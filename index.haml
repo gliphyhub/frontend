@@ -1,3 +1,4 @@
+-menu=[{title: "¿Quienes somos?", link:"#aboutus"},{title:"Sobre GliphyHub", link: "#work"},{title: "Experiencias",link:"#testimony"},{title:"Equipo",link:"#team"},{title:"Contacto",link:"#contact"}]
 !!!5
 %html{:lang => "es"}
 	%head
@@ -13,45 +14,72 @@
 		%link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/icon?family=Material+Icons"}/
 		%link{:rel => "stylesheet", :href => "css/materialize.css", :media => "screen,projection"}/
 		%link{:rel => "stylesheet", :href => "css/style.css"}/
-
 		%title GliphyHub
+
 	%body
 	-#===================================Login====================================
-	#blue.block.blue
-	#red.block.red.lighten-1
-		%nav.pushpin-demo-nav{:data =>{:target => "red"}}
-			.nav-wrapper.red
+	#particles.block.scrollspy
+	
+	#aboutus.block.scrollspy
+		%nav.pushpin-demo-nav{:data =>{:target => "aboutus"}}
+			.nav-wrapper.light.blue
 				.container
-					%a.brand-logo{:href => "#"} Hola
+					%a.brand-logo{:href => "#particles"} Sobre nosotros
 					%ul#nav-mobile.right.hide-on-med-and-down
 						%li
-							%a{:href => "#"}Blue link 1
+							%a{:href => "#aboutG"}Sobre GliphyHub
 						%li
-							%a{:href => "#"}Blue link 2
+							%a{:href => "#exp"}Experiencias
 						%li
-							%a{:href => "#"}Blue link 3
+							%a{:href => "#team"}Team
 					
-	#green.block.green.lighten-1
-		%nav.pushpin-demo-nav{:data =>{:target => "green"}}
-			.nav-wrapper.green
+	#aboutG.block.scrollspy
+		%nav.pushpin-demo-nav{:data =>{:target => "aboutG"}}
+			.nav-wrapper.light.blue
 				.container
-					%a.brand-logo{:href => "#"} Hola
+					%a.brand-logo{:href => "#particles"} Sobre GliphyHub
 					%ul#nav-mobile.right.hide-on-med-and-down
 						%li
-							%a{:href => "#"}Blue link 1
+							%a{:href => "#aboutus"}Sobre Nosotros
 						%li
-							%a{:href => "#"}Blue link 2
+							%a{:href => "#exp"}Experiencias
 						%li
-							%a{:href => "#"}Blue link 3
+							%a{:href => "#team"}Team
+	#exp.block.scrollspy
+		%nav.pushpin-demo-nav{:data =>{:target => "exp"}}
+			.nav-wrapper.light.blue
+				.container
+					%a.brand-logo{:href => "#particles"} Experiencias
+					%ul#nav-mobile.right.hide-on-med-and-down
+						%li
+							%a{:href => "#aboutus"}Sobre nosotros
+						%li
+							%a{:href => "#aboutG"}Sobre GliplyHub
+						%li
+							%a{:href => "#team"}Team
+	#team.block.scrollspy
+		%nav.pushpin-demo-nav{:data =>{:target => "team"}}
+			.nav-wrapper.light.blue
+				.container
+					%a.brand-logo{:href => "#particles"} Team
+					%ul#nav-mobile.right.hide-on-med-and-down
+						%li
+							%a{:href => "#aboutus"}Sobre nosotros
+						%li
+							%a{:href => "#aboutG"}Sobre GliplyHub
+						%li
+							%a{:href => "#exp"}Experiencias
 
+	%footer.block			
+		%p Soy un footer
+	%script{:type=>"text/javascript", :src=>"https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"}		
+	%script{:type => "text/javascript", :src=>"https://code.jquery.com/jquery-3.1.1.min.js", :integrity=>"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=",
+		:crossorigin=>"anonymous"}
+	%script{:src=>"http://jnicol.github.io/particleground/js/jquery.particleground.js"}
+	%script{:type=>"text/javascript", :src=>"js/materialize.js"}
+	%script{:type=>"text/javascript", :src=>"js/main.js"}
+	%script{:type=>"text/javascript", :src=>"js/index.js"}
 
-
-		%footer
-		%script{:type=>"text/javascript", :src=>"https://code.jquery.com/jquery-3.1.1.min.js", :integrity=>"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=",
-  		:crossorigin=>"anonymous"}
 		
-		%script{:type=>"text/javascript", :src=>"js/materialize.js"}
-		%script{:type=>"text/javascript", :src=>"js/main.js"}
-		%script{:type=>"text/javascript", :src=>"js/index.js"}
 		
 		
