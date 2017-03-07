@@ -1,0 +1,57 @@
+!!!5
+%html{:lang => "es"}
+	%head
+		%meta{:name => "viewport", :content=>"width=device-width, initial-scale=1"}
+		%meta{:charset=> "UTF-8"}
+		%meta{:content =>"Plantel Azteca, Gliphy, GliphyHub, gliphy", :name => "keywords"}
+		%meta{:content =>"GliplyHub, aquí podrás acceder a tus tareas y pendientes.", :name => "description"}
+		%meta{:content =>"#TeamDevs", :name => "author"}
+		%meta{:content =>"#TeamDevs", :name => "owner"}
+		%meta{:content =>"index/follow", :name => "robots"}
+		%link{:rel => "shortcut icon", :type=>"image/x-icon", :href => "images/favicon.ico"}/
+		-#google icons
+		%link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/icon?family=Material+Icons"}/
+		%link{:rel => "stylesheet", :href => "css/materialize.css", :media => "screen,projection"}/
+		%link{:rel => "stylesheet", :href => "css/style.css"}/
+
+		%title GliphyHub
+	%body
+	-#===================================Login====================================
+	#blue.block.blue
+	#red.block.red.lighten-1
+		%nav.pushpin-demo-nav{:data =>{:target => "red"}}
+			.nav-wrapper.red
+				.container
+					%a.brand-logo{:href => "#"} Hola
+					%ul#nav-mobile.right.hide-on-med-and-down
+						%li
+							%a{:href => "#"}Blue link 1
+						%li
+							%a{:href => "#"}Blue link 2
+						%li
+							%a{:href => "#"}Blue link 3
+					
+	#green.block.green.lighten-1
+		%nav.pushpin-demo-nav{:data =>{:target => "green"}}
+			.nav-wrapper.green
+				.container
+					%a.brand-logo{:href => "#"} Hola
+					%ul#nav-mobile.right.hide-on-med-and-down
+						%li
+							%a{:href => "#"}Blue link 1
+						%li
+							%a{:href => "#"}Blue link 2
+						%li
+							%a{:href => "#"}Blue link 3
+
+
+
+		%footer
+		%script{:type=>"text/javascript", :src=>"https://code.jquery.com/jquery-3.1.1.min.js", :integrity=>"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=",
+  		:crossorigin=>"anonymous"}
+		
+		%script{:type=>"text/javascript", :src=>"js/materialize.js"}
+		%script{:type=>"text/javascript", :src=>"js/main.js"}
+		%script{:type=>"text/javascript", :src=>"js/index.js"}
+		
+		
