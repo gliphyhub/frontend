@@ -6,8 +6,8 @@
 		%meta{:charset=> "UTF-8"}
 		%meta{:content =>"Plantel Azteca, Gliphy, GliphyHub, gliphy", :name => "keywords"}
 		%meta{:content =>"GliplyHub, aquí podrás acceder a tus tareas y pendientes.", :name => "description"}
-		%meta{:content =>"#TeamDevs", :name => "author"}
-		%meta{:content =>"#TeamDevs", :name => "owner"}
+		%meta{:content =>"TeamDevs", :name => "author"}
+		%meta{:content =>"TeamDevs", :name => "owner"}
 		%meta{:content =>"index/follow", :name => "robots"}
 		%link{:rel => "shortcut icon", :type=>"image/x-icon", :href => "images/favicon.ico"}/
 		-#google icons
@@ -18,59 +18,86 @@
 
 	%body
 	-#===================================Login====================================
-	#particles.block.scrollspy
-	
-	#aboutus.block.scrollspy
+	#particles.block
+	#aboutus.block
 		%nav.pushpin-demo-nav{:data =>{:target => "aboutus"}}
 			.nav-wrapper.light.blue
 				.container
-					%a.brand-logo{:href => "#particles"} Sobre nosotros
-					%ul#nav-mobile.right.hide-on-med-and-down
+					%a.brand-logo Sobre nosotros
+					%ul.right.hide-on-med-and-down
 						%li
-							%a{:href => "#aboutG"}Sobre GliphyHub
+							%a{:href => "#aboutg"}Sobre GliphyHub
 						%li
 							%a{:href => "#exp"}Experiencias
 						%li
 							%a{:href => "#team"}Team
-					
-	#aboutG.block.scrollspy
-		%nav.pushpin-demo-nav{:data =>{:target => "aboutG"}}
+		%br/
+		%br/
+		%br/
+		%br/
+		.container
+			.row
+				.col.s12
+					%p.flow-text.center.text-presentation Somos GliphyHub,  un sistema dedicado a la comunicación entre la comunidad escolar y ... bla bla bla
+	#aboutg.block
+		%nav.pushpin-demo-nav{:data =>{:target => "aboutg"}}
 			.nav-wrapper.light.blue
 				.container
-					%a.brand-logo{:href => "#particles"} Sobre GliphyHub
-					%ul#nav-mobile.right.hide-on-med-and-down
+					%a.brand-logo Sobre GliphyHub
+					%ul.right.hide-on-med-and-down
 						%li
 							%a{:href => "#aboutus"}Sobre Nosotros
 						%li
 							%a{:href => "#exp"}Experiencias
 						%li
 							%a{:href => "#team"}Team
-	#exp.block.scrollspy
+		%br/
+		%br/
+		%br/
+		%br/
+		%br/
+		.container
+			.row
+				.col.s12.m4.l4
+					.center
+						%i.grande.material-icons flash_on
+						%h5 Acelera la comunicación
+						%p.center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ullam consectetur praesentium, nam velit magnam, necessitatibus expedita laudantium tenetur cum sapiente deserunt quae ratione quod atque beatae quos, labore neque!
+				.col.s12.m4.l4
+					.center
+						%i.grande.material-icons group
+						%h5 Enfocado al usuario
+						%p.center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ullam consectetur praesentium, nam velit magnam, necessitatibus expedita laudantium tenetur cum sapiente deserunt quae ratione quod atque beatae quos, labore neque!
+				.col.s12.m4.l4.hide-on-small-only
+					.center
+						%i.grande.material-icons laptop_windows
+						%h5 Totalmente Responsivo
+						%p.center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ullam consectetur praesentium, nam velit magnam, necessitatibus expedita laudantium tenetur cum sapiente deserunt quae ratione quod atque beatae quos, labore neque!		
+	#exp.block
 		%nav.pushpin-demo-nav{:data =>{:target => "exp"}}
 			.nav-wrapper.light.blue
 				.container
-					%a.brand-logo{:href => "#particles"} Experiencias
-					%ul#nav-mobile.right.hide-on-med-and-down
+					%a.brand-logo Experiencias
+					%ul.right.hide-on-med-and-down
 						%li
 							%a{:href => "#aboutus"}Sobre nosotros
 						%li
-							%a{:href => "#aboutG"}Sobre GliplyHub
+							%a{:href => "#aboutg"}Sobre GliplyHub
 						%li
 							%a{:href => "#team"}Team
-	#team.block.scrollspy
+	#team.block
 		%nav.pushpin-demo-nav{:data =>{:target => "team"}}
 			.nav-wrapper.light.blue
 				.container
-					%a.brand-logo{:href => "#particles"} Team
-					%ul#nav-mobile.right.hide-on-med-and-down
+					%a.brand-logo Team
+					%ul.right.hide-on-med-and-down
 						%li
 							%a{:href => "#aboutus"}Sobre nosotros
 						%li
-							%a{:href => "#aboutG"}Sobre GliplyHub
+							%a{:href => "#aboutg"}Sobre GliplyHub
 						%li
 							%a{:href => "#exp"}Experiencias
-
-	%footer.block			
+	%footer			
 		%p Soy un footer
 	%script{:type=>"text/javascript", :src=>"https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"}		
 	%script{:type => "text/javascript", :src=>"https://code.jquery.com/jquery-3.1.1.min.js", :integrity=>"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=",
@@ -79,7 +106,3 @@
 	%script{:type=>"text/javascript", :src=>"js/materialize.js"}
 	%script{:type=>"text/javascript", :src=>"js/main.js"}
 	%script{:type=>"text/javascript", :src=>"js/index.js"}
-
-		
-		
-		

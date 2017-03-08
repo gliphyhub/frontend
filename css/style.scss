@@ -2,6 +2,9 @@
   html, body, .block {
     height: 100%;
   }
+  .medium-alto{
+    height: 70%;
+  }
  // Class for when element is above threshold
   .pin-top {
     position: relative;
@@ -32,21 +35,32 @@
   -moz-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-//==============Welcome===================//
-#welcome{
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate3d(-50%, -50%, 0);
-  z-index: 99;
-  text-align: center;
-  font-weight: 300;
-  text-transform: uppercase;
-  background-color: rgba(255,255,255,.75);
-  box-shadow: 0 1em 2em -1em rgba(0,0,0,.5);
-  padding: 1em 2em;
-  line-height: 1.5;
+.brand-logo{
+    position: absolute;
+    color: #fff;
+    display: inline-block;
+    font-size: 2.1rem;
+    font-style: normal;
+    font-weight: 100;
+    padding: 0;
+    letter-spacing: 7px;
 }
-.full-alto{
-	height:100%;
+nav ul li {
+    font-size: 1.2rem;
+    color: #FFF;
+    letter-spacing: 2px;
+    display: block;
+    font-weight: 300;
+    padding: 0px 15px;
+}
+.text-presentation{
+  font-weight: 300;
+  margin-bottom: 4%; 
+  line-height: 4.5rem;
+  font-size: 2.1rem;
+}
+.grande{
+  font-size: 7rem;
+  display: block;
+  color: #2196F3;
 }
