@@ -64,3 +64,8 @@ nav ul li {
   display: block;
   color: #2196F3;
 }
+@media only screen and (max-height: 524px) {
+  .block{
+    height: 250%;
+  }
+}
