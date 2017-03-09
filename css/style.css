@@ -13,13 +13,47 @@ html, body, .block {
 .pinned {
   position: fixed !important; }
 
+/* label color */
+.input-field label {
+  color: #000; }
+
+/* label focus color */
+.input-field input[type=email]:focus + label {
+  color: #2196F3; }
+
+.input-field input[type=password]:focus + label {
+  color: #2196F3; }
+
+.input-field input[type=text]:focus + label {
+  color: #2196F3; }
+
+/* label underline focus color */
+.input-field input[type=email]:focus {
+  border-bottom: 1px solid #2196F3;
+  box-shadow: 0 1px 0 0 #2196F3; }
+
+.input-field input[type=password]:focus {
+  border-bottom: 1px solid #2196F3;
+  box-shadow: 0 1px 0 0 #2196F3; }
+
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid #2196F3;
+  box-shadow: 0 1px 0 0 #2196F3; }
+
+/* icon prefix focus color */
+.input-field .prefix.active {
+  color: #2196F3; }
+
+.btn {
+  background-color: #2196F3; }
+
 #particles {
   width: 100%;
   height: 100%;
   overflow: hidden;
   position: relative; }
 
-#intro {
+#log-in {
   left: 50%;
   position: absolute;
   top: 50%;
@@ -27,6 +61,8 @@ html, body, .block {
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
+  #log-in img {
+    width: 20rem; }
 
 .brand-logo {
   position: absolute;
@@ -46,17 +82,29 @@ nav ul li {
   font-weight: 300;
   padding: 0px 15px; }
 
+#team .card {
+  position: initial !important; }
+  #team .card img {
+    width: 12rem; }
+
+footer img {
+  width: 15rem;
+  -webkit-filter: invert(100%);
+  filter: invert(100%); }
+
+.grande {
+  font-size: 9rem;
+  display: block;
+  color: #2196F3; }
+
 .text-presentation {
   font-weight: 300;
   margin-bottom: 4%;
   line-height: 4.5rem;
   font-size: 2.1rem; }
 
-.grande {
-  font-size: 7rem;
-  display: block;
-  color: #2196F3; }
-
-@media only screen and (max-height: 524px) {
-  .block {
-    height: 250%; } }
+/* @media only screen and (max-height: 524px) {
+  .block{
+    height: 250%;
+  }
+} */

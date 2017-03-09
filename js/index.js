@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
   particleground(document.getElementById('particles'), {
-    dotColor: 'rgba(0,0,0,1)',
-    lineColor: 'rgba(0,0,0,0.8)'
+    dotColor: 'rgba(0,0,0,0.6)',
+    lineColor: 'rgba(0,0,0,0.5)'
   });
   var intro = document.getElementById('intro');
   //intro.style.marginTop = -intro.offsetHeight / 2 + 'px';

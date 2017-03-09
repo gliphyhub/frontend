@@ -18,6 +18,24 @@
 
 	%body
 		#particles.block
+		#log-in.center
+			.row
+				.col.s12
+					%img.responsive-img{:src => "images/gh.png", :alt => "logo"}/
+				%form.col.s12
+					.row
+						.input-field.col.s12.m6
+							%i.material-icons.prefix.medium account_circle
+							%input.validate#user{:type => "email"}/
+							%label{:for => "user"} Correo
+						.input-field.col.s12.m6
+							%i.material-icons.prefix.medium lock_outline
+							%input.validate#pass{:type => "password"}/
+							%label{:for => "pass"} Contraseña
+						.col.m4.hide-on-small-only
+						%button.col.s12.m4.btn.waves-effect.waves-light{:type=>"submit"}
+							INCIAR SESIÓN 
+							%i.material-icons.right send
 		#aboutus.block
 			%nav.pushpin-demo-nav{:data =>{:target => "aboutus"}}
 				.nav-wrapper.light.blue
@@ -84,100 +102,67 @@
 			%br/
 			%br/
 			%br/
-			.container
-				%br/
-				%br/
-				%br/
-				.row
-					.col.s12.m2
-					.col.s12.m3
-						.card
-							.card-image
-								%br/
-								%img{src: "images/avatar1.png"}
-							.card-content
-								%span.card-title Roberto
-								%p <b>FrontEnd</b> y <b>BackEnd</b>
-								%p Developer
-					.col.s12.m3
-						.card
-							.card-image
-								%br/
-								%img{src: "images/avatar1.png"}
-							.card-content
-								%span.card-title Willie
-								%p <b>DataBase</b> y <b>BackEnd</b>
-								%p Desarrollador
-					.col.s12.m3
-						.card
-							.card-image
-								%br/
-								%img{src: "images/avatar1.png"}
-							.card-content
-								%span.card-title Joel
-								%p <b>FrontEnd</b> y <b>BackEnd</b>
-								%p Diseñador y desarrollador
-				.row
-					.col.s12.m2
-					.col.s12.m3
-						.card
-							.card-image
-								%br/
-								%img{src: "images/avatar2.png"}
-							.card-content
-								%span.card-title Ana
-								%p <b>Documentation</b>
-								%p Documentador
-					.col.s12.m3
-						.card
-							.card-image
-								%br/
-								%img{src: "images/avatar1.png"}
-							.card-content
-								%span.card-title Noé
-								%p <b>Documentation</b>
-								%p Documentador
-					.col.s12.m3
-						.card
-							.card-image
-								%br/
-								%img{src: "images/avatar2.png"}
-							.card-content
-								%span.card-title Mariana
-								%p <b>Documentation</b>
-								%p Documentador
-					.col.s12.m2
-	%br/
-	%br/
-	%br/
-	%br/
-
-	%br/
-	%br/
-	%br/
-	%br/
-	%br/
-	%br/
-	%br/
-	%br/
-	%br/
-	%br/
-	%br/
-	%br/
-	%br/
-	%br/
-	%br/
-	%br/
-	%br/
-	%br/
-	%footer.page-footer
-		.container
 			.row
-				.col.14.s12
-					%h5.white-text GliphyHub
-					%p.grey-text.text-lighten-4 Esperemos que esta página sea útil
-		.footer-copyright
-			.container © 2016-2017 #TeamDevs 
+				.col.s12.m2.hide-on-small-only
+				.col.s12.m3
+					.card
+						%br/
+						%img.responsive-img{src: "images/avatar1.png"}
+						.card-content
+							%span.card-title Roberto
+							%p <b>FrontEnd</b> y <b>BackEnd</b>
+							%p Developer
+				.col.s12.m3
+					.card
+						%br/
+						%img.responsive-img{src: "images/avatar1.png"}
+						.card-content
+							%span.card-title Willie
+							%p <b>DataBase</b> y <b>BackEnd</b>
+							%p Desarrollador
+				.col.s12.m3
+					.card						
+						%br/
+						%img.responsive-img{src: "images/avatar1.png"}
+						.card-content
+							%span.card-title Joel
+							%p <b>FrontEnd</b> y <b>BackEnd</b>
+							%p Diseñador y desarrollador
+				.col.s12.m2.hide-on-small-only
+				.col.s12.m3.hide-on-small-only
+					.card
+						%br/
+						%img.responsive-img{src: "images/avatar2.png"}
+						.card-content
+							%span.card-title Ana
+							%p <b>Documentation</b>
+							%p Documentador
+				.col.s12.m3.hide-on-small-only
+					.card
+						%br/
+						%img.responsive-img{src: "images/avatar1.png"}
+						.card-content
+							%span.card-title Noé
+							%p <b>Documentation</b>
+							%p Documentador
+				.col.s12.m3
+					.card
+						%br/
+						%img.responsive-img{src: "images/avatar2.png"}
+						.card-content
+							%span.card-title Mariana
+							%p <b>Documentation</b>
+							%p Documentador
+				.col.s12.m2.hide-on-small-only
+		%footer.page-footer.blue
+			.container
+				.row
+					.col.s3
+						%img{:src => "images/ghh.png", :alt => ""}/
+					.col.s8
+						%h5.white-text Inspiring innovation
+			.footer-copyright
+				.container © 2016-2017 #TeamDevs 
 	%script{:type=>"text/javascript", :src=>"https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"}		
 	%script{:type => "text/javascript", :src=>"https://code.jquery.com/jquery-3.1.1.min.js", :integrity=>"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=",
 		:crossorigin=>"anonymous"}

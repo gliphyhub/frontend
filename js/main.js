@@ -1,19 +1,19 @@
-$(document).ready(function () {	
-	//=========== EFECTO PUSHPIN ====================================
-	$('.target').pushpin({
-      		top: 0,
-      		bottom: 1000,
-      	offset: 0
+$(document).ready(function () { 
+  //=========== EFECTO PUSHPIN ====================================
+  $('.target').pushpin({
+          top: 0,
+          bottom: 1000,
+        offset: 0
     });
-	$('.pushpin-demo-nav').each(function() {
-    	var $this = $(this);
-    	var $target = $('#' + $(this).attr('data-target'));
+  $('.pushpin-demo-nav').each(function() {
+      var $this = $(this);
+      var $target = $('#' + $(this).attr('data-target'));
       //console.log ($target);
-    	$this.pushpin({
-      		top: $target.offset().top,
-      		bottom: $target.offset().top + $target.outerHeight() - $this.height()
-    	});
-  	});
+      $this.pushpin({
+          top: $target.offset().top,
+          bottom: $target.offset().top + $target.outerHeight() - $this.height()
+      });
+    });
   //======== deslizar ===============================================
     $("#aboutus ul li:nth-child(1),#team ul li:nth-child(2)").click(function(e){
         e.preventDefault()
@@ -30,5 +30,9 @@ $(document).ready(function () {
        var dest= $("#team").offset().top;
         $('html, body').animate( {scrollTop : dest}, 500);
     });
+  //============evitar inciar sesion=====================
+  $("form button").click(function (e) {
+    e.preventDefault();
+  })
 
 });
