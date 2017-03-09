@@ -12,8 +12,9 @@
 		%link{:rel => "shortcut icon", :type=>"image/x-icon", :href => "images/favicon.ico"}/
 		-#google icons
 		%link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/icon?family=Material+Icons"}/
-		%link{:rel => "stylesheet", :href => "css/materialize.css", :media => "screen,projection"}/
+		%link{:rel => "stylesheet", :href => "css/materialize.css", :media => "screen,projection"}/		
 		%link{:rel => "stylesheet", :href => "css/style.css"}/
+		%link{:rel => "stylesheet", :href => "css/animate.css"}/
 		%title GliphyHub
 
 	%body
@@ -21,19 +22,19 @@
 		#log-in.center
 			.row
 				.col.s12
-					%img.responsive-img{:src => "images/gh.png", :alt => "logo"}/
+					%img.responsive-img.animated.flipInX{:src => "images/gh.png", :alt => "logo"}/
 				%form.col.s12
 					.row
-						.input-field.col.s12.m6
+						.input-field.col.s12.m6.animated.fadeInLeftBig
 							%i.material-icons.prefix.medium account_circle
 							%input.validate#user{:type => "email"}/
 							%label{:for => "user"} Correo
-						.input-field.col.s12.m6
+						.input-field.col.s12.m6.animated.fadeInRightBig
 							%i.material-icons.prefix.medium lock_outline
 							%input.validate#pass{:type => "password"}/
 							%label{:for => "pass"} Contraseña
 						.col.m4.hide-on-small-only
-						%button.col.s12.m4.btn.waves-effect.waves-light{:type=>"submit"}
+						%button.col.s12.m4.btn.waves-effect.waves-light.animated.fadeInUpBig{:type=>"submit"}
 							INCIAR SESIÓN 
 							%i.material-icons.right send
 		#aboutus.block
@@ -50,7 +51,7 @@
 			%br/
 			%br/
 			%br/
-			.container
+			.container.animated.fadeInLeftBig
 				.row
 					.col.s12
 						%p.flow-text.center.text-presentation Somos una plataforma para la interacción entre la comunidad escolar y el cuerpo administrativo del plantel, innovando así la <b>comunicación</b>. Nuestra <b>misión</b> fue crear una plataforma innovadora, que mejorara la experiencia de usuario y enriqueciera el ambiente de la comunidad escolar.
@@ -102,7 +103,7 @@
 			%br/
 			%br/
 			%br/
-			.row
+			.row.medium-alto
 				.col.s12.m2.hide-on-small-only
 				.col.s12.m3
 					.card
@@ -154,6 +155,7 @@
 							%p <b>Documentation</b>
 							%p Documentador
 				.col.s12.m2.hide-on-small-only
+		.medium-alto
 		%footer.page-footer.blue
 			.container
 				.row
