@@ -17,70 +17,167 @@
 		%title GliphyHub
 
 	%body
-	-#===================================Login====================================
-	#particles.block
-	#aboutus.block
-		%nav.pushpin-demo-nav{:data =>{:target => "aboutus"}}
-			.nav-wrapper.light.blue
-				.container
-					%a.brand-logo Sobre nosotros
-					%ul.right.hide-on-med-and-down
-						%li
-							%a{:href => "#aboutg"}Sobre GliphyHub
-						%li
-							%a{:href => "#team"}Team
-		%br/
-		%br/
-		%br/
-		%br/
+		#particles.block
+		#aboutus.block
+			%nav.pushpin-demo-nav{:data =>{:target => "aboutus"}}
+				.nav-wrapper.light.blue
+					.container
+						%a.brand-logo Sobre nosotros
+						%ul.right.hide-on-med-and-down
+							%li
+								%a{:href => "#aboutg"}Sobre GliphyHub
+							%li
+								%a{:href => "#team"}Team
+			%br/
+			%br/
+			%br/
+			%br/
+			.container
+				.row
+					.col.s12
+						%p.flow-text.center.text-presentation Somos una plataforma para la interacción entre la comunidad escolar y el cuerpo administrativo del plantel, innovando así la <b>comunicación</b>. Nuestra <b>misión</b> fue crear una plataforma innovadora, que mejorara la experiencia de usuario y enriqueciera el ambiente de la comunidad escolar.
+						%p.flow-text.center.text-presentation Lo que logramos fue algo <b><i>mejor</i>.</b>
+		#aboutg.block
+			%nav.pushpin-demo-nav{:data =>{:target => "aboutg"}}
+				.nav-wrapper.light.blue
+					.container
+						%a.brand-logo Sobre GliphyHub
+						%ul.right.hide-on-med-and-down
+							%li
+								%a{:href => "#aboutus"}Sobre Nosotros
+							%li
+								%a{:href => "#team"}Team
+			%br/
+			%br/
+			%br/
+			%br/
+			%br/
+			.container
+				.row
+					.col.s12.m4.l4
+						.center
+							%i.grande.material-icons flash_on
+							%h5 Acelera la comunicación
+							%p.center Esta plataforma está diseñada para hacer que la comunicación entre los alumnos, tutores y autoridades del <b>plantel</b> sea más efectiva y rápida.
+					.col.s12.m4.l4
+						.center
+							%i.grande.material-icons group
+							%h5 Enfocado al plantel
+							%p.center Se ha desarrollado un diseño intuitivo, fácil de leer y amigable, que permite que todos los usuarios se sientan bien con GliphyHub, el lugar <b>ideal</b> para la comunicación escolar.
+					.col.s12.m4.l4.hide-on-small-only
+						.center
+							%i.grande.material-icons laptop_windows
+							%h5 Totalmente Responsivo
+							%p.center El diseño fue una de nuestras prioridades al diseñar este sitio. Se adapta, <b>evoluciona</b>, para que accedas cómodamente desde el dispositivo que quieras.
+		#team.block
+			%nav.pushpin-demo-nav{:data =>{:target => "team"}}
+				.nav-wrapper.light.blue
+					.container
+						%a.brand-logo Team
+						%ul.right.hide-on-med-and-down
+							%li
+								%a{:href => "#aboutus"}Sobre nosotros
+							%li
+								%a{:href => "#aboutg"}Sobre GliplyHub
+			%br/
+			%br/
+			%br/
+			%br/
+			%br/
+			.container
+				%br/
+				%br/
+				%br/
+				.row
+					.col.s12.m2
+					.col.s12.m3
+						.card
+							.card-image
+								%br/
+								%img{src: "images/avatar1.png"}
+							.card-content
+								%span.card-title Roberto
+								%p <b>FrontEnd</b> y <b>BackEnd</b>
+								%p Developer
+					.col.s12.m3
+						.card
+							.card-image
+								%br/
+								%img{src: "images/avatar1.png"}
+							.card-content
+								%span.card-title Willie
+								%p <b>DataBase</b> y <b>BackEnd</b>
+								%p Desarrollador
+					.col.s12.m3
+						.card
+							.card-image
+								%br/
+								%img{src: "images/avatar1.png"}
+							.card-content
+								%span.card-title Joel
+								%p <b>FrontEnd</b> y <b>BackEnd</b>
+								%p Diseñador y desarrollador
+				.row
+					.col.s12.m2
+					.col.s12.m3
+						.card
+							.card-image
+								%br/
+								%img{src: "images/avatar2.png"}
+							.card-content
+								%span.card-title Ana
+								%p <b>Documentation</b>
+								%p Documentador
+					.col.s12.m3
+						.card
+							.card-image
+								%br/
+								%img{src: "images/avatar1.png"}
+							.card-content
+								%span.card-title Noé
+								%p <b>Documentation</b>
+								%p Documentador
+					.col.s12.m3
+						.card
+							.card-image
+								%br/
+								%img{src: "images/avatar2.png"}
+							.card-content
+								%span.card-title Mariana
+								%p <b>Documentation</b>
+								%p Documentador
+					.col.s12.m2
+	%br/
+	%br/
+	%br/
+	%br/
+
+	%br/
+	%br/
+	%br/
+	%br/
+	%br/
+	%br/
+	%br/
+	%br/
+	%br/
+	%br/
+	%br/
+	%br/
+	%br/
+	%br/
+	%br/
+	%br/
+	%br/
+	%br/
+	%footer.page-footer
 		.container
 			.row
-				.col.s12
-					%p.flow-text.center.text-presentation Somos GliphyHub,  un sistema dedicado a la comunicación entre la comunidad escolar y ... bla bla bla
-	#aboutg.block
-		%nav.pushpin-demo-nav{:data =>{:target => "aboutg"}}
-			.nav-wrapper.light.blue
-				.container
-					%a.brand-logo Sobre GliphyHub
-					%ul.right.hide-on-med-and-down
-						%li
-							%a{:href => "#aboutus"}Sobre Nosotros
-						%li
-							%a{:href => "#team"}Team
-		%br/
-		%br/
-		%br/
-		%br/
-		%br/
-		.container
-			.row
-				.col.s12.m4.l4
-					.center
-						%i.grande.material-icons flash_on
-						%h5 Acelera la comunicación
-						%p.center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ullam consectetur praesentium, nam velit magnam, necessitatibus expedita laudantium tenetur cum sapiente deserunt quae ratione quod atque beatae quos, labore neque!
-				.col.s12.m4.l4
-					.center
-						%i.grande.material-icons group
-						%h5 Enfocado al usuario
-						%p.center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ullam consectetur praesentium, nam velit magnam, necessitatibus expedita laudantium tenetur cum sapiente deserunt quae ratione quod atque beatae quos, labore neque!
-				.col.s12.m4.l4.hide-on-small-only
-					.center
-						%i.grande.material-icons laptop_windows
-						%h5 Totalmente Responsivo
-						%p.center Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum ullam consectetur praesentium, nam velit magnam, necessitatibus expedita laudantium tenetur cum sapiente deserunt quae ratione quod atque beatae quos, labore neque!
-	#team.block
-		%nav.pushpin-demo-nav{:data =>{:target => "team"}}
-			.nav-wrapper.light.blue
-				.container
-					%a.brand-logo Team
-					%ul.right.hide-on-med-and-down
-						%li
-							%a{:href => "#aboutus"}Sobre nosotros
-						%li
-							%a{:href => "#aboutg"}Sobre GliplyHub
-	%footer			
-		%p Soy un footer
+				.col.14.s12
+					%h5.white-text GliphyHub
+					%p.grey-text.text-lighten-4 Esperemos que esta página sea útil
+		.footer-copyright
+			.container © 2016-2017 #TeamDevs 
 	%script{:type=>"text/javascript", :src=>"https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"}		
 	%script{:type => "text/javascript", :src=>"https://code.jquery.com/jquery-3.1.1.min.js", :integrity=>"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=",
 		:crossorigin=>"anonymous"}
