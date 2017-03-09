@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<!--
+  Material Design Lite
+  Copyright 2015 Google Inc. All rights reserved.
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+      https://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="A front-end template that helps you build fast, modern mobile web apps.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <title>Materialize CSS text only template</title>
+
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="icon" sizes="192x192" href="https://rawgit.com/ApoorvSaxena/materialize-css-templates/master/text-only/images/android-desktop.png">
+
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Materialize CSS">
+    <link rel="apple-touch-icon-precomposed" href="https://rawgit.com/ApoorvSaxena/materialize-css-templates/master/text-only/images/ios-desktop.png">
+
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileImage" content="images/touch/ms-touch-icon-144x144-precomposed.png">
+    <meta name="msapplication-TileColor" content="#3372DF">
+
+    <link rel="shortcut icon" href="https://rawgit.com/ApoorvSaxena/materialize-css-templates/master/text-only/images/favicon.png">
+
+    <!-- SEO: If your mobile URL is different from the desktop URL, add a canonical link to the desktop page https://developers.google.com/webmasters/smartphone-sites/feature-phones -->
+    <!--
+    <link rel="canonical" href="http://www.example.com/">
+    -->
+
+    <link rel="stylesheet" href="Materialize%20CSS%20text%20only%20template_files/css.css">
+    <link rel="stylesheet" href="Materialize%20CSS%20text%20only%20template_files/icon.css">
+    <link rel="stylesheet" type="text/css" href="Materialize%20CSS%20text%20only%20template_files/materialize.css">
+    <link rel="stylesheet" href="Materialize%20CSS%20text%20only%20template_files/styles.css">
+    <style>
+    #view-source {
+      position: fixed;
+      display: block;
+      right: 0;
+      bottom: 0;
+      margin-right: 40px;
+      margin-bottom: 40px;
+      z-index: 900;
+    }
+    </style>
+  </head>
+  <body class="mdl-demo">
+    <nav class="color-primary">
+      <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Nombre_profesor</a>
+        <p class="brand-logo mdl-mega-footer--heading">Profesor</p>
+      </div>
+    </nav>  
+    <div class="tab-bar  color-primary--dark">
+      <a href="#overview" class="layout__tab is-active">Inicio</a>
+      <a href="#features" class="layout__tab">Notificaciones</a>
+      <a href="#features" class="layout__tab">Comunicados</a>
+      <a href="#features" class="layout__tab">Tareas</a>
+      <a href="#features" class="layout__tab">Mis alumnos</a>
+      <button class="btn-floating btn-large waves-effect waves-light red" id="add">
+        <i class="material-icons" role="presentation">add</i>
+        <span class="visuallyhidden">Add</span>
+      </button>
+    </div>
+    <div class="container">
+      <main class="mdl-layout__content">
+        <div class="mdl-layout__tab-panel is-active" id="overview">
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="card">
+              <div class="row">
+                <div class="col s4">
+                  <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--teal-100 mdl-color-text--white">
+                    <i class="material-icons">play_circle_filled</i>
+                  </header>
+                </div>
+                <div class="col s8">
+                  <div class="card-content">                  
+                    <h4 class="card-title">Bienvenido<i class="material-icons right">more_vert</i></h4>
+                    Esto es un texto que contendrá los comunicados más urgentes, además de contener las actividades resumidas de los alumnos.
+                  </div>
+                  <div class="card-action">
+                    <a href="#" class="mdl-button">Leer más</a>
+                  </div>
+                </div>              
+              </div>
+            </div>                
+          </section>
+          <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="row">
+              <div class="col">
+              <div class="card">
+                <div class="card-content">
+                  <h4 class="card-title">Comunicados<i class="material-icons right">more_vert</i></h4>
+                  <div class="row">
+                    <div class="col s2 section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                      <div class="section__circle-container__circle color-primary--dark"></div>
+                    </div>
+                    <div class="col s10 section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                      <h5>Comunicado 1</h5>
+                      Esto es un texto de ejemplo, y es el preview de lo que será un comunicado. Puede leer más sobre esto <a href="#">aquí</a>.
+                    </div>                  
+                  </div>
+                  <div class="row">
+                    <div class="col s2 section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                      <div class="section__circle-container__circle color-primary--dark"></div>
+                    </div>
+                    <div class="col s10 section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                      <h5>Comunicado 1</h5>
+                      Esto es un texto de ejemplo, y es el preview de lo que será un comunicado. Puede leer más sobre esto <a href="#">aquí</a>.
+                    </div>                    
+                  </div>
+                  <div class="row">
+                    <div class="col s2 section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                      <div class="section__circle-container__circle color-primary--dark"></div>
+                    </div>
+                    <div class="col s10 section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                      <h5>Comunicado 1</h5>
+                      Esto es un texto de ejemplo, y es el preview de lo que será un comunicado. Puede leer más sobre esto <a href="#">aquí</a>.
+                    </div>                  
+                  </div>
+                </div>
+                <div class="card-action">
+                  <a href="#" class="mdl-button">Leer todas las notificaciones</a>
+                </div>
+              </div>                
+              </div>
+            </div>
+          </section>
+          <section class="section--footer mdl-color--white mdl-grid">
+            <div class="row">
+              <div class="col s12 m6 testimonials">
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle color-secondary section__circle--big"></div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>PENDIENTE 1</h5>
+                  Esto es un texto de ejemplo que trata de ejemplificar alguna tarea programada.
+                </div>
+              </div>
+              <div class="col s12 m6 testimonials">
+                <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+                  <div class="section__circle-container__circle color-secondary section__circle--big"></div>
+                </div>
+                <div class="section__text mdl-cell mdl-cell--4-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+                  <h5>PENDIENTE 2</h5>
+                  Esto es un texto de ejemplo que trata de ejemplificar alguna tarea programada.
+                </div>                
+              </div>
+            </div>
+          </section>
+        </div>
+      </main>
+    </div>
+    <footer class="page-footer">
+      <div class="row">
+        <div class="col s3">
+          <input class="mdl-mega-footer--heading-checkbox" checked="checked" type="checkbox">
+          <h6 class="mdl-mega-footer--heading">Características</h6>
+          <ul class="mdl-mega-footer--link-list">
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Términos</a></li>
+          </ul>
+        </div>
+        <div class="col s3">
+          <input class="mdl-mega-footer--heading-checkbox" checked="checked" type="checkbox">
+          <h6 class="mdl-mega-footer--heading">Ayuda</h6>
+          <ul class="mdl-mega-footer--link-list">
+            <li><a href="#">Tutorial</a></li>
+            <li><a href="#">Mi espacio</a></li>
+            <li><a href="#">Recusros</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="">
+        © 2017 #TeamDevs
+        </div>
+      </div>
+    </footer>
+    <a href="" id="view-source" class="btn">Configuración</a>
+  
+
+</body></html>
