@@ -33,6 +33,12 @@ $(document).ready(function () {
   //============evitar inciar sesion=====================
   $("form button").click(function (e) {
     e.preventDefault();
-  })
+  });
+  //====================================================
+  $(".dropdown-button").dropdown({
+    constrainWidth: flase,
+    inDuration: 300,
+    belowOrigin: flase
+  });
 
 });

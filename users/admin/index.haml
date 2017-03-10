@@ -1,0 +1,38 @@
+!!!5
+%html{:lang => "es"}
+	%head
+		%meta{:name => "viewport", :content=>"width=device-width, initial-scale=1"}
+		%meta{:charset=> "UTF-8"}
+		%link{:rel => "shortcut icon", :type=>"image/x-icon", :href => "../../images/favicon.ico"}/
+		-#google icons
+		%link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/icon?family=Material+Icons"}/
+		%link{:rel => "stylesheet", :href => "../../css/materialize.css", :media => "screen,projection"}/		
+		%link{:rel => "stylesheet", :href => "../../css/style.css"}/
+		%link{:rel => "stylesheet", :href => "../../css/animate.css"}/
+		%title Gliphy Admin
+	%body
+		%nav.negro-flat
+			.navbar-fixed
+				.nav-wrapper
+					.container
+						%a.brand-logo.hide-on-med-and-down GliphyHub ADMIN
+						.dropdown-button{:data=>{:activates=>"dropdown1"}}
+							%a.right.manita
+								%i.material-icons.right arrow_drop_downs
+							%a.right
+								.row.manita
+									.col.s2
+										%img.circle.dropdown-button{:src => "../../images/admin.jpg", :alt => "avatar"}/
+									.col.9
+										%span.info Nombre_ApellidoP_ApellidoM
+										%span.info administrador
+		%ul#dropdown1.dropdown-content
+			%li
+				%a{:href => "#!"} Mi perfil
+			%li
+				%a{:href => "#!"} Salir <i class="material-icons"> power_settings_new </i>
+				
+	%script{:type => "text/javascript", :src=>"https://code.jquery.com/jquery-3.1.1.min.js", :integrity=>"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=",
+		:crossorigin=>"anonymous"}
+	%script{:type=>"text/javascript", :src=>"../../js/materialize.js"}
+	%script{:type=>"text/javascript", :src=>"../../js/main.js"}
