@@ -36,9 +36,8 @@ $(document).ready(function () {
   });
   //====================================================
   $(".dropdown-button").dropdown({
-    constrainWidth: flase,
-    inDuration: 300,
-    belowOrigin: flase
+    constrainWidth: false, //no abarque el ancho que quiera
+    alignment: 'right',
   });
 
 });

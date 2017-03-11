@@ -11,8 +11,8 @@
 		%link{:rel => "stylesheet", :href => "../../css/animate.css"}/
 		%title Gliphy Admin
 	%body
-		%nav.negro-flat
-			.navbar-fixed
+		.navbar-fixed
+			%nav.negro-flat
 				.nav-wrapper
 					.container
 						%a.brand-logo.hide-on-med-and-down GliphyHub ADMIN
@@ -20,18 +20,49 @@
 							%a.right.manita
 								%i.material-icons.right arrow_drop_downs
 							%a.right
-								.row.manita
+								.row.manita.no-margin
 									.col.s2
 										%img.circle.dropdown-button{:src => "../../images/admin.jpg", :alt => "avatar"}/
 									.col.9
 										%span.info Nombre_ApellidoP_ApellidoM
-										%span.info administrador
-		%ul#dropdown1.dropdown-content
-			%li
-				%a{:href => "#!"} Mi perfil
-			%li
-				%a{:href => "#!"} Salir <i class="material-icons"> power_settings_new </i>
-				
+										%span.info.separado administrador
+			%ul#dropdown1.dropdown-content
+				%li
+					%a{:href => "#!"} Mi perfil
+				%li
+					%a{:href => "#!"} Salir <i class="material-icons left rojo"> power_settings_new </i>
+			.fixed-action-btn.toolbar
+				%a.btn-floating.btn-large.bar-menu-color.center
+					%i.material-icons add
+				%ul
+					%li
+						%a.waves-effect.waves-light{:href => "#!"}
+							%i.material-icons insert_chart
+					%li
+						%a.waves-effect.waves-light{:href => "#!"}
+							%i.material-icons format_quote
+					%li
+						%a.waves-effect.waves-light{:href => "#!"}
+							%i.material-icons publish
+					%li
+						%a.waves-effect.waves-light{:href => "#!"}
+							%i.material-icons attach_file
+		.row
+			.col.s1.bar-menu-color.center
+				%ul
+					%li
+						%a.waves-effect.waves-light.btn-floating.btn-large.btn-flat{:href => "#!"} <i class="material-icons"> supervisor_account </i>
+					%li
+						%a.waves-effect.waves-light.btn-floating.btn-large.btn-flat{:href => "#!"} <i class="material-icons"> add </i>
+
+					%li
+						%a.waves-effect.waves-light.btn-floating.btn-large.btn-flat{:href => "#!"} <i class="material-icons"> sd_card </i>
+					%li
+						%a.waves-effect.waves-light.btn-floating.btn-large.btn-flat{:href => "#!"} <i class="material-icons"> error </i>
+			.col.s4
+				.card-panel.options-menu-color
+			.col.s7.fondo-color
+				.card-panel.red
 	%script{:type => "text/javascript", :src=>"https://code.jquery.com/jquery-3.1.1.min.js", :integrity=>"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=",
 		:crossorigin=>"anonymous"}
 	%script{:type=>"text/javascript", :src=>"../../js/materialize.js"}
