@@ -75,24 +75,103 @@
       <div class="col s1 bar-menu-color center">
         <ul>
           <li>
-            <a class="waves-effect waves-light btn-floating btn-large btn-flat" href="#!"><i class="material-icons"> supervisor_account </i></a>
+            <a class="waves-effect waves-light btn-floating btn-flat" href="#!"><i class="material-icons"> storage </i></a>
           </li>
           <li>
-            <a class="waves-effect waves-light btn-floating btn-large btn-flat" href="#!"><i class="material-icons"> add </i></a>
+            <a class="waves-effect waves-light btn-floating btn-flat" href="#!"><i class="material-icons"> account_circle </i></a>
           </li>
           <li>
-            <a class="waves-effect waves-light btn-floating btn-large btn-flat" href="#!"><i class="material-icons"> sd_card </i></a>
+            <a class="waves-effect waves-light btn-floating btn-flat" href="#!"><i class="material-icons"> add </i></a>
           </li>
           <li>
-            <a class="waves-effect waves-light btn-floating btn-large btn-flat" href="#!"><i class="material-icons"> error </i></a>
+            <a class="waves-effect waves-light btn-floating btn-flat" href="#!"><i class="material-icons"> search </i></a>
+          </li>
+          <li>
+            <a class="waves-effect waves-light btn-floating btn-flat" href="#!"><i class="material-icons"> error </i></a>
           </li>
         </ul>
       </div>
-      <div class="col s4">
-        <div class="card-panel options-menu-color"></div>
+      <div class="col s4" style="margin-top: 1.5rem">
+        <br>
+        <div class="waves-effect waves-light btn options-menu-color full-ancho">Administradores <i class="material-icons left">account_circle</i></div>
+        <div class="waves-effect waves-light btn options-menu-color full-ancho">Profesores <i class="material-icons left">contacts</i></div>
+        <div class="waves-effect waves-light btn options-menu-color full-ancho">Alumnos <i class="material-icons left">face</i></div>
+        <div class="waves-effect waves-light btn options-menu-color full-ancho">Grupos <i class="material-icons left">supervisor_account</i></div>
+        <div class="waves-effect waves-light btn options-menu-color full-ancho">Comunicados <i class="material-icons left">art_track</i></div>
       </div>
-      <div class="col s7 fondo-color">
-        <div class="card-panel red"></div>
+      <div class="col s7" style="margin-top: 1em">
+        <table class="striped responsive-table">
+          <thead class="fondo-color">
+            <tr>
+              <th data-field="id">Id</th>
+              <th data-field="Nombre">Nombre</th>
+              <th data-field="ApellidoPaterno">Apellido Paterno</th>
+              <th data-field="ApellidoMaterno">Apellido Materno</th>
+              <th data-field="Grupo">Grupo</th>
+              <th data-field="Edit"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>01</td>
+              <td>Willie</td>
+              <td>Almaraz</td>
+              <td>García</td>
+              <td>611</td>
+              <td>
+                <div class="waves-effect waves-light btn-flat"><i class="material-icons left">create</i></div>
+              </td>
+            </tr>
+            <tr>
+              <td>01</td>
+              <td>Willie</td>
+              <td>Almaraz</td>
+              <td>García</td>
+              <td>611</td>
+              <td>
+                <div class="waves-effect waves-light btn-flat"><i class="material-icons left">create</i></div>
+              </td>
+            </tr>
+            <tr>
+              <td>01</td>
+              <td>Willie</td>
+              <td>Almaraz</td>
+              <td>García</td>
+              <td>611</td>
+              <td>
+                <div class="waves-effect waves-light btn-flat"><i class="material-icons left">create</i></div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <ul class="pagination">
+          <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+          <li class="active"><a href="#!">1</a></li>
+          <li class="waves-effect"><a href="#!">2</a></li>
+          <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+        </ul>
+        <ul class="fondo-color collapsible" data-collapsible="acordion">
+          <li>
+            <div class="collapsible-header"><i class="material-icons right">expand_more</i> Id</div>
+            <div class="collapsible-body">Aquí va un fucking texto</div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons right">expand_more</i> Nombre</div>
+            <div class="collapsible-body">Aquí va un fucking texto</div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons right">expand_more</i> Apellido Paterno</div>
+            <div class="collapsible-body">Aquí va un fucking texto</div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons right">expand_more</i> Apellido Materno</div>
+            <div class="collapsible-body">Aquí va un fucking texto</div>
+          </li>
+          <li>
+            <div class="collapsible-header"><i class="material-icons right">expand_more</i> Grupo</div>
+            <div class="collapsible-body">Aquí va un fucking texto</div>
+          </li>
+        </ul>
       </div>
     </div>
   </body>

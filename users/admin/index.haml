@@ -51,18 +51,81 @@
 			.col.s1.bar-menu-color.center
 				%ul
 					%li
-						%a.waves-effect.waves-light.btn-floating.btn-large.btn-flat{:href => "#!"} <i class="material-icons"> supervisor_account </i>
+						%a.waves-effect.waves-light.btn-floating.btn-flat{:href => "#!"} <i class="material-icons"> storage </i>
 					%li
-						%a.waves-effect.waves-light.btn-floating.btn-large.btn-flat{:href => "#!"} <i class="material-icons"> add </i>
+						%a.waves-effect.waves-light.btn-floating.btn-flat{:href => "#!"} <i class="material-icons"> account_circle </i>
+					%li
+						%a.waves-effect.waves-light.btn-floating.btn-flat{:href => "#!"} <i class="material-icons"> add </i>
+					%li
+						%a.waves-effect.waves-light.btn-floating.btn-flat{:href => "#!"} <i class="material-icons"> search </i>
+					%li
+						%a.waves-effect.waves-light.btn-floating.btn-flat{:href => "#!"} <i class="material-icons"> error </i>
+			.col.s4{:style=>"margin-top: 1.5rem"}
+				%br
+				.waves-effect.waves-light.btn.options-menu-color.full-ancho Administradores <i class="material-icons left">account_circle</i>
+				.waves-effect.waves-light.btn.options-menu-color.full-ancho Profesores <i class="material-icons left">contacts</i>
+				.waves-effect.waves-light.btn.options-menu-color.full-ancho Alumnos <i class="material-icons left">face</i>
+				.waves-effect.waves-light.btn.options-menu-color.full-ancho Grupos <i class="material-icons left">supervisor_account</i>
+				.waves-effect.waves-light.btn.options-menu-color.full-ancho Comunicados <i class="material-icons left">art_track</i>
+			.col.s7{:style=>"margin-top: 1em"}
+				%table.striped.responsive-table
+					%thead.fondo-color
+						%tr
+							%th{:data=>{:field=>"id"}} Id
+							%th{:data=>{:field=>"Nombre"}} Nombre
+							%th{:data=>{:field=>"ApellidoPaterno"}} Apellido Paterno
+							%th{:data=>{:field=>"ApellidoMaterno"}} Apellido Materno
+							%th{:data=>{:field=>"Grupo"}} Grupo
+							%th{:data=>{:field=>"Edit"}} 
+					%tbody
+						%tr
+							%td 01
+							%td Willie
+							%td Almaraz
+							%td García
+							%td 611
+							%td 
+								.waves-effect.waves-light.btn-flat <i class="material-icons left">create</i>
+						%tr
+							%td 01
+							%td Willie
+							%td Almaraz
+							%td García
+							%td 611
+							%td 
+								.waves-effect.waves-light.btn-flat <i class="material-icons left">create</i>
+						%tr
+							%td 01
+							%td Willie
+							%td Almaraz
+							%td García
+							%td 611
+							%td 
+								.waves-effect.waves-light.btn-flat <i class="material-icons left">create</i>
+								
+				%ul.pagination
+					%li.disabled <a href="#!"><i class="material-icons">chevron_left</i></a>
+					%li.active <a href="#!">1</a>
+					%li.waves-effect <a href="#!">2</a>
+					%li.waves-effect <a href="#!"><i class="material-icons">chevron_right</i></a>
+				%ul.fondo-color.collapsible{:data=>{:collapsible=>"acordion"}}
+					%li
+						.collapsible-header <i class="material-icons right">expand_more</i> Id
+						.collapsible-body Aquí va un fucking texto
+					%li
+						.collapsible-header <i class="material-icons right">expand_more</i> Nombre
+						.collapsible-body Aquí va un fucking texto
+					%li
+						.collapsible-header <i class="material-icons right">expand_more</i> Apellido Paterno
+						.collapsible-body Aquí va un fucking texto
+					%li
+						.collapsible-header <i class="material-icons right">expand_more</i> Apellido Materno
+						.collapsible-body Aquí va un fucking texto
+					%li
+						.collapsible-header <i class="material-icons right">expand_more</i> Grupo
+						.collapsible-body Aquí va un fucking texto
 
-					%li
-						%a.waves-effect.waves-light.btn-floating.btn-large.btn-flat{:href => "#!"} <i class="material-icons"> sd_card </i>
-					%li
-						%a.waves-effect.waves-light.btn-floating.btn-large.btn-flat{:href => "#!"} <i class="material-icons"> error </i>
-			.col.s4
-				.card-panel.options-menu-color
-			.col.s7.fondo-color
-				.card-panel.red
+
 	%script{:type => "text/javascript", :src=>"https://code.jquery.com/jquery-3.1.1.min.js", :integrity=>"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=",
 		:crossorigin=>"anonymous"}
 	%script{:type=>"text/javascript", :src=>"../../js/materialize.js"}
