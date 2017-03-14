@@ -49,5 +49,14 @@ $(document).ready(function () {
    $(".collapsible-header").click(function () {
     $("#flecha_up_down").text("keyboard_arrow_down");
    });
+  // =============== CONTAR CARACTERES ====================
+    $('input#input_text, textarea#textarea1').characterCounter();
+  // =============== ComboBox =========================
+    $('select').material_select();
+  //=============== Fecha =================
+    $('.datepicker').pickadate({
+    selectMonths: true, // Creates a dropdown to control month
+    selectYears: 15 // Creates a dropdown of 15 years to control year
+  });
 
 });
