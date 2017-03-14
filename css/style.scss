@@ -142,9 +142,11 @@ nav{
   color: white;
   ul{
     li{
-      padding-bottom: 83%;
-      //font-size: 3rem;
-    }
+      margin: 70% 0;
+      i{
+        font-size: 2rem;        
+      }
+    };
   }
 }
 .options-menu-color{
@@ -155,11 +157,18 @@ nav{
   background-color:#D9D9D9;
 }
 //========admin buttons==========================
-.full-ancho{
-  width : 100%;
+.medium-ancho{
+  width : 70%;
   margin-bottom : 0.5rem;
 }
 //=============Helpers===========================
+.fixed{
+  position: fixed;
+}
+.relative{
+  position: relative;
+  overflow: auto;
+}
 .no-margin{
   margin:0;
 }
@@ -184,6 +193,9 @@ nav{
   font-size: 9rem;
   display: block;
   color: #2196F3;
+}
+.negro-text{
+  color: #000 !important;
 }
 .text-presentation{
   font-weight: 300;

@@ -39,5 +39,15 @@ $(document).ready(function () {
     constrainWidth: false, //no abarque el ancho que quiera
     alignment: 'right',
   });
+  //===========btn editar==================================
+  $(".abrir-btn").click(function () {
+    $(".collapsible-header").addClass("active");
+    $("#lista-expandible").addClass("active");
+    $(".collapsible-body").slideDown();
+    $("#flecha_up_down").text("keyboard_arrow_up");
+  });
+   $(".collapsible-header").click(function () {
+    $("#flecha_up_down").text("keyboard_arrow_down");
+   });
 
 });
