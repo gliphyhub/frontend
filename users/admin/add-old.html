@@ -44,14 +44,24 @@
         </li>
       </ul>
       <div class="fixed-action-btn">
-        <a class="btn-floating btn-large waves-effect waves-light red center">
+        <a class="btn-floating btn-large waves-effect waves-light red tooltipped hoverable" data-delay="50" data-position="left" data-tooltip="Publicar" href="#mensaje-confirmar">
           <i class="material-icons">done</i>
         </a>
       </div>
     </div>
+    <div class="modal" id="mensaje-confirmar">
+      <div class="modal-content">
+        <h4>¿Deseas continuar?</h4>
+        <p>Una vez publicado el comunicado no podrá ser cambiado. Revise los datos, y asegurese de que son correctos.</p>
+        <p class="right">
+          <a class="modal-action modal-close waves-effect waves-green btn-flat" href="#">Volver</a>
+          <a class="modal-action modal-close waves-effect waves-green btn" href="#">Publicar</a>
+        </p>
+      </div>
+    </div>
     <div class="row">
-      <div class="col s1 bar-menu-color center">
-        <ul>
+      <div class="col s1 bar-menu-color" style="padding-left:0px; height:100%; margin:0 auto">
+        <ul class="center" style="height:100%">
           <li>
             <a class="waves-effect waves-light btn-floating btn-flat" href="#!"><i class="material-icons"> storage </i></a>
           </li>
@@ -70,7 +80,7 @@
         </ul>
       </div>
       <div class="col s4" style="margin-top: 0.5rem">
-        <h3>Nuevo comunicado</h3>
+        <h3 class="truncate">Nuevo comunicado</h3>
         <blockquote>Seleccione las opciones que desee y necesita para la creación de un nuevo comunicado.</blockquote>
         <nav class="nav-extended">
           <div class="nav-content bar-menu-color">
@@ -179,6 +189,7 @@
                 <label>Grado</label>
               </div>
             </p>
+            <div class="divider"></div>
             <p style="margin-top: 3rem">
               <div class="input-field">
                 <textarea class="materialize-textarea" id="grupos-en-concreto" placeholder="Grupos individuales elegidos" type="text"></textarea>
@@ -251,7 +262,7 @@
             <label for="titulo">Título del comunicado</label>
           </div>
           <div class="input-field col s12">
-            <textarea class="materialize-textarea" data-length="1000" id="contenido-comunicado" placeholder="Texto" type="text"></textarea>
+            <textarea class="materialize-textarea" data-length="400" id="contenido-comunicado" placeholder="Texto" type="text"></textarea>
             <label for="contenido-comunicado.materialize-textarea">Contenido</label>
           </div>
           <div class="col s12 input-field">

@@ -11,6 +11,7 @@
 		%link{:rel => "stylesheet", :href => "../../css/animate.css"}/
 		%title Gliphy Admin
 	%body
+		
 		.navbar-fixed
 			%nav.negro-flat
 				.nav-wrapper
@@ -32,7 +33,7 @@
 				%li
 					%a{:href => "#!"} Salir <i class="material-icons left rojo"> power_settings_new </i>
 			.fixed-action-btn
-				%a.btn-floating.btn-large.waves-effect.waves-light.red.center
+				%a.btn-floating.btn-large.waves-effect.waves-light.red.tooltipped.hoverable{href:"#mensaje-confirmar", data:{position:"left", delay:"50", tooltip:"Publicar"}}
 					%i.material-icons done
 			-#.fixed-action-btn.toolbar
 				-#%a.btn-floating.btn-large.bar-menu-color.center
@@ -50,9 +51,16 @@
 				-#	%li
 				-#		%a.waves-effect.waves-light{:href => "#!"}
 				-#			%i.material-icons attach_file
+		#mensaje-confirmar.modal
+			.modal-content
+				%h4 ¿Deseas continuar?
+				%p Una vez publicado el comunicado no podrá ser cambiado. Revise los datos, y asegurese de que son correctos.
+				%p.right
+					%a.modal-action.modal-close.waves-effect.waves-green.btn-flat{href:"#"} Volver
+					%a.modal-action.modal-close.waves-effect.waves-green.btn{href:"#"} Publicar
 		.row
-			.col.s1.bar-menu-color.center
-				%ul
+			.col.s1.bar-menu-color{style:"padding-left:0px; height:100%; margin:0 auto"}
+				%ul.center{style:"height:100%"}
 					%li
 						%a.waves-effect.waves-light.btn-floating.btn-flat{:href => "#!"} <i class="material-icons"> storage </i>
 					%li
@@ -64,7 +72,7 @@
 					%li
 						%a.waves-effect.waves-light.btn-floating.btn-flat{:href => "#!"} <i class="material-icons"> error </i>
 			.col.s4{:style=>"margin-top: 0.5rem"}
-				%h3 Nuevo comunicado
+				%h3.truncate Nuevo comunicado
 				%blockquote Seleccione las opciones que desee y necesita para la creación de un nuevo comunicado.
 				%nav.nav-extended
 					.nav-content.bar-menu-color
@@ -148,6 +156,7 @@
 									%option{value:"5"} Segundo - Vespertino
 									%option{value:"6"} Tercero - Vespertino
 								%label Grado
+						.divider
 						%p{style:"margin-top: 3rem"}
 							.input-field
 								%textarea#grupos-en-concreto.materialize-textarea{type:"text", placeholder:"Grupos individuales elegidos"}
@@ -203,7 +212,7 @@
 						%input#titulo.validate{type:"text"}
 						%label{for:"titulo"} Título del comunicado
 					.input-field.col.s12
-						%textarea#contenido-comunicado.materialize-textarea{type:"text", placeholder:"Texto", data:{length:"1000"}}
+						%textarea#contenido-comunicado.materialize-textarea{type:"text", placeholder:"Texto", data:{length:"400"}}
 						%label{for:"contenido-comunicado.materialize-textarea"}Contenido
 					.col.s12.input-field
 						%i.material-icons.prefix today
@@ -227,7 +236,7 @@
 									%input{type:"file", multiple:""}
 								.file-path-wrapper
 									%input.file-path.validate{type:"text", placeholder:"Archivos a subir"}
-
+					
 
 
 				

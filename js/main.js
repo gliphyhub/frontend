@@ -58,5 +58,27 @@ $(document).ready(function () {
     selectMonths: true, // Creates a dropdown to control month
     selectYears: 15 // Creates a dropdown of 15 years to control year
   });
-
+  //=============== Arroja Mensaje ===================
+  $('.tooltipped').tooltip({delay: 50});
+  //=============== Abrir modal ===============
+  $('.modal').modal();
+  //=============== PRUEBA =================
+  $('.button-collapse2').sideNav();
+  $('.button-collapse2').sideNav({
+      menuWidth: 260, // Default is 300
+      edge: 'right', // Choose the horizontal origin
+      closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true // Choose whether you can drag to open on touch screens
+    }
+  );
+  $('.button-collapse1').sideNav();
+  $('.button-collapse1').sideNav({
+      menuWidth: 300, // Default is 300
+      edge: 'left', // Choose the horizontal origin
+      closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
+      draggable: true // Choose whether you can drag to open on touch screens
+    }
+  );
+  // Show sideNav
+  //$('.button-collapse').sideNav('show');
 });

@@ -203,6 +203,19 @@ nav{
   line-height: 4.5rem;
   //font-size: 2.1rem;
 }
+// Ocultarse automáticamente
+  header, main, footer {
+      padding-left: 240px;
+    }
+  @media only screen and (max-width : 992px) {
+      header, main, footer {
+        padding-left: 0;
+      }
+    }
+  // Color blanco
+  .white-bonis{
+    color: rgba(255, 255, 255, 0.87) !important;
+  }
 /* @media only screen and (max-height: 524px) {
   .block{
     height: 250%;
