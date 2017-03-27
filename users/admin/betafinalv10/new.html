@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <header>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <meta charset='UTF-8'>
+    <link href='../../../images/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+    <link href='http://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+    <link href='../../../css/materialize.css' media='screen,projection' rel='stylesheet'>
+    <link href='../../../css/style.css' rel='stylesheet'>
+    <link href='../../../css/animate.css' rel='stylesheet'>
+    <title>Gliphy New</title>
+  </header>
+  <body>
+    <div class='navbar-fixed'>
+      <nav class='negro-flat'>
+        <div class='nav-wrapper'>
+          <p class='left'>
+            <a class='button-collapse1 hide-on-large-only btn-flat white-bonis left' data-activates='navegacion-movil' href='#'>
+              <i class='material-icons' style=' line-height: 30px;'>menu</i>
+            </a>
+          </p>
+          <p class='right'>
+            <a class='button-collapse2 btn-flat white-bonis left' data-activates='slide-out' href='#'>
+              <i class='material-icons left' style=' line-height: 30px;'>apps</i>
+              OPCIONES
+            </a>
+          </p>
+          <div class='col s8 margincito-left hide-on-small-only'>
+            <a class='breadcrumb' href=''>GliphyAdmin</a>
+            <a class='breadcrumb' href=''>Nuevo comunicado</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <ul class='side-nav lateral-admin' id='slide-out'>
+      <li class='userView'>
+        <div class='background'>
+          <img src='../../../images/office.jpg'>
+        </div>
+        <a class='white-bonis' href='#'>
+          <img class='circle' src='../../../images/admin.jpg'>
+        </a>
+        <a class='white-bonis' href='#'>
+          <span class='white-text name'>Joel Hernández</span>
+          <span class='white-text email'>Admnistrador</span>
+        </a>
+      </li>
+      <li>
+        <a class='white-bonis waves-effect' href='#'>
+          <i class='material-icons left white-bonis'>person</i>
+          Mi perfil
+        </a>
+      </li>
+      <li>
+        <a class='white-bonis waves-effect' href='#!'>
+          <i class='material-icons left white-bonis'>power_settings_new</i>
+          Salir
+        </a>
+      </li>
+    </ul>
+    <ul class='side-nav fixed lateral-admin' id='navegacion1' style='width:240px;margin-top:63px;'>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>storage</i>
+          Base de Datos
+        </a>
+      </li>
+      <p></p>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>account_circle</i>
+          Mis comunicados
+        </a>
+      </li>
+      <p></p>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>add</i>
+          Agregar comunicados
+        </a>
+      </li>
+      <p></p>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>search</i>
+          Búsqueda
+        </a>
+      </li>
+      <p></p>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>error</i>
+          Ayuda
+        </a>
+      </li>
+    </ul>
+    <ul class='side-nav lateral-admin' id='navegacion-movil' style='width:240px'>
+      <br>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>storage</i>
+          Base de Datos
+        </a>
+      </li>
+      <p></p>
+      <li>
+        <a class='waves-effect white-bonis' hre='#!'>
+          <i class='material-icons left white-bonis'>account_circle</i>
+          Mis comunicados
+        </a>
+      </li>
+      <p></p>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>add</i>
+          Agregar comunicados
+        </a>
+      </li>
+      <p></p>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>search</i>
+          Búsqueda
+        </a>
+      </li>
+      <p></p>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>error</i>
+          Ayuda
+        </a>
+      </li>
+    </ul>
+    <main>
+      <div class='fixed-action-btn'>
+        <a class='btn-floating btn-large waves-effect waves-light red tooltipped hoverable' data-delay='50' data-position='left' data-tooltip='Publicar' href='#mensaje-confirmar'>
+          <i class='material-icons'>done</i>
+        </a>
+      </div>
+      <div class='modal' id='mensaje-confirmar'>
+        <div class='modal-content'>
+          <h4>¿Deseas continuar?</h4>
+          <p>Revise los datos, y asegurese de que son correctos.</p>
+          <p class='right'>
+            <a class='modal-action modal-close waves-effect waves-green btn-flat' href='#'>Volver</a>
+            <a class='modal-action modal-close waves-effect waves-green btn' href='#'>Publicar</a>
+          </p>
+        </div>
+      </div>
+      <div class='row'>
+        <blockquote style='margin-left: 0.5rem'>Este seria un mensaje solo se muestra cuando es necesario</blockquote>
+        <div class='col s12 l5' style='margin-top: 0.5rem'>
+          <h3 class='truncate'>Nuevo comunicado</h3>
+          <p>Seleccione las opciones que desee y necesite para la publicación de un nuevo comunicado.</p>
+          <h5>Seleccione la prioridad del comunicado</h5>
+          <p>
+            <input checked='' id='normal' name='tipo' type='radio'>
+            <label for='normal'><b> Normal </b></label>
+          </p>
+          <p>
+            <input id='urgente' name='tipo' type='radio'>
+            <label for='urgente'><b> URGENTE </b></label>
+          </p>
+          <h5>Seleccione el destino del comunicado</h5>
+          <p>
+            <input id='todosdest' name='dest' type='radio'>
+            <label for='todosdest'><b> Todos </b></label>
+          </p>
+          <p>
+            <input id='alumnosdest' name='dest' type='radio'>
+            <label for='alumnosdest'><b> Solo alumnos </b></label>
+          </p>
+          <p>
+            <input id='profesoresdest' name='dest' type='radio'>
+            <label for='profesoresdest'><b> Solo profesores </b></label>
+          </p>
+          <p>
+            <input id='admindest' name='dest' type='radio'>
+            <label for='admindest'><b> Solo administradores </b></label>
+          </p>
+          <p>
+            <input id='pers' name='dest' type='radio'>
+            <label for='pers'><b> Perzonalizada </b></label>
+          </p>
+          <nav class='nav-extended'>
+            <div class='nav-content bar-menu-color'>
+              <ul class='tabs tabs-transparent'>
+                <li class='tab'>
+                  <a class='active' href='#general'>general</a>
+                </li>
+                <li class='tab'>
+                  <a href='#alumnos-e'>alumnos</a>
+                </li>
+                <li class='tab'>
+                  <a href='#profadmin-e'>prof y admin</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class='col s12' id='general'>
+            <h5>Nivel</h5>
+            <form action='#'>
+              <p>
+                <input id='secundaria' name='nivel' type='checkbox'>
+                <label for='secundaria'><b>Secundaria</b></label>
+                <input id='bachilerato' name='nivel' type='checkbox'>
+                <label for='bachilerato' style='margin-left: 1rem'><b>Bachillerato</b></label>
+              </p>
+            </form>
+            <h5>Turno</h5>
+            <form action='#'>
+              <p>
+                <input id='matutino' name='turno' type='checkbox'>
+                <label for='matutino'><b>Matutino</b></label>
+                <input id='vespertino' name='turno' type='checkbox'>
+                <label for='vespertino' style='margin-left: 1rem'><b>Vespertino</b></label>
+              </p>
+            </form>
+            <h5>Usuarios</h5>
+            <form action='#'>
+              <p>
+                <input id='alumnos' name='usuarios' type='checkbox'>
+                <label for='alumnos'><b>Alumnos</b></label>
+                <input id='profesores' name='usuarios' type='checkbox'>
+                <label for='profesores' style='margin-left: 1rem'><b>Profesores</b></label>
+                <input id='admin' name='usuarios' type='checkbox'>
+                <label for='admin' style='margin-left: 1rem'><b>Admnistrativos</b></label>
+              </p>
+            </form>
+          </div>
+          <div class='col s12' id='alumnos-e'>
+            <h5>Grupos</h5>
+            <h43>Secundaria O Bachillerato</h43>
+            <form action='#'>
+              <p>
+                <input id='primero' name='level' type='checkbox'>
+                <label for='primero'><b>Primer Grado</b></label>
+                <br>
+                <input id='segundo' name='level' type='checkbox'>
+                <label for='segundo'><b>Segundo Grado</b></label>
+                <br>
+                <input id='tercero' name='level' type='checkbox'>
+                <label for='tercero'><b>Tercer Grado</b></label>
+              </p>
+              <div class='input-field'>
+                <select multiple=''>
+                  <option disabled='' selected='' value=''>Elige los grupos</option>
+                  <option value='1'>Primero - Matutino</option>
+                  <option value='2'>Segundo - Matutino</option>
+                  <option value='3'>Tercero - Matutino</option>
+                  <option value='4'>Primero - Vespertino</option>
+                  <option value='5'>Segundo - Vespertino</option>
+                  <option value='6'>Tercero - Vespertino</option>
+                </select>
+              </div>
+            </form>
+          </div>
+          <div class='col s12' id='profadmin-e'>
+            <h5>Profesores</h5>
+            <form action='#'>
+              <p>
+                <input id='all-teach' name='level-2' type='radio'>
+                <label for='all-teach'><b>Todos</b></label>
+                <input id='seleccionar-teacher' name='level-2' type='radio'>
+                <label for='seleccionar-teacher' style='margin-left: 1rem'><b>Seleccionar</b></label>
+              </p>
+              <p style='margin-top: 2rem'>
+                <div class='input-field'>
+                  <select multiple=''>
+                    <option disabled='' selected='' value=''>Elija a los profesores</option>
+                    <option value='1'>Profesor A</option>
+                    <option value='2'>Profesor B</option>
+                    <option value='3'>Profesor C</option>
+                    <option value='4'>Profesor D</option>
+                  </select>
+                  <label>Profesor</label>
+                </div>
+              </p>
+            </form>
+            <h5>Adminsitradores</h5>
+            <form action='#'>
+              <p>
+                <input id='all-teach' name='level-2' type='radio'>
+                <label for='all-teach'><b>Todos</b></label>
+                <input id='seleccionar-teacher' name='level-2' type='radio'>
+                <label for='seleccionar-teacher' style='margin-left: 1rem'><b>Seleccionar</b></label>
+              </p>
+              <p style='margin-top: 2rem'>
+                <div class='input-field'>
+                  <select multiple=''>
+                    <option disabled='' selected='' value=''>Elija a los administradores</option>
+                    <option value='1'>Administradores A</option>
+                    <option value='2'>Administradores B</option>
+                    <option value='3'>Administradores C</option>
+                    <option value='4'>Administradores D</option>
+                  </select>
+                  <label>Administrador</label>
+                </div>
+              </p>
+            </form>
+          </div>
+        </div>
+        <div class='col s12 l7' style='margin-top: 1em'>
+          <div class='row'>
+            <div class='input-field col s12'>
+              <input class='validate' id='titulo' placeholder='' type='text'>
+              <label for='titulo'>Título del comunicado</label>
+            </div>
+            <div class='input-field col s12'>
+              <textarea class='materialize-textarea' data-length='400' id='contenido-comunicado' placeholder='Texto' type='text'></textarea>
+              <label for='contenido-comunicado.materialize-textarea'>Contenido</label>
+            </div>
+            <div class='col s12 input-field'>
+              <i class='material-icons prefix'>today</i>
+              <input class='datepicker' id='fecha2' type='date'>
+              <label for='fecha2'>Fecha de término</label>
+            </div>
+            <div class='col s12 input-field'>
+              <i class='material-icons prefix'>link</i>
+              <input class='validate' id='links1' type='text'>
+              <label for='links1'>Link 1</label>
+            </div>
+            <div class='col s12 input-field'>
+              <i class='material-icons prefix'>link</i>
+              <input class='validate' id='links2' type='text'>
+              <label for='links2'>Link 2</label>
+            </div>
+            <div class='col s12'>
+              <form action='#'>
+                <div class='file-field input-field'>
+                  <div class='btn'>
+                    <span>
+                      <i class='material-icons'>attach_file</i>
+                    </span>
+                    <input multiple='' type='file'>
+                  </div>
+                  <div class='file-path-wrapper'>
+                    <input class='file-path validate' placeholder='Archivos a subir' type='text'>
+                  </div>
+                </div>
+                <div class='file-field input-field'>
+                  <div class='btn'>
+                    <span>
+                      <i class='material-icons'>attach_file</i>
+                    </span>
+                    <input multiple='' type='file'>
+                  </div>
+                  <div class='file-path-wrapper'>
+                    <input class='file-path validate' placeholder='Archivos a subir' type='text'>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class='col s12'>
+              <div class='chips chips-initial'></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script crossorigin='anonymous' integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=' src='https://code.jquery.com/jquery-3.1.1.min.js' type='text/javascript'></script>
+  <script src='../../../js/materialize.js' type='text/javascript'></script>
+  <script src='../../../js/main.js' type='text/javascript'></script>
+</html>

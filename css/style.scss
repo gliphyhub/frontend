@@ -2,6 +2,7 @@
 // Only necessary for window height sized blocks.
   html, body, .block {
     height: 100%;
+    font-weight: 500;
   }
   .medium-alto{
     height: 70%;
@@ -162,6 +163,12 @@ nav{
   margin-bottom : 0.5rem;
 }
 //=============Helpers===========================
+.margincito-left{
+  margin-left: 50px;
+}
+.message-style{
+  font-weight: 500;
+}
 .fixed{
   position: fixed;
 }
@@ -177,6 +184,9 @@ nav{
 }
 .negro-flat{
   background-color: #404040;
+}
+.lateral-admin{
+  background-color: #2B323A;
 }
 .rojo{
   color: red;
@@ -203,6 +213,7 @@ nav{
   line-height: 4.5rem;
   //font-size: 2.1rem;
 }
+
 // Ocultarse automáticamente
   header, main, footer {
       padding-left: 240px;

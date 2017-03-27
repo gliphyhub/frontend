@@ -79,6 +79,18 @@ $(document).ready(function () {
       draggable: true // Choose whether you can drag to open on touch screens
     }
   );
+
+  //tagts
+   $('.chips').material_chip();
+   $('.chips-initial').material_chip({
+    data: [{
+      tag: 'Tarea',
+    }, {
+      tag: 'Comunicado',
+    }, {
+      tag: 'Aviso',
+    }],
+  });
   // Show sideNav
   //$('.button-collapse').sideNav('show');
 });
