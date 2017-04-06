@@ -216,7 +216,7 @@ nav{
 
 // Ocultarse automáticamente
   header, main, footer {
-      padding-left: 240px;
+      //padding-left: 240px;
     }
   @media only screen and (max-width : 992px) {
       header, main, footer {
@@ -234,8 +234,9 @@ nav{
     line-height: 32px;
     padding-right: 8px;
   }
-/* @media only screen and (max-height: 524px) {
+  
+ @media only screen and (max-height: 524px) {
   .block{
-    height: 250%;
+    height: 170%;
   }
-} */
+} 

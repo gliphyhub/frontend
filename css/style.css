@@ -231,10 +231,6 @@ nav img {
   line-height: 4.5rem;
 }
 
-header, main, footer {
-  padding-left: 240px;
-}
-
 @media only screen and (max-width: 992px) {
   header, main, footer {
     padding-left: 0;
@@ -252,8 +248,8 @@ header, main, footer {
   padding-right: 8px;
 }
 
-/* @media only screen and (max-height: 524px) {
-  .block{
-    height: 250%;
+@media only screen and (max-height: 524px) {
+  .block {
+    height: 170%;
   }
-} */
+}
