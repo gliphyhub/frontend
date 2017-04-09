@@ -115,14 +115,14 @@ footer img {
   filter: invert(100%);
 }
 
-nav img {
-  height: 3.8rem;
+.info {
+  padding-bottom: -20px;
 }
 
-.info {
-  display: block;
-  padding: 1rem 0 0 1.3rem;
-  line-height: 8px;
+.admin-img {
+  border-radius: 50%;
+  height: 35px;
+  margin-right: 10px;
 }
 
 .dropdown-content {
@@ -200,10 +200,6 @@ nav img {
 
 .lateral-admin {
   background-color: #2B323A;
-}
-
-.rojo {
-  color: red;
 }
 
 .separado {

@@ -111,15 +111,18 @@ footer{
   }
 }
 //===========admin image==========
-nav{
-  img{
-    height:  3.8rem;
-  }
-}
+
 .info{
-  display: block;
-  padding: 1rem 0 0 1.3rem;
-  line-height: 8px;
+  //display: inline-block;
+  //padding: 0rem 1rem rem 0rem;
+  //line-height: 8px;
+  padding-bottom: -20px;
+}
+.admin-img{
+  border-radius: 50%;
+  height: 35px;
+  margin-right:10px;
+ // margin-top: -15px;
 }
 //============admin dropdown=====================
 .dropdown-content{
@@ -187,10 +190,6 @@ nav{
 }
 .lateral-admin{
   background-color: #2B323A;
-}
-.rojo{
-  color: red;
- // background-color: transparent;
 }
 .separado{
   letter-spacing: 0px;

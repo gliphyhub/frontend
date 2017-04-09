@@ -1,0 +1,293 @@
+-#===========================LAYOUT==============================================================================================
+!!!5
+%html{:lang => "es"}
+	%header
+		%meta{:name => "viewport", :content=>"width=device-width, initial-scale=1"}
+		%meta{:charset=> "UTF-8"}
+		%link{:rel => "shortcut icon", :type=>"image/x-icon", :href => "../../../images/favicon.ico"}/
+		-#google icons
+		%link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/icon?family=Material+Icons"}/
+		%link{:rel => "stylesheet", :href => "../../../css/materialize.css", :media => "screen,projection"}/		
+		%link{:rel => "stylesheet", :href => "../../css/style.css"}/
+		%link{:rel => "stylesheet", :href => "../../../css/animate.css"}/
+		%title Gliphy Nuevo
+	%body
+		-#=====================Navbar de arriba=================================================================================
+		.navbar-fixed
+			%nav.negro-flat
+				.nav-wrapper
+					%p.left
+						%a.button-collapse1.hide-on-large-only.btn-flat.white-bonis{href:"#", data:{activates:"navegacion-movil"}}
+							%i.material-icons{style:" line-height: 30px;"} menu
+					%p.right
+						%a.button-collapse2.btn-flat.white-bonis.left{href:"#", data:{activates:"slide-out"}}
+							%img.admin-img.left{src:"../../../images/admin.jpg"}
+							NOMBRE_USER_COMPLETE
+					.col.s8.margincito-left.hide-on-small-only
+						%a.breadcrumb{:href => ""} GliphyAdmin
+						%a.breadcrumb{:href => ""} Nueva Publicación
+		-#=====================Menu slide hacia izquierda opciones de usuario====================================================
+		%ul#slide-out.side-nav.lateral-admin
+			%li.userView
+				.background
+					%img{src:"../../../images/office.jpg"}
+				.white-bonis
+					%img.circle{src:"../../../images/admin.jpg"}
+					%span.white-text.name Joel Hernández
+					%span.white-text.email.separado Admnistrador
+			%li
+				%a.white-bonis.waves-effect{href:"#"}
+					%i.material-icons.left.white-bonis person
+					Mi perfil
+			%li
+				%a.white-bonis.waves-effect{:href => "#!"} 
+					%i.material-icons.left.white-bonis power_settings_new
+					Salir
+		-#=====================Menu visible opciones de navegacion===============================================================
+		%ul#navegacion1.side-nav.fixed.lateral-admin{style:"width:240px;margin-top:63px;"}			
+			-# %li
+			-# 	.navbar-fixed
+			-# 		%nav.negro-flat
+			-# %p
+			%li
+				%a.waves-effect.white-bonis{href:"#!"}
+					%i.material-icons.left.white-bonis storage
+					Base de Datos
+			%p
+			%li
+				%a.waves-effect.white-bonis{:href => "#!"} 
+					%i.material-icons.left.white-bonis account_circle
+					Mis comunicados
+			%p
+			%li
+				%a.waves-effect.white-bonis{:href => "#!"} 
+					%i.material-icons.left.white-bonis add
+					Agregar comunicados
+			%p
+			%li
+				%a.waves-effect.white-bonis{:href => "#!"} 
+					%i.material-icons.left.white-bonis search
+					Búsqueda
+			%p
+			%li
+				%a.waves-effect.white-bonis{:href => "#!"} 
+					%i.material-icons.left.white-bonis error
+					Ayuda
+		-#====================Menu desplegable hacia derecha opciones de navegacion responsive===================================
+		%ul#navegacion-movil.side-nav.lateral-admin{style:"width:240px"}
+			%br
+			%li
+				%a.waves-effect.white-bonis{:href=>"#!"}
+					%i.material-icons.left.white-bonis storage
+					Base de Datos
+			%p
+			%li
+				%a.waves-effect.white-bonis{:hre =>"#!"} 
+					%i.material-icons.left.white-bonis account_circle
+					Mis comunicados
+			%p
+			%li
+				%a.waves-effect.white-bonis{:href=>"#!"} 
+					%i.material-icons.left.white-bonis add
+					Agregar comunicados
+			%p
+			%li
+				%a.waves-effect.white-bonis{:href=>"#!"} 
+					%i.material-icons.left.white-bonis search
+					Búsqueda
+			%p
+			%li
+				%a.waves-effect.white-bonis{:href=>"#!"} 
+					%i.material-icons.left.white-bonis error
+					Ayuda
+		-#!!!!!!!!!!!!!!!!!!!CONTENIDO STOP LAYOUT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		%main
+			-#===============Boton publicar================
+			.fixed-action-btn
+				%a.btn-floating.btn-large.waves-effect.waves-light.red.tooltipped.hoverable{href:"#mensaje-confirmar", data:{position:"left", delay:"50", tooltip:"Publicar"}}
+					%i.material-icons done
+			-#===============Mensaje del boton=============
+			#mensaje-confirmar.modal
+				.modal-content
+					%h4 ¿Deseas continuar?
+					%p Revise los datos, y asegurese de que son correctos.
+					%p.right
+						%a.modal-action.modal-close.waves-effect.waves-green.btn-flat{href:"#"} Volver
+						%a.modal-action.modal-close.waves-effect.waves-green.btn{href:"#"} Publicar
+			-#===============Principal contenido===========
+			.row
+				-#===========Mensajes======================
+				%h3.truncate.center-align Nueva Publicación
+				%blockquote{:style=>"margin-left: 0.5rem"} Este seria un mensaje solo se muestra cuando es necesario
+				-#==========Filtros para la publicacion====
+				.col.s12.l5
+					%h4.truncate.center-align Filtros
+					%p Seleccione las opciones que desee y necesite para la publicación de un nuevo comunicado.
+					%nav.nav-extended
+						.nav-content.bar-menu-color
+							%ul.tabs.tabs-transparent
+								%li.tab
+									%a.active{:href => "#general-filter-tab"} general
+								%li.tab
+									%a{:href => "#grupos-filter-tab"} grupos
+								%li.tab
+									%a{:href => "#others-filter-tab"} prof/admin					
+					#general-filter-tab.col.s12
+						%br/
+						%input#everyone{:name=>"everyone", :type=>"radio"}
+							%label{:for=>"everyone"} <b>Todos</b>
+						%h5 Usuarios						
+						%p
+							%input#alumnos-users{:name=>"usuarios-users", :type=>"checkbox"}
+							%label{:for=>"alumnos-users"} <b>Alumnos</b>
+							%input#profesores-users{:name=>"usuario-userss", :type=>"checkbox"}
+							%label{:for=>"profesores-users",style:"margin-left: 1rem"} <b>Profesores</b>
+							%input#admin-users{:name=>"usuarios-users", :type=>"checkbox"}
+							%label{:for=>"admin-users",style:"margin-left: 1rem"} <b>Admnistrativos</b>
+						%h5 Nivel
+						%p
+							%input#secundaria-users{:name=>"nivel-users", :type=>"checkbox"}
+							%label{:for=>"secundaria-users"} <b>Secundaria</b>
+							%input#bachillerato-users{:name=>"nivel-users", :type=>"checkbox"}
+							%label{:for=>"bachillerato-users",style:"margin-left: 1rem"} <b>Bachillerato</b>
+						%h5 Turno
+						%p
+							%input#matutino-users{:name=>"turno-users", :type=>"checkbox"}
+							%label{:for=>"matutino-users"} <b>Matutino</b>
+							%input#vespertino-users{:name=>"turno-users", :type=>"checkbox"}
+							%label{:for=>"vespertino-users",style:"margin-left: 1rem"} <b>Vespertino</b>
+					#grupos-filter-tab.col.s12
+						%br/
+						%p
+							%input#todos-grupos{:name=>"todos-grupos", :type=>"radio"}
+							%label{:for=>"todos-grupos"} <b>Ambos</b>
+						%p
+							%input#matutino-grupos{:name=>"turno-grupos", :type=>"checkbox"}
+							%label{:for=>"matutino-grupos"} <b>Matutino</b>
+							%input#vespertino-grupos{:name=>"turno-grupos", :type=>"checkbox"}
+							%label{:for=>"vespertino-grupos",style:"margin-left: 1rem"} <b>Vespertino</b>
+						%p
+							%input#secundaria-grado{:name=>"nivel-grupos", :type=>"checkbox"}
+							%label{:for=>"secundaria-grado"} <b>Secundaria</b>
+							%input#bachillerato-grado{:name=>"nivel-grupos", :type=>"checkbox"}
+							%label{:for=>"bachillerato-grado",style:"margin-left: 1rem"} <b>Bachillerato</b>
+						%p{style:"margin-top: 2rem"}
+							.input-field
+								%select{multiple:""}
+									%option{value:"", disabled:"", selected:""} Elija por grado
+									%option{value:"1"} Primeros
+									%option{value:"2"} Segundos
+									%option{value:"3"} Terceros
+								%label Grado
+						%p{style:"margin-top: 2rem"}
+							.input-field
+								%select{multiple:""}
+									%option{value:"", disabled:"", selected:""} Eliga por grupo
+									%option{value:"1"} 6xxx
+									%option{value:"2"} 6xxx
+									%option{value:"3"} 6xxx
+								%label Grupos
+						.divider
+						%p{style:"margin-top: 3rem"}
+							.input-field.disabled
+								%textarea#grupos-en-concreto.materialize-textarea{type:"text", placeholder:"Grupos individuales elegidos"}
+								%label{for:"grupos-en-concreto"}Grupos elegidos
+					#others-filter-tab.col.s12
+						%br/
+						%p
+							%input#todos-others{:name=>"todos-others", :type=>"radio"}
+							%label{:for=>"todos-others"} <b>Ambos</b>
+						%p
+							%input#matutino-others{:name=>"turno-others", :type=>"checkbox"}
+							%label{:for=>"matutino-others"} <b>Matutino</b>
+							%input#vespertino-others{:name=>"turno-others", :type=>"checkbox"}
+							%label{:for=>"vespertino-others",style:"margin-left: 1rem"} <b>Vespertino</b>
+						%p
+							%input#secundaria-others{:name=>"nivel-others", :type=>"checkbox"}
+							%label{:for=>"secundaria-others"} <b>Secundaria</b>
+							%input#bachillerato-others{:name=>"nivel-others", :type=>"checkbox"}
+							%label{:for=>"bachillerato-others",style:"margin-left: 1rem"} <b>Bachillerato</b>
+						%h5 Profesores
+						%p
+							%input#all-teach{:name=>"prof-others", :type=>"radio"}
+							%label{:for=>"all-teach"} <b>Todos</b>
+							%input#seleccionar-teacher{:name=>"prof-others", :type=>"radio"}
+							%label{:for=>"seleccionar-teacher",style:"margin-left: 1rem"} <b>Seleccionar</b>
+						%p{style:"margin-top: 2rem"}
+							.input-field
+								%select{multiple:""}
+									%option{value:"", disabled:"", selected:""} Elija a los profesores
+									%option{value:"1"} Profesor A
+									%option{value:"2"} Profesor B
+									%option{value:"3"} Profesor C
+									%option{value:"4"} Profesor D
+								%label Profesor
+						%h5 Adminsitradores						
+						%p
+							%input#all-admin{:name=>"admin-others", :type=>"radio"}
+							%label{:for=>"all-admin"} <b>Todos</b>
+							%input#seleccionar-admin{:name=>"admin-others", :type=>"radio"}
+							%label{:for=>"seleccionar-admin",style:"margin-left: 1rem"} <b>Seleccionar</b>
+						%p{style:"margin-top: 2rem"}
+							.input-field
+								%select{multiple:""}
+									%option{value:"", disabled:"", selected:""} Elija a los administradores
+									%option{value:"1"} Administradores A
+									%option{value:"2"} Administradores B
+									%option{value:"3"} Administradores C
+									%option{value:"4"} Administradores D
+								%label Administrador
+				-#===========Contenido de la publuicacion==
+				.col.s12.l7{:style=>"margin-top: 1em"}
+					%h4.truncate.center-align Contenido
+					.row
+						.input-field.col.s12
+							%input#titulo.validate{type:"text",:placeholder=>""}
+							%label{for:"titulo", data:{success:"bien :)",error:"mal :("}} Título del comunicado
+						.input-field.col.s12
+							%textarea#contenido-comunicado.materialize-textarea{type:"text", placeholder:"Texto", data:{length:"400"}}
+							%label{for:"contenido-comunicado.materialize-textarea"}Contenido
+						.col.s12.input-field
+							%i.material-icons.prefix today
+							%input#fecha2.datepicker{type:"date"}
+							%label{for:"fecha2"} Fecha de término
+
+						.col.s12.input-field
+							%i.material-icons.prefix link
+							%input#links1.validate{type:"text"}
+							%label{for:"links1"} Link 1
+						.col.s12.input-field
+							%i.material-icons.prefix link
+							%input#links2.validate{type:"text"}
+							%label{for:"links2"} Link 2
+						.col.s12
+							%form{action:"#"}
+								.file-field.input-field
+									.btn
+										%span
+											%i.material-icons attach_file
+										%input{type:"file", multiple:""}
+									.file-path-wrapper
+										%input.file-path.validate{type:"text", placeholder:"Archivos a subir"}
+								.file-field.input-field
+									.btn
+										%span
+											%i.material-icons attach_file
+										%input{type:"file", multiple:""}
+									.file-path-wrapper
+										%input.file-path.validate{type:"text", placeholder:"Archivos a subir"}
+						.col.s12
+							.chips.chips-initial
+						.col.s12
+						%h5 Seleccione la prioridad del comunicado
+						%p
+							%input.with-gap#normal{:name=>"tipo", :type=>"radio", :checked=>""}
+							%label{:for=>"normal"} <b> Normal </b>
+						%p
+							%input.with-gap#urgente{:name=>"tipo", :type=>"radio"}
+							%label{:for=>"urgente"} <b> URGENTE </b>
+	-#=======================Scripts=============================================================================================
+	%script{:type => "text/javascript", :src=>"https://code.jquery.com/jquery-3.1.1.min.js", :integrity=>"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=",
+		:crossorigin=>"anonymous"}
+	%script{:type=>"text/javascript", :src=>"../../../js/materialize.js"}
+	%script{:type=>"text/javascript", :src=>"../../../js/main.js"}

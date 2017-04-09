@@ -84,8 +84,6 @@ $(document).ready(function () {
    $('.chips').material_chip();
    $('.chips-initial').material_chip({
     data: [{
-      tag: 'Tarea',
-    }, {
       tag: 'Comunicado',
     }, {
       tag: 'Aviso',

@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang='es'>
+  <header>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <meta charset='UTF-8'>
+    <link href='../../../images/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+    <link href='http://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+    <link href='../../../css/materialize.css' media='screen,projection' rel='stylesheet'>
+    <link href='../../css/style.css' rel='stylesheet'>
+    <link href='../../../css/animate.css' rel='stylesheet'>
+    <title>Gliphy Nuevo</title>
+  </header>
+  <body>
+    <div class='navbar-fixed'>
+      <nav class='negro-flat'>
+        <div class='nav-wrapper'>
+          <p class='left'>
+            <a class='button-collapse1 hide-on-large-only btn-flat white-bonis' data-activates='navegacion-movil' href='#'>
+              <i class='material-icons' style=' line-height: 30px;'>menu</i>
+            </a>
+          </p>
+          <p class='right'>
+            <a class='button-collapse2 btn-flat white-bonis left' data-activates='slide-out' href='#'>
+              <img class='admin-img left' src='../../../images/admin.jpg'>
+              NOMBRE_USER_COMPLETE
+            </a>
+          </p>
+          <div class='col s8 margincito-left hide-on-small-only'>
+            <a class='breadcrumb' href=''>GliphyAdmin</a>
+            <a class='breadcrumb' href=''>Nueva Publicación</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <ul class='side-nav lateral-admin' id='slide-out'>
+      <li class='userView'>
+        <div class='background'>
+          <img src='../../../images/office.jpg'>
+        </div>
+        <div class='white-bonis'>
+          <img class='circle' src='../../../images/admin.jpg'>
+          <span class='white-text name'>Joel Hernández</span>
+          <span class='white-text email separado'>Admnistrador</span>
+        </div>
+      </li>
+      <li>
+        <a class='white-bonis waves-effect' href='#'>
+          <i class='material-icons left white-bonis'>person</i>
+          Mi perfil
+        </a>
+      </li>
+      <li>
+        <a class='white-bonis waves-effect' href='#!'>
+          <i class='material-icons left white-bonis'>power_settings_new</i>
+          Salir
+        </a>
+      </li>
+    </ul>
+    <ul class='side-nav fixed lateral-admin' id='navegacion1' style='width:240px;margin-top:63px;'>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>storage</i>
+          Base de Datos
+        </a>
+      </li>
+      <p></p>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>account_circle</i>
+          Mis comunicados
+        </a>
+      </li>
+      <p></p>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>add</i>
+          Agregar comunicados
+        </a>
+      </li>
+      <p></p>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>search</i>
+          Búsqueda
+        </a>
+      </li>
+      <p></p>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>error</i>
+          Ayuda
+        </a>
+      </li>
+    </ul>
+    <ul class='side-nav lateral-admin' id='navegacion-movil' style='width:240px'>
+      <br>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>storage</i>
+          Base de Datos
+        </a>
+      </li>
+      <p></p>
+      <li>
+        <a class='waves-effect white-bonis' hre='#!'>
+          <i class='material-icons left white-bonis'>account_circle</i>
+          Mis comunicados
+        </a>
+      </li>
+      <p></p>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>add</i>
+          Agregar comunicados
+        </a>
+      </li>
+      <p></p>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>search</i>
+          Búsqueda
+        </a>
+      </li>
+      <p></p>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>error</i>
+          Ayuda
+        </a>
+      </li>
+    </ul>
+    <main>
+      <div class='fixed-action-btn'>
+        <a class='btn-floating btn-large waves-effect waves-light red tooltipped hoverable' data-delay='50' data-position='left' data-tooltip='Publicar' href='#mensaje-confirmar'>
+          <i class='material-icons'>done</i>
+        </a>
+      </div>
+      <div class='modal' id='mensaje-confirmar'>
+        <div class='modal-content'>
+          <h4>¿Deseas continuar?</h4>
+          <p>Revise los datos, y asegurese de que son correctos.</p>
+          <p class='right'>
+            <a class='modal-action modal-close waves-effect waves-green btn-flat' href='#'>Volver</a>
+            <a class='modal-action modal-close waves-effect waves-green btn' href='#'>Publicar</a>
+          </p>
+        </div>
+      </div>
+      <div class='row'>
+        <h3 class='truncate center-align'>Nueva Publicación</h3>
+        <blockquote style='margin-left: 0.5rem'>Este seria un mensaje solo se muestra cuando es necesario</blockquote>
+        <div class='col s12 l5'>
+          <h4 class='truncate center-align'>Filtros</h4>
+          <p>Seleccione las opciones que desee y necesite para la publicación de un nuevo comunicado.</p>
+          <nav class='nav-extended'>
+            <div class='nav-content bar-menu-color'>
+              <ul class='tabs tabs-transparent'>
+                <li class='tab'>
+                  <a class='active' href='#general-filter-tab'>general</a>
+                </li>
+                <li class='tab'>
+                  <a href='#grupos-filter-tab'>grupos</a>
+                </li>
+                <li class='tab'>
+                  <a href='#others-filter-tab'>prof/admin</a>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class='col s12' id='general-filter-tab'>
+            <br>
+            <input id='everyone' name='everyone' type='radio'>
+              <label for='everyone'><b>Todos</b></label>
+            </input>
+            <h5>Usuarios</h5>
+            <p>
+              <input id='alumnos-users' name='usuarios-users' type='checkbox'>
+              <label for='alumnos-users'><b>Alumnos</b></label>
+              <input id='profesores-users' name='usuario-userss' type='checkbox'>
+              <label for='profesores-users' style='margin-left: 1rem'><b>Profesores</b></label>
+              <input id='admin-users' name='usuarios-users' type='checkbox'>
+              <label for='admin-users' style='margin-left: 1rem'><b>Admnistrativos</b></label>
+            </p>
+            <h5>Nivel</h5>
+            <p>
+              <input id='secundaria-users' name='nivel-users' type='checkbox'>
+              <label for='secundaria-users'><b>Secundaria</b></label>
+              <input id='bachillerato-users' name='nivel-users' type='checkbox'>
+              <label for='bachillerato-users' style='margin-left: 1rem'><b>Bachillerato</b></label>
+            </p>
+            <h5>Turno</h5>
+            <p>
+              <input id='matutino-users' name='turno-users' type='checkbox'>
+              <label for='matutino-users'><b>Matutino</b></label>
+              <input id='vespertino-users' name='turno-users' type='checkbox'>
+              <label for='vespertino-users' style='margin-left: 1rem'><b>Vespertino</b></label>
+            </p>
+          </div>
+          <div class='col s12' id='grupos-filter-tab'>
+            <br>
+            <p>
+              <input id='todos-grupos' name='todos-grupos' type='radio'>
+              <label for='todos-grupos'><b>Ambos</b></label>
+            </p>
+            <p>
+              <input id='matutino-grupos' name='turno-grupos' type='checkbox'>
+              <label for='matutino-grupos'><b>Matutino</b></label>
+              <input id='vespertino-grupos' name='turno-grupos' type='checkbox'>
+              <label for='vespertino-grupos' style='margin-left: 1rem'><b>Vespertino</b></label>
+            </p>
+            <p>
+              <input id='secundaria-grado' name='nivel-grupos' type='checkbox'>
+              <label for='secundaria-grado'><b>Secundaria</b></label>
+              <input id='bachillerato-grado' name='nivel-grupos' type='checkbox'>
+              <label for='bachillerato-grado' style='margin-left: 1rem'><b>Bachillerato</b></label>
+            </p>
+            <p style='margin-top: 2rem'>
+              <div class='input-field'>
+                <select multiple=''>
+                  <option disabled='' selected='' value=''>Elija por grado</option>
+                  <option value='1'>Primeros</option>
+                  <option value='2'>Segundos</option>
+                  <option value='3'>Terceros</option>
+                </select>
+                <label>Grado</label>
+              </div>
+            </p>
+            <p style='margin-top: 2rem'>
+              <div class='input-field'>
+                <select multiple=''>
+                  <option disabled='' selected='' value=''>Eliga por grupo</option>
+                  <option value='1'>6xxx</option>
+                  <option value='2'>6xxx</option>
+                  <option value='3'>6xxx</option>
+                </select>
+                <label>Grupos</label>
+              </div>
+            </p>
+            <div class='divider'></div>
+            <p style='margin-top: 3rem'>
+              <div class='input-field disabled'>
+                <textarea class='materialize-textarea' id='grupos-en-concreto' placeholder='Grupos individuales elegidos' type='text'></textarea>
+                <label for='grupos-en-concreto'>Grupos elegidos</label>
+              </div>
+            </p>
+          </div>
+          <div class='col s12' id='others-filter-tab'>
+            <br>
+            <p>
+              <input id='todos-others' name='todos-others' type='radio'>
+              <label for='todos-others'><b>Ambos</b></label>
+            </p>
+            <p>
+              <input id='matutino-others' name='turno-others' type='checkbox'>
+              <label for='matutino-others'><b>Matutino</b></label>
+              <input id='vespertino-others' name='turno-others' type='checkbox'>
+              <label for='vespertino-others' style='margin-left: 1rem'><b>Vespertino</b></label>
+            </p>
+            <p>
+              <input id='secundaria-others' name='nivel-others' type='checkbox'>
+              <label for='secundaria-others'><b>Secundaria</b></label>
+              <input id='bachillerato-others' name='nivel-others' type='checkbox'>
+              <label for='bachillerato-others' style='margin-left: 1rem'><b>Bachillerato</b></label>
+            </p>
+            <h5>Profesores</h5>
+            <p>
+              <input id='all-teach' name='prof-others' type='radio'>
+              <label for='all-teach'><b>Todos</b></label>
+              <input id='seleccionar-teacher' name='prof-others' type='radio'>
+              <label for='seleccionar-teacher' style='margin-left: 1rem'><b>Seleccionar</b></label>
+            </p>
+            <p style='margin-top: 2rem'>
+              <div class='input-field'>
+                <select multiple=''>
+                  <option disabled='' selected='' value=''>Elija a los profesores</option>
+                  <option value='1'>Profesor A</option>
+                  <option value='2'>Profesor B</option>
+                  <option value='3'>Profesor C</option>
+                  <option value='4'>Profesor D</option>
+                </select>
+                <label>Profesor</label>
+              </div>
+            </p>
+            <h5>Adminsitradores</h5>
+            <p>
+              <input id='all-admin' name='admin-others' type='radio'>
+              <label for='all-admin'><b>Todos</b></label>
+              <input id='seleccionar-admin' name='admin-others' type='radio'>
+              <label for='seleccionar-admin' style='margin-left: 1rem'><b>Seleccionar</b></label>
+            </p>
+            <p style='margin-top: 2rem'>
+              <div class='input-field'>
+                <select multiple=''>
+                  <option disabled='' selected='' value=''>Elija a los administradores</option>
+                  <option value='1'>Administradores A</option>
+                  <option value='2'>Administradores B</option>
+                  <option value='3'>Administradores C</option>
+                  <option value='4'>Administradores D</option>
+                </select>
+                <label>Administrador</label>
+              </div>
+            </p>
+          </div>
+        </div>
+        <div class='col s12 l7' style='margin-top: 1em'>
+          <h4 class='truncate center-align'>Contenido</h4>
+          <div class='row'>
+            <div class='input-field col s12'>
+              <input class='validate' id='titulo' placeholder='' type='text'>
+              <label data-error='mal :(' data-success='bien :)' for='titulo'>Título del comunicado</label>
+            </div>
+            <div class='input-field col s12'>
+              <textarea class='materialize-textarea' data-length='400' id='contenido-comunicado' placeholder='Texto' type='text'></textarea>
+              <label for='contenido-comunicado.materialize-textarea'>Contenido</label>
+            </div>
+            <div class='col s12 input-field'>
+              <i class='material-icons prefix'>today</i>
+              <input class='datepicker' id='fecha2' type='date'>
+              <label for='fecha2'>Fecha de término</label>
+            </div>
+            <div class='col s12 input-field'>
+              <i class='material-icons prefix'>link</i>
+              <input class='validate' id='links1' type='text'>
+              <label for='links1'>Link 1</label>
+            </div>
+            <div class='col s12 input-field'>
+              <i class='material-icons prefix'>link</i>
+              <input class='validate' id='links2' type='text'>
+              <label for='links2'>Link 2</label>
+            </div>
+            <div class='col s12'>
+              <form action='#'>
+                <div class='file-field input-field'>
+                  <div class='btn'>
+                    <span>
+                      <i class='material-icons'>attach_file</i>
+                    </span>
+                    <input multiple='' type='file'>
+                  </div>
+                  <div class='file-path-wrapper'>
+                    <input class='file-path validate' placeholder='Archivos a subir' type='text'>
+                  </div>
+                </div>
+                <div class='file-field input-field'>
+                  <div class='btn'>
+                    <span>
+                      <i class='material-icons'>attach_file</i>
+                    </span>
+                    <input multiple='' type='file'>
+                  </div>
+                  <div class='file-path-wrapper'>
+                    <input class='file-path validate' placeholder='Archivos a subir' type='text'>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class='col s12'>
+              <div class='chips chips-initial'></div>
+            </div>
+            <div class='col s12'></div>
+            <h5>Seleccione la prioridad del comunicado</h5>
+            <p>
+              <input checked='' class='with-gap' id='normal' name='tipo' type='radio'>
+              <label for='normal'><b> Normal </b></label>
+            </p>
+            <p>
+              <input class='with-gap' id='urgente' name='tipo' type='radio'>
+              <label for='urgente'><b> URGENTE </b></label>
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script crossorigin='anonymous' integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=' src='https://code.jquery.com/jquery-3.1.1.min.js' type='text/javascript'></script>
+  <script src='../../../js/materialize.js' type='text/javascript'></script>
+  <script src='../../../js/main.js' type='text/javascript'></script>
+</html>
