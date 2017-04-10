@@ -3,11 +3,11 @@
   <header>
     <meta content='width=device-width, initial-scale=1' name='viewport'>
     <meta charset='UTF-8'>
-    <link href='../../../images/favicon.ico' rel='shortcut icon' type='image/x-icon'>
+    <link href='../../images/favicon.ico' rel='shortcut icon' type='image/x-icon'>
     <link href='http://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
-    <link href='../../../css/materialize.css' media='screen,projection' rel='stylesheet'>
+    <link href='../../css/materialize.css' media='screen,projection' rel='stylesheet'>
     <link href='../../css/style.css' rel='stylesheet'>
-    <link href='../../../css/animate.css' rel='stylesheet'>
+    <link href='../../css/animate.css' rel='stylesheet'>
     <title>Gliphy Nuevo</title>
   </header>
   <body>
@@ -15,19 +15,23 @@
       <nav class='negro-flat'>
         <div class='nav-wrapper'>
           <p class='left'>
-            <a class='button-collapse1 hide-on-large-only btn-flat white-bonis' data-activates='navegacion-movil' href='#'>
-              <i class='material-icons' style=' line-height: 30px;'>menu</i>
+            <a class='button-collapse1 hide-on-large-only btn-flat white-bonis' data-activates='navegacion-movil' href='#' style='margin-top: -25px'>
+              <i class='material-icons' style=' line-height: 30px'>menu</i>
             </a>
           </p>
           <p class='right'>
-            <a class='button-collapse2 btn-flat white-bonis left' data-activates='slide-out' href='#'>
-              <img class='admin-img left' src='../../../images/admin.jpg'>
+            <a class='button-collapse2 btn-flat white-bonis left hide-on-small-only' data-activates='slide-out' href='#'>
+              <img class='admin-img left' src='../../images/admin.jpg'>
               NOMBRE_USER_COMPLETE
+            </a>
+            <a class='button-collapse2 btn-flat white-bonis left hide-on-med-and-up' data-activates='slide-out' href='#'>
+              <i class='material-icons left' style=' line-height: 30px;'>apps</i>
+              OPCIONES
             </a>
           </p>
           <div class='col s8 margincito-left hide-on-small-only'>
             <a class='breadcrumb' href=''>GliphyAdmin</a>
-            <a class='breadcrumb' href=''>Nueva Publicación</a>
+            <a class='breadcrumb' href=''>Nuevo</a>
           </div>
         </div>
       </nav>
@@ -35,10 +39,10 @@
     <ul class='side-nav lateral-admin' id='slide-out'>
       <li class='userView'>
         <div class='background'>
-          <img src='../../../images/office.jpg'>
+          <img src='../../images/office.jpg'>
         </div>
         <div class='white-bonis'>
-          <img class='circle' src='../../../images/admin.jpg'>
+          <img class='circle' src='../../images/admin.jpg'>
           <span class='white-text name'>Joel Hernández</span>
           <span class='white-text email separado'>Admnistrador</span>
         </div>
@@ -57,42 +61,13 @@
       </li>
     </ul>
     <ul class='side-nav fixed lateral-admin' id='navegacion1' style='width:240px;margin-top:63px;'>
+      <br>
       <li>
         <a class='waves-effect white-bonis' href='#!'>
-          <i class='material-icons left white-bonis'>storage</i>
-          Base de Datos
+          <i class='material-icons left white-bonis'>home</i>
+          Inicio
         </a>
       </li>
-      <p></p>
-      <li>
-        <a class='waves-effect white-bonis' href='#!'>
-          <i class='material-icons left white-bonis'>account_circle</i>
-          Mis comunicados
-        </a>
-      </li>
-      <p></p>
-      <li>
-        <a class='waves-effect white-bonis' href='#!'>
-          <i class='material-icons left white-bonis'>add</i>
-          Agregar comunicados
-        </a>
-      </li>
-      <p></p>
-      <li>
-        <a class='waves-effect white-bonis' href='#!'>
-          <i class='material-icons left white-bonis'>search</i>
-          Búsqueda
-        </a>
-      </li>
-      <p></p>
-      <li>
-        <a class='waves-effect white-bonis' href='#!'>
-          <i class='material-icons left white-bonis'>error</i>
-          Ayuda
-        </a>
-      </li>
-    </ul>
-    <ul class='side-nav lateral-admin' id='navegacion-movil' style='width:240px'>
       <br>
       <li>
         <a class='waves-effect white-bonis' href='#!'>
@@ -100,34 +75,66 @@
           Base de Datos
         </a>
       </li>
-      <p></p>
+      <br>
       <li>
-        <a class='waves-effect white-bonis' hre='#!'>
+        <a class='waves-effect white-bonis' href='publications.html'>
           <i class='material-icons left white-bonis'>account_circle</i>
-          Mis comunicados
+          Publicaciones
         </a>
       </li>
-      <p></p>
+      <br>
       <li>
-        <a class='waves-effect white-bonis' href='#!'>
+        <a class='waves-effect white-bonis' href='new.html'>
           <i class='material-icons left white-bonis'>add</i>
-          Agregar comunicados
+          Agregar
         </a>
       </li>
-      <p></p>
-      <li>
-        <a class='waves-effect white-bonis' href='#!'>
-          <i class='material-icons left white-bonis'>search</i>
-          Búsqueda
-        </a>
-      </li>
-      <p></p>
+      <br>
       <li>
         <a class='waves-effect white-bonis' href='#!'>
           <i class='material-icons left white-bonis'>error</i>
           Ayuda
         </a>
       </li>
+      <br>
+    </ul>
+    <ul class='side-nav lateral-admin' id='navegacion-movil' style='width:240px'>
+      <br>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>home</i>
+          Inicio
+        </a>
+      </li>
+      <br>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>storage</i>
+          Base de Datos
+        </a>
+      </li>
+      <br>
+      <li>
+        <a class='waves-effect white-bonis' href='publications.html'>
+          <i class='material-icons left white-bonis'>account_circle</i>
+          Publicaciones
+        </a>
+      </li>
+      <br>
+      <li>
+        <a class='waves-effect white-bonis' href='new.html'>
+          <i class='material-icons left white-bonis'>add</i>
+          Agregar
+        </a>
+      </li>
+      <br>
+      <li>
+        <a class='waves-effect white-bonis' href='#!'>
+          <i class='material-icons left white-bonis'>error</i>
+          Ayuda
+        </a>
+      </li>
+      <br>
     </ul>
     <main>
       <div class='fixed-action-btn'>
@@ -146,7 +153,7 @@
         </div>
       </div>
       <div class='row'>
-        <h3 class='truncate center-align'>Nueva Publicación</h3>
+        <h3 class='center-align'>Nueva Publicación</h3>
         <blockquote style='margin-left: 0.5rem'>Este seria un mensaje solo se muestra cuando es necesario</blockquote>
         <div class='col s12 l5'>
           <h4 class='truncate center-align'>Filtros</h4>
@@ -155,13 +162,13 @@
             <div class='nav-content bar-menu-color'>
               <ul class='tabs tabs-transparent'>
                 <li class='tab'>
-                  <a class='active' href='#general-filter-tab'>general</a>
+                  <a href='#general-filter-tab'>todo</a>
                 </li>
                 <li class='tab'>
-                  <a href='#grupos-filter-tab'>grupos</a>
+                  <a href='#grupos-filter-tab'>gral</a>
                 </li>
                 <li class='tab'>
-                  <a href='#others-filter-tab'>prof/admin</a>
+                  <a href='#others-filter-tab'>prf/adm</a>
                 </li>
               </ul>
             </div>

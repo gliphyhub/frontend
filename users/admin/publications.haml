@@ -1,0 +1,77 @@
+-#===========================LAYOUT==============================================================================================
+-menuLateral=[{title:"Inicio", link:"#!", icon:"home"}, {title:"Base de Datos", link:"#!", icon:"storage"},{title:"Publicaciones",link:"publications.html", icon:"account_circle"},{title:"Agregar",link:"new.html", icon:"add"},{title:"Ayuda", link:"#!",icon:"error"}]
+!!!5
+%html{:lang => "es"}
+	%header
+		%meta{:name => "viewport", :content=>"width=device-width, initial-scale=1"}
+		%meta{:charset=> "UTF-8"}
+		%link{:rel => "shortcut icon", :type=>"image/x-icon", :href => "../../images/favicon.ico"}/
+		-#google icons
+		%link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/icon?family=Material+Icons"}/
+		%link{:rel => "stylesheet", :href => "../../css/materialize.css", :media => "screen,projection"}/		
+		%link{:rel => "stylesheet", :href => "../../css/style.css"}/
+		%link{:rel => "stylesheet", :href => "../../css/animate.css"}/
+		%title Gliphy Publicaciones
+	%body
+		-#=====================Navbar de arriba=================================================================================
+		.navbar-fixed
+			%nav.negro-flat
+				.nav-wrapper
+					%p.left
+						%a.button-collapse1.hide-on-large-only.btn-flat.white-bonis{style:"margin-top: -25px",href:"#", data:{activates:"navegacion-movil"}}
+							%i.material-icons{style:" line-height: 30px"} menu
+					%p.right
+						%a.button-collapse2.btn-flat.white-bonis.left.hide-on-small-only{href:"#", data:{activates:"slide-out"}}
+							%img.admin-img.left{src:"../../images/admin.jpg"}
+							NOMBRE_USER_COMPLETE
+						%a.button-collapse2.btn-flat.white-bonis.left.hide-on-med-and-up{href:"#", data:{activates:"slide-out"}}
+							%i.material-icons.left{style:" line-height: 30px;"} apps
+							OPCIONES
+					.col.s8.margincito-left.hide-on-small-only
+						%a.breadcrumb{:href => ""} GliphyAdmin
+						%a.breadcrumb{:href => ""} Publicaciones
+		-#=====================Menu slide hacia izquierda opciones de usuario====================================================
+		%ul#slide-out.side-nav.lateral-admin
+			%li.userView
+				.background
+					%img{src:"../../images/office.jpg"}
+				.white-bonis
+					%img.circle{src:"../../images/admin.jpg"}
+					%span.white-text.name Joel Hernández
+					%span.white-text.email.separado Admnistrador
+			%li
+				%a.white-bonis.waves-effect{href:"#"}
+					%i.material-icons.left.white-bonis person
+					Mi perfil
+			%li
+				%a.white-bonis.waves-effect{:href => "#!"} 
+					%i.material-icons.left.white-bonis power_settings_new
+					Salir
+		-#=====================Menu visible opciones de navegacion===============================================================
+		%ul#navegacion1.side-nav.fixed.lateral-admin{style:"width:240px;margin-top:63px;"}
+			%br/
+			-menuLateral.each do |item|				
+				%li
+					%a.waves-effect.white-bonis{:href => item[:link]}
+						%i.material-icons.left.white-bonis=item[:icon] 
+						=item[:title]
+				%br/
+		-#====================Menu desplegable hacia derecha opciones de navegacion responsive===================================
+		%ul#navegacion-movil.side-nav.lateral-admin{style:"width:240px"}
+			%br/
+			-menuLateral.each do |item|				
+				%li
+					%a.waves-effect.white-bonis{:href => item[:link]}
+						%i.material-icons.left.white-bonis=item[:icon] 
+						=item[:title]
+				%br/
+		-#!!!!!!!!!!!!!!!!!!!CONTENIDO STOP LAYOUT!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+		%main
+			.row				
+				%blockquote{:style=>"margin-left: 0.5rem"} Este seria un mensaje solo se muestra cuando es necesario
+				.col.s1
+	-#=======================Scripts=============================================================================================
+	%script{:type => "text/javascript", :src=>"https://code.jquery.com/jquery-3.1.1.min.js", :integrity=>"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=",
+		:crossorigin=>"anonymous"}
+	%script{:type=>"text/javascript", :src=>"../../../js/materialize.js"}
+	%script{:type=>"text/javascript", :src=>"../../../js/main.js"}
