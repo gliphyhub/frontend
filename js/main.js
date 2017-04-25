@@ -63,16 +63,14 @@ $(document).ready(function () {
   //=============== Abrir modal ===============
   $('.modal').modal();
   //=============== PRUEBA =================
-  $('.button-collapse2').sideNav();
-  $('.button-collapse2').sideNav({
+  $('.options-user').sideNav({
       menuWidth: 260, // Default is 300
       edge: 'right', // Choose the horizontal origin
       closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
       draggable: true // Choose whether you can drag to open on touch screens
     }
   );
-  $('.button-collapse1').sideNav();
-  $('.button-collapse1').sideNav({
+  $('#menu').sideNav({
       menuWidth: 240, // Default is 300
       edge: 'left', // Choose the horizontal origin
       closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
@@ -91,4 +89,41 @@ $(document).ready(function () {
   });
   // Show sideNav
   //$('.button-collapse').sideNav('show');
+
+  // ====== Carousel =========
+  $('.carousel.carousel-slider').carousel({fullWidth: true});
+  $('.carousel').carousel();
+  $('#siguiente').click(function(){
+    $('.carousel').carousel('next');
+  });
+  $('#atras').click(function(){
+    $('.carousel').carousel('prev');
+  });
+  $('#toggleMenu').click(function() {
+    $('#navegacion-no-oculto').toggleClass("ocultado");
+    $('#menu').toggleClass("hide-on-large-only");
+    $('header, main, .botones-flotantes').toggleClass("navegacion-espacio");
+    $('#toggleMenu').toggleClass("grey darken-1");
+  });
+
+  $('#vista-simple').click(function () {
+    $('#contenido-comunicado-large, .v-large').addClass('ocultado');
+    $('.v-touch').removeClass("hide-on-large-only");
+    $('#vista-simple').addClass('red white-bonis');
+    $('#vista-tres-columnas').removeClass('red white-bonis');
+    $('#parte-izquierda').removeClass('l7');
+    $('#diversos, #cards-comunicados').addClass('l6');
+    $('#calendario-contenedor, #flitros-contenedor').addClass('l12');
+
+  });
+
+  $('#vista-tres-columnas').click(function () {
+    $('#contenido-comunicado-large, .v-large').removeClass('ocultado');
+    $('.v-touch').addClass("hide-on-large-only");
+    $('#vista-tres-columnas').addClass('red white-bonis');
+    $('#vista-simple').removeClass('red white-bonis');
+    $('#parte-izquierda').addClass('l7');
+    $('#diversos, #cards-comunicados').removeClass('l6');
+    $('#calendario-contenedor, #flitros-contenedor').removeClass('l12');
+  });
 });

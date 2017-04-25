@@ -2,15 +2,16 @@
 -#===================================== DISEÑO ======================================
 -#=================================================================================
 -menuLateral=[{title:"Inicio", link:"index.html", icon:"home"}, {title:"Base de Datos", link:"base.html", icon:"storage"},{title:"Publicaciones",link:"publications.html", icon:"account_circle"},{title:"Agregar",link:"new.html", icon:"add"},{title:"Ayuda", link:"help.html",icon:"error"}]
+-seccion ="Inicio" 
 !!!5
 %html{lang:"es"}
-	%header
+	%header.navegacion-espacio
 		-#=========================================
 		-#============ Información - METAS ===============
 		-#=========================================
 		%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
 		%meta{charset: "UTF-8"}
-		%link{rel:"shortcut icon", type:"image/x-icon", href: "../../images/favicon.ico"}/
+		%link{rel:"shortcut icon", href: "../../images/favicon.ico"}/
 		-#google icons
 		%link{rel:"stylesheet", href:"http://fonts.googleapis.com/icon?family=Material+Icons"}/
 		%link{rel:"stylesheet", href:"../../css/materialize.css", media: "screen,projection"}/		
@@ -26,27 +27,33 @@
 			%nav.negro-flat
 				.nav-wrapper
 					-#=========================================
-					-#========= Botón Menú - No Large ================
+					-#============= Botón Menú === ================
 					-#=========================================
 					%p.left
-						%a.button-collapse1.hide-on-large-only.btn-flat.white-bonis{style:"margin-top: -25px",href:"#", data:{activates:"navegacion-movil"}}
+						%a#menu.hide-on-large-only.btn-flat.white-bonis{style:"margin-top: -25px",href:"#", data:{activates:"navegacion-movil"}}
 							%i.material-icons{style:" line-height: 30px"} menu
 					-#=========================================
 					-#====== Botón Menú - Opciones usuario ==============
 					-#=========================================
 					%p.right
-						%a.button-collapse2.btn-flat.white-bonis.left.hide-on-small-only{href:"#",style:"text-transform: none", data:{activates:"slide-out"}}
+						%a.options-user.btn-flat.white-bonis.left.hide-on-small-only{href:"#",style:"text-transform: none", data:{activates:"slide-out"}}
 							%img.admin-img.left{src:"../../images/admin.jpg"}
 							Joel Hernández
-						%a.button-collapse2.btn-flat.white-bonis.left.hide-on-med-and-up{href:"#", data:{activates:"slide-out"}}
+						%a.options-user.btn-flat.white-bonis.left.hide-on-med-and-up{href:"#", data:{activates:"slide-out"}}
 							%i.material-icons.left{style:" line-height: 30px;"} apps
 							OPCIONES
+					-#=========================================
+					-#============== Toggle Menú =================
+					-#=========================================
+					%p.right
+						%a#toggleMenu.btn-flat.white-bonis.hide-on-med-and-down.tooltipped.hoverable.grey.darken-1{style:"margin-top: -30px; padding: 0px; width: 40px",href:"#!", data:{position:"bottom", delay:"50", tooltip:"Mostrar menú"}}
+							%i.material-icons.center{style:" line-height: 35px"} view_quilt
 					-#=========================================
 					-#========== Navegación - menú =================
 					-#=========================================
 					.col.s8.margincito-left.hide-on-small-only.truncate
 						%a.breadcrumb{href:""} Gliphy Admin
-						%a.breadcrumb{href:""} Publicaciones
+						%a.breadcrumb{href:""} #{seccion}
 		-#=========================================
 		-#=========== Opciones de usuario ================
 		-#=========================================
@@ -61,15 +68,15 @@
 			%li
 				%a.white-bonis.waves-effect{href:"#"}
 					%i.material-icons.left.white-bonis person
-					Mi perfil
+					%span Mi perfil
 			%li
 				%a.white-bonis.waves-effect{href:"#!"} 
 					%i.material-icons.left.white-bonis power_settings_new
-					Salir
+					%span Salir
 		-#=========================================
 		-#========== Menú navegación - Large ==============
 		-#=========================================
-		%ul#navegacion1.side-nav.fixed.lateral-admin{style:"width:240px;margin-top:63px;"}
+		%ul#navegacion-no-oculto.side-nav.fixed.lateral-admin{style:"width:240px;margin-top:63px"}
 			%br/
 			-menuLateral.each do |item|				
 				%li
@@ -91,12 +98,13 @@
 		-#=================================================================
 		-#========================= Contenido - Layout ===========================
 		-#=================================================================
-		%main
+		%main.navegacion-espacio
+
 
 	-#=================================================================
 	-#============================= Scripts ===============================
 	-#=================================================================
 
 	%script{type:"text/javascript", src:"https://code.jquery.com/jquery-3.1.1.min.js", integrity:"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin:"anonymous"}
-	%script{:type=>"text/javascript", :src=>"../../../js/materialize.js"}
-	%script{:type=>"text/javascript", :src=>"../../../js/main.js"}
+	%script{:type=>"text/javascript", :src=>"../../js/materialize.js"}
+	%script{:type=>"text/javascript", :src=>"../../js/main.js"}

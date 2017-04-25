@@ -2,15 +2,16 @@
 -#===================================== DISEÑO ======================================
 -#=================================================================================
 -menuLateral=[{title:"Inicio", link:"index.html", icon:"home"}, {title:"Base de Datos", link:"base.html", icon:"storage"},{title:"Publicaciones",link:"publications.html", icon:"account_circle"},{title:"Agregar",link:"new.html", icon:"add"},{title:"Ayuda", link:"help.html",icon:"error"}]
+-seccion ="Publicaciones" 
 !!!5
 %html{lang:"es"}
-	%header
+	%header.navegacion-espacio
 		-#=========================================
 		-#============ Información - METAS ===============
 		-#=========================================
 		%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
 		%meta{charset: "UTF-8"}
-		%link{rel:"shortcut icon", type:"image/x-icon", href: "../../images/favicon.ico"}/
+		%link{rel:"shortcut icon", href: "../../images/favicon.ico"}/
 		-#google icons
 		%link{rel:"stylesheet", href:"http://fonts.googleapis.com/icon?family=Material+Icons"}/
 		%link{rel:"stylesheet", href:"../../css/materialize.css", media: "screen,projection"}/		
@@ -18,9 +19,6 @@
 
 		%link{rel:"stylesheet", href:"../../css/animate.css"}/
 		%title Gliphy Admin
-
-		-#Calendar
-		%link{rel:"stylesheet", href:"../../css/calendar.css"}/
 	%body
 		-#=========================================
 		-#=========== Barra de navegación ================
@@ -29,27 +27,33 @@
 			%nav.negro-flat
 				.nav-wrapper
 					-#=========================================
-					-#========= Botón Menú - No Large ================
+					-#============= Botón Menú === ================
 					-#=========================================
 					%p.left
-						%a.button-collapse1.hide-on-large-only.btn-flat.white-bonis{style:"margin-top: -25px",href:"#", data:{activates:"navegacion-movil"}}
+						%a#menu.hide-on-large-only.btn-flat.white-bonis{style:"margin-top: -25px",href:"#", data:{activates:"navegacion-movil"}}
 							%i.material-icons{style:" line-height: 30px"} menu
 					-#=========================================
 					-#====== Botón Menú - Opciones usuario ==============
 					-#=========================================
 					%p.right
-						%a.button-collapse2.btn-flat.white-bonis.left.hide-on-small-only{href:"#",style:"text-transform: none", data:{activates:"slide-out"}}
+						%a.options-user.btn-flat.white-bonis.left.hide-on-small-only{href:"#",style:"text-transform: none", data:{activates:"slide-out"}}
 							%img.admin-img.left{src:"../../images/admin.jpg"}
 							Joel Hernández
-						%a.button-collapse2.btn-flat.white-bonis.left.hide-on-med-and-up{href:"#", data:{activates:"slide-out"}}
+						%a.options-user.btn-flat.white-bonis.left.hide-on-med-and-up{href:"#", data:{activates:"slide-out"}}
 							%i.material-icons.left{style:" line-height: 30px;"} apps
 							OPCIONES
+					-#=========================================
+					-#============== Toggle Menú =================
+					-#=========================================
+					%p.right
+						%a#toggleMenu.btn-flat.white-bonis.hide-on-med-and-down.tooltipped.hoverable.grey.darken-1{style:"margin-top: -30px; padding: 0px; width: 40px",href:"#!", data:{position:"bottom", delay:"50", tooltip:"Mostrar menú"}}
+							%i.material-icons.center{style:" line-height: 35px"} view_quilt
 					-#=========================================
 					-#========== Navegación - menú =================
 					-#=========================================
 					.col.s8.margincito-left.hide-on-small-only.truncate
 						%a.breadcrumb{href:""} Gliphy Admin
-						%a.breadcrumb{href:""} Publicaciones
+						%a.breadcrumb{href:""} #{seccion}
 		-#=========================================
 		-#=========== Opciones de usuario ================
 		-#=========================================
@@ -64,15 +68,15 @@
 			%li
 				%a.white-bonis.waves-effect{href:"#"}
 					%i.material-icons.left.white-bonis person
-					Mi perfil
+					%span Mi perfil
 			%li
 				%a.white-bonis.waves-effect{href:"#!"} 
 					%i.material-icons.left.white-bonis power_settings_new
-					Salir
+					%span Salir
 		-#=========================================
 		-#========== Menú navegación - Large ==============
 		-#=========================================
-		%ul#navegacion1.side-nav.fixed.lateral-admin{style:"width:240px;margin-top:63px;"}
+		%ul#navegacion-no-oculto.side-nav.fixed.lateral-admin{style:"width:240px;margin-top:63px"}
 			%br/
 			-menuLateral.each do |item|				
 				%li
@@ -94,7 +98,7 @@
 		-#=================================================================
 		-#========================= Contenido - Layout ===========================
 		-#=================================================================
-		%main
+		%main.navegacion-espacio
 			-#===============Boton buscar================
 			.fixed-action-btn
 				%a.btn-floating.btn-large.waves-effect.waves-light.red.tooltipped.hoverable{href:"#buscar", data:{position:"left", delay:"50", tooltip:"Buscar"}}
@@ -117,39 +121,44 @@
 			-#============Dirigido a ============
 			#dirigido.modal
 				.modal-content
-					%h4 Dirigido a:
+					%h4 Para
 					.chip 
 						%i.icono-on-chip.material-icons person
-						Grupo_1
+						%span Grupo_1
 					.chip 
 						%i.icono-on-chip.material-icons person
-						Grupo_2
+						%span Grupo_2
+					.chip 
+						%i.icono-on-chip.material-icons person
+						%span Grupo_3
 					%p.right
 						%a.modal-action.modal-close.waves-effect.btn-flat{href:"#!"} Volver
-			-#==========Cotenido-destacado =========
-			#contenido-destacado.modal.modal-fixed-footer{style:"max-height: 80%; height: 80%; width: 90%"}
-				.modal-content{style:"padding: 0px"}
-					.card{style:"margin: 0"}
-						.card-image
-							%img.responsive-img{src:"/../../images/comunicados/examen-1.jpg"}
+			-#==========Cotenido-responsivo =========
+			#contenido-responsivo.modal.modal-fixed-footer
+				.modal-content
+					.card.contenido-comunicado.min-cien
+						.card-image.fijable
+							%img{src:"../../images/comunicados/examen-1.jpg"}
 							%span.card-title Título del comunicado
-							%a.btn-floating.halfway-fab.waves-effect.waves-light.red
-								%i.material-icons star
 						.card-content
+							%a.btn-floating.halfway-fab.waves-effect.waves-light.red.a-corregido
+								%i.material-icons star
 							%p.indigo-text.accent-1-text.truncate{style:"padding-bottom: 10px"}
 								%i.material-icons.left today
-								Fecha_publicación
+								%span Publicado: 03/09/18
+							%p.indigo-text.accent-1-text.truncate{style:"padding-bottom: 10px"}
+								%i.material-icons.left date_range
+								%span Termina: 03/09/19
 							%p.indigo-text.accent-1-text.truncate{style:"padding-bottom: 10px"}
 								%i.material-icons.left person
-								Publicado por: Persona_1
+								%span De: Persona_1
 							%p.indigo-text.accent-1-text.truncate{style:"padding-bottom: 15px"}
 								%i.material-icons.left group
-								Dirigido a: Grupo_1, Grupo_2
+								%span.trun Para: Grupo_1, Grupo_2, Grupo_3
 								%span.right
 									%a{href:"#dirigido"} Ver todo
-							%p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-
-							%p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+							%p.text-normal Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+							%p.text-normal Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
 							%p{style:"margin-top: 1em"}
 								.chip 
 									%i.icono-on-chip.material-icons attachment
@@ -160,57 +169,30 @@
 								.chip 
 									%i.icono-on-chip.material-icons link
 									%a.grey-text.text-darken-1{href:"#!"} Link_1
-						.card-action
-							%p Hola
-				.modal-footer
+						.card-action.grey.lighten-2
+							.row
+								.col.s12.center-align
+									%img{src:"../../images/teacher01.jpg"}
+								.col.s12.center-align
+									%h4.truncate Nombre_publicador
+								.col.s12
+									%p.jus Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				.modal-footer.grey.lighten-2
 					%a.modal-action.modal-close.waves-effect.btn-flat{href:"#!"} Volver
 			-#===============Principal contenido===========
-			.row				
-				.col.s12
-					%h3.red-text.center-align Publicaciones
-				-#=========== CALENDAR ==================
-				.col.s12.l4
-					%h5.truncate.center-align Calendario
-					#calendar
-				-#=========== COMUNICADOS ==================
-				.col.s12.l8
+			.row	
+				#parte-izquierda.col.s12.l7			
 					.col.s12
-						%h5.truncate.center-align Comunicados
-						%ul.tabs.tabs-fixed-width
-							%li.tab
-								%a.active{href: "#destacados"} Destacados
-							%li.tab
-								%a{href:"#dia"} Actuales
-					-#=========== DESTACADOS ==================
-					#destacados
-						.col.s12 
-							.card
-								.card-title.grey-text.text-darken-4.truncate.blue-grey.lighten-3{style:"padding: 15px !important"}
-									Título del comunicado
-									%a{href:"#contenido-destacado"}
-										%i.material-icons.right visibility
-								.card-content{style:"padding: 15px !important"}
-									%p
-										Esto es un preview del texto y no acabarás de lee...
-									%p{style:"margin-top: 1em"}
-										.chip
-											%i.icono-on-chip.material-icons today
-											Fecha
-										.chip 
-											%i.icono-on-chip.material-icons person
-											Persona_1
-										.chip 
-											%i.icono-on-chip.material-icons equalizer
-											Visto 
-										.chip
-											%i.icono-on-chip.material-icons attachment
-											Adjuntos
-						
-					-#=========== COMUNICADOS DIARIO - CARDS ==================
-					#dia
-						.col.s12.m6
+						%h3.red-text.center-align Publicaciones
+					#diversos.col.s12
+						-#======== CALENDAR ==========
+						#calendario-contenedor.col.s12.m7{style:"padding: 0"}
+							%h5.truncate.center-align Calendario
+							#calendar
+						-#======== FILTROS =========
+						#flitros-contenedor.col.s12.m5{style:"padding: 1px"}
 							.col.s12
-								%h4.blue-text.truncate Abril 18
+								%h4.blue-text.truncate.center-align Abril 18
 							.col.s12
 								%p
 									.input-field
@@ -224,128 +206,130 @@
 								%p
 									%input#self.with-gap{name:"grupo1", type:"checkbox"}
 									%label.black-text{for:"self",style:"margin-left: 1rem"} Mostrar sólo mis publicaciones
-							.col.s12
-								.card
-									.card-title.grey-text.text-darken-4.truncate.blue-grey.lighten-3{style:"padding: 15px !important"}
-										Título del comunicado
-										%a{href:"#contenido-comunicado"}
-											%i.material-icons.right visibility
-									.card-content{style:"padding: 15px !important"}
-										%p
-											Esto es un preview del texto y no acabarás de lee...
-										%p{style:"margin-top: 1em"}
-											.chip
-												%i.icono-on-chip.material-icons today
-												Fecha
-											.chip 
-												%i.icono-on-chip.material-icons person
-												Persona_1
-											.chip 
-												%i.icono-on-chip.material-icons equalizer
-												Visto 
-											.chip
-												%i.icono-on-chip.material-icons attachment
-												Adjuntos
-								.card
-									.card-title.grey-text.text-darken-4.truncate.blue-grey.lighten-3{style:"padding: 15px !important"}
-										Título del comunicado
-										%a{href:"#contenido-comunicado"}
-											%i.material-icons.right visibility
-									.card-content{style:"padding: 15px !important"}
-										%p
-											Esto es un preview del texto y no acabarás de lee...
-										%p{style:"margin-top: 1em"}
-											.chip
-												%i.icono-on-chip.material-icons today
-												Fecha
-											.chip 
-												%i.icono-on-chip.material-icons person
-												Persona_1
-											.chip 
-												%i.icono-on-chip.material-icons equalizer
-												Visto 
-											.chip
-												%i.icono-on-chip.material-icons attachment
-												Adjuntos
-								.card
-									.card-title.grey-text.text-darken-4.truncate.blue-grey.lighten-3{style:"padding: 15px !important"}
-										Título del comunicado
-										%a{href:"#contenido-comunicado"}
-											%i.material-icons.right visibility
-									.card-content{style:"padding: 15px !important"}
-										%p
-											Esto es un preview del texto y no acabarás de lee...
-										%p{style:"margin-top: 1em"}
-											.chip
-												%i.icono-on-chip.material-icons today
-												Fecha
-											.chip 
-												%i.icono-on-chip.material-icons person
-												Persona_1
-											.chip 
-												%i.icono-on-chip.material-icons equalizer
-												Visto 
-											.chip
-												%i.icono-on-chip.material-icons attachment
-												Adjuntos
-								.card
-									.card-title.grey-text.text-darken-4.truncate.blue-grey.lighten-3{style:"padding: 15px !important"}
-										Título del comunicado
-										%a{href:"#contenido-comunicado"}
-											%i.material-icons.right visibility
-									.card-content{style:"padding: 15px !important"}
-										%p
-											Esto es un preview del texto y no acabarás de lee...
-										%p{style:"margin-top: 1em"}
-											.chip
-												%i.icono-on-chip.material-icons today
-												Fecha
-											.chip 
-												%i.icono-on-chip.material-icons person
-												Persona_1
-											.chip 
-												%i.icono-on-chip.material-icons equalizer
-												Visto 
-											.chip
-												%i.icono-on-chip.material-icons attachment
-												Adjuntos
-						-#=========== CONTENIDO DEL COMUNICADO ==================
-						.col.s12.m6
-							#contenido-comunicado.card
-								.card
-									.card-image
-										%img.responsive-img{src:"/../../images/comunicados/examen-1.jpg"}
-										%span.card-title Título del comunicado
-										%a.btn-floating.halfway-fab.waves-effect.waves-light.red
-											%i.material-icons star
-									.card-content
-										%p.indigo-text.accent-1-text.truncate{style:"padding-bottom: 10px"}
-											%i.material-icons.left today
-											Fecha_publicación
-										%p.indigo-text.accent-1-text.truncate{style:"padding-bottom: 10px"}
-											%i.material-icons.left person
-											Publicado por: Persona_1
-										%p.indigo-text.accent-1-text.truncate{style:"padding-bottom: 15px"}
-											%i.material-icons.left group
-											Dirigido a: Grupo_1, Grupo_2
-											%span.right
-												%a{href:"#dirigido"} Ver todo
-										%p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+							.col.s12.hide-on-med-and-down
+								%p Elegir tipo de vista
+							.col.s12.hide-on-med-and-down
+								%p
+									%a#vista-tres-columnas.btn-flat.tooltipped.hoverable.red.white-bonis{style:"margin-top: -30px; padding-left: 10px; width: 40px",href:"#!", data:{position:"top", delay:"50", tooltip:"3 columnas"}}
+										%i.material-icons.center{style:" line-height: 35px"} view_column
+									%a#vista-simple.btn-flat.tooltipped.hoverable{style:"margin-top: -30px; padding-left: 10px; width: 40px",href:"#!", data:{position:"top", delay:"50", tooltip:"Vista simple"}}
+										%i.material-icons.center{style:" line-height: 35px"} view_day
+					-#======== CARDS =======
+					#cards-comunicados.col.s12
+						%h5.truncate.center-align Comunicados
+						.card
+							.head-card.blue-grey.lighten-3
+								%h4.grey-text.text-darken-4.truncate  Título del comunicado
+								%span Profesor > Alumno
+								%a.v-large.hide-on-med-and-down.right{href:"#contenido-large"}
+									%i.material-icons visibility
+								%a.v-touch.hide-on-large-only.right{href:"#contenido-responsivo"}
+									%i.material-icons visibility
+							.card-prev.card-content
+								%p.text-normal.truncate Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+								.chip
+									%i.icono-on-chip.material-icons today
+									Publ: 03/09/18
+								.chip
+									%i.icono-on-chip.material-icons date_range
+									Term: 03/09/19
+								.chip 
+									%i.icono-on-chip.material-icons equalizer
+									Visto 
+								.chip
+									%i.icono-on-chip.material-icons attachment
+									Adjuntos
+						.card
+							.head-card.blue-grey.lighten-3
+								%h4.grey-text.text-darken-4.truncate  Título del comunicado
+								%span Profesor > Alumno
+								%a.v-large.hide-on-med-and-down.right{href:"#contenido-large"}
+									%i.material-icons visibility
+								%a.v-touch.hide-on-large-only.right{href:"#contenido-responsivo"}
+									%i.material-icons visibility
+							.card-prev.card-content
+								%p.text-normal.truncate Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+								.chip
+									%i.icono-on-chip.material-icons today
+									Publ: 03/09/18
+								.chip
+									%i.icono-on-chip.material-icons date_range
+									Term: 03/09/19
+								.chip 
+									%i.icono-on-chip.material-icons equalizer
+									Visto 
+								.chip
+									%i.icono-on-chip.material-icons attachment
+									Adjuntos
+						.card
+							.head-card.blue-grey.lighten-3
+								%h4.grey-text.text-darken-4.truncate  Título del comunicado
+								%span Profesor > Alumno
+								%a.v-large.hide-on-med-and-down.right{href:"#contenido-large"}
+									%i.material-icons visibility
+								%a.v-touch.hide-on-large-only.right{href:"#contenido-responsivo"}
+									%i.material-icons visibility
+							.card-prev.card-content
+								%p.text-normal.truncate Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+								.chip
+									%i.icono-on-chip.material-icons today
+									Publ: 03/09/18
+								.chip
+									%i.icono-on-chip.material-icons date_range
+									Term: 03/09/19
+								.chip 
+									%i.icono-on-chip.material-icons equalizer
+									Visto 
+								.chip
+									%i.icono-on-chip.material-icons attachment
+									Adjuntos
 
-										%p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-										%p{style:"margin-top: 1em"}
-											.chip 
-												%i.icono-on-chip.material-icons attachment
-												%a.grey-text.text-darken-1{href:"#!"} Archivo adjunto1
-											.chip 
-												%i.icono-on-chip.material-icons attachment
-												%a.grey-text.text-darken-1{href:"#!"} Archivo adjunto1
-											.chip 
-												%i.icono-on-chip.material-icons link
-												%a.grey-text.text-darken-1{href:"#!"} Link_1
-									.card-action
-										%p Hola
-
+					-#====== CONTENIDO - large =======
+				#contenido-comunicado-large.col.s12.l5.hide-on-med-and-down
+					#contenido-large.card
+						.card.card-flotante
+							.card.contenido-comunicado.min-cien
+								.card-image.fijable
+									%img{src:"../../images/comunicados/examen-1.jpg"}
+									%span.card-title Título del comunicado
+									
+								.card-content
+									%a.btn-floating.halfway-fab.waves-effect.waves-light.red.a-corregido
+										%i.material-icons star
+									%p.indigo-text.accent-1-text.truncate{style:"padding-bottom: 10px"}
+										%i.material-icons.left today
+										%span Publicado: 03/09/18
+									%p.indigo-text.accent-1-text.truncate{style:"padding-bottom: 10px"}
+										%i.material-icons.left date_range
+										%span Termina: 03/09/19
+									%p.indigo-text.accent-1-text.truncate{style:"padding-bottom: 10px"}
+										%i.material-icons.left person
+										%span De: Persona_1
+									%p.indigo-text.accent-1-text.truncate{style:"padding-bottom: 15px"}
+										%i.material-icons.left group
+										%span.trun Para: Grupo_1, Grupo_2, Grupo_3
+										%span.right
+											%a{href:"#dirigido"} Ver todo
+									%p.text-normal Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+									%p.text-normal Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
+									%p{style:"margin-top: 1em"}
+										.chip 
+											%i.icono-on-chip.material-icons attachment
+											%a.grey-text.text-darken-1{href:"#!"} Archivo adjunto1
+										.chip 
+											%i.icono-on-chip.material-icons attachment
+											%a.grey-text.text-darken-1{href:"#!"} Archivo adjunto1
+										.chip 
+											%i.icono-on-chip.material-icons link
+											%a.grey-text.text-darken-1{href:"#!"} Link_1
+								.card-action.grey.lighten-2
+									.row
+										.col.s12.center-align
+											%img{src:"../../images/teacher01.jpg"}
+										.col.s12.center-align
+											%h4.truncate Nombre_publicador
+										.col.s12
+											%p.jus Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 
 
 	-#=================================================================
@@ -357,8 +341,8 @@
 	-#Calendar
 	%script{src:"https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"}
 
-	%script{:type=>"text/javascript", :src=>"../../../js/materialize.js"}
-	%script{:type=>"text/javascript", :src=>"../../../js/main.js"}
+	%script{:type=>"text/javascript", :src=>"../../js/materialize.js"}
+	%script{:type=>"text/javascript", :src=>"../../js/main.js"}
 	-#Calendar
-	%script{src:"../../../js/jquery-ui-datepicker.min.js"}
-	%script{src:"../../../js/calendar.js"}
+	%script{src:"../../js/jquery-ui-datepicker.min.js"}
+	%script{src:"../../js/calendar.js"}

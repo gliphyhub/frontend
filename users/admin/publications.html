@@ -1,33 +1,37 @@
 <!DOCTYPE html>
 <html lang="es">
-  <header>
+  <header class="navegacion-espacio">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta charset="UTF-8">
-    <link href="../../images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="../../images/favicon.ico" rel="shortcut icon">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../../css/materialize.css" media="screen,projection" rel="stylesheet">
     <link href="../../css/style.css" rel="stylesheet">
     <link href="../../css/animate.css" rel="stylesheet">
     <title>Gliphy Admin</title>
-    <link href="../../css/calendar.css" rel="stylesheet">
   </header>
   <body>
     <div class="navbar-fixed">
       <nav class="negro-flat">
         <div class="nav-wrapper">
           <p class="left">
-            <a class="button-collapse1 hide-on-large-only btn-flat white-bonis" data-activates="navegacion-movil" href="#" style="margin-top: -25px">
+            <a class="hide-on-large-only btn-flat white-bonis" data-activates="navegacion-movil" href="#" id="menu" style="margin-top: -25px">
               <i class="material-icons" style=" line-height: 30px">menu</i>
             </a>
           </p>
           <p class="right">
-            <a class="button-collapse2 btn-flat white-bonis left hide-on-small-only" data-activates="slide-out" href="#" style="text-transform: none">
+            <a class="options-user btn-flat white-bonis left hide-on-small-only" data-activates="slide-out" href="#" style="text-transform: none">
               <img class="admin-img left" src="../../images/admin.jpg">
               Joel Hernández
             </a>
-            <a class="button-collapse2 btn-flat white-bonis left hide-on-med-and-up" data-activates="slide-out" href="#">
+            <a class="options-user btn-flat white-bonis left hide-on-med-and-up" data-activates="slide-out" href="#">
               <i class="material-icons left" style=" line-height: 30px;">apps</i>
               OPCIONES
+            </a>
+          </p>
+          <p class="right">
+            <a class="btn-flat white-bonis hide-on-med-and-down tooltipped hoverable grey darken-1" data-delay="50" data-position="bottom" data-tooltip="Mostrar menú" href="#!" id="toggleMenu" style="margin-top: -30px; padding: 0px; width: 40px">
+              <i class="material-icons center" style=" line-height: 35px">view_quilt</i>
             </a>
           </p>
           <div class="col s8 margincito-left hide-on-small-only truncate">
@@ -51,17 +55,17 @@
       <li>
         <a class="white-bonis waves-effect" href="#">
           <i class="material-icons left white-bonis">person</i>
-          Mi perfil
+          <span>Mi perfil</span>
         </a>
       </li>
       <li>
         <a class="white-bonis waves-effect" href="#!">
           <i class="material-icons left white-bonis">power_settings_new</i>
-          Salir
+          <span>Salir</span>
         </a>
       </li>
     </ul>
-    <ul class="side-nav fixed lateral-admin" id="navegacion1" style="width:240px;margin-top:63px;">
+    <ul class="side-nav fixed lateral-admin" id="navegacion-no-oculto" style="width:240px;margin-top:63px">
       <br>
       <li>
         <a class="waves-effect white-bonis" href="index.html">
@@ -137,7 +141,7 @@
       </li>
       <br>
     </ul>
-    <main>
+    <main class="navegacion-espacio">
       <div class="fixed-action-btn">
         <a class="btn-floating btn-large waves-effect waves-light red tooltipped hoverable" data-delay="50" data-position="left" data-tooltip="Buscar" href="#buscar">
           <i class="material-icons">search</i>
@@ -162,48 +166,56 @@
       </div>
       <div class="modal" id="dirigido">
         <div class="modal-content">
-          <h4>Dirigido a:</h4>
+          <h4>Para</h4>
           <div class="chip">
             <i class="icono-on-chip material-icons">person</i>
-            Grupo_1
+            <span>Grupo_1</span>
           </div>
           <div class="chip">
             <i class="icono-on-chip material-icons">person</i>
-            Grupo_2
+            <span>Grupo_2</span>
+          </div>
+          <div class="chip">
+            <i class="icono-on-chip material-icons">person</i>
+            <span>Grupo_3</span>
           </div>
           <p class="right">
             <a class="modal-action modal-close waves-effect btn-flat" href="#!">Volver</a>
           </p>
         </div>
       </div>
-      <div class="modal modal-fixed-footer" id="contenido-destacado" style="max-height: 80%; height: 80%; width: 90%">
-        <div class="modal-content" style="padding: 0px">
-          <div class="card" style="margin: 0">
-            <div class="card-image">
-              <img class="responsive-img" src="/../../images/comunicados/examen-1.jpg">
+      <div class="modal modal-fixed-footer" id="contenido-responsivo">
+        <div class="modal-content">
+          <div class="card contenido-comunicado min-cien">
+            <div class="card-image fijable">
+              <img src="../../images/comunicados/examen-1.jpg">
               <span class="card-title">Título del comunicado</span>
-              <a class="btn-floating halfway-fab waves-effect waves-light red">
-                <i class="material-icons">star</i>
-              </a>
             </div>
             <div class="card-content">
+              <a class="btn-floating halfway-fab waves-effect waves-light red a-corregido">
+                <i class="material-icons">star</i>
+              </a>
               <p class="indigo-text accent-1-text truncate" style="padding-bottom: 10px">
                 <i class="material-icons left">today</i>
-                Fecha_publicación
+                <span>Publicado: 03/09/18</span>
+              </p>
+              <p class="indigo-text accent-1-text truncate" style="padding-bottom: 10px">
+                <i class="material-icons left">date_range</i>
+                <span>Termina: 03/09/19</span>
               </p>
               <p class="indigo-text accent-1-text truncate" style="padding-bottom: 10px">
                 <i class="material-icons left">person</i>
-                Publicado por: Persona_1
+                <span>De: Persona_1</span>
               </p>
               <p class="indigo-text accent-1-text truncate" style="padding-bottom: 15px">
                 <i class="material-icons left">group</i>
-                Dirigido a: Grupo_1, Grupo_2
+                <span class="trun">Para: Grupo_1, Grupo_2, Grupo_3</span>
                 <span class="right">
                   <a href="#dirigido">Ver todo</a>
                 </span>
               </p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <p class="text-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <p class="text-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
               <p style="margin-top: 1em">
                 <div class="chip">
                   <i class="icono-on-chip material-icons">attachment</i>
@@ -219,74 +231,38 @@
                 </div>
               </p>
             </div>
-            <div class="card-action">
-              <p>Hola</p>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <a class="modal-action modal-close waves-effect btn-flat" href="#!">Volver</a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col s12">
-          <h3 class="red-text center-align">Publicaciones</h3>
-        </div>
-        <div class="col s12 l4">
-          <h5 class="truncate center-align">Calendario</h5>
-          <div id="calendar"></div>
-        </div>
-        <div class="col s12 l8">
-          <div class="col s12">
-            <h5 class="truncate center-align">Comunicados</h5>
-            <ul class="tabs tabs-fixed-width">
-              <li class="tab">
-                <a class="active" href="#destacados">Destacados</a>
-              </li>
-              <li class="tab">
-                <a href="#dia">Actuales</a>
-              </li>
-            </ul>
-          </div>
-          <div id="destacados">
-            <div class="col s12">
-              <div class="card">
-                <div class="card-title grey-text text-darken-4 truncate blue-grey lighten-3" style="padding: 15px !important">
-                  Título del comunicado
-                  <a href="#contenido-destacado">
-                    <i class="material-icons right">visibility</i>
-                  </a>
+            <div class="card-action grey lighten-2">
+              <div class="row">
+                <div class="col s12 center-align">
+                  <img src="../../images/teacher01.jpg">
                 </div>
-                <div class="card-content" style="padding: 15px !important">
-                  <p>
-                    Esto es un preview del texto y no acabarás de lee...
-                  </p>
-                  <p style="margin-top: 1em">
-                    <div class="chip">
-                      <i class="icono-on-chip material-icons">today</i>
-                      Fecha
-                    </div>
-                    <div class="chip">
-                      <i class="icono-on-chip material-icons">person</i>
-                      Persona_1
-                    </div>
-                    <div class="chip">
-                      <i class="icono-on-chip material-icons">equalizer</i>
-                      Visto
-                    </div>
-                    <div class="chip">
-                      <i class="icono-on-chip material-icons">attachment</i>
-                      Adjuntos
-                    </div>
-                  </p>
+                <div class="col s12 center-align">
+                  <h4 class="truncate">Nombre_publicador</h4>
+                </div>
+                <div class="col s12">
+                  <p class="jus">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
               </div>
             </div>
           </div>
-          <div id="dia">
-            <div class="col s12 m6">
+        </div>
+        <div class="modal-footer grey lighten-2">
+          <a class="modal-action modal-close waves-effect btn-flat" href="#!">Volver</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12 l7" id="parte-izquierda">
+          <div class="col s12">
+            <h3 class="red-text center-align">Publicaciones</h3>
+          </div>
+          <div class="col s12" id="diversos">
+            <div class="col s12 m7" id="calendario-contenedor" style="padding: 0">
+              <h5 class="truncate center-align">Calendario</h5>
+              <div id="calendar"></div>
+            </div>
+            <div class="col s12 m5" id="flitros-contenedor" style="padding: 1px">
               <div class="col s12">
-                <h4 class="blue-text truncate">Abril 18</h4>
+                <h4 class="blue-text truncate center-align">Abril 18</h4>
               </div>
               <div class="col s12">
                 <p>
@@ -307,178 +283,177 @@
                   <label class="black-text" for="self" style="margin-left: 1rem">Mostrar sólo mis publicaciones</label>
                 </p>
               </div>
-              <div class="col s12">
-                <div class="card">
-                  <div class="card-title grey-text text-darken-4 truncate blue-grey lighten-3" style="padding: 15px !important">
-                    Título del comunicado
-                    <a href="#contenido-comunicado">
-                      <i class="material-icons right">visibility</i>
-                    </a>
-                  </div>
-                  <div class="card-content" style="padding: 15px !important">
-                    <p>
-                      Esto es un preview del texto y no acabarás de lee...
-                    </p>
-                    <p style="margin-top: 1em">
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">today</i>
-                        Fecha
-                      </div>
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">person</i>
-                        Persona_1
-                      </div>
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">equalizer</i>
-                        Visto
-                      </div>
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">attachment</i>
-                        Adjuntos
-                      </div>
-                    </p>
-                  </div>
+              <div class="col s12 hide-on-med-and-down">
+                <p>Elegir tipo de vista</p>
+              </div>
+              <div class="col s12 hide-on-med-and-down">
+                <p>
+                  <a class="btn-flat tooltipped hoverable red white-bonis" data-delay="50" data-position="top" data-tooltip="3 columnas" href="#!" id="vista-tres-columnas" style="margin-top: -30px; padding-left: 10px; width: 40px">
+                    <i class="material-icons center" style=" line-height: 35px">view_column</i>
+                  </a>
+                  <a class="btn-flat tooltipped hoverable" data-delay="50" data-position="top" data-tooltip="Vista simple" href="#!" id="vista-simple" style="margin-top: -30px; padding-left: 10px; width: 40px">
+                    <i class="material-icons center" style=" line-height: 35px">view_day</i>
+                  </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col s12" id="cards-comunicados">
+            <h5 class="truncate center-align">Comunicados</h5>
+            <div class="card">
+              <div class="head-card blue-grey lighten-3">
+                <h4 class="grey-text text-darken-4 truncate">Título del comunicado</h4>
+                <span>Profesor > Alumno</span>
+                <a class="v-large hide-on-med-and-down right" href="#contenido-large">
+                  <i class="material-icons">visibility</i>
+                </a>
+                <a class="v-touch hide-on-large-only right" href="#contenido-responsivo">
+                  <i class="material-icons">visibility</i>
+                </a>
+              </div>
+              <div class="card-prev card-content">
+                <p class="text-normal truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <div class="chip">
+                  <i class="icono-on-chip material-icons">today</i>
+                  Publ: 03/09/18
                 </div>
-                <div class="card">
-                  <div class="card-title grey-text text-darken-4 truncate blue-grey lighten-3" style="padding: 15px !important">
-                    Título del comunicado
-                    <a href="#contenido-comunicado">
-                      <i class="material-icons right">visibility</i>
-                    </a>
-                  </div>
-                  <div class="card-content" style="padding: 15px !important">
-                    <p>
-                      Esto es un preview del texto y no acabarás de lee...
-                    </p>
-                    <p style="margin-top: 1em">
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">today</i>
-                        Fecha
-                      </div>
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">person</i>
-                        Persona_1
-                      </div>
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">equalizer</i>
-                        Visto
-                      </div>
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">attachment</i>
-                        Adjuntos
-                      </div>
-                    </p>
-                  </div>
+                <div class="chip">
+                  <i class="icono-on-chip material-icons">date_range</i>
+                  Term: 03/09/19
                 </div>
-                <div class="card">
-                  <div class="card-title grey-text text-darken-4 truncate blue-grey lighten-3" style="padding: 15px !important">
-                    Título del comunicado
-                    <a href="#contenido-comunicado">
-                      <i class="material-icons right">visibility</i>
-                    </a>
-                  </div>
-                  <div class="card-content" style="padding: 15px !important">
-                    <p>
-                      Esto es un preview del texto y no acabarás de lee...
-                    </p>
-                    <p style="margin-top: 1em">
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">today</i>
-                        Fecha
-                      </div>
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">person</i>
-                        Persona_1
-                      </div>
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">equalizer</i>
-                        Visto
-                      </div>
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">attachment</i>
-                        Adjuntos
-                      </div>
-                    </p>
-                  </div>
+                <div class="chip">
+                  <i class="icono-on-chip material-icons">equalizer</i>
+                  Visto
                 </div>
-                <div class="card">
-                  <div class="card-title grey-text text-darken-4 truncate blue-grey lighten-3" style="padding: 15px !important">
-                    Título del comunicado
-                    <a href="#contenido-comunicado">
-                      <i class="material-icons right">visibility</i>
-                    </a>
-                  </div>
-                  <div class="card-content" style="padding: 15px !important">
-                    <p>
-                      Esto es un preview del texto y no acabarás de lee...
-                    </p>
-                    <p style="margin-top: 1em">
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">today</i>
-                        Fecha
-                      </div>
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">person</i>
-                        Persona_1
-                      </div>
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">equalizer</i>
-                        Visto
-                      </div>
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">attachment</i>
-                        Adjuntos
-                      </div>
-                    </p>
-                  </div>
+                <div class="chip">
+                  <i class="icono-on-chip material-icons">attachment</i>
+                  Adjuntos
                 </div>
               </div>
             </div>
-            <div class="col s12 m6">
-              <div class="card" id="contenido-comunicado">
-                <div class="card">
-                  <div class="card-image">
-                    <img class="responsive-img" src="/../../images/comunicados/examen-1.jpg">
-                    <span class="card-title">Título del comunicado</span>
-                    <a class="btn-floating halfway-fab waves-effect waves-light red">
-                      <i class="material-icons">star</i>
-                    </a>
-                  </div>
-                  <div class="card-content">
-                    <p class="indigo-text accent-1-text truncate" style="padding-bottom: 10px">
-                      <i class="material-icons left">today</i>
-                      Fecha_publicación
-                    </p>
-                    <p class="indigo-text accent-1-text truncate" style="padding-bottom: 10px">
-                      <i class="material-icons left">person</i>
-                      Publicado por: Persona_1
-                    </p>
-                    <p class="indigo-text accent-1-text truncate" style="padding-bottom: 15px">
-                      <i class="material-icons left">group</i>
-                      Dirigido a: Grupo_1, Grupo_2
-                      <span class="right">
-                        <a href="#dirigido">Ver todo</a>
-                      </span>
-                    </p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                    <p style="margin-top: 1em">
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">attachment</i>
-                        <a class="grey-text text-darken-1" href="#!">Archivo adjunto1</a>
-                      </div>
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">attachment</i>
-                        <a class="grey-text text-darken-1" href="#!">Archivo adjunto1</a>
-                      </div>
-                      <div class="chip">
-                        <i class="icono-on-chip material-icons">link</i>
-                        <a class="grey-text text-darken-1" href="#!">Link_1</a>
-                      </div>
-                    </p>
-                  </div>
-                  <div class="card-action">
-                    <p>Hola</p>
+            <div class="card">
+              <div class="head-card blue-grey lighten-3">
+                <h4 class="grey-text text-darken-4 truncate">Título del comunicado</h4>
+                <span>Profesor > Alumno</span>
+                <a class="v-large hide-on-med-and-down right" href="#contenido-large">
+                  <i class="material-icons">visibility</i>
+                </a>
+                <a class="v-touch hide-on-large-only right" href="#contenido-responsivo">
+                  <i class="material-icons">visibility</i>
+                </a>
+              </div>
+              <div class="card-prev card-content">
+                <p class="text-normal truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <div class="chip">
+                  <i class="icono-on-chip material-icons">today</i>
+                  Publ: 03/09/18
+                </div>
+                <div class="chip">
+                  <i class="icono-on-chip material-icons">date_range</i>
+                  Term: 03/09/19
+                </div>
+                <div class="chip">
+                  <i class="icono-on-chip material-icons">equalizer</i>
+                  Visto
+                </div>
+                <div class="chip">
+                  <i class="icono-on-chip material-icons">attachment</i>
+                  Adjuntos
+                </div>
+              </div>
+            </div>
+            <div class="card">
+              <div class="head-card blue-grey lighten-3">
+                <h4 class="grey-text text-darken-4 truncate">Título del comunicado</h4>
+                <span>Profesor > Alumno</span>
+                <a class="v-large hide-on-med-and-down right" href="#contenido-large">
+                  <i class="material-icons">visibility</i>
+                </a>
+                <a class="v-touch hide-on-large-only right" href="#contenido-responsivo">
+                  <i class="material-icons">visibility</i>
+                </a>
+              </div>
+              <div class="card-prev card-content">
+                <p class="text-normal truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <div class="chip">
+                  <i class="icono-on-chip material-icons">today</i>
+                  Publ: 03/09/18
+                </div>
+                <div class="chip">
+                  <i class="icono-on-chip material-icons">date_range</i>
+                  Term: 03/09/19
+                </div>
+                <div class="chip">
+                  <i class="icono-on-chip material-icons">equalizer</i>
+                  Visto
+                </div>
+                <div class="chip">
+                  <i class="icono-on-chip material-icons">attachment</i>
+                  Adjuntos
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col s12 l5 hide-on-med-and-down" id="contenido-comunicado-large">
+          <div class="card" id="contenido-large">
+            <div class="card card-flotante">
+              <div class="card contenido-comunicado min-cien">
+                <div class="card-image fijable">
+                  <img src="../../images/comunicados/examen-1.jpg">
+                  <span class="card-title">Título del comunicado</span>
+                </div>
+                <div class="card-content">
+                  <a class="btn-floating halfway-fab waves-effect waves-light red a-corregido">
+                    <i class="material-icons">star</i>
+                  </a>
+                  <p class="indigo-text accent-1-text truncate" style="padding-bottom: 10px">
+                    <i class="material-icons left">today</i>
+                    <span>Publicado: 03/09/18</span>
+                  </p>
+                  <p class="indigo-text accent-1-text truncate" style="padding-bottom: 10px">
+                    <i class="material-icons left">date_range</i>
+                    <span>Termina: 03/09/19</span>
+                  </p>
+                  <p class="indigo-text accent-1-text truncate" style="padding-bottom: 10px">
+                    <i class="material-icons left">person</i>
+                    <span>De: Persona_1</span>
+                  </p>
+                  <p class="indigo-text accent-1-text truncate" style="padding-bottom: 15px">
+                    <i class="material-icons left">group</i>
+                    <span class="trun">Para: Grupo_1, Grupo_2, Grupo_3</span>
+                    <span class="right">
+                      <a href="#dirigido">Ver todo</a>
+                    </span>
+                  </p>
+                  <p class="text-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                  <p class="text-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                  <p style="margin-top: 1em">
+                    <div class="chip">
+                      <i class="icono-on-chip material-icons">attachment</i>
+                      <a class="grey-text text-darken-1" href="#!">Archivo adjunto1</a>
+                    </div>
+                    <div class="chip">
+                      <i class="icono-on-chip material-icons">attachment</i>
+                      <a class="grey-text text-darken-1" href="#!">Archivo adjunto1</a>
+                    </div>
+                    <div class="chip">
+                      <i class="icono-on-chip material-icons">link</i>
+                      <a class="grey-text text-darken-1" href="#!">Link_1</a>
+                    </div>
+                  </p>
+                </div>
+                <div class="card-action grey lighten-2">
+                  <div class="row">
+                    <div class="col s12 center-align">
+                      <img src="../../images/teacher01.jpg">
+                    </div>
+                    <div class="col s12 center-align">
+                      <h4 class="truncate">Nombre_publicador</h4>
+                    </div>
+                    <div class="col s12">
+                      <p class="jus">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -490,8 +465,8 @@
   </body>
   <script crossorigin="anonymous" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script src="../../../js/materialize.js" type="text/javascript"></script>
-  <script src="../../../js/main.js" type="text/javascript"></script>
-  <script src="../../../js/jquery-ui-datepicker.min.js"></script>
-  <script src="../../../js/calendar.js"></script>
+  <script src="../../js/materialize.js" type="text/javascript"></script>
+  <script src="../../js/main.js" type="text/javascript"></script>
+  <script src="../../js/jquery-ui-datepicker.min.js"></script>
+  <script src="../../js/calendar.js"></script>
 </html>

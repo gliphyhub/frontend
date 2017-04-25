@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
-  <header>
+  <header class="navegacion-espacio">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta charset="UTF-8">
-    <link href="../../images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="../../images/favicon.ico" rel="shortcut icon">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../../css/materialize.css" media="screen,projection" rel="stylesheet">
     <link href="../../css/style.css" rel="stylesheet">
@@ -15,23 +15,28 @@
       <nav class="negro-flat">
         <div class="nav-wrapper">
           <p class="left">
-            <a class="button-collapse1 hide-on-large-only btn-flat white-bonis" data-activates="navegacion-movil" href="#" style="margin-top: -25px">
+            <a class="hide-on-large-only btn-flat white-bonis" data-activates="navegacion-movil" href="#" id="menu" style="margin-top: -25px">
               <i class="material-icons" style=" line-height: 30px">menu</i>
             </a>
           </p>
           <p class="right">
-            <a class="button-collapse2 btn-flat white-bonis left hide-on-small-only" data-activates="slide-out" href="#" style="text-transform: none">
+            <a class="options-user btn-flat white-bonis left hide-on-small-only" data-activates="slide-out" href="#" style="text-transform: none">
               <img class="admin-img left" src="../../images/admin.jpg">
               Joel Hernández
             </a>
-            <a class="button-collapse2 btn-flat white-bonis left hide-on-med-and-up" data-activates="slide-out" href="#">
+            <a class="options-user btn-flat white-bonis left hide-on-med-and-up" data-activates="slide-out" href="#">
               <i class="material-icons left" style=" line-height: 30px;">apps</i>
               OPCIONES
             </a>
           </p>
+          <p class="right">
+            <a class="btn-flat white-bonis hide-on-med-and-down tooltipped hoverable grey darken-1" data-delay="50" data-position="bottom" data-tooltip="Mostrar menú" href="#!" id="toggleMenu" style="margin-top: -30px; padding: 0px; width: 40px">
+              <i class="material-icons center" style=" line-height: 35px">view_quilt</i>
+            </a>
+          </p>
           <div class="col s8 margincito-left hide-on-small-only truncate">
             <a class="breadcrumb" href="">Gliphy Admin</a>
-            <a class="breadcrumb" href="">Publicaciones</a>
+            <a class="breadcrumb" href="">Agregar</a>
           </div>
         </div>
       </nav>
@@ -50,17 +55,17 @@
       <li>
         <a class="white-bonis waves-effect" href="#">
           <i class="material-icons left white-bonis">person</i>
-          Mi perfil
+          <span>Mi perfil</span>
         </a>
       </li>
       <li>
         <a class="white-bonis waves-effect" href="#!">
           <i class="material-icons left white-bonis">power_settings_new</i>
-          Salir
+          <span>Salir</span>
         </a>
       </li>
     </ul>
-    <ul class="side-nav fixed lateral-admin" id="navegacion1" style="width:240px;margin-top:63px;">
+    <ul class="side-nav fixed lateral-admin" id="navegacion-no-oculto" style="width:240px;margin-top:63px">
       <br>
       <li>
         <a class="waves-effect white-bonis" href="index.html">
@@ -136,7 +141,7 @@
       </li>
       <br>
     </ul>
-    <main>
+    <main class="navegacion-espacio">
       <div class="fixed-action-btn">
         <a class="btn-floating btn-large waves-effect waves-light red tooltipped hoverable" data-delay="50" data-position="left" data-tooltip="Publicar" href="#mensaje-confirmar">
           <i class="material-icons">done</i>
@@ -379,6 +384,6 @@
     </main>
   </body>
   <script crossorigin="anonymous" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
-  <script src="../../../js/materialize.js" type="text/javascript"></script>
-  <script src="../../../js/main.js" type="text/javascript"></script>
+  <script src="../../js/materialize.js" type="text/javascript"></script>
+  <script src="../../js/main.js" type="text/javascript"></script>
 </html>
