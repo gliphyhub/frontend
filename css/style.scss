@@ -252,7 +252,7 @@ footer{
 .text-normal
 {
   font-weight: 400 !important;
-  font-size: 13px !important;
+  font-size: 14px !important;
 }
 .trun
 {
@@ -349,7 +349,7 @@ footer{
   margin-right: 10px;
 }
 
-//======== Estilos de cards - propuesta 01 ============
+/*======== Estilos de cards - propuesta 01 ============
 .head-card
 {
   padding : 10px 10px 10px 15px  !important;
@@ -380,6 +380,74 @@ footer{
 {
   padding-bottom: 1em !important;
 }
+*/
+//======== Estilos de cards - propuesta 02 ============
+///pasar a variables si es aprobado
+.negro-card{
+  background-color: #1d1d1d
+}
+.verde-card{
+  background-color: #00c171
+}
+.azul-card{
+  background-color: #01579d
+}
+.verdedark-card{
+  background-color: #0d261e
+}
+.gris-card{
+  background-color: #607d8b
+}
+.naranja-card{
+  background-color: #ea4c36
+}
+//==============================
+.head-card
+{
+  padding : 125px 10px 10px 15px  !important;
+  color: white;
+  border-radius: 5px;
+  h4
+  {
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    margin: 0;
+    line-height: 1.5;
+  }
+ /*  span{
+    font-weight: 200;
+  } */
+}
+.card-prev 
+{
+  padding: 15px !important;
+  p
+  {
+    padding-bottom: 1em !important;
+  }
+ 
+}
+.min-text{
+  font-size: 11px;  
+  .icon-special{
+        float: left;
+        font-size: 16px;
+        padding-right: 8px;
+  }
+}
+.titulo-card
+{
+    font-size: 20px !important;
+    font-weight: 300 !important;
+}
+
+.contenedor-chips
+{
+  padding-bottom: 1em !important;
+}
+
+
+
 
 //==== truncate sin block
 
@@ -477,4 +545,4 @@ footer{
         width: 100%;
       }
     }
-
+//==================NUJEVA PROPUESTA DE CARD=============================
