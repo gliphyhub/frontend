@@ -1,459 +1,458 @@
 <!DOCTYPE html>
-<html lang="es">
-  <header class="navegacion-espacio">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta charset="UTF-8">
-    <link href="../../images/favicon.ico" rel="shortcut icon">
-    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link href="../../css/materialize.css" media="screen,projection" rel="stylesheet">
-    <link href="../../css/style.css" rel="stylesheet">
-    <link href="../../css/calendar.css" rel="stylesheet">
-    <link href="../../css/animate.css" rel="stylesheet">
+<html lang='es'>
+  <header class='navegacion-espacio'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <meta charset='UTF-8'>
+    <link href='../../images/favicon.ico' rel='shortcut icon'>
+    <link href='http://fonts.googleapis.com/icon?family=Material+Icons' rel='stylesheet'>
+    <link href='../../css/materialize.css' media='screen,projection' rel='stylesheet'>
+    <link href='../../css/style.css' rel='stylesheet'>
+    <link href='../../css/calendar.css' rel='stylesheet'>
     <title>Gliphy Admin</title>
   </header>
   <body>
-    <div class="navbar-fixed">
-      <nav class="negro-flat">
-        <div class="nav-wrapper">
-          <p class="left">
-            <a class="hide-on-large-only btn-flat white-bonis" data-activates="navegacion-movil" href="#" id="menu" style="margin-top: -25px">
-              <i class="material-icons" style=" line-height: 30px">menu</i>
+    <div class='navbar-fixed'>
+      <nav class='negro-flat'>
+        <div class='nav-wrapper'>
+          <p class='left'>
+            <a class='hide-on-large-only btn-flat white-bonis' data-activates='navegacion-movil' href='#' id='menu' style='margin-top: -25px'>
+              <i class='material-icons' style=' line-height: 30px'>menu</i>
             </a>
           </p>
-          <p class="right">
-            <a class="options-user btn-flat white-bonis left hide-on-small-only" data-activates="slide-out" href="#" style="text-transform: none">
-              <img class="admin-img left" src="../../images/admin.jpg">
+          <p class='right'>
+            <a class='options-user btn-flat white-bonis left hide-on-small-only' data-activates='slide-out' href='#' style='text-transform: none'>
+              <img class='admin-img left' src='../../images/admin.jpg'>
               Joel Hernández
             </a>
-            <a class="options-user btn-flat white-bonis left hide-on-med-and-up" data-activates="slide-out" href="#">
-              <i class="material-icons left" style=" line-height: 30px;">apps</i>
+            <a class='options-user btn-flat white-bonis left hide-on-med-and-up' data-activates='slide-out' href='#'>
+              <i class='material-icons left' style=' line-height: 30px;'>apps</i>
               OPCIONES
             </a>
           </p>
-          <p class="right">
-            <a class="btn-flat white-bonis hide-on-med-and-down tooltipped hoverable grey darken-1" data-delay="50" data-position="bottom" data-tooltip="Mostrar menú" href="#!" id="toggleMenu" style="margin-top: -30px; padding: 0px; width: 40px">
-              <i class="material-icons center" style=" line-height: 35px">view_quilt</i>
+          <p class='right'>
+            <a class='btn-flat white-bonis hide-on-med-and-down tooltipped hoverable' data-delay='50' data-position='bottom' data-tooltip='Cambiar vista' href='#!' id='toggleMenu' style='margin-top: -30px; padding: 0px; width: 40px'>
+              <i class='material-icons center' style=' line-height: 35px'>view_stream</i>
             </a>
           </p>
-          <div class="col s8 margincito-left hide-on-small-only truncate">
-            <a class="breadcrumb" href="">Gliphy Admin</a>
-            <a class="breadcrumb" href="">Publicaciones</a>
+          <div class='col s8 margincito-left hide-on-small-only truncate'>
+            <a class='breadcrumb' href=''>Gliphy Admin</a>
+            <a class='breadcrumb' href=''>Publicaciones</a>
           </div>
         </div>
       </nav>
     </div>
-    <ul class="side-nav lateral-admin" id="slide-out">
-      <li class="userView">
-        <div class="background">
-          <img src="../../images/office.jpg">
+    <ul class='side-nav lateral-admin' id='slide-out'>
+      <li class='userView'>
+        <div class='background'>
+          <img src='../../images/office.jpg'>
         </div>
-        <div class="white-bonis">
-          <img class="circle" src="../../images/admin.jpg">
-          <span class="white-text name">Joel Hernández</span>
-          <span class="white-text email separado">Admnistrador</span>
+        <div class='white-bonis'>
+          <img class='circle' src='../../images/admin.jpg'>
+          <span class='white-text name'>Joel Hernández</span>
+          <span class='white-text email separado'>Admnistrador</span>
         </div>
       </li>
       <li>
-        <a class="white-bonis waves-effect" href="#">
-          <i class="material-icons left white-bonis">person</i>
+        <a class='white-bonis waves-effect' href='#'>
+          <i class='material-icons left white-bonis'>person</i>
           <span>Mi perfil</span>
         </a>
       </li>
       <li>
-        <a class="white-bonis waves-effect" href="#!">
-          <i class="material-icons left white-bonis">power_settings_new</i>
+        <a class='white-bonis waves-effect' href='#!'>
+          <i class='material-icons left white-bonis'>power_settings_new</i>
           <span>Salir</span>
         </a>
       </li>
     </ul>
-    <ul class="side-nav fixed lateral-admin" id="navegacion-no-oculto" style="width:240px;margin-top:63px">
+    <ul class='side-nav fixed lateral-admin' id='navegacion-no-oculto' style='width:240px;margin-top:63px'>
       <br>
       <li>
-        <a class="waves-effect white-bonis" href="index.html">
-          <i class="material-icons left white-bonis">home</i>
+        <a class='waves-effect white-bonis' href='index.html'>
+          <i class='material-icons left white-bonis'>home</i>
           Inicio
         </a>
       </li>
       <br>
       <li>
-        <a class="waves-effect white-bonis" href="base.html">
-          <i class="material-icons left white-bonis">storage</i>
+        <a class='waves-effect white-bonis' href='base.html'>
+          <i class='material-icons left white-bonis'>storage</i>
           Base de Datos
         </a>
       </li>
       <br>
       <li>
-        <a class="waves-effect white-bonis" href="publications.html">
-          <i class="material-icons left white-bonis">account_circle</i>
+        <a class='waves-effect white-bonis' href='publications.html'>
+          <i class='material-icons left white-bonis'>account_circle</i>
           Publicaciones
         </a>
       </li>
       <br>
       <li>
-        <a class="waves-effect white-bonis" href="new.html">
-          <i class="material-icons left white-bonis">add</i>
+        <a class='waves-effect white-bonis' href='new.html'>
+          <i class='material-icons left white-bonis'>add</i>
           Agregar
         </a>
       </li>
       <br>
       <li>
-        <a class="waves-effect white-bonis" href="help.html">
-          <i class="material-icons left white-bonis">error</i>
+        <a class='waves-effect white-bonis' href='help.html'>
+          <i class='material-icons left white-bonis'>error</i>
           Ayuda
         </a>
       </li>
       <br>
     </ul>
-    <ul class="side-nav lateral-admin" id="navegacion-movil" style="width:240px">
+    <ul class='side-nav lateral-admin' id='navegacion-movil' style='width:240px'>
       <br>
       <li>
-        <a class="waves-effect white-bonis" href="index.html">
-          <i class="material-icons left white-bonis">home</i>
+        <a class='waves-effect white-bonis' href='index.html'>
+          <i class='material-icons left white-bonis'>home</i>
           Inicio
         </a>
       </li>
       <br>
       <li>
-        <a class="waves-effect white-bonis" href="base.html">
-          <i class="material-icons left white-bonis">storage</i>
+        <a class='waves-effect white-bonis' href='base.html'>
+          <i class='material-icons left white-bonis'>storage</i>
           Base de Datos
         </a>
       </li>
       <br>
       <li>
-        <a class="waves-effect white-bonis" href="publications.html">
-          <i class="material-icons left white-bonis">account_circle</i>
+        <a class='waves-effect white-bonis' href='publications.html'>
+          <i class='material-icons left white-bonis'>account_circle</i>
           Publicaciones
         </a>
       </li>
       <br>
       <li>
-        <a class="waves-effect white-bonis" href="new.html">
-          <i class="material-icons left white-bonis">add</i>
+        <a class='waves-effect white-bonis' href='new.html'>
+          <i class='material-icons left white-bonis'>add</i>
           Agregar
         </a>
       </li>
       <br>
       <li>
-        <a class="waves-effect white-bonis" href="help.html">
-          <i class="material-icons left white-bonis">error</i>
+        <a class='waves-effect white-bonis' href='help.html'>
+          <i class='material-icons left white-bonis'>error</i>
           Ayuda
         </a>
       </li>
       <br>
     </ul>
-    <main class="navegacion-espacio">
-      <div class="fixed-action-btn">
-        <a class="btn-floating btn-large waves-effect waves-light red tooltipped hoverable" data-delay="50" data-position="left" data-tooltip="Buscar" href="#buscar">
-          <i class="material-icons">search</i>
+    <main class='navegacion-espacio'>
+      <div class='fixed-action-btn'>
+        <a class='btn-floating btn-large waves-effect waves-light red tooltipped hoverable' data-delay='50' data-position='left' data-tooltip='Buscar' href='#buscar'>
+          <i class='material-icons'>search</i>
         </a>
       </div>
-      <div class="modal bottom-sheet" id="buscar">
-        <div class="modal-content">
+      <div class='modal bottom-sheet' id='buscar'>
+        <div class='modal-content'>
           <h5>Ingrese el término de la búsqueda</h5>
           <br>
-          <div class="input-field">
-            <i class="material-icons prefix">search</i>
-            <input class="validate" id="links1" type="text">
-            <label for="links1">Búsqueda</label>
+          <div class='input-field'>
+            <i class='material-icons prefix'>search</i>
+            <input class='validate' id='links1' type='text'>
+            <label for='links1'>Búsqueda</label>
           </div>
         </div>
-        <div class="modal-footer">
-          <p class="right">
-            <a class="modal-action modal-close waves-effect waves-green btn" href="#">Buscar</a>
-            <a class="modal-action modal-close waves-effect waves-green btn-flat" href="#">Volver</a>
+        <div class='modal-footer'>
+          <p class='right'>
+            <a class='modal-action modal-close waves-effect waves-green btn' href='#'>Buscar</a>
+            <a class='modal-action modal-close waves-effect waves-green btn-flat' href='#'>Volver</a>
           </p>
         </div>
       </div>
-      <div class="modal" id="dirigido">
-        <div class="modal-content">
+      <div class='modal' id='dirigido'>
+        <div class='modal-content'>
           <h4>Para</h4>
-          <div class="chip">
-            <i class="icono-on-chip material-icons">person</i>
+          <div class='chip'>
+            <i class='icono-on-chip material-icons'>person</i>
             <span>Grupo_1</span>
           </div>
-          <div class="chip">
-            <i class="icono-on-chip material-icons">person</i>
+          <div class='chip'>
+            <i class='icono-on-chip material-icons'>person</i>
             <span>Grupo_2</span>
           </div>
-          <div class="chip">
-            <i class="icono-on-chip material-icons">person</i>
+          <div class='chip'>
+            <i class='icono-on-chip material-icons'>person</i>
             <span>Grupo_3</span>
           </div>
-          <p class="right">
-            <a class="modal-action modal-close waves-effect btn-flat" href="#!">Volver</a>
+          <p class='right'>
+            <a class='modal-action modal-close waves-effect btn-flat' href='#!'>Volver</a>
           </p>
         </div>
       </div>
-      <div class="modal modal-fixed-footer" id="contenido-responsivo">
-        <div class="modal-content">
-          <div class="card contenido-comunicado min-cien">
-            <div class="card-image fijable">
-              <img src="../../images/comunicados/examen-1.jpg">
-              <span class="card-title">Título del comunicado</span>
+      <div class='modal modal-fixed-footer' id='contenido-responsivo'>
+        <div class='modal-content'>
+          <div class='card contenido-comunicado min-cien'>
+            <div class='card-image fijable'>
+              <img src='../../images/comunicados/examen-1.jpg'>
+              <span class='card-title'>Título del comunicado</span>
             </div>
-            <div class="card-content">
-              <a class="btn-floating halfway-fab waves-effect waves-light red a-corregido">
-                <i class="material-icons">star</i>
+            <div class='card-content'>
+              <a class='btn-floating halfway-fab waves-effect waves-light red a-corregido'>
+                <i class='material-icons'>star</i>
               </a>
-              <p class="indigo-text accent-1-text truncate" style="padding-bottom: 10px">
-                <i class="material-icons left">today</i>
+              <p class='indigo-text accent-1-text truncate' style='padding-bottom: 10px'>
+                <i class='material-icons left'>today</i>
                 <span>Publicado: 03/09/18</span>
               </p>
-              <p class="indigo-text accent-1-text truncate" style="padding-bottom: 10px">
-                <i class="material-icons left">date_range</i>
+              <p class='indigo-text accent-1-text truncate' style='padding-bottom: 10px'>
+                <i class='material-icons left'>date_range</i>
                 <span>Termina: 03/09/19</span>
               </p>
-              <p class="indigo-text accent-1-text truncate" style="padding-bottom: 10px">
-                <i class="material-icons left">person</i>
+              <p class='indigo-text accent-1-text truncate' style='padding-bottom: 10px'>
+                <i class='material-icons left'>person</i>
                 <span>De: Persona_1</span>
               </p>
-              <p class="indigo-text accent-1-text truncate" style="padding-bottom: 15px">
-                <i class="material-icons left">group</i>
-                <span class="trun">Para: Grupo_1, Grupo_2, Grupo_3</span>
-                <span class="right">
-                  <a href="#dirigido">Ver todo</a>
+              <p class='indigo-text accent-1-text truncate' style='padding-bottom: 15px'>
+                <i class='material-icons left'>group</i>
+                <span class='trun'>Para: Grupo_1, Grupo_2, Grupo_3</span>
+                <span class='right'>
+                  <a href='#dirigido'>Ver todo</a>
                 </span>
               </p>
-              <p class="text-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-              <p class="text-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-              <p style="margin-top: 1em">
-                <div class="chip">
-                  <i class="icono-on-chip material-icons">attachment</i>
-                  <a class="grey-text text-darken-1" href="#!">Archivo adjunto1</a>
+              <p class='text-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <p class='text-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+              <p style='margin-top: 1em'>
+                <div class='chip'>
+                  <i class='icono-on-chip material-icons'>attachment</i>
+                  <a class='grey-text text-darken-1' href='#!'>Archivo adjunto1</a>
                 </div>
-                <div class="chip">
-                  <i class="icono-on-chip material-icons">attachment</i>
-                  <a class="grey-text text-darken-1" href="#!">Archivo adjunto1</a>
+                <div class='chip'>
+                  <i class='icono-on-chip material-icons'>attachment</i>
+                  <a class='grey-text text-darken-1' href='#!'>Archivo adjunto1</a>
                 </div>
-                <div class="chip">
-                  <i class="icono-on-chip material-icons">link</i>
-                  <a class="grey-text text-darken-1" href="#!">Link_1</a>
+                <div class='chip'>
+                  <i class='icono-on-chip material-icons'>link</i>
+                  <a class='grey-text text-darken-1' href='#!'>Link_1</a>
                 </div>
               </p>
             </div>
-            <div class="card-action grey lighten-2">
-              <div class="row">
-                <div class="col s12 center-align">
-                  <img src="../../images/teacher01.jpg">
+            <div class='card-action grey lighten-2'>
+              <div class='row'>
+                <div class='col s12 center-align'>
+                  <img src='../../images/teacher01.jpg'>
                 </div>
-                <div class="col s12 center-align">
-                  <h4 class="truncate">Nombre_publicador</h4>
+                <div class='col s12 center-align'>
+                  <h4 class='truncate'>Nombre_publicador</h4>
                 </div>
-                <div class="col s12">
-                  <p class="jus">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <div class='col s12'>
+                  <p class='jus'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="modal-footer grey lighten-2">
-          <a class="modal-action modal-close waves-effect btn-flat" href="#!">Volver</a>
+        <div class='modal-footer grey lighten-2'>
+          <a class='modal-action modal-close waves-effect btn-flat' href='#!'>Volver</a>
         </div>
       </div>
-      <div class="row">
-        <div class="col s12 l7" id="parte-izquierda">
-          <div class="col s12">
-            <h3 class="red-text center-align">Publicaciones</h3>
+      <div class='row'>
+        <div class='col s12 l7' id='parte-izquierda'>
+          <div class='col s12'>
+            <h3 class='red-text center-align'>Publicaciones</h3>
           </div>
-          <div class="col s12" id="diversos">
-            <div class="col s12 m7" id="calendario-contenedor" style="padding: 0">
-              <h5 class="truncate center-align">Calendario</h5>
-              <div id="calendar"></div>
+          <div class='col s12' id='diversos'>
+            <div class='col s12 m7' id='calendario-contenedor' style='padding: 0'>
+              <h5 class='truncate center-align'>Calendario</h5>
+              <div id='calendar'></div>
             </div>
-            <div class="col s12 m5" id="flitros-contenedor" style="padding: 1px">
-              <div class="col s12">
-                <h4 class="blue-text truncate center-align">Abril 18</h4>
+            <div class='col s12 m5' id='flitros-contenedor' style='padding: 1px'>
+              <div class='col s12'>
+                <h4 class='blue-text truncate center-align'>Abril 18</h4>
               </div>
-              <div class="col s12">
+              <div class='col s12'>
                 <p>
-                  <div class="input-field">
-                    <i class="material-icons prefix center-align">sort</i>
+                  <div class='input-field'>
+                    <i class='material-icons prefix center-align'>sort</i>
                     <select>
-                      <option disabled="" selected="" value="">Elige el orden</option>
-                      <option value="0">Fecha de publicación</option>
-                      <option value="1">Importancia</option>
+                      <option disabled='' selected='' value=''>Elige el orden</option>
+                      <option value='0'>Fecha de publicación</option>
+                      <option value='1'>Importancia</option>
                     </select>
                     <label>Ordenar por:</label>
                   </div>
                 </p>
               </div>
-              <div class="col s12">
+              <div class='col s12'>
                 <p>
-                  <input class="with-gap" id="self" name="grupo1" type="checkbox">
-                  <label class="black-text" for="self" style="margin-left: 1rem">Mostrar sólo mis publicaciones</label>
+                  <input class='with-gap' id='self' name='grupo1' type='checkbox'>
+                  <label class='black-text' for='self' style='margin-left: 1rem'>Mostrar sólo mis publicaciones</label>
                 </p>
               </div>
-              <div class="col s12 hide-on-med-and-down">
+              <div class='col s12 hide-on-med-and-down'>
                 <p>Elegir tipo de vista</p>
               </div>
-              <div class="col s12 hide-on-med-and-down">
+              <div class='col s12 hide-on-med-and-down'>
                 <p>
-                  <a class="btn-flat tooltipped hoverable red white-bonis" data-delay="50" data-position="top" data-tooltip="3 columnas" href="#!" id="vista-tres-columnas" style="margin-top: -30px; padding-left: 10px; width: 40px">
-                    <i class="material-icons center" style=" line-height: 35px">view_column</i>
+                  <a class='btn-flat tooltipped hoverable red white-bonis' data-delay='50' data-position='top' data-tooltip='3 columnas' href='#!' id='vista-tres-columnas' style='margin-top: -30px; padding-left: 10px; width: 40px'>
+                    <i class='material-icons center' style=' line-height: 35px'>view_column</i>
                   </a>
-                  <a class="btn-flat tooltipped hoverable" data-delay="50" data-position="top" data-tooltip="Vista simple" href="#!" id="vista-simple" style="margin-top: -30px; padding-left: 10px; width: 40px">
-                    <i class="material-icons center" style=" line-height: 35px">view_day</i>
+                  <a class='btn-flat tooltipped hoverable' data-delay='50' data-position='top' data-tooltip='Vista simple' href='#!' id='vista-simple' style='margin-top: -30px; padding-left: 10px; width: 40px'>
+                    <i class='material-icons center' style=' line-height: 35px'>view_day</i>
                   </a>
                 </p>
               </div>
             </div>
           </div>
-          <div class="col s12" id="cards-comunicados">
-            <h5 class="truncate center-align">Comunicados</h5>
-            <div class="card">
-              <div class="head-card blue-grey lighten-3">
-                <h4 class="grey-text text-darken-4 truncate">Título del comunicado</h4>
+          <div class='col s12' id='cards-comunicados'>
+            <h5 class='truncate center-align'>Comunicados</h5>
+            <div class='card'>
+              <div class='head-card blue-grey lighten-3'>
+                <h4 class='grey-text text-darken-4 truncate'>Título del comunicado</h4>
                 <span>Profesor > Alumno</span>
-                <a class="v-large hide-on-med-and-down right" href="#contenido-large">
-                  <i class="material-icons">visibility</i>
+                <a class='v-large hide-on-med-and-down right' href='#contenido-large'>
+                  <i class='material-icons'>visibility</i>
                 </a>
-                <a class="v-touch hide-on-large-only right" href="#contenido-responsivo">
-                  <i class="material-icons">visibility</i>
+                <a class='v-touch hide-on-large-only right' href='#contenido-responsivo'>
+                  <i class='material-icons'>visibility</i>
                 </a>
               </div>
-              <div class="card-prev card-content">
-                <p class="text-normal truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                <div class="chip">
-                  <i class="icono-on-chip material-icons">today</i>
+              <div class='card-prev card-content'>
+                <p class='text-normal truncate'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <div class='chip'>
+                  <i class='icono-on-chip material-icons'>today</i>
                   Publ: 03/09/18
                 </div>
-                <div class="chip">
-                  <i class="icono-on-chip material-icons">date_range</i>
+                <div class='chip'>
+                  <i class='icono-on-chip material-icons'>date_range</i>
                   Term: 03/09/19
                 </div>
-                <div class="chip">
-                  <i class="icono-on-chip material-icons">equalizer</i>
+                <div class='chip'>
+                  <i class='icono-on-chip material-icons'>equalizer</i>
                   Visto
                 </div>
-                <div class="chip">
-                  <i class="icono-on-chip material-icons">attachment</i>
+                <div class='chip'>
+                  <i class='icono-on-chip material-icons'>attachment</i>
                   Adjuntos
                 </div>
               </div>
             </div>
-            <div class="card">
-              <div class="head-card blue-grey lighten-3">
-                <h4 class="grey-text text-darken-4 truncate">Título del comunicado</h4>
+            <div class='card'>
+              <div class='head-card blue-grey lighten-3'>
+                <h4 class='grey-text text-darken-4 truncate'>Título del comunicado</h4>
                 <span>Profesor > Alumno</span>
-                <a class="v-large hide-on-med-and-down right" href="#contenido-large">
-                  <i class="material-icons">visibility</i>
+                <a class='v-large hide-on-med-and-down right' href='#contenido-large'>
+                  <i class='material-icons'>visibility</i>
                 </a>
-                <a class="v-touch hide-on-large-only right" href="#contenido-responsivo">
-                  <i class="material-icons">visibility</i>
+                <a class='v-touch hide-on-large-only right' href='#contenido-responsivo'>
+                  <i class='material-icons'>visibility</i>
                 </a>
               </div>
-              <div class="card-prev card-content">
-                <p class="text-normal truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                <div class="chip">
-                  <i class="icono-on-chip material-icons">today</i>
+              <div class='card-prev card-content'>
+                <p class='text-normal truncate'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <div class='chip'>
+                  <i class='icono-on-chip material-icons'>today</i>
                   Publ: 03/09/18
                 </div>
-                <div class="chip">
-                  <i class="icono-on-chip material-icons">date_range</i>
+                <div class='chip'>
+                  <i class='icono-on-chip material-icons'>date_range</i>
                   Term: 03/09/19
                 </div>
-                <div class="chip">
-                  <i class="icono-on-chip material-icons">equalizer</i>
+                <div class='chip'>
+                  <i class='icono-on-chip material-icons'>equalizer</i>
                   Visto
                 </div>
-                <div class="chip">
-                  <i class="icono-on-chip material-icons">attachment</i>
+                <div class='chip'>
+                  <i class='icono-on-chip material-icons'>attachment</i>
                   Adjuntos
                 </div>
               </div>
             </div>
-            <div class="card">
-              <div class="head-card blue-grey lighten-3">
-                <h4 class="grey-text text-darken-4 truncate">Título del comunicado</h4>
+            <div class='card'>
+              <div class='head-card blue-grey lighten-3'>
+                <h4 class='grey-text text-darken-4 truncate'>Título del comunicado</h4>
                 <span>Profesor > Alumno</span>
-                <a class="v-large hide-on-med-and-down right" href="#contenido-large">
-                  <i class="material-icons">visibility</i>
+                <a class='v-large hide-on-med-and-down right' href='#contenido-large'>
+                  <i class='material-icons'>visibility</i>
                 </a>
-                <a class="v-touch hide-on-large-only right" href="#contenido-responsivo">
-                  <i class="material-icons">visibility</i>
+                <a class='v-touch hide-on-large-only right' href='#contenido-responsivo'>
+                  <i class='material-icons'>visibility</i>
                 </a>
               </div>
-              <div class="card-prev card-content">
-                <p class="text-normal truncate">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                <div class="chip">
-                  <i class="icono-on-chip material-icons">today</i>
+              <div class='card-prev card-content'>
+                <p class='text-normal truncate'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                <div class='chip'>
+                  <i class='icono-on-chip material-icons'>today</i>
                   Publ: 03/09/18
                 </div>
-                <div class="chip">
-                  <i class="icono-on-chip material-icons">date_range</i>
+                <div class='chip'>
+                  <i class='icono-on-chip material-icons'>date_range</i>
                   Term: 03/09/19
                 </div>
-                <div class="chip">
-                  <i class="icono-on-chip material-icons">equalizer</i>
+                <div class='chip'>
+                  <i class='icono-on-chip material-icons'>equalizer</i>
                   Visto
                 </div>
-                <div class="chip">
-                  <i class="icono-on-chip material-icons">attachment</i>
+                <div class='chip'>
+                  <i class='icono-on-chip material-icons'>attachment</i>
                   Adjuntos
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <div class="col s12 l5 hide-on-med-and-down" id="contenido-comunicado-large">
-          <div class="card" id="contenido-large">
-            <div class="card card-flotante">
-              <div class="card contenido-comunicado min-cien">
-                <div class="card-image fijable">
-                  <img src="../../images/comunicados/examen-1.jpg">
-                  <span class="card-title">Título del comunicado</span>
+        <div class='col s12 l5 hide-on-med-and-down' id='contenido-comunicado-large'>
+          <div class='card' id='contenido-large'>
+            <div class='card card-flotante'>
+              <div class='card contenido-comunicado min-cien'>
+                <div class='card-image fijable'>
+                  <img src='../../images/comunicados/examen-1.jpg'>
+                  <span class='card-title'>Título del comunicado</span>
                 </div>
-                <div class="card-content">
-                  <a class="btn-floating halfway-fab waves-effect waves-light red a-corregido">
-                    <i class="material-icons">star</i>
+                <div class='card-content'>
+                  <a class='btn-floating halfway-fab waves-effect waves-light red a-corregido'>
+                    <i class='material-icons'>star</i>
                   </a>
-                  <p class="indigo-text accent-1-text truncate" style="padding-bottom: 10px">
-                    <i class="material-icons left">today</i>
+                  <p class='indigo-text accent-1-text truncate' style='padding-bottom: 10px'>
+                    <i class='material-icons left'>today</i>
                     <span>Publicado: 03/09/18</span>
                   </p>
-                  <p class="indigo-text accent-1-text truncate" style="padding-bottom: 10px">
-                    <i class="material-icons left">date_range</i>
+                  <p class='indigo-text accent-1-text truncate' style='padding-bottom: 10px'>
+                    <i class='material-icons left'>date_range</i>
                     <span>Termina: 03/09/19</span>
                   </p>
-                  <p class="indigo-text accent-1-text truncate" style="padding-bottom: 10px">
-                    <i class="material-icons left">person</i>
+                  <p class='indigo-text accent-1-text truncate' style='padding-bottom: 10px'>
+                    <i class='material-icons left'>person</i>
                     <span>De: Persona_1</span>
                   </p>
-                  <p class="indigo-text accent-1-text truncate" style="padding-bottom: 15px">
-                    <i class="material-icons left">group</i>
-                    <span class="trun">Para: Grupo_1, Grupo_2, Grupo_3</span>
-                    <span class="right">
-                      <a href="#dirigido">Ver todo</a>
+                  <p class='indigo-text accent-1-text truncate' style='padding-bottom: 15px'>
+                    <i class='material-icons left'>group</i>
+                    <span class='trun'>Para: Grupo_1, Grupo_2, Grupo_3</span>
+                    <span class='right'>
+                      <a href='#dirigido'>Ver todo</a>
                     </span>
                   </p>
-                  <p class="text-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                  <p class="text-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                  <p style="margin-top: 1em">
-                    <div class="chip">
-                      <i class="icono-on-chip material-icons">attachment</i>
-                      <a class="grey-text text-darken-1" href="#!">Archivo adjunto1</a>
+                  <p class='text-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                  <p class='text-normal'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                  <p style='margin-top: 1em'>
+                    <div class='chip'>
+                      <i class='icono-on-chip material-icons'>attachment</i>
+                      <a class='grey-text text-darken-1' href='#!'>Archivo adjunto1</a>
                     </div>
-                    <div class="chip">
-                      <i class="icono-on-chip material-icons">attachment</i>
-                      <a class="grey-text text-darken-1" href="#!">Archivo adjunto1</a>
+                    <div class='chip'>
+                      <i class='icono-on-chip material-icons'>attachment</i>
+                      <a class='grey-text text-darken-1' href='#!'>Archivo adjunto1</a>
                     </div>
-                    <div class="chip">
-                      <i class="icono-on-chip material-icons">link</i>
-                      <a class="grey-text text-darken-1" href="#!">Link_1</a>
+                    <div class='chip'>
+                      <i class='icono-on-chip material-icons'>link</i>
+                      <a class='grey-text text-darken-1' href='#!'>Link_1</a>
                     </div>
                   </p>
                 </div>
-                <div class="card-action grey lighten-2">
-                  <div class="row">
-                    <div class="col s12 center-align">
-                      <img src="../../images/teacher01.jpg">
+                <div class='card-action grey lighten-2'>
+                  <div class='row'>
+                    <div class='col s12 center-align'>
+                      <img src='../../images/teacher01.jpg'>
                     </div>
-                    <div class="col s12 center-align">
-                      <h4 class="truncate">Nombre_publicador</h4>
+                    <div class='col s12 center-align'>
+                      <h4 class='truncate'>Nombre_publicador</h4>
                     </div>
-                    <div class="col s12">
-                      <p class="jus">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    <div class='col s12'>
+                      <p class='jus'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                   </div>
                 </div>
@@ -464,10 +463,10 @@
       </div>
     </main>
   </body>
-  <script crossorigin="anonymous" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script src="../../js/materialize.js" type="text/javascript"></script>
-  <script src="../../js/main.js" type="text/javascript"></script>
-  <script src="../../js/jquery-ui-datepicker.min.js"></script>
-  <script src="../../js/calendar.js"></script>
+  <script crossorigin='anonymous' integrity='sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=' src='https://code.jquery.com/jquery-3.1.1.min.js' type='text/javascript'></script>
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js'></script>
+  <script src='../../js/materialize.js' type='text/javascript'></script>
+  <script src='../../js/main.js' type='text/javascript'></script>
+  <script src='../../js/jquery-ui-datepicker.min.js'></script>
+  <script src='../../js/calendar.js'></script>
 </html>

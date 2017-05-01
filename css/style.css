@@ -177,7 +177,7 @@ footer img {
   font-weight: 500;
 }
 
-.fixed, .card-flotante {
+.fixed {
   position: fixed;
 }
 
@@ -233,7 +233,7 @@ footer img {
 
 @media only screen and (max-width: 992px) {
   .navegacion-espacio {
-    padding-left: 0;
+    padding-left: 0 !important;
   }
 }
 
@@ -326,17 +326,16 @@ footer img {
   padding: 0px;
 }
 
-.fijable {
+/*.fijable{
   height: 150px;
   overflow: hidden;
-}
-
-.fijable img {
-  min-height: 100%;
-  min-width: 100%;
-  width: 150%;
-}
-
+  img 
+  {
+    min-height: 100%;
+    min-width: 100%;
+    width: 150%;
+  }
+}*/
 .a-corregido {
   top: 130px;
 }
@@ -345,12 +344,28 @@ footer img {
   display: none;
 }
 
-.card-flotante {
+#contenido-large {
+  position: fixed;
+  /*}
+.card-flotante
+{*/
   top: 70px;
   bottom: 15px;
   height: auto;
   overflow-y: auto;
-  margin-right: 10px;
+}
+
+#contenido-large .head-card {
+  padding: 100px 10px 10px 15px  !important;
+  color: white;
+  background-color: #e74c3c;
+}
+
+#contenido-large .head-card h4 {
+  font-size: 22px !important;
+  font-weight: 500 !important;
+  margin: 0;
+  line-height: 1.5;
 }
 
 /*======== Estilos de cards - propuesta 01 ============
@@ -405,11 +420,21 @@ footer img {
   background-color: #607d8b;
 }
 
-.naranja-card {
+.urgente-card {
   background-color: #ea4c36;
 }
 
-.head-card {
+#cards-comunicados .card {
+  padding-top: 1em;
+  color: black;
+  transition: all 0.2s;
+}
+
+#cards-comunicados .card:hover {
+  transform: translate3d(0, -3px, 0);
+}
+
+#cards-comunicados .head-card {
   padding: 125px 10px 10px 15px  !important;
   color: white;
   border-radius: 5px;
@@ -418,38 +443,29 @@ footer img {
   } */
 }
 
-.head-card h4 {
+#cards-comunicados .head-card h4 {
   font-size: 22px !important;
   font-weight: 500 !important;
   margin: 0;
   line-height: 1.5;
 }
 
-.card-prev {
+#cards-comunicados .card-prev {
   padding: 15px !important;
 }
 
-.card-prev p {
+#cards-comunicados .card-prev p {
   padding-bottom: 1em !important;
 }
 
-.min-text {
+#cards-comunicados .min-text {
   font-size: 11px;
 }
 
-.min-text .icon-special {
+#cards-comunicados .min-text .icon-special {
   float: left;
   font-size: 16px;
   padding-right: 8px;
-}
-
-.titulo-card, .contenedor-carousel .carousel h4 {
-  font-size: 20px !important;
-  font-weight: 300 !important;
-}
-
-.contenedor-chips {
-  padding-bottom: 1em !important;
 }
 
 .transparente-truco {
@@ -527,4 +543,12 @@ footer img {
     left: 0px;
     width: 100%;
   }
+}
+
+.animar {
+  transition: all 0.9s;
+}
+
+.select-wrapper input.select-dropdown {
+  z-index: 800;
 }

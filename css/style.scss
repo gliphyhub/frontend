@@ -215,11 +215,11 @@ footer{
 
 // Ocultarse automáticamente
   .navegacion-espacio {
-      padding-left: 240px;
+      padding-left: 240px ;
     }
   @media only screen and (max-width : 992px) {
       .navegacion-espacio{
-        padding-left: 0;
+        padding-left: 0 !important;
       }
     }
   // Color blanco
@@ -307,8 +307,7 @@ footer{
     }
 }
 
-#contenido-responsivo
-{
+#contenido-responsivo{
   max-height: 80%;
   height: 80%;
   width: 90%;
@@ -318,8 +317,7 @@ footer{
   }
 }
 
-.fijable
-{
+/*.fijable{
   height: 150px;
   overflow: hidden;
   img 
@@ -328,25 +326,39 @@ footer{
     min-width: 100%;
     width: 150%;
   }
-}
+}*/
 
-.a-corregido
-{
+.a-corregido{
   top: 130px;
 }
 
 .ocultado{
-  display: none;
+ display: none;
 }
 
+#contenido-large{
+  position: fixed;
+/*}
 .card-flotante
-{
-  @extend .fixed;
+{*/
+  //@extend .fixed;
   top: 70px;
   bottom: 15px;
   height: auto;
   overflow-y: auto;
-  margin-right: 10px;
+  //margin-right: 0px;
+
+  .head-card{
+  padding : 100px 10px 10px 15px  !important;
+  color: white;
+  background-color: #e74c3c;
+  h4  {
+    font-size: 22px !important;
+    font-weight: 500 !important;
+    margin: 0;
+    line-height: 1.5;
+  }
+}
 }
 
 /*======== Estilos de cards - propuesta 01 ============
@@ -398,17 +410,25 @@ footer{
 .gris-card{
   background-color: #607d8b
 }
-.naranja-card{
+.urgente-card{
   background-color: #ea4c36
 }
+
 //==============================
-.head-card
-{
+#cards-comunicados{
+.card{
+  padding-top: 1em;
+  color: black;
+  &:hover{
+    transform: translate3d(0, -3px, 0);
+  }
+  transition: all 0.2s
+}
+.head-card{
   padding : 125px 10px 10px 15px  !important;
   color: white;
   border-radius: 5px;
-  h4
-  {
+  h4  {
     font-size: 22px !important;
     font-weight: 500 !important;
     margin: 0;
@@ -418,12 +438,10 @@ footer{
     font-weight: 200;
   } */
 }
-.card-prev 
-{
+.card-prev {
   padding: 15px !important;
-  p
-  {
-    padding-bottom: 1em !important;
+  p  {
+    padding-bottom: 1em !important;    
   }
  
 }
@@ -435,26 +453,13 @@ footer{
         padding-right: 8px;
   }
 }
-.titulo-card
-{
-    font-size: 20px !important;
-    font-weight: 300 !important;
 }
-
-.contenedor-chips
-{
-  padding-bottom: 1em !important;
-}
-
-
-
 
 //==== truncate sin block
 
 
 
-  .transparente-truco
-  {
+  .transparente-truco  {
      position: absolute;
      min-height: 100%;
      left: 0;
@@ -462,8 +467,7 @@ footer{
     z-index: 1;
     overflow-y: auto;
   }
-  .contenedor-carousel
-  {
+  .contenedor-carousel  {
     position: relative;
     text-align: center;
     height: 100%  !important;
@@ -497,8 +501,7 @@ footer{
   }
 
 
-.altito
-{
+.altito{
   margin-top: 50px !important;
 }
 
@@ -518,12 +521,8 @@ footer{
       }
     }
 
-.carousel-tabla
-{
 
-}
-   .botones-flotantes
-  {
+   .botones-flotantes  {
     bottom: 20px; 
     z-index: 5;
     right: 0px;
@@ -545,4 +544,10 @@ footer{
         width: 100%;
       }
     }
-//==================NUJEVA PROPUESTA DE CARD=============================
+
+.animar{
+  transition: all 0.9s;
+}
+.select-wrapper input.select-dropdown{
+  z-index: 800;
+}
