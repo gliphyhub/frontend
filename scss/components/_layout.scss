@@ -1,0 +1,67 @@
+.negro-flat{
+  background-color: #404040;
+}
+
+//===========admin image==========
+.admin-img{
+  border-radius: 50%;
+  height: 35px;
+  margin-right:10px;
+}
+
+//========== Menú lateral ===========
+
+#nav-user {
+  i { line-height: 35px;}
+  #user-label {text-transform: none;}
+  #toggleMenu {
+    padding: 0px;
+    width: 40px
+  }
+}
+
+#navegacion-no-oculto {
+  width:240px;
+  margin-top:63px;
+}
+
+#navegacion-movil {
+  width:240px;
+}
+
+.side-nav #base-datos-list {
+  padding-left: 31px;
+  .arrow{
+    float: right;
+    margin: 0;
+  }
+}
+
+.background img {
+  width: 180%;
+}
+
+// =========== Notificaciones ====== 
+.notificaciones {
+  & > li {
+  }
+  .collapsible-header {
+    padding: 0 0 10px !important;
+  }
+  i {
+    margin: 0 7px !important;
+  }
+  label {
+    padding: 0 0 0 37px;
+    margin: -15px 0;
+    display: block;
+    height: 20px !important;
+    line-height: 1;
+  }
+}
+
+.noti {
+  padding: 10px;
+  line-height: 1.5;
+  font-weight: normal;
+}

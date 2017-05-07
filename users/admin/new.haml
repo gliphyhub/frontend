@@ -1,8 +1,17 @@
 -#=================================================================================
 -#===================================== DISEÑO ======================================
 -#=================================================================================
+-nombresTabla = "Joel Harim"
+-apellidosTabla = "Hernández Javier"
+-divName = nombresTabla.split(/ /)
+-divAp = apellidosTabla.split(/ /)
+-nombreCompleto = nombresTabla + " " + apellidosTabla
+-nombreCorto = divName[0] + " " + divAp[0]
+-tipoUser = "Administrador"
+
 -menuLateral=[{title:"Inicio", link:"index.html", icon:"home"}, {title:"Base de Datos", link:"base.html", icon:"storage"},{title:"Publicaciones",link:"publications.html", icon:"account_circle"},{title:"Agregar",link:"new.html", icon:"add"},{title:"Ayuda", link:"help.html",icon:"error"}]
--seccion ="Agregar" 
+-seccion ="Agregar"
+-tablas=["Alumnos", "Profesores", "Administrativos", "Grupos"]
 !!!5
 %html{lang:"es"}
 	%header.navegacion-espacio
@@ -12,59 +21,59 @@
 		%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
 		%meta{charset: "UTF-8"}
 		%link{rel:"shortcut icon", href: "../../images/favicon.ico"}/
-		-#google icons
+		%meta{name: "theme-color", content: "#303030"}
 		%link{rel:"stylesheet", href:"http://fonts.googleapis.com/icon?family=Material+Icons"}/
 		%link{rel:"stylesheet", href:"../../css/materialize.css", media: "screen,projection"}/		
-		%link{rel: "stylesheet", href:"../../css/style.css"}/
+		%link{rel: "stylesheet", href:"../../css/gliphy.css"}/
 		%title Gliphy Admin
 	%body
 		-#=========================================
 		-#=========== Barra de navegación ================
 		-#=========================================
-		.navbar-fixed
+		#nav-user.navbar-fixed
 			%nav.negro-flat
 				.nav-wrapper
 					-#=========================================
 					-#============= Botón Menú === ================
 					-#=========================================
-					%p.left
-						%a#menu.hide-on-large-only.btn-flat.white-bonis{style:"margin-top: -25px",href:"#", data:{activates:"navegacion-movil"}}
-							%i.material-icons{style:" line-height: 30px"} menu
+					.left
+						%a#menu.hide-on-large-only.btn-flat.white-bonis{href:"#", data:{activates:"navegacion-movil"}}
+							%i.material-icons menu
 					-#=========================================
 					-#====== Botón Menú - Opciones usuario ==============
 					-#=========================================
-					%p.right
-						%a.options-user.btn-flat.white-bonis.left.hide-on-small-only{href:"#",style:"text-transform: none", data:{activates:"slide-out"}}
+					.right
+						%a#user-label.options-user.btn-flat.white-bonis.hide-on-small-only{href:"#!", data:{activates:"slide-out"}}
 							%img.admin-img.left{src:"../../images/admin.jpg"}
-							Joel Hernández
-						%a.options-user.btn-flat.white-bonis.left.hide-on-med-and-up{href:"#", data:{activates:"slide-out"}}
-							%i.material-icons.left{style:" line-height: 30px;"} apps
-							OPCIONES
+							%span #{nombreCorto}
+						%a.options-user.btn-flat.white-bonis.hide-on-med-and-up{href:"#!",data:{activates:"slide-out"}}
+							%i.material-icons.left apps
+							%span OPCIONES
 					-#=========================================
 					-#============== Toggle Menú =================
 					-#=========================================
-					%p.right
-						%a#toggleMenu.btn-flat.white-bonis.hide-on-med-and-down.tooltipped.hoverable{style:"margin-top: -30px; padding: 0px; width: 40px",href:"#!", data:{position:"bottom", delay:"50", tooltip:"Cambiar vista"}}
-							%i.material-icons.center{style:" line-height: 35px"} view_stream
+					.right
+						%a#toggleMenu.btn-flat.white-bonis.hide-on-med-and-down.tooltipped.hoverable{href:"#!", data:{position:"bottom", delay:"50", tooltip:"Cambiar vista"}}
+							%i.material-icons.center view_stream
 					-#=========================================
 					-#========== Navegación - menú =================
 					-#=========================================
 					.col.s8.margincito-left.hide-on-small-only.truncate
-						%a.breadcrumb{href:""} Gliphy Admin
-						%a.breadcrumb{href:""} #{seccion}
+						%a.breadcrumb{href:"index.html"} Gliphy Admin
+						%a.breadcrumb #{seccion}
 		-#=========================================
 		-#=========== Opciones de usuario ================
 		-#=========================================
-		%ul#slide-out.side-nav.lateral-admin
+		%ul#slide-out.side-nav.blue-grey.darken-4
 			%li.userView
 				.background
-					%img{src:"../../images/office.jpg"}
+					%img{src:"../../images/covers/admin-cover.jpg"}
 				.white-bonis
 					%img.circle{src:"../../images/admin.jpg"}
-					%span.white-text.name Joel Hernández
-					%span.white-text.email.separado Admnistrador
+					%span.white-text.name #{nombreCorto}
+					%span.white-text.email.separado #{tipoUser}
 			%li
-				%a.white-bonis.waves-effect{href:"#"}
+				%a.white-bonis.waves-effect{href:"profile.html"}
 					%i.material-icons.left.white-bonis person
 					%span Mi perfil
 			%li
@@ -74,24 +83,52 @@
 		-#=========================================
 		-#========== Menú navegación - Large ==============
 		-#=========================================
-		%ul#navegacion-no-oculto.side-nav.fixed.lateral-admin{style:"width:240px;margin-top:63px"}
+		%ul#navegacion-no-oculto.side-nav.fixed.blue-grey.darken-4
 			%br/
-			-menuLateral.each do |item|				
-				%li
-					%a.waves-effect.white-bonis{href: item[:link]}
-						%i.material-icons.left.white-bonis=item[:icon] 
-						=item[:title]
+			-menuLateral.each do |item|		
+				-if item[:title] == "Base de Datos"
+					%li
+						%ul.collapsible.collapsible-accordion
+							%li
+								%a#base-datos-list.waves-effect.white-bonis.collapsible-header
+									%i.material-icons.left.white-bonis=item[:icon]
+									%span=item[:title]
+									%i.arrow.material-icons.white-bonis arrow_drop_down
+								.collapsible-body
+									%ul.blue-grey.darken-3
+										-tablas.each do |nombreTabla|
+											%li
+												%a.waves-effect.white-bonis{href:"#!"}=nombreTabla
+				-else
+					%li
+						%a.waves-effect.white-bonis{href: item[:link]}
+							%i.material-icons.left.white-bonis=item[:icon]
+							%span=item[:title]
 				%br/
 		-#=========================================
 		-#======== Menú navegación - Responsive ============
 		-#=========================================
-		%ul#navegacion-movil.side-nav.lateral-admin{style:"width:240px"}
+		%ul#navegacion-movil.side-nav.blue-grey.darken-4
 			%br/
-			-menuLateral.each do |item|				
-				%li
-					%a.waves-effect.white-bonis{href:item[:link]}
-						%i.material-icons.left.white-bonis=item[:icon] 
-						=item[:title]
+			-menuLateral.each do |item|		
+				-if item[:title] == "Base de Datos"
+					%li
+						%ul.collapsible.collapsible-accordion
+							%li
+								%a#base-datos-list.waves-effect.white-bonis.collapsible-header
+									%i.material-icons.left.white-bonis=item[:icon]
+									%span=item[:title]
+									%i.arrow.material-icons.white-bonis arrow_drop_down
+								.collapsible-body
+									%ul.blue-grey.darken-2
+										-tablas.each do |nombreTabla|
+											%li
+												%a.waves-effect.white-bonis{href:"#!"}=nombreTabla
+				-else
+					%li
+						%a.waves-effect.white-bonis{href: item[:link]}
+							%i.material-icons.left.white-bonis=item[:icon]
+							%span=item[:title]
 				%br/
 		-#=================================================================
 		-#========================= Contenido - Layout ===========================
@@ -288,4 +325,4 @@
 
 	%script{type:"text/javascript", src:"https://code.jquery.com/jquery-3.1.1.min.js", integrity:"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin:"anonymous"}
 	%script{:type=>"text/javascript", :src=>"../../js/materialize.js"}
-	%script{:type=>"text/javascript", :src=>"../../js/main.js"}
+	%script{:type=>"text/javascript", :src=>"../../js/gliphy.js"}

@@ -1,0 +1,123 @@
+-#=================================================================================
+-#===================================== DISEÑO ======================================
+-#=================================================================================
+-nombresTabla = "Willie"
+-apellidosTabla = "Alamaráz García"
+-divName = nombresTabla.split(/ /)
+-divAp = apellidosTabla.split(/ /)
+-nombreCompleto = nombresTabla + " " + apellidosTabla
+-nombreCorto = divName[0] + " " + divAp[0]
+-tipoUser = "Estudiante"
+-sexo = "Masculino"
+-correo = "estudiante@correo.com"
+-fechaNac = "00/00/99"
+-direccion = "Mountain View, 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States"
+-grupo = "611"
+!!!5
+%html{lang:"es"}
+	%header
+		-#=========================================
+		-#============ Información - METAS ===============
+		-#=========================================
+		%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+		%meta{charset: "UTF-8"}
+		%link{rel:"shortcut icon", href: "../../images/favicon.ico"}/
+		%meta{name: "theme-color", content: "#b71c1c"}
+		%link{rel:"stylesheet", href:"http://fonts.googleapis.com/icon?family=Material+Icons"}/
+		%link{rel:"stylesheet", href:"../../css/materialize.css", media: "screen,projection"}/		
+		%link{rel: "stylesheet", href:"../../css/gliphy.css"}/
+		%title Gliphy
+	%body
+		-#=================================================================
+		-#========================= Contenido - Layout ===========================
+		-#=================================================================
+		%main
+			-#===============Boton publicar================
+			.fixed-action-btn
+				%a.btn-floating.btn-large.waves-effect.waves-light.red.hoverable{href:"help.html"}
+					%i.material-icons help_outline
+			-#Contenedor principal
+			.row.blue-grey.darken-4.no-margin.min-total
+				-#Portada
+				.portadaProfile.col.s12.z-depth-1.no-padding
+					%img{src:"../../images/covers/teacher-cover.jpg"}
+				-#Contenido
+				.fit.white-text
+					.col.s12.blue-grey.darken-2.no-padding.s-interna
+						-#Imagen de perfil
+						.imgProfile.col.s12.center.no-padding
+							%a{href: "#!"}
+								%i.small.material-icons.white-text.circle.change autorenew
+								%img.circle.z-depth-4{src:"../../images/admin.jpg"}
+						-#Contenido del perfil
+						.contentProfile.col.s12.no-padding
+							-#Nombre 
+							.col.s12
+								%h5.center-align
+									%span #{nombreCorto}
+								%h6.center-align.upper
+									%span #{tipoUser}
+							-#Opciones
+							#profileOptions.col.s12
+								.col.s12.no-padding
+									.col.s12.m6.l4.dato
+										.col.s12
+											%i.material-icons.left face
+											%p Nombre completo: 
+										.col.s12
+											%h5 #{nombreCompleto}
+									.col.s12.m6.l4.dato
+										.col.s12
+											%i.material-icons.left contacts
+											%p Tipo de cuenta:
+										.col.s12
+											%h5 #{tipoUser}
+									.col.s12.m6.l4.dato
+										.col.s12
+											%i.material-icons.left extension
+											%p Grupo:
+										.col.s12
+											%h5 #{grupo}
+									.col.s12.m6.l4.dato
+										.col.s12
+											%i.material-icons.left favorite
+											%p Sexo:
+										.col.s12
+											%h5 #{sexo}
+									.col.s12.m6.l4.dato
+										.col.s12
+											%i.material-icons.left event
+											%p Fecha de nacimiento:
+										.col.s12
+											%h5 #{fechaNac}
+									
+									.col.s12.m6.l4.dato
+										.col.s12
+											%i.material-icons.left nature_people
+											%p Dirección:
+										.col.s12
+											%h5 #{direccion}
+								.col.s12.no-padding
+									.col.s12.m6.dato
+										.col.s12
+											%i.material-icons.left email
+											%p Correo:
+										.col.s12.input-field
+											%input.validate{placeholder:"#{correo}", disabled:"", type:"text"}
+										.col.s12
+											%a.btn-flat.waves-effect.orange-text.text-lighten-1.right Editar
+									.col.s12.m6.dato
+										.col.s12
+											%i.material-icons.left vpn_key
+											%p Contraseña:
+										.col.s12.input-field
+											%input.validate{placeholder:"********", disabled:"", type:"text"}
+										.col.s12
+											%a.btn-flat.waves-effect.orange-text.text-lighten-1.right Editar
+	-#=================================================================
+	-#============================= Scripts ===============================
+	-#=================================================================
+
+	%script{type:"text/javascript", src:"https://code.jquery.com/jquery-3.1.1.min.js", integrity:"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin:"anonymous"}
+	%script{:type=>"text/javascript", :src=>"../../js/materialize.js"}
+	%script{:type=>"text/javascript", :src=>"../../js/gliphy.js"}

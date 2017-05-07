@@ -1,176 +1,303 @@
--menu=[{title: "¿Quienes somos?", link:"#aboutus"},{title:"Sobre GliphyHub", link: "#work"},{title: "Experiencias",link:"#testimony"},{title:"Equipo",link:"#team"},{title:"Contacto",link:"#contact"}]
 !!!5
-%html{:lang => "es"}
+%html{lang: "es"}
 	%head
-		%meta{:name => "viewport", :content=>"width=device-width, initial-scale=1"}
-		%meta{:charset=> "UTF-8"}
-		%meta{:content =>"Plantel Azteca, Gliphy, GliphyHub, gliphy", :name => "keywords"}
-		%meta{:content =>"GliplyHub, aquí podrás acceder a tus tareas y pendientes.", :name => "description"}
-		%meta{:content =>"TeamDevs", :name => "author"}
-		%meta{:content =>"TeamDevs", :name => "owner"}
-		%meta{:content =>"index/follow", :name => "robots"}
-		%link{:rel => "shortcut icon", :type=>"image/x-icon", :href => "images/favicon.ico"}/
+		%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+		%meta{charset:"UTF-8"}
+		%meta{content:"Plantel Azteca, Gliphy, GliphyHub, gliphy", name: "keywords"}
+		%meta{content:"GliplyHub, aquí podrás acceder a tus tareas y pendientes.", name: "description"}
+		%meta{content:"TeamDevs", name: "author"}
+		%meta{content:"TeamDevs", name: "owner"}
+		%meta{content:"index/follow", name: "robots"}
+		%meta{name: "theme-color", content: "#1e88e5"}
+		%link{rel:"shortcut icon", type:"image/x-icon",  href:  "images/favicon.ico"}/
 		-#google icons
-		%link{:rel => "stylesheet", :href => "http://fonts.googleapis.com/icon?family=Material+Icons"}/
-		%link{:rel => "stylesheet", :href => "css/materialize.css", :media => "screen,projection"}/		
-		%link{:rel => "stylesheet", :href => "css/style.css"}/
+		%link{rel:"stylesheet", href: "http://fonts.googleapis.com/icon?family=Material+Icons"}/
+		%link{rel:"stylesheet",  href:  "css/materialize.css", media: "screen,projection"}/		
+		%link{rel:"stylesheet", href:  "css/gliphy.css"}/
+		%link{rel:"stylesheet",  href:  "css/animate.css"}/
 		%title GliphyHub
 
 	%body
-		#particles.block
-		#log-in.center
-			.row
-				.col.s12
-					%img.responsive-img.animated.flipInX{:src => "images/gh.png", :alt => "logo"}/
-				%form.col.s12
-					.row
-						.input-field.col.s12.m6.animated.fadeInLeftBig
-							%i.material-icons.prefix.medium account_circle
-							%input.validate#user{:type => "email"}/
-							%label{:for => "user"} Correo
-						.input-field.col.s12.m6.animated.fadeInRightBig
-							%i.material-icons.prefix.medium lock_outline
-							%input.validate#pass{:type => "password"}/
-							%label{:for => "pass"} Contraseña
-						.col.m4.hide-on-small-only
-						%button.col.s12.m4.btn.waves-effect.waves-light.animated.fadeInUpBig{:type=>"submit"}
-							INCIAR SESIÓN 
-							%i.material-icons.right send
-		#aboutus.block
-			%nav.pushpin-demo-nav{:data =>{:target => "aboutus"}}
-				.nav-wrapper.light.blue
+		%main.main-login
+			.contenedor-login
+				.login-before
+				.login
+					#particles
+					.profile-card
+						.logotipo-login.blue-grey.lighten-5
+							%a
+								%img{src:"images/favicon.ico"}
+							%h1
+								%span GliphyHub
+							%h2
+								%span Inspiring innovation
+						.profile-bio.blue-grey.lighten-5
+							.input-field.col.s12.m6
+								%i.material-icons.prefix.medium account_circle
+								%input.validate#user{type: "email"}/
+								%label{for: "user"} Correo
+							.input-field.col.s12.m6
+								%i.material-icons.prefix.medium lock_outline
+								%input.validate#pass{type: "password"}/
+								%label{for: "pass"} Contraseña
+							.col.m4.hide-on-small-only
+							%button.col.s12.m4.btn.waves-effect.waves-light{type: "submit"}
+								%span INICIAR SESIÓN 
+								%i.material-icons.right send
+			%ul#dropdown1.dropdown-content.flechita
+				%li
+					%a.grey-text.text-darken-4{href:"#about"} Sobre
+				%li
+					%a.grey-text.text-darken-4{href:"#desc"} Características
+				%li
+					%a.grey-text.text-darken-4{href:"#team"} Team
+			%nav{style:"z-index: 40"}
+				.nav-wrapper.blue
+					%span.left{style: "margin-left: 10px"} Sobre nosotros
+					%ul.right
+						%li
+							%a.dropdown-button{href:"#!", data:{activates:"dropdown1"}} 
+								%span{style:"margin-right: 60px"} Menú
+								%i.material-icons.right arrow_drop_down
+			
+			.deslizable
+				#about.section.scrollspy
+				.article
 					.container
-						%a.brand-logo Sobre nosotros
-						%ul.right.hide-on-med-and-down
-							%li
-								%a{:href => "#aboutg"}Sobre GliphyHub
-							%li
-								%a{:href => "#team"}Team
-			%br/
-			%br/
-			%br/
-			%br/
-			.container
-				.row
-					.col.s12
-						%p.flow-text.center.text-presentation Somos una plataforma para la interacción entre la comunidad escolar y el cuerpo administrativo del plantel, innovando así la <b>comunicación</b>. Nuestra <b>misión</b> fue crear una plataforma innovadora, que mejorara la experiencia de usuario y enriqueciera el ambiente de la comunidad escolar. <br> Lo que logramos fue algo <b><i>mejor</i>.</b>
-		#aboutg.block
-			%nav.pushpin-demo-nav{:data =>{:target => "aboutg"}}
-				.nav-wrapper.light.blue
+						.row
+							.col.s12
+								%h2.blue-text.text-darken-3 ¿Quiénes somos?
+							
+							.col.s12
+								%p.flow-text.jus.text-presentation
+									%span Somos una plataforma enfocada en la interacción entre la comunidad escolar y el cuerpo administrativo del plantel, innovando así la
+									%strong comunicación
+									%span . Nuestra 
+									%strong misión 
+									%span fue crear una nueva plataforma, que mejorara la experiencia de usuario y enriqueciera el ambiente de la comunidad escolar. 
+									%br
+									%span Lo que logramos, fue
+									%strong mejor.
+				#desc.section.scrollspy
+				.container	
+					.row.title-gif
+						.col.s12.m6.center
+							%h2.blue-text.text-darken-3 Características
+						.col.s12.m6.center
+							%img.responsive-img{src: "images/inicio.gif"}
+
+				.article.blue.lighten-1.white-text
 					.container
-						%a.brand-logo Sobre GliphyHub
-						%ul.right.hide-on-med-and-down
-							%li
-								%a{:href => "#aboutus"}Sobre Nosotros
-							%li
-								%a{:href => "#team"}Team
-			%br/
-			%br/
-			%br/
-			%br/
-			%br/
-			.container
-				.row
-					.col.s12.m4.l4
-						.center
-							%i.grande.material-icons flash_on
-							%h5 Acelera la comunicación
-							%p.center Esta plataforma está diseñada para hacer que la comunicación entre los alumnos, tutores y autoridades del <b>plantel</b> sea más efectiva y rápida.
-					.col.s12.m4.l4
-						.center
-							%i.grande.material-icons group
-							%h5 Enfocado al plantel
-							%p.center Se ha desarrollado un diseño intuitivo, fácil de leer y amigable, que permite que todos los usuarios se sientan bien con GliphyHub, el lugar <b>ideal</b> para la comunicación escolar.
-					.col.s12.m4.l4.hide-on-small-only
-						.center
-							%i.grande.material-icons laptop_windows
-							%h5 Totalmente Responsivo
-							%p.center El diseño fue una de nuestras prioridades al diseñar este sitio. Se adapta, <b>evoluciona</b>, para que accedas cómodamente desde el dispositivo que quieras.
-		#team.block
-			%nav.pushpin-demo-nav{:data =>{:target => "team"}}
-				.nav-wrapper.light.blue
+						.row
+							.col.s12.m6.l4
+								.center.space-login
+									%i.grande.material-icons.white-text flash_on
+									%h5 Acelera la comunicación
+									%p.center Esta plataforma está diseñada para hacer que la comunicación entre los alumnos, tutores y autoridades del <b>plantel</b> sea más efectiva y rápida.
+							.col.s12.m6.l4
+								.center.space-login
+									%i.grande.material-icons.white-text group
+									%h5 Enfocado al plantel
+									%p.center Se ha desarrollado un diseño intuitivo, fácil de leer y amigable, que permite que todos los usuarios se sientan bien con GliphyHub, el lugar <b>ideal</b> para la comunicación escolar.
+							.col.s12.m12.l4
+								.center.space-login
+									%i.grande.material-icons.white-text important_devices
+									%h5 Totalmente Responsivo
+									%p.center El diseño fue una de nuestras prioridades al diseñar este sitio. Se adapta, <b>evoluciona</b>, para que accedas cómodamente desde el dispositivo que quieras.
+				#team.section.scrollspy
+				.article
+					.col.s12.center.section-Title
+						%h2.blue-text.text-darken-3 El equipo
 					.container
-						%a.brand-logo Team
-						%ul.right.hide-on-med-and-down
-							%li
-								%a{:href => "#aboutus"}Sobre nosotros
-							%li
-								%a{:href => "#aboutg"}Sobre GliplyHub
-			%br/
-			%br/
-			%br/
-			%br/
-			%br/
-			.row.medium-alto
-				.col.s12.m2.hide-on-small-only
-				%a.col.s12.m3.hoverable{:href => "https://github.com/robtry", :target=>"_blank"}
-					.card
-						%br/
-						%img.responsive-img{src: "images/roberto1.png"}
-						.card-content
-							%span.card-title.negro-text Roberto
-							%p.negro-text <b>FrontEnd</b> y <b>BackEnd</b>
-							%p Developer
-				%a.col.s12.m3.hoverable{:href => "https://omegaup.com/profile/CRWillieAlmaraz/" , :target=>"_blank"}
-					.card
-						%br/
-						%img.responsive-img{src: "images/willie1.png"}
-						.card-content
-							%span.card-title.negro-text Willie
-							%p.negro-text <b>DataBase</b> y <b>BackEnd</b>
-							%p Desarrollador
-				%a.col.s12.m3.hoverable{:href => "", :target=>"_blank"}
-					.card					
-						%br/
-						%img.responsive-img{src: "images/joel1.png"}
-						.card-content
-							%span.card-title.negro-text Joel
-							%p.negro-text <b>FrontEnd</b> y <b>BackEnd</b>
-							%p Diseñador y desarrollador
-				.col.s12.m2.hide-on-small-only
-				%a.col.s12.m3.hide-on-small-only.hoverable{:href => "https://www.facebook.com/AnSethLedger", :target=>"_blank"}
-					.card
-						%br/
-						%img.responsive-img{src: "images/avatar2.png"}
-						.card-content
-							%span.card-title.negro-text Ana
-							%p.negro-text <b>Documentation</b>
-							%p Documentador
-				%a.col.s12.m3.hide-on-small-only.hoverable{:href => "https://www.instagram.com/iker_camacho/", :target=>"_blank"}
-					.card
-						%br/
-						%img.responsive-img{src: "images/noe1.png"}
-						.card-content
-							%span.card-title.negro-text Noé
-							%p.negro-text <b>Documentation</b>
-							%p Documentador
-				%a.col.s12.m3.hide-on-small-only.hoverable{:href => "https://www.instagram.com/marianazq13/", :target=>"_blank"}
-					.card
-						%br/
-						%img.responsive-img{src: "images/mariana1.png"}
-						.card-content
-							%span.card-title.negro-text Mariana
-							%p.negro-text <b>Documentation</b>
-							%p Documentador
-				.col.s12.m2
-		.medium-alto
+						.row
+							.col.s12.m6.l4
+								.team
+									%article.material-card
+										%h2.blue
+											%span.truncate Joel Hernández
+											%strong.truncate
+												%i.material-icons.left{style:"margin-top: 3px;  margin-right: 5px"} edit
+												%span{style:"display: inline-block;"} Desarrollador Web
+										.mc-content.blue.lighten-1
+											.img-container
+												%img.responsive-img.white{src:"images/joel.jpg"}
+											.mc-description.white-text
+												%span Esto es una breve descripción sobre mí
+										%a.mc-btn-action.blue.lighten-2.z-depth-3.hoverable
+											%i.material-icons{style:"line-height: 2.2"} menu
+										.mc-footer.blue.lighten-3
+											%h4
+												%span.white-text Contacto
+											%a.center-align.blue.lighten-1
+												%i.material-icons settings
+							.col.s12.m6.l4
+								.team
+									%article.material-card
+										%h2.blue
+											%span.truncate Roberto Gervacio
+											%strong.truncate
+												%i.material-icons.left{style:"margin-top: 3px;  margin-right: 5px"} edit
+												%span{style:"display: inline-block;"} Desarrollador Web
+										.mc-content.blue.lighten-1
+											.img-container
+												%img.responsive-img.white{src:"images/roberto.jpg"}
+											.mc-description.white-text
+												%span Esto es una breve descripción sobre mí
+										%a.mc-btn-action.blue.lighten-2.z-depth-3.hoverable
+											%i.material-icons{style:"line-height: 2.2"} menu
+										.mc-footer.blue.lighten-3
+											%h4
+												%span.white-text Contacto
+											%a.center-align.blue.lighten-1
+												%i.material-icons settings
+							.col.s12.m6.l4
+								.team
+									%article.material-card
+										%h2.blue
+											%span.truncate Willie Almaraz
+											%strong.truncate
+												%i.material-icons.left{style:"margin-top: 3px;  margin-right: 5px"} edit
+												%span{style:"display: inline-block;"} Desarrollador Web
+										.mc-content.blue.lighten-1
+											.img-container
+												%img.responsive-img.white{src:"images/teacher01.jpg"}
+											.mc-description.white-text
+												%span Esto es una breve descripción sobre mí
+										%a.mc-btn-action.blue.lighten-2.z-depth-3.hoverable
+											%i.material-icons{style:"line-height: 2.2"} menu
+										.mc-footer.blue.lighten-3
+											%h4
+												%span.white-text Contacto
+											%a.center-align.blue.lighten-1
+												%i.material-icons settings
+							.col.s12.m6.l4
+								.team
+									%article.material-card
+										%h2.blue
+											%span.truncate Ana Morales
+											%strong.truncate
+												%i.material-icons.left{style:"margin-top: 3px;  margin-right: 5px"} edit
+												%span{style:"display: inline-block;"} Desarrollador Web
+										.mc-content.blue.lighten-1
+											.img-container
+												%img.responsive-img.white{src:"images/teacher01.jpg"}
+											.mc-description.white-text
+												%span Esto es una breve descripción sobre mí
+										%a.mc-btn-action.blue.lighten-2.z-depth-3.hoverable
+											%i.material-icons{style:"line-height: 2.2"} menu
+										.mc-footer.blue.lighten-3
+											%h4
+												%span.white-text Contacto
+											%a.center-align.blue.lighten-1
+												%i.material-icons settings
+							.col.s12.m6.l4
+								.team
+									%article.material-card
+										%h2.blue
+											%span.truncate Noé
+											%strong.truncate
+												%i.material-icons.left{style:"margin-top: 3px;  margin-right: 5px"} edit
+												%span{style:"display: inline-block;"} Desarrollador Web
+										.mc-content.blue.lighten-1
+											.img-container
+												%img.responsive-img.white{src:"images/teacher01.jpg"}
+											.mc-description.white-text
+												%span Esto es una breve descripción sobre mí
+										%a.mc-btn-action.blue.lighten-2.z-depth-3.hoverable
+											%i.material-icons{style:"line-height: 2.2"} menu
+										.mc-footer.blue.lighten-3
+											%h4
+												%span.white-text Contacto
+											%a.center-align.blue.lighten-1
+												%i.material-icons settings
+							.col.s12.m6.l4
+								.team
+									%article.material-card
+										%h2.blue
+											%span.truncate Mariana Alonzo
+											%strong.truncate
+												%i.material-icons.left{style:"margin-top: 3px;  margin-right: 5px"} edit
+												%span{style:"display: inline-block;"} Desarrollador Web
+										.mc-content.blue.lighten-1
+											.img-container
+												%img.responsive-img.white{src:"images/teacher01.jpg"}
+											.mc-description.white-text
+												%span Esto es una breve descripción sobre mí
+										%a.mc-btn-action.blue.lighten-2.z-depth-3.hoverable
+											%i.material-icons{style:"line-height: 2.2"} menu
+										.mc-footer.blue.lighten-3
+											%h4
+												%span.white-text Contacto
+											%a.center-align.blue.lighten-1
+												%i.material-icons settings
+
+
+					
+			-#		.row
+			-#			%a.col.s12.m3{:href => "https://github.com/robtry", :target=>"_blank"}
+			-#				.card
+			-#					%br/
+			-#					%img.responsive-img{src: "images/roberto1.png"}
+			-#					.card-content
+			-#						%span.card-title.negro-text Roberto
+			-#						%p.negro-text <b>FrontEnd</b> y <b>BackEnd</b>
+			-#						%p Developer
+			-#			%a.col.s12.m3.hoverable{:href => "https://omegaup.com/profile/CRWillieAlmaraz/" , :target=>"_blank"}
+			-#				.card
+			-#					%br/
+			-#					%img.responsive-img{src: "images/willie1.png"}
+			-#					.card-content
+			-#						%span.card-title.negro-text Willie
+			-#						%p.negro-text <b>DataBase</b> y <b>BackEnd</b>
+			-#						%p Desarrollador
+			-#			%a.col.s12.m3.hoverable{:href => "", :target=>"_blank"}
+			-#				.card					
+			-#					%br/
+			-#					%img.responsive-img{src: "images/joel1.png"}
+			-#					.card-content
+			-#						%span.card-title.negro-text Joel
+			-#						%p.negro-text <b>FrontEnd</b> y <b>BackEnd</b>
+			-#						%p Diseñador y desarrollador
+			-#			%a.col.s12.m3.hoverable{:href => "https://www.facebook.com/AnSethLedger", :target=>"_blank"}
+			-#				.card
+			-#					%br/
+			-#					%img.responsive-img{src: "images/avatar2.png"}
+			-#					.card-content
+			-#						%span.card-title.negro-text Ana
+			-#						%p.negro-text <b>Documentation</b>
+			-#						%p Documentador
+			-#			%a.col.s12.m3.hoverable{:href => "https://www.instagram.com/iker_camacho/", :target=>"_blank"}
+			-#				.card
+			-#					%br/
+			-#					%img.responsive-img{src: "images/noe1.png"}
+			-#					.card-content
+			-#						%span.card-title.negro-text Noé
+			-#						%p.negro-text <b>Documentation</b>
+			-#						%p Documentador
+			-#			%a.col.s12.m3.hoverable{:href => "https://www.instagram.com/marianazq13/", :target=>"_blank"}
+			-#				.card
+			-#					%br/
+			-#					%img.responsive-img{src: "images/mariana1.png"}
+			-#					.card-content
+			-#						%span.card-title.negro-text Mariana
+			-#						%p.negro-text <b>Documentation</b>
+			-#						%p Documentador
+			-#		/
+			-#			.col.s12.m2
 		%footer.page-footer.blue
 			.container
 				.row
 					.col.s12.m6
-						%img{:src => "images/ghh.png", :alt => ""}/
+						%img{src:"images/ghh.png", alt:""}/
 						%h5.white-text Inspiring innovation
 			.footer-copyright
 				.container
-					.row
-						.col.s8
-							%p ©2017 Devs
-						.col.s4
-							%a.waves-effect.waves-light.btn{:href => "https://github.com/gliphyhub", :target=>"_blank"} Github
-	%script{:type=>"text/javascript", :src=>"https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"}		
-	%script{:type => "text/javascript", :src=>"https://code.jquery.com/jquery-3.1.1.min.js", :integrity=>"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=",
-		:crossorigin=>"anonymous"}
-	%script{:src=>"http://jnicol.github.io/particleground/js/jquery.particleground.js"}
-	%script{:type=>"text/javascript", :src=>"js/materialize.js"}
-	%script{:type=>"text/javascript", :src=>"js/main.js"}
-	%script{:type=>"text/javascript", :src=>"js/index.js"}
+					%span{style:"line-height: 2.5"} ©2017 #TeamDevs
+					%a.waves-effect.waves-light.btn.right{href:"https://github.com/gliphyhub", target:"_blank"} Github
+			
+	%script{type:"text/javascript",src:"https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"}		
+	%script{type:"text/javascript", src:"https://code.jquery.com/jquery-3.1.1.min.js",integrity:"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=",crossorigin:"anonymous"}
+	%script{src:"http://jnicol.github.io/particleground/js/jquery.particleground.js"}
+	%script{type:"text/javascript", src:"js/materialize.js"}
+	%script{type:"text/javascript", src:"js/gliphy.js"}
+	%script{type:"text/javascript", src:"js/index.js"}

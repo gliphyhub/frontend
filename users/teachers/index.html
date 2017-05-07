@@ -4,25 +4,30 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta charset="UTF-8">
     <link href="../../images/favicon.ico" rel="shortcut icon">
-    <meta content="#303030" name="theme-color">
+    <meta content="#bf360c   " name="theme-color">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../../css/materialize.css" media="screen,projection" rel="stylesheet">
     <link href="../../css/gliphy.css" rel="stylesheet">
-    <title>Gliphy Admin</title>
+    <title>Gliphy Teachers</title>
   </header>
   <body>
     <div class="navbar-fixed" id="nav-user">
-      <nav class="negro-flat">
+      <nav class="deep-orange darken-3">
         <div class="nav-wrapper">
           <div class="left">
             <a class="hide-on-large-only btn-flat white-bonis" data-activates="navegacion-movil" href="#" id="menu">
               <i class="material-icons">menu</i>
             </a>
           </div>
+          <div class="left">
+            <a class="btn-flat white-bonis" data-activates="notificaciones" href="#" id="nTeacher">
+              <i class="material-icons">notifications</i>
+            </a>
+          </div>
           <div class="right">
             <a class="options-user btn-flat white-bonis hide-on-small-only" data-activates="slide-out" href="#!" id="user-label">
               <img class="admin-img left" src="../../images/admin.jpg">
-              <span>Joel Hernández</span>
+              <span>Roberto Gervacio</span>
             </a>
             <a class="options-user btn-flat white-bonis hide-on-med-and-up" data-activates="slide-out" href="#!">
               <i class="material-icons left">apps</i>
@@ -35,8 +40,8 @@
             </a>
           </div>
           <div class="col s8 margincito-left hide-on-small-only truncate">
-            <a class="breadcrumb" href="index.html">Gliphy Admin</a>
-            <a class="breadcrumb">Publicaciones</a>
+            <a class="breadcrumb" href="index.html">Gliphy Teachers</a>
+            <a class="breadcrumb">Inicio</a>
           </div>
         </div>
       </nav>
@@ -44,16 +49,16 @@
     <ul class="side-nav blue-grey darken-4" id="slide-out">
       <li class="userView">
         <div class="background">
-          <img src="../../images/covers/admin-cover.jpg">
+          <img src="../../images/covers/teacher-cover.jpg">
         </div>
         <div class="white-bonis">
           <img class="circle" src="../../images/admin.jpg">
-          <span class="white-text name">Joel Hernández</span>
-          <span class="white-text email separado">Administrador</span>
+          <span class="white-text name">Roberto Gervacio</span>
+          <span class="white-text email separado">Profesor</span>
         </div>
       </li>
       <li>
-        <a class="white-bonis waves-effect" href="#profile.html">
+        <a class="white-bonis waves-effect" href="profile.html">
           <i class="material-icons left white-bonis">person</i>
           <span>Mi perfil</span>
         </a>
@@ -69,41 +74,6 @@
       <br>
       <li>
         <a class="waves-effect white-bonis" href="index.html">
-          <i class="material-icons left white-bonis">home</i>
-          <span>Inicio</span>
-        </a>
-      </li>
-      <br>
-      <li>
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="waves-effect white-bonis collapsible-header" id="base-datos-list">
-              <i class="material-icons left white-bonis">storage</i>
-              <span>Base de Datos</span>
-              <i class="arrow material-icons white-bonis">arrow_drop_down</i>
-            </a>
-            <div class="collapsible-body">
-              <ul class="blue-grey darken-3">
-                <li>
-                  <a class="waves-effect white-bonis" href="#!">Alumnos</a>
-                </li>
-                <li>
-                  <a class="waves-effect white-bonis" href="#!">Profesores</a>
-                </li>
-                <li>
-                  <a class="waves-effect white-bonis" href="#!">Administrativos</a>
-                </li>
-                <li>
-                  <a class="waves-effect white-bonis" href="#!">Grupos</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
-      <br>
-      <li>
-        <a class="waves-effect white-bonis" href="publications.html">
           <i class="material-icons left white-bonis">account_circle</i>
           <span>Publicaciones</span>
         </a>
@@ -128,41 +98,6 @@
       <br>
       <li>
         <a class="waves-effect white-bonis" href="index.html">
-          <i class="material-icons left white-bonis">home</i>
-          <span>Inicio</span>
-        </a>
-      </li>
-      <br>
-      <li>
-        <ul class="collapsible collapsible-accordion">
-          <li>
-            <a class="waves-effect white-bonis collapsible-header" id="base-datos-list">
-              <i class="material-icons left white-bonis">storage</i>
-              <span>Base de Datos</span>
-              <i class="arrow material-icons white-bonis">arrow_drop_down</i>
-            </a>
-            <div class="collapsible-body">
-              <ul class="blue-grey darken-2">
-                <li>
-                  <a class="waves-effect white-bonis" href="#!">Alumnos</a>
-                </li>
-                <li>
-                  <a class="waves-effect white-bonis" href="#!">Profesores</a>
-                </li>
-                <li>
-                  <a class="waves-effect white-bonis" href="#!">Administrativos</a>
-                </li>
-                <li>
-                  <a class="waves-effect white-bonis" href="#!">Grupos</a>
-                </li>
-              </ul>
-            </div>
-          </li>
-        </ul>
-      </li>
-      <br>
-      <li>
-        <a class="waves-effect white-bonis" href="publications.html">
           <i class="material-icons left white-bonis">account_circle</i>
           <span>Publicaciones</span>
         </a>
@@ -182,6 +117,83 @@
         </a>
       </li>
       <br>
+    </ul>
+    <ul class="side-nav blue-grey darken-4" id="notificaciones">
+      <br>
+      <li class="white-text">
+        <h6 class="center-align upper">Notificaciones</h6>
+      </li>
+      <ul class="notificaciones">
+        <li>
+          <ul class="collapsible collapsible-accordion">
+            <li>
+              <a class="waves-effect white-bonis collapsible-header">
+                <i class="material-icons left white-bonis">sms</i>
+                <span class="trun">Comunicado 1</span>
+                <label>David</label>
+              </a>
+              <div class="collapsible-body blue-grey darken-3">
+                <ul class="blue-grey darken-3">
+                  <div class="row no-margin">
+                    <div class="col s12 no-padding">
+                      <div class="noti white-text jus">Destacado el 00/00/00</div>
+                    </div>
+                    <div class="col s12 no-padding">
+                      <a class="btn-flat waves-effect no-margin orange-text right">Ver más</a>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class="collapsible collapsible-accordion">
+            <li>
+              <a class="waves-effect white-bonis collapsible-header">
+                <i class="material-icons left white-bonis">description</i>
+                <span class="trun">Tarea 1</span>
+                <label>Villena</label>
+              </a>
+              <div class="collapsible-body blue-grey darken-3">
+                <ul class="blue-grey darken-3">
+                  <div class="row no-margin">
+                    <div class="col s12 no-padding">
+                      <div class="noti white-text jus">Fecha de entrega el 25/05/17</div>
+                    </div>
+                    <div class="col s12 no-padding">
+                      <a class="btn-flat waves-effect no-margin orange-text right">Ver más</a>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <ul class="collapsible collapsible-accordion">
+            <li>
+              <a class="waves-effect white-bonis collapsible-header">
+                <i class="material-icons left white-bonis">sms</i>
+                <span class="trun">Comunicado 2</span>
+                <label>Clemente Cartujano</label>
+              </a>
+              <div class="collapsible-body blue-grey darken-3">
+                <ul class="blue-grey darken-3">
+                  <div class="row no-margin">
+                    <div class="col s12 no-padding">
+                      <div class="noti white-text jus">Alguna especie de preview o mensaje bastante largo que sí cabe</div>
+                    </div>
+                    <div class="col s12 no-padding">
+                      <a class="btn-flat waves-effect no-margin orange-text right">Ver más</a>
+                    </div>
+                  </div>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </li>
+      </ul>
     </ul>
     <main class="navegacion-espacio">
       <div class="fixed-action-btn">

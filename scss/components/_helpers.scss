@@ -1,0 +1,107 @@
+.margincito-left{
+  margin-left: 50px !important;
+}
+.message-style{
+  font-weight: 500;
+}
+.fixed{
+  position: fixed;
+}
+.relative{
+  position: relative;
+  overflow: auto;
+}
+.no-margin{
+  margin:0 !important;
+}
+.manita{
+  cursor: pointer;
+}
+
+.separado{
+  letter-spacing: 0px;
+  text-transform: uppercase;
+}
+.peque{
+  font-size: 0.8rem;
+}
+.grande{
+  font-size: 9rem;
+  display: block;
+  color: #2196F3;
+}
+.negro-text{
+  color: #000 !important;
+}
+.text-presentation{
+  font-weight: 300;
+  line-height: 4.5rem;
+}
+
+// Ocultarse automáticamente
+  .navegacion-espacio {
+      padding-left: 240px ;
+    }
+  @media only screen and (max-width : 992px) {
+      .navegacion-espacio{
+        padding-left: 0 !important;
+      }
+    }
+  // Color blanco
+  .white-bonis{
+    color: rgba(255, 255, 255, 0.87) !important;
+  }
+  // Ubicación correcta de iconos en chips
+  .icono-on-chip{
+    float: left;
+    font-size: 16px;
+    line-height: 32px;
+    padding-right: 8px;
+  }
+ @media only screen and (max-height: 560px) {
+  .block{
+    height: 150%;
+  }
+}
+ @media only screen and (max-height: 425px) {
+  .block{
+    height: 180%;
+  }
+}
+
+.jus
+{
+  text-align: justify !important;
+}
+.text-normal
+{
+  font-weight: 400 !important;
+  font-size: 14px !important;
+}
+.trun
+{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.min-cien
+{
+  min-height: 100%;
+}
+
+.no-padding{
+  padding: 0px !important;
+}
+
+.padding-one {
+  padding: 1px !important;
+}
+
+.min-total {
+  min-height: 100vh !important;
+}
+
+.upper {
+  text-transform: uppercase;
+}

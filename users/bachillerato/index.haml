@@ -1,17 +1,16 @@
 -#=================================================================================
 -#===================================== DISEÑO ======================================
 -#=================================================================================
--nombresTabla = "Joel Harim"
--apellidosTabla = "Hernández Javier"
+-nombresTabla = "Willie"
+-apellidosTabla = "Almaráz García"
 -divName = nombresTabla.split(/ /)
 -divAp = apellidosTabla.split(/ /)
 -nombreCompleto = nombresTabla + " " + apellidosTabla
 -nombreCorto = divName[0] + " " + divAp[0]
--tipoUser = "Administrador"
+-tipoUser = "Estudiante"
 
--menuLateral=[{title:"Inicio", link:"index.html", icon:"home"}, {title:"Base de Datos", link:"base.html", icon:"storage"},{title:"Publicaciones",link:"publications.html", icon:"account_circle"},{title:"Agregar",link:"new.html", icon:"add"},{title:"Ayuda", link:"help.html",icon:"error"}]
--seccion ="Publicaciones"
--tablas=["Alumnos", "Profesores", "Administrativos", "Grupos"]
+-notificationes=[{title:"Comunicado 1", icon:"sms", publicador: "David", desc: "Destacado el 00/00/00"}, {title:"Tarea 1", icon:"description", publicador: "Villena",  desc: "Fecha de entrega el 25/05/17"}, {title:"Comunicado 2", icon:"sms", publicador: "Clemente Cartujano", desc: "Alguna especie de preview o mensaje bastante largo que sí cabe"},]
+-seccion ="Inicio"
 !!!5
 %html{lang:"es"}
 	%header.navegacion-espacio
@@ -21,24 +20,24 @@
 		%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
 		%meta{charset: "UTF-8"}
 		%link{rel:"shortcut icon", href: "../../images/favicon.ico"}/
-		%meta{name: "theme-color", content: "#303030"}
+		%meta{name: "theme-color", content: "#004d40 "}
 		%link{rel:"stylesheet", href:"http://fonts.googleapis.com/icon?family=Material+Icons"}/
 		%link{rel:"stylesheet", href:"../../css/materialize.css", media: "screen,projection"}/		
 		%link{rel: "stylesheet", href:"../../css/gliphy.css"}/
-		%title Gliphy Admin
+		%title Gliphy
 	%body
 		-#=========================================
 		-#=========== Barra de navegación ================
 		-#=========================================
 		#nav-user.navbar-fixed
-			%nav.negro-flat
+			%nav.teal.darken-3
 				.nav-wrapper
 					-#=========================================
 					-#============= Botón Menú === ================
 					-#=========================================
 					.left
 						%a#menu.hide-on-large-only.btn-flat.white-bonis{href:"#", data:{activates:"navegacion-movil"}}
-							%i.material-icons menu
+							%i.material-icons notifications
 					-#=========================================
 					-#====== Botón Menú - Opciones usuario ==============
 					-#=========================================
@@ -59,7 +58,7 @@
 					-#========== Navegación - menú =================
 					-#=========================================
 					.col.s8.margincito-left.hide-on-small-only.truncate
-						%a.breadcrumb{href:"index.html"} Gliphy Admin
+						%a.breadcrumb{href:"index.html"} Gliphy
 						%a.breadcrumb #{seccion}
 		-#=========================================
 		-#=========== Opciones de usuario ================
@@ -67,13 +66,13 @@
 		%ul#slide-out.side-nav.blue-grey.darken-4
 			%li.userView
 				.background
-					%img{src:"../../images/covers/admin-cover.jpg"}
+					%img{src:"../../images/covers/student-cover.jpg"}
 				.white-bonis
 					%img.circle{src:"../../images/admin.jpg"}
 					%span.white-text.name #{nombreCorto}
 					%span.white-text.email.separado #{tipoUser}
 			%li
-				%a.white-bonis.waves-effect{href:"#profile.html"}
+				%a.white-bonis.waves-effect{href:"profile.html"}
 					%i.material-icons.left.white-bonis person
 					%span Mi perfil
 			%li
@@ -82,54 +81,51 @@
 					%span Salir
 		-#=========================================
 		-#========== Menú navegación - Large ==============
-		-#=========================================
+		-#=========================================http://localhost:7880/users/secundaria/#!
 		%ul#navegacion-no-oculto.side-nav.fixed.blue-grey.darken-4
 			%br/
-			-menuLateral.each do |item|		
-				-if item[:title] == "Base de Datos"
-					%li
+			%li.white-text
+				%h6.center-align.upper Notificaciones
+			%ul.notificaciones
+				-notificationes.each do |item|
+					%li 
 						%ul.collapsible.collapsible-accordion
 							%li
-								%a#base-datos-list.waves-effect.white-bonis.collapsible-header
+								%a.waves-effect.white-bonis.collapsible-header
 									%i.material-icons.left.white-bonis=item[:icon]
-									%span=item[:title]
-									%i.arrow.material-icons.white-bonis arrow_drop_down
-								.collapsible-body
+									%span.trun=item[:title]
+									%label=item[:publicador]
+								.collapsible-body.blue-grey.darken-3
 									%ul.blue-grey.darken-3
-										-tablas.each do |nombreTabla|
-											%li
-												%a.waves-effect.white-bonis{href:"#!"}=nombreTabla
-				-else
-					%li
-						%a.waves-effect.white-bonis{href: item[:link]}
-							%i.material-icons.left.white-bonis=item[:icon]
-							%span=item[:title]
-				%br/
+										.row.no-margin
+											.col.s12.no-padding
+												.noti.white-text.jus=item[:desc]
+											.col.s12.no-padding
+												%a.btn-flat.waves-effect.no-margin.orange-text.right Ver más
 		-#=========================================
 		-#======== Menú navegación - Responsive ============
 		-#=========================================
 		%ul#navegacion-movil.side-nav.blue-grey.darken-4
 			%br/
-			-menuLateral.each do |item|		
-				-if item[:title] == "Base de Datos"
-					%li
+			%li.white-text
+				%h6.center-align.upper Notificaciones
+			%ul.notificaciones
+				-notificationes.each do |item|
+					%li 
 						%ul.collapsible.collapsible-accordion
 							%li
-								%a#base-datos-list.waves-effect.white-bonis.collapsible-header
+								%a.waves-effect.white-bonis.collapsible-header
 									%i.material-icons.left.white-bonis=item[:icon]
-									%span=item[:title]
-									%i.arrow.material-icons.white-bonis arrow_drop_down
-								.collapsible-body
-									%ul.blue-grey.darken-2
-										-tablas.each do |nombreTabla|
-											%li
-												%a.waves-effect.white-bonis{href:"#!"}=nombreTabla
-				-else
-					%li
-						%a.waves-effect.white-bonis{href: item[:link]}
-							%i.material-icons.left.white-bonis=item[:icon]
-							%span=item[:title]
-				%br/
+									%span.trun=item[:title]
+									%label=item[:publicador]
+								.collapsible-body.blue-grey.darken-3
+									%ul.blue-grey.darken-3
+										.row.no-margin
+											.col.s12.no-padding
+												.noti.white-text.jus=item[:desc]
+											.col.s12.no-padding
+												%a.btn-flat.waves-effect.no-margin.orange-text.right Ver más
+			
 		-#=================================================================
 		-#========================= Contenido - Layout ===========================
 		-#=================================================================
@@ -175,9 +171,6 @@
 						.head-card
 							%span.card-title un ejemplo de un titulo muy grande que si cabe								
 						.card-content
-							%a.destacar-btn.btn-floating.waves-effect.waves-light.tooltipped{href:"#!", data:{position:"left", delay:"50", tooltip:"Destacar"}}
-								%i.material-icons
-									%span error_outline
 							%p.indigo-text.accent-1-text.truncate.etiqueta
 								%i.material-icons.left today
 								%span Publicado: 03/09/18
@@ -390,8 +383,6 @@
 							.head-card
 								%span.card-title un ejemplo de un titulo muy grande que si cabe								
 							.card-content
-								%a.destacar-btn.btn-floating.waves-effect.waves-light.tooltipped{href:"#!", data:{position:"left", delay:"50", tooltip:"Destacar"}}
-									%i.material-icons notifications_none
 								%p.indigo-text.accent-1-text.truncate.etiqueta
 									%i.material-icons.left today
 									%span Publicado: 03/09/18
@@ -431,7 +422,6 @@
 	-#=================================================================
 	-#============================= Scripts ===============================
 	-#=================================================================
-
 	-#Calendar
 	%script{src:"https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"}
 	%script{src:"../../js/jquery-ui-datepicker.min.js"}
@@ -440,5 +430,3 @@
 	%script{type:"text/javascript", src:"https://code.jquery.com/jquery-3.1.1.min.js", integrity:"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin:"anonymous"}
 	%script{:type=>"text/javascript", :src=>"../../js/materialize.js"}
 	%script{:type=>"text/javascript", :src=>"../../js/gliphy.js"}
-
-	

@@ -1,8 +1,17 @@
 -#=================================================================================
 -#===================================== DISEÑO ======================================
 -#=================================================================================
+-nombresTabla = "Joel Harim"
+-apellidosTabla = "Hernández Javier"
+-divName = nombresTabla.split(/ /)
+-divAp = apellidosTabla.split(/ /)
+-nombreCompleto = nombresTabla + " " + apellidosTabla
+-nombreCorto = divName[0] + " " + divAp[0]
+-tipoUser = "Administrador"
+
 -menuLateral=[{title:"Inicio", link:"index.html", icon:"home"}, {title:"Base de Datos", link:"base.html", icon:"storage"},{title:"Publicaciones",link:"publications.html", icon:"account_circle"},{title:"Agregar",link:"new.html", icon:"add"},{title:"Ayuda", link:"help.html",icon:"error"}]
--seccion ="Ayuda" 
+-seccion ="Ayuda"
+-tablas=["Alumnos", "Profesores", "Administrativos", "Grupos"]
 !!!5
 %html{lang:"es"}
 	%header.navegacion-espacio
@@ -12,59 +21,59 @@
 		%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
 		%meta{charset: "UTF-8"}
 		%link{rel:"shortcut icon", href: "../../images/favicon.ico"}/
-		-#google icons
+		%meta{name: "theme-color", content: "#303030"}
 		%link{rel:"stylesheet", href:"http://fonts.googleapis.com/icon?family=Material+Icons"}/
 		%link{rel:"stylesheet", href:"../../css/materialize.css", media: "screen,projection"}/		
-		%link{rel: "stylesheet", href:"../../css/style.css"}/
+		%link{rel: "stylesheet", href:"../../css/gliphy.css"}/
 		%title Gliphy Admin
 	%body
 		-#=========================================
 		-#=========== Barra de navegación ================
 		-#=========================================
-		.navbar-fixed
+		#nav-user.navbar-fixed
 			%nav.negro-flat
 				.nav-wrapper
 					-#=========================================
 					-#============= Botón Menú === ================
 					-#=========================================
-					%p.left
-						%a#menu.hide-on-large-only.btn-flat.white-bonis{style:"margin-top: -25px",href:"#", data:{activates:"navegacion-movil"}}
-							%i.material-icons{style:" line-height: 30px"} menu
+					.left
+						%a#menu.hide-on-large-only.btn-flat.white-bonis{href:"#", data:{activates:"navegacion-movil"}}
+							%i.material-icons menu
 					-#=========================================
 					-#====== Botón Menú - Opciones usuario ==============
 					-#=========================================
-					%p.right
-						%a.options-user.btn-flat.white-bonis.left.hide-on-small-only{href:"#",style:"text-transform: none", data:{activates:"slide-out"}}
+					.right
+						%a#user-label.options-user.btn-flat.white-bonis.hide-on-small-only{href:"#!", data:{activates:"slide-out"}}
 							%img.admin-img.left{src:"../../images/admin.jpg"}
-							Joel Hernández
-						%a.options-user.btn-flat.white-bonis.left.hide-on-med-and-up{href:"#", data:{activates:"slide-out"}}
-							%i.material-icons.left{style:" line-height: 30px;"} apps
-							OPCIONES
+							%span #{nombreCorto}
+						%a.options-user.btn-flat.white-bonis.hide-on-med-and-up{href:"#!",data:{activates:"slide-out"}}
+							%i.material-icons.left apps
+							%span OPCIONES
 					-#=========================================
 					-#============== Toggle Menú =================
 					-#=========================================
-					%p.right
-						%a#toggleMenu.btn-flat.white-bonis.hide-on-med-and-down.tooltipped.hoverable{style:"margin-top: -30px; padding: 0px; width: 40px",href:"#!", data:{position:"bottom", delay:"50", tooltip:"Cambiar vista"}}
-							%i.material-icons.center{style:" line-height: 35px"} view_stream
+					.right
+						%a#toggleMenu.btn-flat.white-bonis.hide-on-med-and-down.tooltipped.hoverable{href:"#!", data:{position:"bottom", delay:"50", tooltip:"Cambiar vista"}}
+							%i.material-icons.center view_stream
 					-#=========================================
 					-#========== Navegación - menú =================
 					-#=========================================
 					.col.s8.margincito-left.hide-on-small-only.truncate
-						%a.breadcrumb{href:""} Gliphy Admin
-						%a.breadcrumb{href:""} #{seccion}
+						%a.breadcrumb{href:"index.html"} Gliphy Admin
+						%a.breadcrumb #{seccion}
 		-#=========================================
 		-#=========== Opciones de usuario ================
 		-#=========================================
-		%ul#slide-out.side-nav.lateral-admin
+		%ul#slide-out.side-nav.blue-grey.darken-4
 			%li.userView
 				.background
-					%img{src:"../../images/office.jpg"}
+					%img{src:"../../images/covers/admin-cover.jpg"}
 				.white-bonis
 					%img.circle{src:"../../images/admin.jpg"}
-					%span.white-text.name Joel Hernández
-					%span.white-text.email.separado Admnistrador
+					%span.white-text.name #{nombreCorto}
+					%span.white-text.email.separado #{tipoUser}
 			%li
-				%a.white-bonis.waves-effect{href:"#"}
+				%a.white-bonis.waves-effect{href:"profile.html"}
 					%i.material-icons.left.white-bonis person
 					%span Mi perfil
 			%li
@@ -74,40 +83,67 @@
 		-#=========================================
 		-#========== Menú navegación - Large ==============
 		-#=========================================
-		%ul#navegacion-no-oculto.side-nav.fixed.lateral-admin{style:"width:240px;margin-top:63px"}
+		%ul#navegacion-no-oculto.side-nav.fixed.blue-grey.darken-4
 			%br/
-			-menuLateral.each do |item|				
-				%li
-					%a.waves-effect.white-bonis{href: item[:link]}
-						%i.material-icons.left.white-bonis=item[:icon] 
-						=item[:title]
+			-menuLateral.each do |item|		
+				-if item[:title] == "Base de Datos"
+					%li
+						%ul.collapsible.collapsible-accordion
+							%li
+								%a#base-datos-list.waves-effect.white-bonis.collapsible-header
+									%i.material-icons.left.white-bonis=item[:icon]
+									%span=item[:title]
+									%i.arrow.material-icons.white-bonis arrow_drop_down
+								.collapsible-body
+									%ul.blue-grey.darken-3
+										-tablas.each do |nombreTabla|
+											%li
+												%a.waves-effect.white-bonis{href:"#!"}=nombreTabla
+				-else
+					%li
+						%a.waves-effect.white-bonis{href: item[:link]}
+							%i.material-icons.left.white-bonis=item[:icon]
+							%span=item[:title]
 				%br/
 		-#=========================================
 		-#======== Menú navegación - Responsive ============
 		-#=========================================
-		%ul#navegacion-movil.side-nav.lateral-admin{style:"width:240px"}
+		%ul#navegacion-movil.side-nav.blue-grey.darken-4
 			%br/
-			-menuLateral.each do |item|				
-				%li
-					%a.waves-effect.white-bonis{href:item[:link]}
-						%i.material-icons.left.white-bonis=item[:icon] 
-						=item[:title]
+			-menuLateral.each do |item|		
+				-if item[:title] == "Base de Datos"
+					%li
+						%ul.collapsible.collapsible-accordion
+							%li
+								%a#base-datos-list.waves-effect.white-bonis.collapsible-header
+									%i.material-icons.left.white-bonis=item[:icon]
+									%span=item[:title]
+									%i.arrow.material-icons.white-bonis arrow_drop_down
+								.collapsible-body
+									%ul.blue-grey.darken-2
+										-tablas.each do |nombreTabla|
+											%li
+												%a.waves-effect.white-bonis{href:"#!"}=nombreTabla
+				-else
+					%li
+						%a.waves-effect.white-bonis{href: item[:link]}
+							%i.material-icons.left.white-bonis=item[:icon]
+							%span=item[:title]
 				%br/
 		-#=================================================================
 		-#========================= Contenido - Layout ===========================
 		-#=================================================================
-		
-		%main.navegacion-espacio.main-height-help
+		%main.navegacion-espacio{style:"position: relative;"}
 			-#===============Principal contenido===========
 			.row.botones-flotantes.fixed.navegacion-espacio
 				.col.s6.center
 					%a#atras.btn.white.waves-effect.grey-text.text-darken-4{style:"width:120px; padding: 0px"} Atrás
 				.col.s6.center
 					%a#siguiente.btn.white.waves-effect.grey-text.text-darken-4{style:"width:120px; padding: 0px"} Siguiente
-			.row{style:"margin-bottom: 0px;height: 100%  !important;"}			
-				.col.s12{style:" padding:0px;height: 100%  !important"}
+			.row.no-margin
+				.col.s12.no-padding
 					.contenedor-carousel
-						.carousel.center.carousel-slider
+						.carousel.carousel-slider
 							-#Bienvenida
 							#bienvenida-c.carousel-item.white-text
 								.col.s12
@@ -121,187 +157,232 @@
 										%img{src:"../../images/help/help01.jpg", style:"height:35vh; width:auto"}
 							
 							-#Interfaz
-							.carousel-item.blue.white-text
-								.col.s12
-									%h2.truncate Interfaz
-								.col.s12
-									%h4 Barra de navegación
-								-#Nav bar completo
-								.col.s12
-									%nav.negro-flat
-										.nav-wrapper
-											-#=========================================
-											-#========= Botón Menú - No Large ================
-											-#=========================================
-											%p.left
-												%a.hide-on-large-only.btn-flat.white-bonis{style:"margin-top: -25px"}
-													%i.material-icons{style:" line-height: 30px"} menu
-											-#=========================================
-											-#====== Botón Menú - Opciones usuario ==============
-											-#=========================================
-											%p.right
-												%a.btn-flat.white-bonis.left.hide-on-small-only{style:"text-transform: none"}
-													%img.admin-img.left{src:"../../images/admin.jpg"}
-													Joel Hernández
-												%a.btn-flat.white-bonis.left.hide-on-med-and-up
-													%i.material-icons.left{style:" line-height: 30px;"} apps
-													OPCIONES
-											-#=========================================
-											-#========== Navegación - menú =================
-											-#=========================================
-											.margincito-left.hide-on-small-only.truncate{style:"text-align:left;"}
-												%a.breadcrumb Gliphy Admin
-												%a.breadcrumb Publicaciones
-								
-								.col.s12
-									%p.center-align.text-normal
-										%span La barra de navegación se encuentra en la parte superior y consta de las siguiente partes:
-								-#Menu-derecho
-								.col.s12.l6.carousel-tabla
-									.col.s12.blue.darken-2
-										%h5 Menu Usuario
-									.col.s12.blue.darken-1{style:"padding-bottom:10px;padding-top: 10px "}
-										.col.s12.m6.l12
-											%nav.negro-flat.truncate
+							.carousel-item.blue.white-text.center-align
+								.row.fit
+									.col.s12
+										%h2.truncate Interfaz
+									.col.s12
+										%h4 Barra de navegación
+									-#Nav bar completo
+									.col.s12
+										#nav-user.left-align
+											%nav.negro-flat
 												.nav-wrapper
+													-#=========================================
+													-#============= Botón Menú === ================
+													-#=========================================
+													.left
+														%a#menu.hide-on-large-only.btn-flat.white-bonis{href:"#!"}
+															%i.material-icons menu
 													-#=========================================
 													-#====== Botón Menú - Opciones usuario ==============
 													-#=========================================
-													%p.right
-														%a.btn-flat.white-bonis.left.hide-on-small-only{style:"text-transform: none"}
+													.right
+														%a#user-label.btn-flat.white-bonis.hide-on-small-only{href:"#!"}
 															%img.admin-img.left{src:"../../images/admin.jpg"}
-															Joel Hernández
-														%a.btn-flat.white-bonis.left.hide-on-med-and-up
-															%i.material-icons.left{style:" line-height: 30px;"} apps
-															OPCIONES
-										.col.s12.m6.l12
-											%p.jus.text-normal
-												%span Aquí tu puedes acceder al menú de opciones de usuario.
-										.col.s12
-											%p.jus.text-normal
-												%span Las opciones que se encuentran en este menú son las siguientes:
-										.col.s12.m6.blue
-											%p	
-												%a.white-bonis.waves-effect
-													%i.material-icons.left.white-bonis person
-													%span Mi perfil
-										.col.s12.m6
-											%p.jus.text-normal
-												%span Permite acceder a las configuraciones de tu perfil.
-										.col.s12
-										.col.s12.m6.blue
-											%p
-												%a.white-bonis.waves-effect
-													%i.material-icons.left.white-bonis power_settings_new
-													%span Salir
-										.col.s12.m6
-											%p.jus.text-normal
-												%span Le permite cerrar sesión de manera segura del sistema.
-								-#Navegador
-								
-								.col.s12.l6.carousel-tabla
-									.col.s12.blue.darken-2.hide-on-small-only
-										%h5 Navegador
-									.col.s12.hide-on-small-only.blue.darken-1{style:"padding-bottom:10px; padding-top: 10px "}
-										.col.s12.m6.l12
-											%nav.negro-flat.truncate
-												.nav-wrapper
+															%span Joel Hernández
+														%a.btn-flat.white-bonis.hide-on-med-and-up{href:"#!"}
+															%i.material-icons.left apps
+															%span OPCIONES
+													-#=========================================
+													-#============== Toggle Menú =================
+													-#=========================================
+													.right
+														%a.helpToggleMenu.btn-flat.white-bonis.hide-on-med-and-down.tooltipped.hoverable{href:"#!", data:{position:"bottom", delay:"50", tooltip:"Cambiar vista"}}
+															%i.material-icons.center view_stream
 													-#=========================================
 													-#========== Navegación - menú =================
 													-#=========================================
-													.col.left.hide-on-small-only.truncate
-														%a.breadcrumb Gliphy Admin
-														%a.breadcrumb Publicaciones
-										.col.s12.m6.l12
-											%p.jus.text-normal
-												%span Este navegador te permite saber en que sección de
-												%b GliphyHub Admin
-												%span te encuentras
-								
+													.col.s8.margincito-left.hide-on-small-only.truncate
+														%a.breadcrumb{href:"#!"} Gliphy Admin
+														%a.breadcrumb #{seccion}
+									.col.s12
+										%p.center-align.text-normal
+											%span La barra de navegación se encuentra en la parte superior y consta de las siguiente partes:
+									-#Menu-derecho
+									.col.s12.l6.carousel-tabla
+										.col.s12.blue.darken-2
+											%h5 Menu Usuario
+										.col.s12.blue.darken-1{style:"padding-bottom:10px;padding-top: 10px "}
+											.col.s12.m6.l12
+												#nav-user.left-align
+													%nav.negro-flat
+														.nav-wrapper
+															-#=========================================
+															-#====== Botón Menú - Opciones usuario ==============
+															-#=========================================
+															.right
+																%a#user-label.btn-flat.white-bonis.hide-on-small-only{href:"#!"}
+																	%img.admin-img.left{src:"../../images/admin.jpg"}
+																	%span Joel Hernández
+																%a.btn-flat.white-bonis.hide-on-med-and-up{href:"#!"}
+																	%i.material-icons.left apps
+																	%span OPCIONES
+											.col.s12.m6.l12
+												%p.jus.text-normal
+													%span Aquí tu puedes acceder al menú de opciones de usuario.
+											.col.s12
+												%p.jus.text-normal
+													%span Las opciones que se encuentran en este menú son las siguientes:
+											.col.s12
+												.col.s12.m6.blue
+													%p	
+														%a.white-bonis.waves-effect
+															%i.material-icons.left.white-bonis person
+															%span Mi perfil
+												.col.s12.m6
+													%p.jus.text-normal
+														%span Permite acceder a las configuraciones de tu perfil.
+											.col.s12
+												.col.s12.m6.blue
+													%p
+														%a.white-bonis.waves-effect
+															%i.material-icons.left.white-bonis power_settings_new
+															%span Salir
+												.col.s12.m6
+													%p.jus.text-normal
+														%span Le permite cerrar sesión de manera segura del sistema.
+									-#Navegador
+									
+									.col.s12.l6.carousel-tabla.hide-on-small-only
+										.col.s12.blue.darken-2
+											%h5 Navegador
+										.col.s12.blue.darken-1{style:"padding-bottom:10px; padding-top: 10px "}
+											.col.s12.m6.l12
+												#nav-user.left-align
+													%nav.negro-flat
+														.nav-wrapper
+															-#=========================================
+															-#========== Navegación - menú =================
+															-#=========================================
+															.col.truncate
+																%a.breadcrumb{href:"#!"} Gliphy Admin
+																%a.breadcrumb #{seccion}
+											.col.s12.m6.l12
+												%p.jus.text-normal
+													%span Este navegador te permite saber en que sección de
+													%b GliphyHub Admin
+													%span te encuentras
+									-#Toogle
+									.col.s12.l6.carousel-tabla.hide-on-med-and-down
+										.col.s12.blue.darken-2
+											%h5 Cambiar vista
+										.col.s12.blue.darken-1{style:"padding-bottom:10px; padding-top: 10px "}
+											.col.s12.m6.l12
+												#nav-user.left-align
+													%nav.negro-flat
+														.nav-wrapper
+															-#=========================================
+															-#============== Toggle Menú =================
+															-#=========================================
+															.center
+																%a.helpToggleMenu.btn-flat.white-bonis.hide-on-med-and-down.tooltipped.hoverable{href:"#!", data:{position:"bottom", delay:"50", tooltip:"Cambiar vista"}}
+																	%i.material-icons.center view_stream
+											.col.s12.m6.l12
+												%p.jus.text-normal
+													%span Este navegador te permite saber en que sección de
+													%b GliphyHub Admin
+													%span te encuentras
+									
 
-								-#Menu-derecho
-								.col.s12.hide-on-large-only.carousel-tabla
-									.col.s12.blue.darken-2
-										%h5 Menu Lateral
-									.col.s12.blue.darken-1{style:"padding-bottom:10px;padding-top: 10px "}
-										.col.s12.m6.l12
-											%nav.negro-flat.truncate
-												.nav-wrapper
-													-#=========================================
-													-#========= Botón Menú - No Large ================
-													-#=========================================
-													%p.left
-														%a.hide-on-large-only.btn-flat.white-bonis{style:"margin-top: -25px",href:"#"}
-															%i.material-icons{style:" line-height: 30px"} menu
-										.col.s12.m6.l12
-											%p.jus.text-normal
-												%span Aquí tu puedes acceder al 
-												%b menú de navegación
-												%span (sólo en dispositivos móviles y tablets)
+									-#Menu-derecho
+									.col.s12.hide-on-large-only.carousel-tabla
+										.col.s12.blue.darken-2
+											%h5 Menu Lateral
+										.col.s12.blue.darken-1{style:"padding-bottom:10px;padding-top: 10px "}
+											.col.s12.m6.l12
+												#nav-user.left-align
+													%nav.negro-flat
+														.nav-wrapper
+															-#=========================================
+															-#============= Botón Menú === ================
+															-#=========================================
+															.left
+																%a#menu.hide-on-large-only.btn-flat.white-bonis{href:"#!"}
+																	%i.material-icons menu
+											.col.s12.m6.l12
+												%p.jus.text-normal
+													%span Aquí tu puedes acceder al 
+													%b menú de navegación
+													%span (sólo en dispositivos móviles y tablets)
 
-								-#======= MENÚ DE NAVEGACIÓN ========
-								.col.s12.altito
-									%h4 Menú de navegación
-								.col.s12.m6.l4
-									%ul.lateral-admin.center-align{style:"width:100%; right:0;left: 0"}
-										%br/
-										-menuLateral.each do |item|				
-											%li.left-align{style:"padding-left: 40px"}
-												%a.waves-effect.white-bonis
-													%i.material-icons.left.white-bonis=item[:icon] 
-													=item[:title]
+									-#======= MENÚ DE NAVEGACIÓN ========
+									.col.s12.space-top
+										%h4 Menú de navegación
+									.col.s12.m6.l4
+										%ul.blue-grey.darken-4.left-align.help-menu{style:"width:100%; right:0;left: 0"}
 											%br/
-								.col.s12.m6.l8.carousel-tabla
-									.col.s12.blue.darken-2
-										%h5 Opciones
-									.col.s12.blue.darken-1{style:"padding-bottom:10px;padding-top: 10px "}
-										.col.s12
-											%p.text-normal
-												%span Las opciones que se encuentran en este menú son las siguientes:
-										.col.s12.m6.blue
-											%p	
-												%a.white-bonis.waves-effect
-													%i.material-icons.left.white-bonis home
-													%span Inicio
-										.col.s12.m6
-											%p.jus.text-normal
-												%span Permite acceder a las configuraciones de tu perfil.
-										.col.s12
-										.col.s12.m6.blue
-											%p
-												%a.white-bonis.waves-effect
-													%i.material-icons.left.white-bonis storage
-													%span Base de Datos
-										.col.s12.m6
-											%p.jus.text-normal
-												%span Le permite cerrar sesión de manera segura del sistema.
-										.col.s12
-										.col.s12.m6.blue
-											%p	
-												%a.white-bonis.waves-effect
-													%i.material-icons.left.white-bonis account_circle
-													%span Publicaciones
-										.col.s12.m6
-											%p.jus.text-normal
-												%span Permite acceder a las configuraciones de tu perfil.
-										.col.s12
-										.col.s12.m6.blue
-											%p
-												%a.white-bonis.waves-effect
-													%i.material-icons.left.white-bonis add
-													%span Agregar
-										.col.s12.m6
-											%p.jus.text-normal
-												%span Le permite cerrar sesión de manera segura del sistema.
-										.col.s12
-										.col.s12.m6.blue
-											%p	
-												%a.white-bonis.waves-effect
-													%i.material-icons.left.white-bonis error
-													%span Ayuda
-										.col.s12.m6
-											%p.jus.text-normal
-												%span Permite acceder a las configuraciones de tu perfil.
+											-menuLateral.each do |item|		
+												-if item[:title] == "Base de Datos"
+													%li
+														%ul.collapsible.collapsible-accordion
+															%li
+																%a#base-datos-list.waves-effect.white-bonis.collapsible-header
+																	%i.material-icons.left.white-bonis=item[:icon]
+																	%span=item[:title]
+																	%i.arrow.material-icons.white-bonis arrow_drop_down
+																.collapsible-body.blue-grey.darken-3
+																	%ul
+																		-tablas.each do |nombreTabla|
+																			%li
+																				%a.waves-effect.white-bonis{href:"#!"}=nombreTabla
+												-else
+													%li
+														%a.waves-effect.white-bonis
+															%i.material-icons.left.white-bonis=item[:icon]
+															%span=item[:title]
+											%br/
+									.col.s12.m6.l8.carousel-tabla
+										.col.s12.blue.darken-2
+											%h5 Opciones
+										.col.s12.blue.darken-1{style:"padding-bottom:10px;padding-top: 10px "}
+											.col.s12
+												%p.text-normal
+													%span Las opciones que se encuentran en este menú son las siguientes:
+											.col.s12.m6.blue
+												%p	
+													%a.white-bonis.waves-effect
+														%i.material-icons.left.white-bonis home
+														%span Inicio
+											.col.s12.m6
+												%p.jus.text-normal
+													%span Permite acceder a las configuraciones de tu perfil.
+											.col.s12
+											.col.s12.m6.blue
+												%p
+													%a.white-bonis.waves-effect
+														%i.material-icons.left.white-bonis storage
+														%span Base de Datos
+											.col.s12.m6
+												%p.jus.text-normal
+													%span Le permite cerrar sesión de manera segura del sistema.
+											.col.s12
+											.col.s12.m6.blue
+												%p	
+													%a.white-bonis.waves-effect
+														%i.material-icons.left.white-bonis account_circle
+														%span Publicaciones
+											.col.s12.m6
+												%p.jus.text-normal
+													%span Permite acceder a las configuraciones de tu perfil.
+											.col.s12
+											.col.s12.m6.blue
+												%p
+													%a.white-bonis.waves-effect
+														%i.material-icons.left.white-bonis add
+														%span Agregar
+											.col.s12.m6
+												%p.jus.text-normal
+													%span Le permite cerrar sesión de manera segura del sistema.
+											.col.s12
+											.col.s12.m6.blue
+												%p	
+													%a.white-bonis.waves-effect
+														%i.material-icons.left.white-bonis error
+														%span Ayuda
+											.col.s12.m6
+												%p.jus.text-normal
+													%span Permite acceder a las configuraciones de tu perfil.
 							-#Inicio
 							.carousel-item.purple.lighten-2.white-text
 								.col.s12
@@ -396,4 +477,4 @@
 
 	%script{type:"text/javascript", src:"https://code.jquery.com/jquery-3.1.1.min.js", integrity:"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin:"anonymous"}
 	%script{:type=>"text/javascript", :src=>"../../js/materialize.js"}
-	%script{:type=>"text/javascript", :src=>"../../js/main.js"}
+	%script{:type=>"text/javascript", :src=>"../../js/gliphy.js"}
