@@ -23,27 +23,45 @@
 				.login-before
 				.login
 					#particles
-					.profile-card
-						.logotipo-login.blue-grey.lighten-5
+					.profile-card.profileAnimated
+						.logotipo-login.blue-grey.lighten-5.animate
 							%a
 								%img{src:"images/favicon.ico"}
 							%h1
 								%span GliphyHub
-							%h2
-								%span Inspiring innovation
-						.profile-bio.blue-grey.lighten-5
-							.input-field.col.s12.m6
+						%form#inicialForm.profile-bio.blue-grey.lighten-5.animate
+							.input-field.col.s12
 								%i.material-icons.prefix.medium account_circle
 								%input.validate#user{type: "email"}/
 								%label{for: "user"} Correo
-							.input-field.col.s12.m6
+							.input-field.col.s12
 								%i.material-icons.prefix.medium lock_outline
 								%input.validate#pass{type: "password"}/
 								%label{for: "pass"} Contraseña
-							.col.m4.hide-on-small-only
-							%button.col.s12.m4.btn.waves-effect.waves-light{type: "submit"}
-								%span INICIAR SESIÓN 
+							%button.col.s12.btn.waves-effect.waves-light{type: "submit"}
+								%span.upper IIniciar sesión
 								%i.material-icons.right send
+							.col.s12.forget
+								%a#forget.upper{href: "#!"} olvidé mi contraseña
+							
+						%form#forgotten.profile-bio.blue-grey.lighten-5
+							.left.backLogin
+								%a#backLogin.btn-flat.btn-square
+									%i.material-icons.prefix.medium arrow_back
+							.col.s12
+								%h5 ¿Olvidaste tu contraseña?
+							.col.s12
+								%p.jus.text-normal
+									%span Si olvidate tu contraseña, ingresa en el campo de abajo tu
+									%strong correo con el cual te registrate
+									%span en la plataforma, para que nosotros podamos ayudarte a recuperar tu cuenta
+							.input-field.col.s12
+								%i.material-icons.prefix.medium email
+								%input.validate#user{type: "email"}/
+								%label{for: "user"} Correo
+							%button.col.s12.btn.waves-effect.waves-light{type: "submit"}
+								%span Recuperar mi cuenta
+
 			%ul#dropdown1.dropdown-content.flechita
 				%li
 					%a.grey-text.text-darken-4{href:"#about"} Sobre

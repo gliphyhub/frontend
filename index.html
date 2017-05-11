@@ -22,35 +22,59 @@
         <div class="login-before"></div>
         <div class="login">
           <div id="particles"></div>
-          <div class="profile-card">
-            <div class="logotipo-login blue-grey lighten-5">
+          <div class="profile-card profileAnimated">
+            <div class="logotipo-login blue-grey lighten-5 animate">
               <a>
                 <img src="images/favicon.ico">
               </a>
               <h1>
                 <span>GliphyHub</span>
               </h1>
-              <h2>
-                <span>Inspiring innovation</span>
-              </h2>
             </div>
-            <div class="profile-bio blue-grey lighten-5">
-              <div class="input-field col s12 m6">
+            <form class="profile-bio blue-grey lighten-5 animate" id="inicialForm">
+              <div class="input-field col s12">
                 <i class="material-icons prefix medium">account_circle</i>
                 <input class="validate" id="user" type="email">
                 <label for="user">Correo</label>
               </div>
-              <div class="input-field col s12 m6">
+              <div class="input-field col s12">
                 <i class="material-icons prefix medium">lock_outline</i>
                 <input class="validate" id="pass" type="password">
                 <label for="pass">Contraseña</label>
               </div>
-              <div class="col m4 hide-on-small-only"></div>
-              <button class="col s12 m4 btn waves-effect waves-light" type="submit">
-                <span>INICIAR SESIÓN</span>
+              <button class="col s12 btn waves-effect waves-light" type="submit">
+                <span class="upper">IIniciar sesión</span>
                 <i class="material-icons right">send</i>
               </button>
-            </div>
+              <div class="col s12 forget">
+                <a class="upper" href="#!" id="forget">olvidé mi contraseña</a>
+              </div>
+            </form>
+            <form class="profile-bio blue-grey lighten-5" id="forgotten">
+              <div class="left backLogin">
+                <a class="btn-flat btn-square" id="backLogin">
+                  <i class="material-icons prefix medium">arrow_back</i>
+                </a>
+              </div>
+              <div class="col s12">
+                <h5>¿Olvidaste tu contraseña?</h5>
+              </div>
+              <div class="col s12">
+                <p class="jus text-normal">
+                  <span>Si olvidate tu contraseña, ingresa en el campo de abajo tu</span>
+                  <strong>correo con el cual te registrate</strong>
+                  <span>en la plataforma, para que nosotros podamos ayudarte a recuperar tu cuenta</span>
+                </p>
+              </div>
+              <div class="input-field col s12">
+                <i class="material-icons prefix medium">email</i>
+                <input class="validate" id="user" type="email">
+                <label for="user">Correo</label>
+              </div>
+              <button class="col s12 btn waves-effect waves-light" type="submit">
+                <span>Recuperar mi cuenta</span>
+              </button>
+            </form>
           </div>
         </div>
       </div>
