@@ -4,119 +4,120 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta charset="UTF-8">
     <link href="../../images/favicon.ico" rel="shortcut icon">
-    <meta content="#b71c1c" name="theme-color">
+    <meta content="#303030" name="theme-color">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../../css/materialize.css" media="screen,projection" rel="stylesheet">
     <link href="../../css/gliphy.css" rel="stylesheet">
-    <title>Gliphy</title>
+    <title>Gliphy Admin</title>
   </header>
   <body>
     <main>
-      <div class="row blue-grey darken-4 no-margin min-total">
-        <div class="portadaProfile col s12 z-depth-1 no-padding">
-          <img src="../../images/covers/student-cover.jpg">
+      <div class="profile row no-margin min-total white-text">
+        <div class="col s12 m12 l4 no-padding side-profile">
+          <div class="portadaProfile z-depth-3 no-padding">
+            <img src="../../images/covers/student-cover.jpg">
+          </div>
+          <div class="imgProfile col s12 center no-padding">
+            <img class="circle z-depth-4" src="../../images/admin.jpg">
+          </div>
+          <div class="name-profile col s12">
+            <h5 class="center-align">
+              <span>Willie Alamaráz</span>
+            </h5>
+            <h6 class="center-align upper">
+              <span>Estudiante</span>
+            </h6>
+          </div>
+          <div class="editar col s12 ocultado center-align">
+            <a class="btn-flat waves-effect orange-text text-lighten-1">Editar foto</a>
+          </div>
         </div>
-        <div class="fit white-text">
-          <div class="col s12 blue-grey darken-2 no-padding s-interna">
-            <div class="imgProfile col s12 center no-padding">
-              <a href="#!">
-                <i class="small material-icons white-text circle change">autorenew</i>
-                <img class="circle z-depth-4" src="../../images/admin.jpg">
-              </a>
+        <div class="contentProfile col s12 m12 l8 no-padding blue-grey darken-2 z-depth-3">
+          <div class="col s12" id="profileOptions">
+            <div class="col s12 no-padding">
+              <div class="col s12 hide-on-med-and-down">
+                <h4>Mis datos</h4>
+              </div>
+              <div class="col s12 m6 dato">
+                <div class="col s12">
+                  <i class="material-icons left">face</i>
+                  <p>Nombre completo:</p>
+                </div>
+                <div class="col s12">
+                  <h5>Willie Alamaráz García</h5>
+                </div>
+              </div>
+              <div class="col s12 m6 dato">
+                <div class="col s12">
+                  <i class="material-icons left">contacts</i>
+                  <p>Tipo de cuenta:</p>
+                </div>
+                <div class="col s12">
+                  <h5>Estudiante</h5>
+                </div>
+              </div>
+              <div class="col s12 m6 dato">
+                <div class="col s12">
+                  <i class="material-icons left">event</i>
+                  <p>Fecha de nacimiento:</p>
+                </div>
+                <div class="col s12">
+                  <h5>00/00/99</h5>
+                </div>
+              </div>
+              <div class="col s12 m6 dato">
+                <div class="col s12">
+                  <i class="material-icons left">favorite</i>
+                  <p>Sexo:</p>
+                </div>
+                <div class="col s12">
+                  <h5>Masculino</h5>
+                </div>
+              </div>
+              <div class="col s12 m6 dato">
+                <div class="col s12">
+                  <i class="material-icons left">extension</i>
+                  <p>Grupo:</p>
+                </div>
+                <div class="col s12">
+                  <h5>611</h5>
+                </div>
+              </div>
             </div>
-            <div class="contentProfile col s12 no-padding">
-              <div class="col s12">
-                <h5 class="center-align">
-                  <span>Willie Alamaráz</span>
-                </h5>
-                <h6 class="center-align upper">
-                  <span>Estudiante</span>
-                </h6>
-              </div>
-              <div class="col s12" id="profileOptions">
-                <div class="col s12 no-padding">
-                  <div class="col s12 m6 l4 dato">
-                    <div class="col s12">
-                      <i class="material-icons left">face</i>
-                      <p>Nombre completo:</p>
-                    </div>
-                    <div class="col s12">
-                      <h5>Willie Alamaráz García</h5>
-                    </div>
-                  </div>
-                  <div class="col s12 m6 l4 dato">
-                    <div class="col s12">
-                      <i class="material-icons left">contacts</i>
-                      <p>Tipo de cuenta:</p>
-                    </div>
-                    <div class="col s12">
-                      <h5>Estudiante</h5>
-                    </div>
-                  </div>
-                  <div class="col s12 m6 l4 dato">
-                    <div class="col s12">
-                      <i class="material-icons left">extension</i>
-                      <p>Grupo:</p>
-                    </div>
-                    <div class="col s12">
-                      <h5>611</h5>
-                    </div>
-                  </div>
-                  <div class="col s12 m6 l4 dato">
-                    <div class="col s12">
-                      <i class="material-icons left">favorite</i>
-                      <p>Sexo:</p>
-                    </div>
-                    <div class="col s12">
-                      <h5>Masculino</h5>
-                    </div>
-                  </div>
-                  <div class="col s12 m6 l4 dato">
-                    <div class="col s12">
-                      <i class="material-icons left">event</i>
-                      <p>Fecha de nacimiento:</p>
-                    </div>
-                    <div class="col s12">
-                      <h5>00/00/99</h5>
-                    </div>
-                  </div>
-                  <div class="col s12 m6 l4 dato">
-                    <div class="col s12">
-                      <i class="material-icons left">nature_people</i>
-                      <p>Dirección:</p>
-                    </div>
-                    <div class="col s12">
-                      <h5>Mountain View, 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States</h5>
-                    </div>
-                  </div>
+            <div class="col s12 no-padding">
+              <div class="col s12 m6 dato">
+                <div class="col s12">
+                  <i class="material-icons left">email</i>
+                  <p>Correo:</p>
                 </div>
-                <div class="col s12 no-padding">
-                  <div class="col s12 m6 dato">
-                    <div class="col s12">
-                      <i class="material-icons left">email</i>
-                      <p>Correo:</p>
-                    </div>
-                    <div class="col s12 input-field">
-                      <input class="validate" disabled="" placeholder="estudiante@correo.com" type="text">
-                    </div>
-                    <div class="col s12">
-                      <a class="btn-flat waves-effect orange-text text-lighten-1 right">Editar</a>
-                    </div>
+                <form>
+                  <div class="col s12 input-field">
+                    <input class="validate grey-text" disabled="" id="correoUser" placeholder="Ingresa un correo electrónico" type="text" value="estudiante@correo.com">
                   </div>
-                  <div class="col s12 m6 dato">
-                    <div class="col s12">
-                      <i class="material-icons left">vpn_key</i>
-                      <p>Contraseña:</p>
-                    </div>
-                    <div class="col s12 input-field">
-                      <input class="validate" disabled="" placeholder="********" type="text">
-                    </div>
-                    <div class="col s12">
-                      <a class="btn-flat waves-effect orange-text text-lighten-1 right">Editar</a>
-                    </div>
-                  </div>
-                </div>
+                </form>
               </div>
+              <div class="col s12 m6 dato">
+                <div class="col s12">
+                  <i class="material-icons left">vpn_key</i>
+                  <p>Contraseña:</p>
+                </div>
+                <form class="col s12 no-padding">
+                  <div class="col s12 input-field">
+                    <input class="validate" disabled="" id="passOne" placeholder="********" type="text">
+                  </div>
+                  <div class="col s12 input-field ocultado">
+                    <input class="validate" disabled="" id="passTwo" placeholder="********" type="text">
+                  </div>
+                </form>
+              </div>
+            </div>
+            <form class="col s12 m6 input-field ocultado white-text" id="validarPass">
+              <h5 class="orange-text text-darken-1">Ingresa tu contraseña antigua para guardar los cambios:</h5>
+              <input class="validate" disabled="" placeholder="Contraseña antigua" type="text">
+            </form>
+            <div class="col s12 m6 dato">
+              <a class="btn-flat waves-effect orange-text text-darken-1 ocultado" href="#!" id="cancelarDatosProfile">Cancelar</a>
+              <a class="btn waves-effect grey-text text-darken-4 orange" href="#!" id="editarDatosProfile">Editar</a>
             </div>
           </div>
         </div>

@@ -658,18 +658,37 @@
 
 .portadaProfile {
   width: 100%;
-  height: 20vh;
+  height: 40vh;
   overflow: hidden; }
   .portadaProfile img {
-    width: 100%; }
+    min-height: 100%; }
 
-.s-interna {
-  box-shadow: 0 2px 1px 0 rgba(0, 0, 0, 0.3) inset; }
+.contentProfile {
+  min-height: 100vh !important;
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3); }
+
+.profile {
+  background-color: #263238 !important; }
+
+@media only screen and (max-width: 992px) {
+  .portadaProfile {
+    height: 20vh; }
+  .side-profile {
+    background-color: #455a64 !important; }
+  .contentProfile {
+    min-height: 0 !important;
+    box-shadow: none; }
+  .profile {
+    background-color: #455a64 !important; } }
+
+.name-profile {
+  margin-top: 7.5vh; }
 
 .imgProfile {
   margin-top: -7.5vh;
   width: 100%;
-  height: 0px; }
+  height: 0px;
+  position: relative; }
   .imgProfile img {
     height: 15vh;
     width: 15vh;
@@ -678,30 +697,6 @@
     max-height: 30vw;
     max-width: 30vw;
     top: -32px; }
-  .imgProfile .change {
-    height: 15vh;
-    width: 15vh;
-    min-height: 64px;
-    min-width: 64px;
-    max-height: 30vw;
-    max-width: 30vw;
-    margin: 0 auto 0 auto;
-    right: 0px;
-    left: 0px;
-    background: black;
-    position: absolute;
-    opacity: 0.65;
-    font-size: 10vh;
-    line-height: 15vh;
-    display: none; }
-  .imgProfile a {
-    position: ralative; }
-  .imgProfile a:hover .change {
-    display: inherit; }
-
-.contentProfile {
-  min-height: 72.5vh !important;
-  margin-top: 7.5vh !important; }
 
 #profileOptions .dato {
   padding-bottom: 15px;

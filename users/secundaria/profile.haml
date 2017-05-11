@@ -22,94 +22,93 @@
 		%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
 		%meta{charset: "UTF-8"}
 		%link{rel:"shortcut icon", href: "../../images/favicon.ico"}/
-		%meta{name: "theme-color", content: "#b71c1c"}
+		%meta{name: "theme-color", content: "#303030"}
 		%link{rel:"stylesheet", href:"http://fonts.googleapis.com/icon?family=Material+Icons"}/
 		%link{rel:"stylesheet", href:"../../css/materialize.css", media: "screen,projection"}/		
 		%link{rel: "stylesheet", href:"../../css/gliphy.css"}/
-		%title Gliphy
+		%title Gliphy Admin
 	%body
 		-#=================================================================
 		-#========================= Contenido - Layout ===========================
 		-#=================================================================
 		%main
 			-#Contenedor principal
-			.row.blue-grey.darken-4.no-margin.min-total
-				-#Portada
-				.portadaProfile.col.s12.z-depth-1.no-padding
-					%img{src:"../../images/covers/student-cover.jpg"}
+			.profile.row.no-margin.min-total.white-text
+				.col.s12.m12.l4.no-padding.side-profile
+					-#Portada
+					.portadaProfile.z-depth-3.no-padding
+						%img{src:"../../images/covers/student-cover.jpg"}
+					-#Imagen de perfil
+					.imgProfile.col.s12.center.no-padding
+						%img.circle.z-depth-4{src:"../../images/admin.jpg"}
+					-#Nombre 
+					.name-profile.col.s12
+						%h5.center-align
+							%span #{nombreCorto}
+						%h6.center-align.upper
+							%span #{tipoUser}
+					.editar.col.s12.ocultado.center-align
+						%a.btn-flat.waves-effect.orange-text.text-lighten-1 Editar foto
 				-#Contenido
-				.fit.white-text
-					.col.s12.blue-grey.darken-2.no-padding.s-interna
-						-#Imagen de perfil
-						.imgProfile.col.s12.center.no-padding
-							%a{href: "#!"}
-								%i.small.material-icons.white-text.circle.change autorenew
-								%img.circle.z-depth-4{src:"../../images/admin.jpg"}
-						-#Contenido del perfil
-						.contentProfile.col.s12.no-padding
-							-#Nombre 
-							.col.s12
-								%h5.center-align
-									%span #{nombreCorto}
-								%h6.center-align.upper
-									%span #{tipoUser}
-							-#Opciones
-							#profileOptions.col.s12
-								.col.s12.no-padding
-									.col.s12.m6.l4.dato
-										.col.s12
-											%i.material-icons.left face
-											%p Nombre completo: 
-										.col.s12
-											%h5 #{nombreCompleto}
-									.col.s12.m6.l4.dato
-										.col.s12
-											%i.material-icons.left contacts
-											%p Tipo de cuenta:
-										.col.s12
-											%h5 #{tipoUser}
-									.col.s12.m6.l4.dato
-										.col.s12
-											%i.material-icons.left extension
-											%p Grupo:
-										.col.s12
-											%h5 #{grupo}
-									.col.s12.m6.l4.dato
-										.col.s12
-											%i.material-icons.left favorite
-											%p Sexo:
-										.col.s12
-											%h5 #{sexo}
-									.col.s12.m6.l4.dato
-										.col.s12
-											%i.material-icons.left event
-											%p Fecha de nacimiento:
-										.col.s12
-											%h5 #{fechaNac}
-									
-									.col.s12.m6.l4.dato
-										.col.s12
-											%i.material-icons.left nature_people
-											%p Dirección:
-										.col.s12
-											%h5 #{direccion}
-								.col.s12.no-padding
-									.col.s12.m6.dato
-										.col.s12
-											%i.material-icons.left email
-											%p Correo:
-										.col.s12.input-field
-											%input.validate{placeholder:"#{correo}", disabled:"", type:"text"}
-										.col.s12
-											%a.btn-flat.waves-effect.orange-text.text-lighten-1.right Editar
-									.col.s12.m6.dato
-										.col.s12
-											%i.material-icons.left vpn_key
-											%p Contraseña:
-										.col.s12.input-field
-											%input.validate{placeholder:"********", disabled:"", type:"text"}
-										.col.s12
-											%a.btn-flat.waves-effect.orange-text.text-lighten-1.right Editar
+				.contentProfile.col.s12.m12.l8.no-padding.blue-grey.darken-2.z-depth-3
+					-#Opciones
+					#profileOptions.col.s12
+						.col.s12.no-padding
+							.col.s12.hide-on-med-and-down
+								%h4 Mis datos
+							.col.s12.m6.dato
+								.col.s12
+									%i.material-icons.left face
+									%p Nombre completo: 
+								.col.s12
+									%h5 #{nombreCompleto}
+							.col.s12.m6.dato
+								.col.s12
+									%i.material-icons.left contacts
+									%p Tipo de cuenta:
+								.col.s12
+									%h5 #{tipoUser}
+							.col.s12.m6.dato
+								.col.s12
+									%i.material-icons.left event
+									%p Fecha de nacimiento:
+								.col.s12
+									%h5 #{fechaNac}
+							.col.s12.m6.dato
+								.col.s12
+									%i.material-icons.left favorite
+									%p Sexo:
+								.col.s12
+									%h5 #{sexo}
+							.col.s12.m6.dato
+								.col.s12
+									%i.material-icons.left extension
+									%p Grupo:
+								.col.s12
+									%h5 #{grupo}
+						.col.s12.no-padding
+							.col.s12.m6.dato
+								.col.s12
+									%i.material-icons.left email
+									%p Correo:
+								%form
+									.col.s12.input-field
+										%input#correoUser.validate.grey-text{placeholder:"Ingresa un correo electrónico",value:"#{correo}", disabled:"", type:"text"}
+							.col.s12.m6.dato
+								.col.s12
+									%i.material-icons.left vpn_key
+									%p Contraseña:
+								%form.col.s12.no-padding
+									.col.s12.input-field
+										%input#passOne.validate{placeholder:"********", disabled:"", type:"text"}
+									.col.s12.input-field.ocultado
+										%input#passTwo.validate{placeholder:"********", disabled:"", type:"text"}
+						%form#validarPass.col.s12.m6.input-field.ocultado.white-text
+							%h5.orange-text.text-darken-1 Ingresa tu contraseña antigua para guardar los cambios:
+							%input.validate{placeholder:"Contraseña antigua",disabled:"", type:"text"}
+						.col.s12.m6.dato
+							%a#cancelarDatosProfile.btn-flat.waves-effect.orange-text.text-darken-1.ocultado{href:"#!"} Cancelar
+							%a#editarDatosProfile.btn.waves-effect.grey-text.text-darken-4.orange{href:"#!"} Editar
 	-#=================================================================
 	-#============================= Scripts ===============================
 	-#=================================================================

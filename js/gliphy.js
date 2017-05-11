@@ -236,5 +236,62 @@ $(function() {
 		$("#forgotten").fadeOut();
 		$("#inicialForm, .logotipo-login").delay(400).fadeIn(2000);
 	});
+
+	//========= Editar Profile ==========
+	var editable = false
+	$("#editarDatosProfile").on("click", function() {
+		if (editable) {
+			$("#passOne").prop("disabled", true);
+			$("#passOne").attr("placeholder", "********");
+			$("#passOne").val("");
+			$("#passTwo").parent().addClass("ocultado");
+			$("#passTwo").prop("disabled", true);
+			$("#passTwo").attr("placeholder", "********");
+			$("#passTwo").val("");
+			$("#correoUser").addClass("grey-text");
+			$("#correoUser").prop("disabled", true);
+			$("#editarDatosProfile").text("editar");
+			$("#cancelarDatosProfile").addClass("ocultado");
+			$("#validarPass").addClass("ocultado");
+			$("#validarPass input").prop("disabled", true);
+			$("#validarPass").val("");
+			$(".editar").addClass("ocultado");
+			editable = !editable;
+		}
+		else {
+			$("#passOne").prop("disabled", false);
+			$("#passOne").attr("placeholder", "Ingresa la nueva contraseña");
+			$("#passTwo").parent().removeClass("ocultado");
+			$("#passTwo").prop("disabled", false);
+			$("#passTwo").attr("placeholder", "Repite la contraseña");
+			$("#correoUser").removeClass("grey-text");
+			$("#correoUser").prop("disabled", false);
+			$("#editarDatosProfile").text("guardar");
+			$("#cancelarDatosProfile").removeClass("ocultado");
+			$("#validarPass").removeClass("ocultado");
+			$("#validarPass input").prop("disabled", false);
+			$(".editar").removeClass("ocultado");
+			editable = !editable;
+		}
+	});
+
+	$("#cancelarDatosProfile").on("click", function() {
+		$("#passOne").prop("disabled", true);
+		$("#passOne").attr("placeholder", "********");
+		$("#passOne").val("");
+		$("#passTwo").parent().addClass("ocultado");
+		$("#passTwo").prop("disabled", true);
+		$("#passTwo").attr("placeholder", "********");
+		$("#passTwo").val("");
+		$("#correoUser").addClass("grey-text");
+		$("#correoUser").prop("disabled", true);
+		$("#editarDatosProfile").text("editar");
+		$("#cancelarDatosProfile").addClass("ocultado");
+		$("#validarPass").addClass("ocultado");
+		$("#validarPass input").prop("disabled", true);
+		$("#validarPass input").val("");
+		$(".editar").addClass("ocultado");
+		editable = !editable;
+	});
 });
 
