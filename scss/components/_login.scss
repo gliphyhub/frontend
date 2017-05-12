@@ -47,11 +47,9 @@ nav ul li {
   }
 }
 //========footer image====================
-footer{
-  img{
-    width: 15rem;
-    filter: invert(100%);
-  }
+footer {
+  img{ width: 15rem; }
+  h5 {font-size: 1.3rem;}
 }
 
 .main-login {
@@ -196,11 +194,10 @@ footer{
   left: 50%;
   top: 50%;
   z-index: 2;
-  overflow: hidden;
   opacity: 0;
   margin-top: 70px;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -45%);
+  transform: translate(-50%, -45%);
   -webkit-border-radius: 50%;
   border-radius: 50%;
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
@@ -299,12 +296,12 @@ footer{
     -webkit-border-radius: 4px;
   }
   100% {
-    width: 40vh;
-    height: 60vh;
+    width: 35vh;
+    height: 50vh;
     background: #eceff1;
     -webkit-border-radius: 4px;
-    min-height: 430px;
-     min-width: 280px;
+    min-height: 400px;
+    min-width: 280px;
   }
 }
 @keyframes materia {
@@ -315,11 +312,11 @@ footer{
     border-radius: 4px;
   }
   100% {
-    width: 40vh;
-    height: 60vh;
+    width: 35vh;
+    height: 50vh;
     background: #eceff1;
     border-radius: 4px;
-    min-height: 430px;
+    min-height: 400px;
     min-width: 280px;
   }
 }
@@ -328,22 +325,21 @@ footer{
 .profileFinal {
   margin-top: 0px !important;
   opacity: 1 !important;
-  width: 40vh ;
-  height: 60vh;
+  width: 35vh;
+  height: 50vh;
   background: #eceff1;
   -webkit-border-radius: 4px;
-  min-height: 430px;
+  min-height: 400px;
   min-width: 280px;
 }
 
 //===== contenido del Card =======
 .profile-card .profile-bio {
-  height: 180px;
   background: #FFFFFF;
   color: #333333;
   text-align: center;
   opacity: 0;
-  padding: 5px 20px 30px 20px;
+  padding: 5px 20px 0px 20px;
   display: block;
 }
 
@@ -359,30 +355,29 @@ footer{
   height: auto;
   padding: 0 20px 0px 20px;
   display: block;
-  vertical-align: center;
   background: #FFFFFF;
   color: #000000;
   margin-top: 50px;
   opacity: 0;
   text-align: center;
-  
 }
+
 .profile-card .logotipo-login a {
-  display: inline-block;
   text-align: center;
   position: relative;
   margin: 20px 30px 10px 30px;
 }
 
 .profile-card .logotipo-login a > img {
-  width: 12vh;
+  margin: -7.5vh 0 10px 0;
+  width: 17vh;
   max-width: 100%;
   -webkit-border-radius: 50%;
   border-radius: 50%;
+  -webkit-box-shadow: 0px 0px 0px 6px #C2C2C2;
+  box-shadow: 0px 0px 0px 6px #C2C2C2;
   -webkit-transition: -webkit-box-shadow 0.3s ease;
   transition: box-shadow 0.3s ease;
-  -webkit-box-shadow: 0px 0px 0px 6px rgba(0, 0, 0, 0.2);
-  box-shadow: 0px 0px 0px 6px rgba(0, 0, 0, 0.2);
 }
 
 .profile-card .logotipo-login h1 {
@@ -431,61 +426,59 @@ footer{
 
 @-webkit-keyframes anchoIn {
     0% {
-    width: 40vh;
+    width: 35vh;
+    -webkit-transform: translate(-50%, -45%);
   }
   100% {
     width: 500px;
+    -webkit-transform: translate(-50%, -50%);
   }
 }
 
 @keyframes anchoIn {
   0% {
-    width: 40vh;
+    width: 35vh;
+    transform: translate(-50%, -45%);
   }
   100% {
     width: 500px;
+    transform: translate(-50%, -50%);
   }
 }
 
-.anchoCambiado {
-  width: 60vh;
-  height: 60vh;
-}
 
 @media only screen and (max-width : 600px) {
   @-webkit-keyframes anchoIn {
       0% {
-      width: 40vh;
-      height: 60vh;
-      min-height: 430px;
-      min-width: 280px;
+        width: 35vh;
+        height: 50vh;
+        min-height: 400px;
+        min-width: 280px;
+        -webkit-transform: translate(-50%, -45%);
     }
     100% {
       width: 100vw;
       height: 100vh;
       min-height: 0px;
       min-width: 0px;
+      -webkit-transform: translate(-50%, -50%);
     }
   }
 
   @keyframes anchoIn {
       0% {
-        width: 40vh;
-        height: 60vh;
-        min-height: 430px;
+         width: 35vh;
+        height: 50vh;
+        min-height: 400px;
         min-width: 280px;
+        transform: translate(-50%, -45%);
       }
       100% {
         width: 100vw;
         height: 100vh;
         min-height: 100%;
         min-width: 100%;
-      }
-      .anchoCambiado {
-        width: 100vw;
-        height: 100vh;
-        min-height: 100%;
-        min-width: 100%;
+        transform: translate(-50%, -50%);
       }
     }
 }
@@ -498,17 +491,21 @@ footer{
 @-webkit-keyframes anchoOut {
   0% {
     width: 500px;
+    -webkit-transform: translate(-50%, -50%);
   }
   100% {
-    width: 40vh;
+    width: 35vh;
+    -webkit-transform: translate(-50%, -45%);
   }
 }
 @keyframes anchoOut {
   0% {
     width: 500px;
+    transform: translate(-50%, -50%);
   }
   100% {
-    width: 40vh;
+    width: 35vh;
+    transform: translate(-50%, -45%);
   }
 }
 
@@ -517,20 +514,32 @@ footer{
       0% {
       width: 100vw;
       height: 100vh;
+      min-height: 100%;
+      min-width: 100%;
+       -webkit-transform: translate(-50%, -50%);
     }
     100% {
-      width: 40vh;
-      height: 60vh;
+      width: 35vh;
+      height: 50vh;
+      min-height: 400px;
+      min-width: 280px;
+       -webkit-transform: translate(-50%, -45%);
     }
   }
   @keyframes anchoOut {
-   0% {
+      0% {
       width: 100vw;
       height: 100vh;
+      min-height: 100%;
+      min-width: 100%;
+      transform: translate(-50%, -50%);
     }
     100% {
-      width: 40vh;
-      height: 60vh;
+      width: 35vh;
+      height: 50vh;
+      min-height: 400px;
+      min-width: 280px;
+      transform: translate(-50%, -45%);
     }
   }
 }

@@ -62,7 +62,7 @@
 }
 
 .mc-title {
-  span {display: inline-block; margin-top: -10px;}
+  span {margin-top: -10px;}
 }
 
 //======= Sombras esquinadas =======
@@ -165,20 +165,7 @@
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-.material-card .mc-footer h4 {
-  position: absolute;
-  top: 200px;
-  left: 30px;
-  padding: 0;
-  margin: 0;
-  font-size: 16px;
-  font-weight: 700;
-  -webkit-transition: all 1.4s;
-  -moz-transition: all 1.4s;
-  -ms-transition: all 1.4s;
-  -o-transition: all 1.4s;
-  transition: all 1.4s;
-}
+
 .material-card .mc-footer a {
   display: block;
   float: left;
@@ -269,7 +256,7 @@
 
 .material-card.mc-active .mc-description {
   top: 50px;
-  padding-top: 3.4em;
+  padding-top: 3.8em;
   opacity: 1;
   overflow: visible;
   filter: alpha(opacity=100);
@@ -287,9 +274,6 @@
 }
 .material-card.mc-active .mc-footer a {
   top: 0;
-}
-.material-card.mc-active .mc-footer h4 {
-  top: -32px;
 }
 .material-card h2:after {
   border-top-color: #2196f3 ;

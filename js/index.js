@@ -55,4 +55,26 @@ $(function() {
 			icon.text("chevron_left");
 		}
 	});
+
+	//======= Forget =========
+
+	$("#forget").on("click", function() {
+		$(".profile-card").removeClass("profileAnimated");
+		$(".profile-card").removeClass("anchuraExtraOff");
+		$(".profile-card").removeClass("anchuraCambiado");
+		$(".profile-card").addClass("profileFinal");
+		$('.profile-card').addClass("anchuraExtra");
+		$(".profile-card .animate").addClass("animated");
+		$(".profile-card .animate").removeClass("animate");
+		$("#inicialForm, .logotipo-login").fadeOut();
+		$("#forgotten").delay(400).fadeIn(2000);
+		
+	});
+
+	$("#backLogin").on("click", function() {
+		$('.profile-card').removeClass("anchuraExtra");
+		$(".profile-card").addClass("anchuraExtraOff");
+		$("#forgotten").fadeOut();
+		$("#inicialForm, .logotipo-login").delay(400).fadeIn(2000);
+	});
 });
