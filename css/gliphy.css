@@ -1201,12 +1201,9 @@ footer img {
   display: block;
   font-size: .8em; }
 
-.mc-title i {
-  margin-top: 3px;
-  margin-right: 5px; }
-
 .mc-title span {
-  display: inline-block; }
+  display: inline-block;
+  margin-top: -10px; }
 
 .material-card h2:before,
 .material-card h2:after {
@@ -1272,7 +1269,7 @@ footer img {
   line-height: 2.2; }
 
 .material-card.mc-active .mc-btn-action {
-  top: 62px; }
+  top: 50px; }
 
 .material-card .mc-description {
   position: absolute;
@@ -1395,7 +1392,7 @@ footer img {
 
 .material-card.mc-active .mc-description {
   top: 50px;
-  padding-top: 3.2em;
+  padding-top: 3.4em;
   opacity: 1;
   overflow: visible;
   filter: alpha(opacity=100); }
