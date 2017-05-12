@@ -18,6 +18,16 @@
   </head>
   <body>
     <main class="main-login">
+      <div class="modal" id="dirigido">
+        <div class="modal-content center">
+          <img src="images/login/message.png">
+          <h5>Te enviaremos un correo muy pronto</h5>
+          <p>Revisa tu correo en unos minutos, así podrás recuperar tu cuenta</p>
+          <p class="right">
+            <a class="modal-action modal-close waves-effect btn-flat" href="#!">Volver</a>
+          </p>
+        </div>
+      </div>
       <div class="contenedor-login">
         <div class="login-before"></div>
         <div class="login">
@@ -61,7 +71,7 @@
               </div>
               <div class="col s12">
                 <p class="jus text-normal">
-                  <span>Si olvidate tu contraseña, ingresa en el campo de abajo tu</span>
+                  <span>Si olvidate tu contraseña, ingresa en el campo de abajo el</span>
                   <strong>correo con el cual te registrate</strong>
                   <span>en la plataforma, para que nosotros podamos ayudarte a recuperar tu cuenta</span>
                 </p>
@@ -71,7 +81,7 @@
                 <input class="validate" id="user" type="email">
                 <label for="user">Correo</label>
               </div>
-              <button class="col s12 btn waves-effect waves-light" type="submit">
+              <button class="col s12 btn waves-effect waves-light" id="recuperar" type="submit">
                 <span>Recuperar mi cuenta</span>
               </button>
             </form>
@@ -111,7 +121,7 @@
                 <h2 class="blue-text text-darken-3">¿Quiénes somos?</h2>
               </div>
               <div class="col s12">
-                <p class="flow-text jus text-presentation">
+                <p class="jus text-presentation">
                   <span>Somos una plataforma enfocada en la interacción entre la comunidad escolar y el cuerpo administrativo del plantel, innovando así la</span>
                   <strong>comunicación</strong>
                   <span>. Nuestra</span>
@@ -175,28 +185,28 @@
                   <article class="material-card">
                     <h2 class="blue">
                       <span class="truncate">Joel Hernández</span>
-                      <strong class="truncate">
-                        <i class="material-icons left" style="margin-top: 3px;  margin-right: 5px">edit</i>
-                        <span style="display: inline-block;">Desarrollador Web</span>
+                      <strong class="truncate mc-title">
+                        <i class="material-icons left">edit</i>
+                        <span>FrontEnd</span>
                       </strong>
                     </h2>
                     <div class="mc-content blue lighten-1">
                       <div class="img-container">
-                        <img class="responsive-img white" src="images/joel.jpg">
+                        <img class="responsive-img white" src="images/login/joel.jpg">
                       </div>
                       <div class="mc-description white-text">
-                        <span>Esto es una breve descripción sobre mí</span>
+                        <span>Desarrollador, 11/03/2015 <3</span>
                       </div>
                     </div>
                     <a class="mc-btn-action blue lighten-2 z-depth-3 hoverable">
-                      <i class="material-icons" style="line-height: 2.2">menu</i>
+                      <i class="material-icons">menu</i>
                     </a>
                     <div class="mc-footer blue lighten-3">
                       <h4>
                         <span class="white-text">Contacto</span>
                       </h4>
-                      <a class="center-align blue lighten-1">
-                        <i class="material-icons">settings</i>
+                      <a class="center-align blue lighten-1" href="https://github.com/joelhernandez343" target="_blank">
+                        <img src="images/login/git.png">
                       </a>
                     </div>
                   </article>
@@ -207,28 +217,28 @@
                   <article class="material-card">
                     <h2 class="blue">
                       <span class="truncate">Roberto Gervacio</span>
-                      <strong class="truncate">
-                        <i class="material-icons left" style="margin-top: 3px;  margin-right: 5px">edit</i>
-                        <span style="display: inline-block;">Desarrollador Web</span>
+                      <strong class="truncate mc-title">
+                        <i class="material-icons left">line_style</i>
+                        <span>FullStack</span>
                       </strong>
                     </h2>
                     <div class="mc-content blue lighten-1">
                       <div class="img-container">
-                        <img class="responsive-img white" src="images/roberto.jpg">
+                        <img class="responsive-img white" src="images/login/roberto.jpg">
                       </div>
                       <div class="mc-description white-text">
                         <span>Esto es una breve descripción sobre mí</span>
                       </div>
                     </div>
                     <a class="mc-btn-action blue lighten-2 z-depth-3 hoverable">
-                      <i class="material-icons" style="line-height: 2.2">menu</i>
+                      <i class="material-icons">menu</i>
                     </a>
                     <div class="mc-footer blue lighten-3">
                       <h4>
                         <span class="white-text">Contacto</span>
                       </h4>
-                      <a class="center-align blue lighten-1">
-                        <i class="material-icons">settings</i>
+                      <a class="center-align blue lighten-1" href="https://github.com/robtry" target="_blank">
+                        <img src="images/login/git.png">
                       </a>
                     </div>
                   </article>
@@ -239,28 +249,28 @@
                   <article class="material-card">
                     <h2 class="blue">
                       <span class="truncate">Willie Almaraz</span>
-                      <strong class="truncate">
-                        <i class="material-icons left" style="margin-top: 3px;  margin-right: 5px">edit</i>
-                        <span style="display: inline-block;">Desarrollador Web</span>
+                      <strong class="truncate mc-title">
+                        <i class="material-icons left">storage</i>
+                        <span>BackEnd</span>
                       </strong>
                     </h2>
                     <div class="mc-content blue lighten-1">
                       <div class="img-container">
-                        <img class="responsive-img white" src="images/teacher01.jpg">
+                        <img class="responsive-img white" src="images/login/teacher01.jpg">
                       </div>
                       <div class="mc-description white-text">
-                        <span>Esto es una breve descripción sobre mí</span>
+                        <span>Joven estudiante desarrollador de código, con habilidades en físico-matemáticas.</span>
                       </div>
                     </div>
                     <a class="mc-btn-action blue lighten-2 z-depth-3 hoverable">
-                      <i class="material-icons" style="line-height: 2.2">menu</i>
+                      <i class="material-icons">menu</i>
                     </a>
                     <div class="mc-footer blue lighten-3">
                       <h4>
                         <span class="white-text">Contacto</span>
                       </h4>
-                      <a class="center-align blue lighten-1">
-                        <i class="material-icons">settings</i>
+                      <a class="center-align blue lighten-1" href="https://omegaup.com/profile/CRWillieAlmaraz/" target="_blank">
+                        <img src="images/login/oup.png">
                       </a>
                     </div>
                   </article>
@@ -271,28 +281,28 @@
                   <article class="material-card">
                     <h2 class="blue">
                       <span class="truncate">Ana Morales</span>
-                      <strong class="truncate">
-                        <i class="material-icons left" style="margin-top: 3px;  margin-right: 5px">edit</i>
-                        <span style="display: inline-block;">Desarrollador Web</span>
+                      <strong class="truncate mc-title">
+                        <i class="material-icons left">description</i>
+                        <span>Documentación</span>
                       </strong>
                     </h2>
                     <div class="mc-content blue lighten-1">
                       <div class="img-container">
-                        <img class="responsive-img white" src="images/teacher01.jpg">
+                        <img class="responsive-img white" src="images/login/ana.jpg">
                       </div>
                       <div class="mc-description white-text">
                         <span>Esto es una breve descripción sobre mí</span>
                       </div>
                     </div>
                     <a class="mc-btn-action blue lighten-2 z-depth-3 hoverable">
-                      <i class="material-icons" style="line-height: 2.2">menu</i>
+                      <i class="material-icons">menu</i>
                     </a>
                     <div class="mc-footer blue lighten-3">
                       <h4>
                         <span class="white-text">Contacto</span>
                       </h4>
-                      <a class="center-align blue lighten-1">
-                        <i class="material-icons">settings</i>
+                      <a class="center-align blue lighten-1" href="https://www.facebook.com/AnSethLedger" target="_blank">
+                        <img src="images/login/facebook.png">
                       </a>
                     </div>
                   </article>
@@ -302,29 +312,29 @@
                 <div class="team">
                   <article class="material-card">
                     <h2 class="blue">
-                      <span class="truncate">Noé</span>
-                      <strong class="truncate">
-                        <i class="material-icons left" style="margin-top: 3px;  margin-right: 5px">edit</i>
-                        <span style="display: inline-block;">Desarrollador Web</span>
+                      <span class="truncate">Noé Camacho</span>
+                      <strong class="truncate mc-title">
+                        <i class="material-icons left">description</i>
+                        <span>Documentación</span>
                       </strong>
                     </h2>
                     <div class="mc-content blue lighten-1">
                       <div class="img-container">
-                        <img class="responsive-img white" src="images/teacher01.jpg">
+                        <img class="responsive-img white" src="images/login/noe.jpg">
                       </div>
                       <div class="mc-description white-text">
-                        <span>Esto es una breve descripción sobre mí</span>
+                        <span>Canto, baile, caminar sin rumbo y viajar son mis más grandes placeres en la vida</span>
                       </div>
                     </div>
                     <a class="mc-btn-action blue lighten-2 z-depth-3 hoverable">
-                      <i class="material-icons" style="line-height: 2.2">menu</i>
+                      <i class="material-icons">menu</i>
                     </a>
                     <div class="mc-footer blue lighten-3">
                       <h4>
                         <span class="white-text">Contacto</span>
                       </h4>
-                      <a class="center-align blue lighten-1">
-                        <i class="material-icons">settings</i>
+                      <a class="center-align blue lighten-1" href="https://www.instagram.com/iker_camacho/" target="_blank">
+                        <img src="images/login/instagram.png">
                       </a>
                     </div>
                   </article>
@@ -335,28 +345,28 @@
                   <article class="material-card">
                     <h2 class="blue">
                       <span class="truncate">Mariana Alonzo</span>
-                      <strong class="truncate">
-                        <i class="material-icons left" style="margin-top: 3px;  margin-right: 5px">edit</i>
-                        <span style="display: inline-block;">Desarrollador Web</span>
+                      <strong class="truncate mc-title">
+                        <i class="material-icons left">description</i>
+                        <span>Documentación</span>
                       </strong>
                     </h2>
                     <div class="mc-content blue lighten-1">
                       <div class="img-container">
-                        <img class="responsive-img white" src="images/teacher01.jpg">
+                        <img class="responsive-img white" src="images/login/teacher01.jpg">
                       </div>
                       <div class="mc-description white-text">
-                        <span>Esto es una breve descripción sobre mí</span>
+                        <span>Análisis. Aspirante a ingeniera aeronauta.</span>
                       </div>
                     </div>
                     <a class="mc-btn-action blue lighten-2 z-depth-3 hoverable">
-                      <i class="material-icons" style="line-height: 2.2">menu</i>
+                      <i class="material-icons">menu</i>
                     </a>
                     <div class="mc-footer blue lighten-3">
                       <h4>
                         <span class="white-text">Contacto</span>
                       </h4>
-                      <a class="center-align blue lighten-1">
-                        <i class="material-icons">settings</i>
+                      <a class="center-align blue lighten-1" href="https://www.instagram.com/marianazq13/" target="_blank">
+                        <img src="images/login/instagram.png">
                       </a>
                     </div>
                   </article>

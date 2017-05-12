@@ -293,5 +293,10 @@ $(function() {
 		$(".editar").addClass("ocultado");
 		editable = !editable;
 	});
+
+	$("#recuperar").on("click", function() {
+		$('#dirigido').modal('open');
+		$("#recuperar").html("<span>Reenviar correo</span>")
+	});
 });
 

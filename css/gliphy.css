@@ -111,7 +111,8 @@
 
 .text-presentation {
   font-weight: 300;
-  line-height: 4.5rem; }
+  font-size: 1.3rem;
+  line-height: 2; }
 
 .navegacion-espacio {
   padding-left: 240px; }
@@ -758,6 +759,9 @@ footer img {
   -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23); }
 
+#dirigido img {
+  height: 130px; }
+
 .login {
   padding: 0px;
   margin: 0px;
@@ -1031,8 +1035,8 @@ footer img {
   margin-top: 0px; }
 
 .anchuraExtra {
-  -webkit-animation: anchoIn 2s ease-in-out 0s forwards;
-  animation: anchoIn 2s ease-in-out 0s forwards; }
+  -webkit-animation: anchoIn 1s ease-in-out 0s forwards;
+  animation: anchoIn 1s ease-in-out 0s forwards; }
 
 @-webkit-keyframes anchoIn {
   0% {
@@ -1080,8 +1084,8 @@ footer img {
       min-width: 100%; } } }
 
 .anchuraExtraOff {
-  -webkit-animation: anchoOut 2s ease-in-out 0s forwards;
-  animation: anchoOut 2s ease-in-out 0s forwards; }
+  -webkit-animation: anchoOut 1s ease-in-out 0s forwards;
+  animation: anchoOut 1s ease-in-out 0s forwards; }
 
 @-webkit-keyframes anchoOut {
   0% {
@@ -1197,6 +1201,13 @@ footer img {
   display: block;
   font-size: .8em; }
 
+.mc-title i {
+  margin-top: 3px;
+  margin-right: 5px; }
+
+.mc-title span {
+  display: inline-block; }
+
 .material-card h2:before,
 .material-card h2:after {
   content: ' ';
@@ -1256,6 +1267,9 @@ footer img {
   -ms-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s; }
+
+.mc-btn-action i {
+  line-height: 2.2; }
 
 .material-card.mc-active .mc-btn-action {
   top: 62px; }
@@ -1347,6 +1361,11 @@ footer img {
   -o-transition: all 0.9s;
   transition: all 0.9s; }
 
+.mc-footer img {
+  height: 30px;
+  padding-top: 10px;
+  box-sizing: content-box; }
+
 .material-card .img-container {
   overflow: hidden;
   position: absolute;
@@ -1376,8 +1395,9 @@ footer img {
 
 .material-card.mc-active .mc-description {
   top: 50px;
-  padding-top: 5.6em;
+  padding-top: 3.2em;
   opacity: 1;
+  overflow: visible;
   filter: alpha(opacity=100); }
 
 .material-card.mc-active .mc-footer {

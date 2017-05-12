@@ -66,6 +66,10 @@ footer{
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
 }
 
+//====== correo confirmación ====== 
+#dirigido img {
+  height: 130px;
+}
 
 //======= LoginBox =======
 .login {
@@ -421,8 +425,8 @@ footer{
 
 //====== Animación Cambiar ancho ===========
 .anchuraExtra {
-  -webkit-animation: anchoIn 2s ease-in-out 0s forwards; 
-  animation: anchoIn 2s ease-in-out 0s forwards; 
+  -webkit-animation: anchoIn 1s ease-in-out 0s forwards; 
+  animation: anchoIn 1s ease-in-out 0s forwards; 
 }
 
 @-webkit-keyframes anchoIn {
@@ -487,8 +491,8 @@ footer{
 }
 
 .anchuraExtraOff {
-  -webkit-animation: anchoOut 2s ease-in-out 0s forwards; 
-  animation: anchoOut 2s ease-in-out 0s forwards; 
+  -webkit-animation: anchoOut 1s ease-in-out 0s forwards; 
+  animation: anchoOut 1s ease-in-out 0s forwards; 
 }
 
 @-webkit-keyframes anchoOut {

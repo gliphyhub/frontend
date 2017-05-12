@@ -19,6 +19,13 @@
 
 	%body
 		%main.main-login
+			#dirigido.modal
+				.modal-content.center
+					%img{src:"images/login/message.png"}
+					%h5 Te enviaremos un correo muy pronto
+					%p Revisa tu correo en unos minutos, así podrás recuperar tu cuenta
+					%p.right
+						%a.modal-action.modal-close.waves-effect.btn-flat{href:"#!"} Volver
 			.contenedor-login
 				.login-before
 				.login
@@ -52,14 +59,14 @@
 								%h5 ¿Olvidaste tu contraseña?
 							.col.s12
 								%p.jus.text-normal
-									%span Si olvidate tu contraseña, ingresa en el campo de abajo tu
+									%span Si olvidate tu contraseña, ingresa en el campo de abajo el
 									%strong correo con el cual te registrate
 									%span en la plataforma, para que nosotros podamos ayudarte a recuperar tu cuenta
 							.input-field.col.s12
 								%i.material-icons.prefix.medium email
 								%input.validate#user{type: "email"}/
 								%label{for: "user"} Correo
-							%button.col.s12.btn.waves-effect.waves-light{type: "submit"}
+							%button#recuperar.col.s12.btn.waves-effect.waves-light{type: "submit"}
 								%span Recuperar mi cuenta
 
 			%ul#dropdown1.dropdown-content.flechita
@@ -87,7 +94,7 @@
 								%h2.blue-text.text-darken-3 ¿Quiénes somos?
 							
 							.col.s12
-								%p.flow-text.jus.text-presentation
+								%p.jus.text-presentation
 									%span Somos una plataforma enfocada en la interacción entre la comunidad escolar y el cuerpo administrativo del plantel, innovando así la
 									%strong comunicación
 									%span . Nuestra 
@@ -133,121 +140,122 @@
 									%article.material-card
 										%h2.blue
 											%span.truncate Joel Hernández
-											%strong.truncate
-												%i.material-icons.left{style:"margin-top: 3px;  margin-right: 5px"} edit
-												%span{style:"display: inline-block;"} Desarrollador Web
+											%strong.truncate.mc-title
+												%i.material-icons.left edit
+												%span FrontEnd
 										.mc-content.blue.lighten-1
 											.img-container
-												%img.responsive-img.white{src:"images/joel.jpg"}
+												%img.responsive-img.white{src:"images/login/joel.jpg"}
 											.mc-description.white-text
-												%span Esto es una breve descripción sobre mí
+												%span Desarrollador, 11/03/2015 <3
 										%a.mc-btn-action.blue.lighten-2.z-depth-3.hoverable
-											%i.material-icons{style:"line-height: 2.2"} menu
+											%i.material-icons menu
 										.mc-footer.blue.lighten-3
 											%h4
 												%span.white-text Contacto
-											%a.center-align.blue.lighten-1
-												%i.material-icons settings
+											%a.center-align.blue.lighten-1{href:"https://github.com/joelhernandez343", target:"_blank"}
+												%img{src:"images/login/git.png"}
 							.col.s12.m6.l4
 								.team
 									%article.material-card
 										%h2.blue
 											%span.truncate Roberto Gervacio
-											%strong.truncate
-												%i.material-icons.left{style:"margin-top: 3px;  margin-right: 5px"} edit
-												%span{style:"display: inline-block;"} Desarrollador Web
+											%strong.truncate.mc-title
+												%i.material-icons.left line_style
+												%span FullStack
 										.mc-content.blue.lighten-1
 											.img-container
-												%img.responsive-img.white{src:"images/roberto.jpg"}
+												%img.responsive-img.white{src:"images/login/roberto.jpg"}
 											.mc-description.white-text
 												%span Esto es una breve descripción sobre mí
 										%a.mc-btn-action.blue.lighten-2.z-depth-3.hoverable
-											%i.material-icons{style:"line-height: 2.2"} menu
+											%i.material-icons menu
 										.mc-footer.blue.lighten-3
 											%h4
 												%span.white-text Contacto
-											%a.center-align.blue.lighten-1
-												%i.material-icons settings
+											%a.center-align.blue.lighten-1{href:"https://github.com/robtry", target:"_blank"}
+												%img{src:"images/login/git.png"}
 							.col.s12.m6.l4
 								.team
 									%article.material-card
 										%h2.blue
 											%span.truncate Willie Almaraz
-											%strong.truncate
-												%i.material-icons.left{style:"margin-top: 3px;  margin-right: 5px"} edit
-												%span{style:"display: inline-block;"} Desarrollador Web
+											%strong.truncate.mc-title
+												%i.material-icons.left storage
+												%span BackEnd
 										.mc-content.blue.lighten-1
 											.img-container
-												%img.responsive-img.white{src:"images/teacher01.jpg"}
+												%img.responsive-img.white{src:"images/login/teacher01.jpg"}
 											.mc-description.white-text
-												%span Esto es una breve descripción sobre mí
+												%span Joven estudiante desarrollador de código, con habilidades en físico-matemáticas.
 										%a.mc-btn-action.blue.lighten-2.z-depth-3.hoverable
-											%i.material-icons{style:"line-height: 2.2"} menu
+											%i.material-icons menu
 										.mc-footer.blue.lighten-3
 											%h4
 												%span.white-text Contacto
-											%a.center-align.blue.lighten-1
-												%i.material-icons settings
+											%a.center-align.blue.lighten-1{href:"https://omegaup.com/profile/CRWillieAlmaraz/", target:"_blank"}
+												%img{src:"images/login/oup.png"}
 							.col.s12.m6.l4
 								.team
 									%article.material-card
 										%h2.blue
 											%span.truncate Ana Morales
-											%strong.truncate
-												%i.material-icons.left{style:"margin-top: 3px;  margin-right: 5px"} edit
-												%span{style:"display: inline-block;"} Desarrollador Web
+											%strong.truncate.mc-title
+												%i.material-icons.left description
+												%span Documentación
 										.mc-content.blue.lighten-1
 											.img-container
-												%img.responsive-img.white{src:"images/teacher01.jpg"}
+												%img.responsive-img.white{src:"images/login/ana.jpg"}
 											.mc-description.white-text
 												%span Esto es una breve descripción sobre mí
 										%a.mc-btn-action.blue.lighten-2.z-depth-3.hoverable
-											%i.material-icons{style:"line-height: 2.2"} menu
+											%i.material-icons menu
 										.mc-footer.blue.lighten-3
 											%h4
 												%span.white-text Contacto
-											%a.center-align.blue.lighten-1
-												%i.material-icons settings
+											%a.center-align.blue.lighten-1{href:"https://www.facebook.com/AnSethLedger", target:"_blank"}
+												%img{src:"images/login/facebook.png"}
 							.col.s12.m6.l4
 								.team
 									%article.material-card
 										%h2.blue
-											%span.truncate Noé
-											%strong.truncate
-												%i.material-icons.left{style:"margin-top: 3px;  margin-right: 5px"} edit
-												%span{style:"display: inline-block;"} Desarrollador Web
+											%span.truncate Noé Camacho
+											%strong.truncate.mc-title
+												%i.material-icons.left description
+												%span Documentación
 										.mc-content.blue.lighten-1
 											.img-container
-												%img.responsive-img.white{src:"images/teacher01.jpg"}
+												%img.responsive-img.white{src:"images/login/noe.jpg"}
 											.mc-description.white-text
-												%span Esto es una breve descripción sobre mí
+												%span Canto, baile, caminar sin rumbo y viajar son mis más grandes placeres en la vida
 										%a.mc-btn-action.blue.lighten-2.z-depth-3.hoverable
-											%i.material-icons{style:"line-height: 2.2"} menu
+											%i.material-icons menu
 										.mc-footer.blue.lighten-3
 											%h4
 												%span.white-text Contacto
-											%a.center-align.blue.lighten-1
-												%i.material-icons settings
+											%a.center-align.blue.lighten-1{href:"https://www.instagram.com/iker_camacho/", target:"_blank"}
+												%img{src:"images/login/instagram.png"}
+											
 							.col.s12.m6.l4
 								.team
 									%article.material-card
 										%h2.blue
 											%span.truncate Mariana Alonzo
-											%strong.truncate
-												%i.material-icons.left{style:"margin-top: 3px;  margin-right: 5px"} edit
-												%span{style:"display: inline-block;"} Desarrollador Web
+											%strong.truncate.mc-title
+												%i.material-icons.left description
+												%span Documentación
 										.mc-content.blue.lighten-1
 											.img-container
-												%img.responsive-img.white{src:"images/teacher01.jpg"}
+												%img.responsive-img.white{src:"images/login/teacher01.jpg"}
 											.mc-description.white-text
-												%span Esto es una breve descripción sobre mí
+												%span Análisis. Aspirante a ingeniera aeronauta. 
 										%a.mc-btn-action.blue.lighten-2.z-depth-3.hoverable
-											%i.material-icons{style:"line-height: 2.2"} menu
+											%i.material-icons menu
 										.mc-footer.blue.lighten-3
 											%h4
 												%span.white-text Contacto
-											%a.center-align.blue.lighten-1
-												%i.material-icons settings
+											%a.center-align.blue.lighten-1{href:"https://www.instagram.com/marianazq13/", target:"_blank"}
+												%img{src:"images/login/instagram.png"}
 
 
 					
