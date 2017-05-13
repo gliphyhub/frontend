@@ -37,6 +37,10 @@
 					-#Portada
 					.portadaProfile.z-depth-3.no-padding
 						%img{src:"../../images/covers/admin-cover.jpg"}
+						.col.s12.back-btn
+							%a.btn.waves-effect.center-align.white-bonis
+								%i.material-icons.left arrow_back
+								%span Regresar
 					-#Imagen de perfil
 					.imgProfile.col.s12.center.no-padding
 						%img.circle.z-depth-4{src:"../../images/admin.jpg"}
@@ -48,6 +52,7 @@
 							%span #{tipoUser}
 					.editar.col.s12.ocultado.center-align
 						%a.btn-flat.waves-effect.orange-text.text-lighten-1 Editar foto
+
 				-#Contenido
 				.contentProfile.col.s12.m12.l8.no-padding.blue-grey.darken-2.z-depth-3
 					-#Opciones
