@@ -8,6 +8,8 @@
 -nombreCompleto = nombresTabla + " " + apellidosTabla
 -nombreCorto = divName[0] + " " + divAp[0]
 -tipoUser = "Estudiante"
+-imgPerfil = "../../images/users/user01.jpg"
+-imgCover = "../../images/covers/student-cover.jpg"
 
 -notificationes=[{title:"Comunicado 1", icon:"sms", publicador: "David", desc: "Destacado el 00/00/00"}, {title:"Tarea 1", icon:"description", publicador: "Villena",  desc: "Fecha de entrega el 25/05/17"}, {title:"Comunicado 2", icon:"sms", publicador: "Clemente Cartujano", desc: "Alguna especie de preview o mensaje bastante largo que sí cabe"},]
 -seccion ="Inicio"
@@ -43,7 +45,7 @@
 					-#=========================================
 					.right
 						%a#user-label.options-user.btn-flat.white-bonis.hide-on-small-only{href:"#!", data:{activates:"slide-out"}}
-							%img.admin-img.left{src:"../../images/admin.jpg"}
+							%img.admin-img.left{src:"#{imgPerfil}"}
 							%span #{nombreCorto}
 						%a.options-user.btn-flat.white-bonis.hide-on-med-and-up{href:"#!",data:{activates:"slide-out"}}
 							%i.material-icons.left apps
@@ -66,9 +68,9 @@
 		%ul#slide-out.side-nav.blue-grey.darken-4
 			%li.userView
 				.background
-					%img{src:"../../images/covers/student-cover.jpg"}
+					%img{src:"#{imgCover}"}
 				.white-bonis
-					%img.circle{src:"../../images/admin.jpg"}
+					%img.circle{src:"#{imgPerfil}"}
 					%span.white-text.name #{nombreCorto}
 					%span.white-text.email.separado #{tipoUser}
 			%li

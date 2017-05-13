@@ -11,7 +11,8 @@
 -sexo = "Masculino"
 -correo = "joel.programador@gmail.com"
 -fechaNac = "02/07/99"
--direccion = "Mountain View, 1600 Amphitheatre Parkway, Mountain View, CA 94043, United States"
+-imgPerfil = "../../images/users/user01.jpg"
+-imgCover = "../../images/covers/admin-cover.jpg"
 !!!5
 %html{lang:"es"}
 	%header
@@ -36,14 +37,14 @@
 				.col.s12.m12.l4.no-padding.side-profile
 					-#Portada
 					.portadaProfile.z-depth-3.no-padding
-						%img{src:"../../images/covers/admin-cover.jpg"}
+						%img{src:"#{imgCover}"}
 						.col.s12.back-btn
 							%a.btn.waves-effect.center-align.white-bonis
 								%i.material-icons.left arrow_back
 								%span Regresar
 					-#Imagen de perfil
 					.imgProfile.col.s12.center.no-padding
-						%img.circle.z-depth-4{src:"../../images/admin.jpg"}
+						%img.circle.z-depth-4{src:"#{imgPerfil}"}
 					-#Nombre 
 					.name-profile.col.s12
 						%h5.center-align

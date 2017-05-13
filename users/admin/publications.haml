@@ -8,6 +8,8 @@
 -nombreCompleto = nombresTabla + " " + apellidosTabla
 -nombreCorto = divName[0] + " " + divAp[0]
 -tipoUser = "Administrador"
+-imgPerfil = "../../images/users/user01.jpg"
+-imgCover = "../../images/covers/admin-cover.jpg"
 
 -menuLateral=[{title:"Inicio", link:"index.html", icon:"home"}, {title:"Base de Datos", link:"base.html", icon:"storage"},{title:"Publicaciones",link:"publications.html", icon:"account_circle"},{title:"Agregar",link:"new.html", icon:"add"},{title:"Ayuda", link:"help.html",icon:"error"}]
 -seccion ="Publicaciones"
@@ -44,7 +46,7 @@
 					-#=========================================
 					.right
 						%a#user-label.options-user.btn-flat.white-bonis.hide-on-small-only{href:"#!", data:{activates:"slide-out"}}
-							%img.admin-img.left{src:"../../images/admin.jpg"}
+							%img.admin-img.left{src:"#{imgPerfil}"}
 							%span #{nombreCorto}
 						%a.options-user.btn-flat.white-bonis.hide-on-med-and-up{href:"#!",data:{activates:"slide-out"}}
 							%i.material-icons.left apps
@@ -67,13 +69,13 @@
 		%ul#slide-out.side-nav.blue-grey.darken-4
 			%li.userView
 				.background
-					%img{src:"../../images/covers/admin-cover.jpg"}
+					%img{src:"#{imgCover}"}
 				.white-bonis
-					%img.circle{src:"../../images/admin.jpg"}
+					%img.circle{src:"#{imgPerfil}"}
 					%span.white-text.name #{nombreCorto}
 					%span.white-text.email.separado #{tipoUser}
 			%li
-				%a.white-bonis.waves-effect{href:"#profile.html"}
+				%a.white-bonis.waves-effect{href:"profile.html"}
 					%i.material-icons.left.white-bonis person
 					%span Mi perfil
 			%li
@@ -421,7 +423,7 @@
 							.card-action.grey.lighten-2
 								.row
 									.col.s12.center-align
-										%img{src:"../../images/teacher01.jpg"}
+										%img{src:"../../images/users/user02.jpg"}
 									.col.s12.center-align
 										%h4.truncate Nombre_publicador
 									.col.s12

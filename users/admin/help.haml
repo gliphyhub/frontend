@@ -8,9 +8,11 @@
 -nombreCompleto = nombresTabla + " " + apellidosTabla
 -nombreCorto = divName[0] + " " + divAp[0]
 -tipoUser = "Administrador"
+-imgPerfil = "../../images/users/user01.jpg"
+-imgCover = "../../images/covers/admin-cover.jpg"
 
 -menuLateral=[{title:"Inicio", link:"index.html", icon:"home"}, {title:"Base de Datos", link:"base.html", icon:"storage"},{title:"Publicaciones",link:"publications.html", icon:"account_circle"},{title:"Agregar",link:"new.html", icon:"add"},{title:"Ayuda", link:"help.html",icon:"error"}]
--seccion ="Ayuda"
+-seccion ="Publicaciones"
 -tablas=["Alumnos", "Profesores", "Administrativos", "Grupos"]
 !!!5
 %html{lang:"es"}
@@ -44,7 +46,7 @@
 					-#=========================================
 					.right
 						%a#user-label.options-user.btn-flat.white-bonis.hide-on-small-only{href:"#!", data:{activates:"slide-out"}}
-							%img.admin-img.left{src:"../../images/admin.jpg"}
+							%img.admin-img.left{src:"#{imgPerfil}"}
 							%span #{nombreCorto}
 						%a.options-user.btn-flat.white-bonis.hide-on-med-and-up{href:"#!",data:{activates:"slide-out"}}
 							%i.material-icons.left apps
@@ -67,9 +69,9 @@
 		%ul#slide-out.side-nav.blue-grey.darken-4
 			%li.userView
 				.background
-					%img{src:"../../images/covers/admin-cover.jpg"}
+					%img{src:"#{imgCover}"}
 				.white-bonis
-					%img.circle{src:"../../images/admin.jpg"}
+					%img.circle{src:"#{imgPerfil}"}
 					%span.white-text.name #{nombreCorto}
 					%span.white-text.email.separado #{tipoUser}
 			%li
@@ -179,7 +181,7 @@
 													-#=========================================
 													.right
 														%a#user-label.btn-flat.white-bonis.hide-on-small-only{href:"#!"}
-															%img.admin-img.left{src:"../../images/admin.jpg"}
+															%img.admin-img.left{src:"../../images/users/user01.jpg"}
 															%span Joel Hernández
 														%a.btn-flat.white-bonis.hide-on-med-and-up{href:"#!"}
 															%i.material-icons.left apps
