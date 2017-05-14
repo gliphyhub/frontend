@@ -1,0 +1,42 @@
+!!!5
+%html{lang:"es"}
+	%header
+		-#=========================================
+		-#============ Información - METAS ===============
+		-#=========================================
+		%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
+		%meta{charset: "UTF-8"}
+		%link{rel:"shortcut icon", href: "../../images/favicon.ico"}/
+		%meta{name: "theme-color", content: "#17202A"}
+		%link{rel:"stylesheet", href:"http://fonts.googleapis.com/icon?family=Material+Icons"}/
+		%link{rel:"stylesheet", href:"../../css/materialize.css", media: "screen,projection"}/		
+		%link{rel: "stylesheet", href:"../../css/gliphy.css"}/
+		%title Gliphy Hub
+	%body
+		%main
+			.error-container
+				.whole
+					.error-back
+						.error-ground1
+						.hill1
+						.hill2
+						.mountain1
+						.mountain2
+						.mountain3
+					.ship.hacia-arriba
+					.over.hacia-arriba
+					.down1.hacia-arriba
+					.down2.hacia-arriba
+					.flash
+					.light.apagadito
+					.sheet.hacia-arriba.center-align
+						.sheet-text :(
+					.error-title.center.white-bonis
+						%h1 404
+						%h2 La página que buscabas ha sido raptada por aliens
+						%h3
+							%span Sentimos los inconvenientes, ir a
+							%a{href: "index.html"} Inicio
+	%script{type:"text/javascript", src:"https://code.jquery.com/jquery-3.1.1.min.js", integrity:"sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=", crossorigin:"anonymous"}
+	%script{:type=>"text/javascript", :src=>"../../js/materialize.js"}
+	%script{:type=>"text/javascript", :src=>"../../js/gliphy.js"}
