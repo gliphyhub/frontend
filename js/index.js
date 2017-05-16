@@ -27,6 +27,7 @@ $(function() {
 
 	$(window).scroll(function() {
 		indexParticles ();
+		//parallaxScroll();
 	});
 
 	function indexParticles () {
@@ -113,4 +114,11 @@ $(function() {
 	$("#menu-login a").on("click", function() {
 		$('#menu-login').sideNav('hide');
 	});
+
+       // function parallaxScroll()
+        //{
+	//var sss = $( "nav" ).offset();
+	//sss.top = 0;
+	//alert (sss.top)
+        //}
 });
