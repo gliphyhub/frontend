@@ -82,7 +82,7 @@
   font-weight: 500; }
 
 .fixed {
-  position: fixed; }
+  position: fixed !important; }
 
 .relative {
   position: relative;
@@ -165,6 +165,9 @@
 .upper {
   text-transform: uppercase; }
 
+.no-upper {
+  text-transform: none; }
+
 .ocultado {
   display: none !important; }
 
@@ -179,18 +182,26 @@
 #nav-user i {
   line-height: 35px; }
 
-#nav-user #user-label {
-  text-transform: none; }
-
 #nav-user #toggleMenu {
   padding: 0px;
   width: 40px; }
 
-#navegacion-no-oculto {
+.side-contenedor {
+  position: relative;
+  height: 100vh;
+  overflow-x: auto; }
+
+#menu-normal {
   width: 240px;
   margin-top: 63px; }
+  #menu-normal .side-contenedor {
+    height: calc(100vh - 64px); }
 
-#navegacion-movil {
+.side-lista {
+  height: calc(100% - 54px);
+  overflow-x: auto; }
+
+#menu-movil {
   width: 240px; }
 
 .side-nav #base-datos-list {
@@ -219,6 +230,15 @@
   padding: 10px;
   line-height: 1.5;
   font-weight: normal; }
+
+.ayuda-btn {
+  position: absolute;
+  bottom: 0;
+  width: 100%; }
+
+.line-divider {
+  border-top: 1px solid #757575;
+  margin: 0 8px 0 8px; }
 
 .ui-datepicker,
 .ui-datepicker table,
@@ -1034,6 +1054,267 @@
   .error-title h3 {
     font-size: calc(0.25em + 2vh); }
 
+.nav-index {
+  background: transparent;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+  box-shadow: none; }
+
+.mask {
+  position: fixed !important;
+  top: calc(-100vh + 64px) !important;
+  bottom: initial !important; }
+
+@media only screen and (max-height: 600px) {
+  .mask {
+    top: calc(-100vh + 56px) !important; } }
+
+.index-first {
+  overflow: hidden;
+  position: relative;
+  min-height: 100vh;
+  z-index: 3; }
+  .index-first #particles {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    background: #3367D6;
+    bottom: 0; }
+  .index-first .row {
+    position: relative;
+    opacity: 0;
+    padding-top: 30vh;
+    -webkit-animation: content-puff 0.5s 2.9s linear forwards;
+    animation: content-puff 0.5s 2.9s linear forwards;
+    z-index: 2;
+    padding-bottom: 20px; }
+    .index-first .row img {
+      background: transparent;
+      height: 30vh;
+      max-height: 20vw; }
+    .index-first .row img.left {
+      background: transparent;
+      min-height: 35vw !important; }
+  .index-first input {
+    color: #e0e0e0; }
+  .index-first label {
+    color: #e0e0e0; }
+  .index-first input[type=email]:focus + label {
+    color: #ffb74d; }
+  .index-first input[type=password]:focus + label {
+    color: #ffb74d; }
+  .index-first input[type=text]:focus + label {
+    color: #ffb74d; }
+  .index-first input[type=email]:focus {
+    border-bottom: 1px solid #ffb74d;
+    box-shadow: 0 1px 0 0 #ffb74d; }
+  .index-first input[type=password]:focus {
+    border-bottom: 1px solid #ffb74d;
+    box-shadow: 0 1px 0 0 #ffb74d; }
+  .index-first input[type=text]:focus {
+    border-bottom: 1px solid #ffb74d;
+    box-shadow: 0 1px 0 0 #ffb74d; }
+  .index-first .prefix {
+    color: #e0e0e0; }
+  .index-first .prefix.active {
+    color: #ffb74d; }
+  .index-first .btn {
+    background-color: #2196F3; }
+  .index-first .forget {
+    margin-top: 10px;
+    font-size: 0.8rem; }
+
+.olvide {
+  display: none;
+  position: relative;
+  padding: 20px !important;
+  background-color: #363636;
+  transition: box-shadow .25s;
+  border-radius: 2px; }
+
+@media only screen and (max-height: 600px) {
+  .index-first .row {
+    padding: 15vh 0 20px 0; }
+    .index-first .row img {
+      margin: 0 0 0 3%; } }
+
+@-webkit-keyframes content-puff {
+  100% {
+    opacity: 1; } }
+
+@keyframes content-puff {
+  100% {
+    opacity: 1; } }
+
+.index-first .back {
+  content: "";
+  height: 0px;
+  padding: 0px;
+  border: 130em solid #212121;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  z-index: 4;
+  display: block;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-animation: crecer 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, normalBorder 0.2s 2.3s linear forwards;
+  animation: crecer 0.5s 1.8s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, normalBorder 0.2s 2.3s linear forwards; }
+
+@-webkit-keyframes crecer {
+  0% {
+    top: 100%;
+    height: 0px;
+    padding: 0px; }
+  100% {
+    top: 50%;
+    height: 100%;
+    padding: 0px 100%; } }
+
+@keyframes crecer {
+  0% {
+    top: 100%;
+    height: 0px;
+    padding: 0px; }
+  100% {
+    top: 50%;
+    height: 100%;
+    padding: 0px 100%; } }
+
+@media screen and (min-aspect-ratio: 4 / 3) {
+  @-webkit-keyframes crecer {
+    0% {
+      top: 100%;
+      width: 0px;
+      padding-bottom: 0px; }
+    100% {
+      top: 50%;
+      width: 100%;
+      padding-bottom: 100%; } }
+  @keyframes crecer {
+    0% {
+      top: 100%;
+      width: 0px;
+      padding-bottom: 0px; }
+    100% {
+      top: 50%;
+      width: 100%;
+      padding-bottom: 100%; } } }
+
+@-webkit-keyframes normalBorder {
+  0% {
+    -webkit-border-radius: 50%; }
+  100% {
+    -webkit-border-radius: 0px;
+    z-index: 0; } }
+
+@keyframes normalBorder {
+  0% {
+    border-radius: 50%; }
+  100% {
+    border-radius: 0px;
+    z-index: 0; } }
+
+.bolita {
+  background: #FFB300;
+  width: 56px;
+  height: 56px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 5;
+  opacity: 0;
+  margin-top: 70px;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  overflow: hidden;
+  -webkit-animation: inicial 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveAbajo 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveArriba 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, finalBolita 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards;
+  animation: inicial 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveAbajo 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveArriba 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, finalBolita 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards; }
+
+@-webkit-keyframes inicial {
+  0% {
+    width: 0px;
+    height: 0px; }
+  100% {
+    width: 56px;
+    height: 56px;
+    margin-top: 0px;
+    opacity: 1; } }
+
+@keyframes inicial {
+  0% {
+    width: 0px;
+    height: 0px; }
+  100% {
+    width: 56px;
+    height: 56px;
+    margin-top: 0px;
+    opacity: 1; } }
+
+@-webkit-keyframes moveAbajo {
+  0% {
+    top: 50%; }
+  50% {
+    top: 40%; }
+  100% {
+    top: 100%; } }
+
+@keyframes moveAbajo {
+  0% {
+    top: 50%; }
+  50% {
+    top: 40%; }
+  100% {
+    top: 100%; } }
+
+@-webkit-keyframes moveArriba {
+  0% {
+    background: #FFB300;
+    top: 100%; }
+  50% {
+    top: 40%; }
+  100% {
+    top: 50%;
+    background: #E0E0E0; } }
+
+@keyframes moveArriba {
+  0% {
+    background: #FFB300;
+    top: 100%; }
+  50% {
+    top: 40%; }
+  100% {
+    top: 50%;
+    background: #E0E0E0; } }
+
+@-webkit-keyframes finalBolita {
+  0% {
+    background: #E0E0E0; }
+  100% {
+    height: 100vh;
+    width: 100vh;
+    background: transparent;
+    z-index: 0; } }
+
+@keyframes finalBolita {
+  0% {
+    background: #E0E0E0; }
+  100% {
+    height: 100vh;
+    width: 100vh;
+    background: transparent;
+    z-index: 0; } }
+
+#mensaje-01 img {
+  height: 130px; }
+
 html, body, .block {
   height: 100%;
   font-weight: 500; }
@@ -1042,7 +1323,8 @@ html, body, .block {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  position: relative; }
+  position: relative;
+  background: white; }
 
 .brand-logo {
   position: absolute;
@@ -1191,9 +1473,7 @@ footer h5 {
   -ms-transform: translate(-50%, -45%);
   transform: translate(-50%, -45%);
   -webkit-border-radius: 50%;
-  border-radius: 50%;
-  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23); }
+  border-radius: 50%; }
 
 .profileAnimated {
   -webkit-animation: init 0.5s 0.2s cubic-bezier(0.55, 0.055, 0.675, 0.19) forwards, moveDown 1s 0.8s cubic-bezier(0.6, -0.28, 0.735, 0.045) forwards, moveUp 1s 1.8s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, materia 0.5s 2.7s cubic-bezier(0.86, 0, 0.07, 1) forwards;
@@ -1518,7 +1798,8 @@ footer h5 {
   position: relative;
   height: 0;
   padding-bottom: calc(100% - 16px);
-  margin-bottom: 6.6em; }
+  margin-bottom: 6.6em;
+  z-index: 1; }
 
 .material-card h2 {
   position: absolute;

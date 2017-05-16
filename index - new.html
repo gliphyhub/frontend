@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
+    <meta charset="UTF-8">
+    <meta content="Plantel Azteca, Gliphy, GliphyHub, gliphy" name="keywords">
+    <meta content="GliplyHub, aquí podrás acceder a tus tareas y pendientes." name="description">
+    <meta content="TeamDevs" name="author">
+    <meta content="TeamDevs" name="owner">
+    <meta content="index/follow" name="robots">
+    <meta content="#2E5EC6" name="theme-color">
+    <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="css/materialize.css" media="screen,projection" rel="stylesheet">
+    <link href="css/gliphy.css" rel="stylesheet">
+    <link href="css/animate.css" rel="stylesheet">
+    <title>GliphyHub</title>
+  </head>
+  <body>
+    <ul class="side-nav blue" id="menu-login">
+      <br>
+      <li>
+        <a class="waves-effect white-bonis" href="#about">
+          <span>Acerca de</span>
+        </a>
+      </li>
+      <li>
+        <a class="waves-effect white-bonis" href="#desc">
+          <span>Características</span>
+        </a>
+      </li>
+      <li>
+        <a class="waves-effect white-bonis" href="#team">
+          <span>Team</span>
+        </a>
+      </li>
+    </ul>
+    <div class="modal" id="mensaje-01">
+      <div class="modal-content center">
+        <img src="images/login/message.png">
+        <h5>Te enviaremos un correo muy pronto</h5>
+        <p>Revisa tu correo en unos minutos, así podrás recuperar su cuenta</p>
+        <p class="right">
+          <a class="modal-action modal-close waves-effect btn-flat" href="#!">Volver</a>
+        </p>
+      </div>
+    </div>
+    <main class="main-login">
+      <div class="index-first z-depth-2">
+        <div class="back"></div>
+        <div class="fixed z-depth-2" id="particles"></div>
+        <nav class="nav-index">
+          <div class="nav-wrapper">
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="#about">
+                  <span>Acerca de</span>
+                </a>
+              </li>
+              <li>
+                <a href="#desc">
+                  <span>Características</span>
+                </a>
+              </li>
+              <li>
+                <a href="#team">
+                  <span>Team</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="right">
+              <li class="hide-on-large-only">
+                <a class="btn-flat" data-activates="menu-login" href="#" id="login-activator">
+                  <i class="material-icons white-text">menu</i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="row no-margin">
+          <div class="col s12 m6 center-align">
+            <img class="hide-on-small-only" src="images/login/logo-horizontal-w-s.png">
+            <img class="hide-on-med-and-up left" src="images/login/logo-s.png">
+          </div>
+          <div class="ingresar col s12 m5">
+            <form>
+              <div class="col s12 white-bonis">
+                <h4 class="hide-on-small-only">Bienvenido</h4>
+                <h4 class="hide-on-med-and-up">Bienvenido a GliphyHub</h4>
+                <h6>Ingrese su nombre de usuario y contraseña para acceder a la plataforma</h6>
+              </div>
+              <div class="input-field col s12 l6">
+                <i class="material-icons prefix medium">account_circle</i>
+                <input class="validate" id="user" type="email">
+                <label for="user">Correo</label>
+              </div>
+              <div class="input-field col s12 l6">
+                <i class="material-icons prefix medium">lock_outline</i>
+                <input class="validate" id="pass" type="password">
+                <label for="pass">Contraseña</label>
+              </div>
+              <button class="col s12 btn waves-effect waves-light" type="submit">
+                <span class="upper">Ingresar</span>
+              </button>
+              <div class="col s12 forget center-align">
+                <a class="upper white-bonis" href="#!">¿olvidó su contraseña?</a>
+              </div>
+            </form>
+          </div>
+          <div class="olvide col s12 m5 white-text">
+            <div class="left">
+              <a class="btn-flat btn-square" id="back-to-ingresar">
+                <i class="material-icons prefix medium">arrow_back</i>
+              </a>
+            </div>
+            <div class="col s12">
+              <h5>¿Olvidó su contraseña?</h5>
+            </div>
+            <div class="col s12">
+              <p class="jus text-normal">
+                <span>Si olvidó su contraseña, ingrese en el campo de abajo el</span>
+                <strong>correo con el cual se registró</strong>
+                <span>en la plataforma, para que nosotros podamos ayudarle a recuperar tu cuenta</span>
+              </p>
+            </div>
+            <div class="input-field col s12">
+              <i class="material-icons prefix medium">email</i>
+              <input class="validate" id="rcorreo" type="email">
+              <label for="user">Correo</label>
+            </div>
+            <button class="col s12 btn waves-effect waves-light" id="rbutton" type="submit">
+              <span>Recuperar mi cuenta</span>
+            </button>
+          </div>
+        </div>
+        <div class="bolita"></div>
+      </div>
+      <div class="index-content">
+        <div class="section scrollspy" id="about"></div>
+        <div class="article">
+          <div class="container">
+            <div class="row">
+              <div class="col s12">
+                <h2 class="blue-text text-darken-3">¿Quiénes somos?</h2>
+              </div>
+              <div class="col s12">
+                <p class="jus text-presentation">
+                  <span>Somos una plataforma enfocada en la interacción entre la comunidad escolar y el cuerpo administrativo del plantel, innovando así la</span>
+                  <strong>comunicación</strong>
+                  <span>. Nuestra</span>
+                  <strong>misión</strong>
+                  <span>fue crear una nueva plataforma, que mejorara la experiencia de usuario y enriqueciera el ambiente de la comunidad escolar.</span>
+                  <br>
+                  <span>Lo que logramos, fue</span>
+                  <strong>mejor.</strong>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section scrollspy" id="desc"></div>
+        <div class="container">
+          <div class="row title-gif">
+            <div class="col s12 m6 center">
+              <h2 class="blue-text text-darken-3">Características</h2>
+            </div>
+            <div class="col s12 m6 center">
+              <img class="responsive-img" src="images/inicio.gif">
+            </div>
+          </div>
+        </div>
+        <div class="article blue lighten-1 white-text">
+          <div class="container">
+            <div class="row">
+              <div class="col s12 m6 l4">
+                <div class="center space-login">
+                  <i class="grande material-icons white-text">flash_on</i>
+                  <h5>Acelera la comunicación</h5>
+                  <p class="center">Esta plataforma está diseñada para hacer que la comunicación entre los alumnos, tutores y autoridades del <b>plantel</b> sea más efectiva y rápida.</p>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="center space-login">
+                  <i class="grande material-icons white-text">group</i>
+                  <h5>Enfocado al plantel</h5>
+                  <p class="center">Se ha desarrollado un diseño intuitivo, fácil de leer y amigable, que permite que todos los usuarios se sientan bien con GliphyHub, el lugar <b>ideal</b> para la comunicación escolar.</p>
+                </div>
+              </div>
+              <div class="col s12 m12 l4">
+                <div class="center space-login">
+                  <i class="grande material-icons white-text">important_devices</i>
+                  <h5>Totalmente Responsivo</h5>
+                  <p class="center">El diseño fue una de nuestras prioridades al diseñar este sitio. Se adapta, <b>evoluciona</b>, para que accedas cómodamente desde el dispositivo que quieras.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section scrollspy" id="team"></div>
+        <div class="article">
+          <div class="col s12 center section-Title">
+            <h2 class="blue-text text-darken-3">El equipo</h2>
+          </div>
+          <div class="container">
+            <div class="row">
+              <div class="col s12 m6 l4">
+                <div class="team">
+                  <article class="material-card">
+                    <h2 class="blue">
+                      <span class="truncate">Joel Hernández</span>
+                      <strong class="truncate mc-title">
+                        <span class="trun">FrontEnd</span>
+                      </strong>
+                    </h2>
+                    <div class="mc-content blue lighten-1">
+                      <div class="img-container">
+                        <img class="responsive-img white" src="images/login/joel.jpg">
+                      </div>
+                      <div class="mc-description white-text">
+                        <span>Desarrollador, maker, atraído por la ciencia y la tecnología. ¿Su más grande sueño?, viajar por las estrellas</span>
+                      </div>
+                    </div>
+                    <a class="mc-btn-action blue lighten-2 z-depth-3 hoverable">
+                      <i class="material-icons">menu</i>
+                    </a>
+                    <div class="mc-footer blue lighten-3">
+                      <a class="center-align blue lighten-1" href="https://github.com/joelhernandez343" target="_blank">
+                        <img src="images/login/git.png">
+                      </a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="team">
+                  <article class="material-card">
+                    <h2 class="blue">
+                      <span class="truncate">Roberto Gervacio</span>
+                      <strong class="truncate mc-title">
+                        <span class="trun">FullStack</span>
+                      </strong>
+                    </h2>
+                    <div class="mc-content blue lighten-1">
+                      <div class="img-container">
+                        <img class="responsive-img white" src="images/login/roberto.jpg">
+                      </div>
+                      <div class="mc-description white-text">
+                        <span>Futuro ingeniero en tecnologías de cómputo, apasionado por Linux y el código libre</span>
+                      </div>
+                    </div>
+                    <a class="mc-btn-action blue lighten-2 z-depth-3 hoverable">
+                      <i class="material-icons">menu</i>
+                    </a>
+                    <div class="mc-footer blue lighten-3">
+                      <a class="center-align blue lighten-1" href="https://github.com/robtry" target="_blank">
+                        <img src="images/login/git.png">
+                      </a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="team">
+                  <article class="material-card">
+                    <h2 class="blue">
+                      <span class="truncate">Willie Almaraz</span>
+                      <strong class="truncate mc-title">
+                        <span class="trun">BackEnd</span>
+                      </strong>
+                    </h2>
+                    <div class="mc-content blue lighten-1">
+                      <div class="img-container">
+                        <img class="responsive-img white" src="images/login/teacher01.jpg">
+                      </div>
+                      <div class="mc-description white-text">
+                        <span>Joven estudiante desarrollador de código, con habilidades en físico-matemáticas</span>
+                      </div>
+                    </div>
+                    <a class="mc-btn-action blue lighten-2 z-depth-3 hoverable">
+                      <i class="material-icons">menu</i>
+                    </a>
+                    <div class="mc-footer blue lighten-3">
+                      <a class="center-align blue lighten-1" href="https://omegaup.com/profile/CRWillieAlmaraz/" target="_blank">
+                        <img src="images/login/oup.png">
+                      </a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="team">
+                  <article class="material-card">
+                    <h2 class="blue">
+                      <span class="truncate">Ana Morales</span>
+                      <strong class="truncate mc-title">
+                        <span class="trun">Documentación</span>
+                      </strong>
+                    </h2>
+                    <div class="mc-content blue lighten-1">
+                      <div class="img-container">
+                        <img class="responsive-img white" src="images/login/ana.jpg">
+                      </div>
+                      <div class="mc-description white-text">
+                        <span>Esto es una breve descripción sobre mí</span>
+                      </div>
+                    </div>
+                    <a class="mc-btn-action blue lighten-2 z-depth-3 hoverable">
+                      <i class="material-icons">menu</i>
+                    </a>
+                    <div class="mc-footer blue lighten-3">
+                      <a class="center-align blue lighten-1" href="https://www.facebook.com/AnSethLedger" target="_blank">
+                        <img src="images/login/facebook.png">
+                      </a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="team">
+                  <article class="material-card">
+                    <h2 class="blue">
+                      <span class="truncate">Noé Camacho</span>
+                      <strong class="truncate mc-title">
+                        <span class="trun">Documentación</span>
+                      </strong>
+                    </h2>
+                    <div class="mc-content blue lighten-1">
+                      <div class="img-container">
+                        <img class="responsive-img white" src="images/login/noe.jpg">
+                      </div>
+                      <div class="mc-description white-text">
+                        <span>Canto, baile, caminar sin rumbo y viajar son mis más grandes placeres en la vida</span>
+                      </div>
+                    </div>
+                    <a class="mc-btn-action blue lighten-2 z-depth-3 hoverable">
+                      <i class="material-icons">menu</i>
+                    </a>
+                    <div class="mc-footer blue lighten-3">
+                      <a class="center-align blue lighten-1" href="https://www.instagram.com/iker_camacho/" target="_blank">
+                        <img src="images/login/instagram.png">
+                      </a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="team">
+                  <article class="material-card">
+                    <h2 class="blue">
+                      <span class="truncate">Mariana Alonzo</span>
+                      <strong class="truncate mc-title">
+                        <span class="trun">Documentación</span>
+                      </strong>
+                    </h2>
+                    <div class="mc-content blue lighten-1">
+                      <div class="img-container">
+                        <img class="responsive-img white" src="images/login/teacher01.jpg">
+                      </div>
+                      <div class="mc-description white-text">
+                        <span>Análisis. Aspirante a ingeniera aeronauta</span>
+                      </div>
+                    </div>
+                    <a class="mc-btn-action blue lighten-2 z-depth-3 hoverable">
+                      <i class="material-icons">menu</i>
+                    </a>
+                    <div class="mc-footer blue lighten-3">
+                      <a class="center-align blue lighten-1" href="https://www.instagram.com/marianazq13/" target="_blank">
+                        <img src="images/login/instagram.png">
+                      </a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="page-footer blue">
+      <div class="container">
+        <div class="row">
+          <div class="col s12 m6">
+            <img alt="" src="images/login/logo-horizontal-w-s.png">
+            <h5 class="white-text">Uniendo a la comunidad</h5>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <span style="line-height: 2.5">©2017 | #TeamDevs</span>
+          <a class="waves-effect waves-light btn right" href="https://github.com/gliphyhub" target="_blank">Github</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script crossorigin="anonymous" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" src="https://code.jquery.com/jquery-3.1.1.min.js" type="text/javascript"></script>
+  <script src="http://jnicol.github.io/particleground/js/jquery.particleground.js"></script>
+  <script src="js/materialize.js" type="text/javascript"></script>
+  <script src="js/gliphy.js" type="text/javascript"></script>
+  <script src="js/index.js" type="text/javascript"></script>
+</html>

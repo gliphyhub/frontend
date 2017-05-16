@@ -13,19 +13,32 @@
 
 #nav-user {
   i { line-height: 35px;}
-  #user-label {text-transform: none;}
   #toggleMenu {
     padding: 0px;
     width: 40px
   }
 }
 
-#navegacion-no-oculto {
-  width:240px;
-  margin-top:63px;
+.side-contenedor {
+  position: relative;
+  height: 100vh;
+  overflow-x: auto;
 }
 
-#navegacion-movil {
+#menu-normal {
+  width:240px;
+  margin-top:63px;
+  .side-contenedor {
+    height: calc(100vh - 64px);
+  } 
+}
+
+.side-lista {
+  height: calc(100% - 54px);
+  overflow-x: auto;
+}
+
+#menu-movil {
   width:240px;
 }
 
@@ -43,8 +56,6 @@
 
 // =========== Notificaciones ====== 
 .notificaciones {
-  & > li {
-  }
   .collapsible-header {
     padding: 0 0 10px !important;
   }
@@ -64,4 +75,17 @@
   padding: 10px;
   line-height: 1.5;
   font-weight: normal;
+}
+
+
+
+.ayuda-btn {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.line-divider {
+  border-top: 1px solid #757575 ;
+  margin: 0 8px 0 8px;
 }

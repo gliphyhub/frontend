@@ -7,6 +7,7 @@ html, body, .block {
   height: 100%;
   overflow: hidden;
   position: relative;
+  background: white;
 }
 
 //========== login styles================
@@ -200,8 +201,6 @@ footer {
   transform: translate(-50%, -45%);
   -webkit-border-radius: 50%;
   border-radius: 50%;
-  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
-  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16), 0px 3px 6px rgba(0, 0, 0, 0.23);
 }
 
 //===== Animación principal =========
@@ -298,7 +297,7 @@ footer {
   100% {
     width: 35vh;
     height: 50vh;
-    background: #eceff1;
+    background: #eceff1      ;
     -webkit-border-radius: 4px;
     min-height: 400px;
     min-width: 280px;
@@ -314,7 +313,7 @@ footer {
   100% {
     width: 35vh;
     height: 50vh;
-    background: #eceff1;
+    background: #eceff1      ;
     border-radius: 4px;
     min-height: 400px;
     min-width: 280px;
@@ -327,7 +326,7 @@ footer {
   opacity: 1 !important;
   width: 35vh;
   height: 50vh;
-  background: #eceff1;
+  background: #eceff1         ;
   -webkit-border-radius: 4px;
   min-height: 400px;
   min-width: 280px;
@@ -341,7 +340,7 @@ footer {
   padding: 5px 20px 0px 20px;
   display: block;
 }
-
+ 
 .profile-card .forget {
   margin-top: 10px;
   display: block;

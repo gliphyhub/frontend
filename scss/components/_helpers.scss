@@ -5,7 +5,7 @@
   font-weight: 500;
 }
 .fixed{
-  position: fixed;
+  position: fixed !important;
 }
 .relative{
   position: relative;
@@ -105,6 +105,9 @@
 
 .upper {
   text-transform: uppercase;
+}
+.no-upper {
+  text-transform: none;
 }
 
 .ocultado{

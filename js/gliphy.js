@@ -32,20 +32,20 @@ $(function() {
 	//=============== Abrir modal ===============
 	$('.modal').modal();
 	//=============== PRUEBA =================
-	$('.options-user').sideNav({
+	$('.user-activator').sideNav({
 		menuWidth: 260, // Default is 300
 		edge: 'right', // Choose the horizontal origin
 		closeOnClick: true, // Closes side-nav on <a> clicks, useful for Angular/Meteor
 		draggable: true // Choose whether you can drag to open on touch screens
 	});
-	$('#menu').sideNav({
+	$('#menu-activator').sideNav({
 		menuWidth: 240, // Default is 300
 		edge: 'left', // Choose the horizontal origin
 		closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
 		draggable: true // Choose whether you can drag to open on touch screens
 	});
 
-	$('#nTeacher').sideNav({
+	$('#notificaciones-activator').sideNav({
 		menuWidth: 240, // Default is 300
 		edge: 'left', // Choose the horizontal origin
 		closeOnClick: false, // Closes side-nav on <a> clicks, useful for Angular/Meteor
@@ -73,19 +73,19 @@ $(function() {
 	 var menunavegaciónLargeVisible = true;
 	$('#toggleMenu').on("click", function() {
 		if (menunavegaciónLargeVisible){
-			$('#navegacion-no-oculto').animate({width: '0px'},"fast");
+			$('#menu-normal').animate({width: '0px'},"fast");
 			$('header, main, .botones-flotantes').animate({paddingLeft: '0px'},"fast");
 			$('#location').animate({paddingLeft: '3px'});
 			$('#toggleMenu i').text("view_quilt");
 		}
 		else{
-			$('#navegacion-no-oculto').animate({width: '240px'},"fast");
+			$('#menu-normal').animate({width: '240px'},"fast");
 			$('header, main, .botones-flotantes').animate({paddingLeft: '240px'},"fast");
 			$('#location').animate({paddingLeft: '0px'});
 			$('#toggleMenu i').text("view_stream");
 		}   
 		menunavegaciónLargeVisible = !menunavegaciónLargeVisible
-		$('#menu').toggleClass("hide-on-large-only");   
+		$('#menu-activator').toggleClass("hide-on-large-only");   
 		$('header, main, .botones-flotantes').toggleClass("navegacion-espacio");
 	    	//$('#navegacion-no-oculto').toggleClass("ocultado");
 	});
@@ -196,9 +196,7 @@ $(function() {
 		vistaTres = true;
 	});
 
-	$('.scrollspy').scrollSpy(
-		{scrollOffset: 20}
-	);
+	
 	$(".flechita").dropdown();
 
 	var destacado = false
