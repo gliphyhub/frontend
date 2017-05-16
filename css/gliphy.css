@@ -1315,6 +1315,27 @@
 #mensaje-01 img {
   height: 130px; }
 
+.index-content article {
+  padding: 150px 0 100px 0;
+  margin: 0 auto;
+  max-width: 1280px;
+  width: 90%; }
+
+.index-content h2 {
+  font-weight: 400;
+  color: #343434; }
+
+.index-content .space-login h5 {
+  color: #3367D6;
+  padding-top: 1rem; }
+
+.index-content .space-login i {
+  color: #DCDCDC;
+  font-size: 5rem; }
+
+.index-content .space-login p {
+  font-weight: 400; }
+
 html, body, .block {
   height: 100%;
   font-weight: 500; }

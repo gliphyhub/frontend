@@ -334,7 +334,27 @@
 
 // estilos del contenido del index ========
 .index-content {
-	h5 {
-
+	article {
+		padding: 150px 0 100px 0;
+		margin: 0 auto;
+		max-width: 1280px;
+		width: 90%;
+	}
+	h2 {
+		font-weight: 400;
+		color: #343434;
+	}
+	.space-login {
+		h5 {
+			color: #3367D6;
+			padding-top: 1rem;
+		}
+		i {
+			color: #DCDCDC;
+			font-size: 5rem;
+		}
+		p {
+			font-weight: 400;
+		}
 	}
 }
