@@ -10,6 +10,9 @@ document.addEventListener('DOMContentLoaded', function() {
 }, false);
 
 $(function() {
+	//Efecto parallax
+	$('.parallax').parallax();
+
 	var w = $(window).width(), h = $(window).outerHeight(true);
 	$('header').width(w);
 	$('header').height(h);
@@ -100,7 +103,8 @@ $(function() {
 
 	$("#rbutton").on("click", function() {
 		$('#mensaje-01').modal('open');
-		$("#button").html("<span>Reenviar correo</span>")
+		$("#recuperar01").fadeOut();
+		$("#recuperar02").delay(500).removeClass("ocultado")
 	});
 
 	$("#back-to-ingresar").on("click", function() {
@@ -108,7 +112,7 @@ $(function() {
 		$(".ingresar").delay(500).fadeIn();
 	});
 	$('.scrollspy').scrollSpy(
-		{scrollOffset: 40}
+		{scrollOffset: 60}
 	);
 
 	$("#menu-login a").on("click", function() {

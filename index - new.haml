@@ -18,20 +18,15 @@
 		%title GliphyHub
 
 	%body
-		-#=========================================
-		-#======== Menú navegación - Responsive ============
-		-#=========================================
-		%ul#menu-login.side-nav.blue
-			%br/
+		%ul#dropdown1.dropdown-content.flechita
 			%li
-				%a.waves-effect.white-bonis{href:"#about"}
-					%span Acerca de
+				%a.grey-text.text-darken-4{href:"#about"} Acerca de
 			%li
-				%a.waves-effect.white-bonis{href:"#desc"}
-					%span Características
+				%a.grey-text.text-darken-4{href:"#design"} Design
 			%li
-				%a.waves-effect.white-bonis{href:"#team"} 
-					%span Team
+				%a.grey-text.text-darken-4{href:"#tec"} Tecnología
+			%li
+				%a.grey-text.text-darken-4{href:"#team"} Team
 		-#=========================================
 		-#=========== Mensaje de confirmación ============
 		-#=========================================
@@ -57,15 +52,20 @@
 								%a{href:"#about"}
 									%span Acerca de
 							%li
-								%a{href:"#desc"}
-									%span Características
+								%a{href:"#design"}
+									%span Design
+							%li
+								%a{href:"#tec"}
+									%span Tecnología
 							%li
 								%a{href:"#team"} 
 									%span Team
 						%ul.right
 							%li.hide-on-large-only
-								%a#login-activator.btn-flat{href:"#", data:{activates:"menu-login"}}
-									%i.material-icons.white-text menu
+								%a.dropdown-button{href:"#!", data:{activates:"dropdown1"}} 
+									%span{style:"margin-right: 60px"} Menú
+									%i.material-icons.right arrow_drop_down
+
 				-#======== Contenido de la parte principal ===========
 				.row.no-margin
 					.col.s12.m6.center-align
@@ -100,12 +100,16 @@
 								%span Si olvidó su contraseña, ingrese en el campo de abajo el
 								%strong correo con el cual se registró
 								%span en la plataforma, para que nosotros podamos ayudarle a recuperar tu cuenta
-						.input-field.col.s12
-							%i.material-icons.prefix.medium email
-							%input.validate#rcorreo{type: "email"}/
-							%label{for: "user"} Correo
-						%button#rbutton.col.s12.btn.waves-effect.waves-light{type: "submit"}
-							%span Recuperar mi cuenta
+						%form#recuperar01
+							.input-field.col.s12
+								%i.material-icons.prefix.medium email
+								%input.validate#rcorreo{type: "email"}/
+								%label{for: "user"} Correo
+							%button#rbutton.col.s12.btn.waves-effect.waves-light{type: "submit"}
+								%span Recuperar mi cuenta
+						%form#recuperar02.ocultado
+							%button#rbutton.col.s12.btn.waves-effect.waves-light{type: "submit"}
+								%span Reenviar correo de confirmación
 
 				.bolita
 						
@@ -147,7 +151,7 @@
 									%h5 Totalmente responsivo
 								.col.s12
 									%p El diseño fue una de nuestras prioridades al diseñar este sitio. Se adapta, <b>evoluciona</b>, para que accedas cómodamente desde el dispositivo que quieras.
-				.sec.grey.lighten-2
+				#design.sec.scrollspy.grey.lighten-2
 					%section
 						.row
 							.col.s12.l6
@@ -165,37 +169,48 @@
 								%h2 Material Design, el corazón del sitio
 								%p Creado y diseñado por Google, Material Design es un lenguaje de diseño que combina los principios clásicos del diseño exitoso junto con la innovación y la tecnología. El objetivo de Google consiste en desarrollar un sistema de diseño que permite una experiencia de usuario unificada a través de todos sus productos en cualquier plataforma.
 								%a.btn.waves-effect{href:"https://material.io/guidelines/material-design/introduction.html",target:"_blank"} Leer más
-				#desc.section.scrollspy
-				.container	
-					.row.title-gif
-						.col.s12.m6.center
-							%h2 Características
-						.col.s12.m6.center
-							%img.responsive-img{src: "images/inicio.gif"}
-
-				.article.blue.lighten-1.white-text
-					.container
+				#tec.scrollspy
+				.sec.build
+					%section.center.white-text
 						.row
+							.col.s12
+								%h2.white-text Construido con tecnología de última generación
+							.col.s12
+								%h6 Hemos utilizado tecnologías sólidas, libres y confiables, siempre pensando en el rendimiento y la confiabilidad que ofrecen estas herramientas, y el poder de creación y desarrollo de cada una.
 							.col.s12.m6.l4
-								.center.space-login
-									%i.grande.material-icons.white-text flash_on
-									%h5 Acelera la comunicación
-									%p.center Esta plataforma está diseñada para hacer que la comunicación entre los alumnos, tutores y autoridades del <b>plantel</b> sea más efectiva y rápida.
+								%img{src:"images/login/ruby.png"}
+								%h5 Ruby On Rails
+								%p
+									%span Ruby On Rails es un poderosísimo framework BackEnd escrito en Ruby y de código libre. Siguiendo el paradigma del patrón
+									%strong Modelo Vista Controlador
+									%span combina la simplicidad y la potencia
+								%a.btn.waves-effect{href:"http://rubyonrails.org/",target:"_blank"} Saber más
 							.col.s12.m6.l4
-								.center.space-login
-									%i.grande.material-icons.white-text group
-									%h5 Enfocado al plantel
-									%p.center Se ha desarrollado un diseño intuitivo, fácil de leer y amigable, que permite que todos los usuarios se sientan bien con GliphyHub, el lugar <b>ideal</b> para la comunicación escolar.
-							.col.s12.m12.l4
-								.center.space-login
-									%i.grande.material-icons.white-text important_devices
-									%h5 Totalmente Responsivo
-									%p.center El diseño fue una de nuestras prioridades al diseñar este sitio. Se adapta, <b>evoluciona</b>, para que accedas cómodamente desde el dispositivo que quieras.
+								%img{src:"images/login/material.png"}
+								%h5 Materialize
+								%p 
+									%span Un framework web FrontEnd moderno y responsivo basado en
+									%strong Material Design.
+									%span Materialize simplifica la vida de los desarrolladores y los usuarios que atienden
+								%a.btn.waves-effect{href:"http://materializecss.com/",target:"_blank"} Saber más
+							.col.s12.l4
+								%img{src:"images/login/github.png"}
+								%h5 GitHub
+								%p
+									%span Es una plataforma que, utilizando el sistema de 
+									%strong control de versiones Git,
+									%span permite la colaboración entre cientos de miles de desarrolladores
+								%a.btn.waves-effect{href:"https://github.com/",target:"_blank"} Saber más
 				
-				#team.section.scrollspy
-				.article
-					.col.s12.center.section-Title
-						%h2.blue-text.text-darken-3 El equipo
+				#team.scrollspy.parallax-container.valign-wrapper
+					.section
+						.container
+							.row.center.no-margin
+								.col.s12
+									%h2.white-text Conozca al equipo
+					.parallax
+						%img{src:"images/login/team.jpg"}
+				.section
 					.container
 						.row
 							.col.s12.m6.l4
@@ -209,7 +224,7 @@
 											.img-container
 												%img.responsive-img.white{src:"images/login/joel.jpg"}
 											.mc-description.white-text
-												%span Desarrollador, maker, atraído por la ciencia y la tecnología. ¿Su más grande sueño?, viajar por las estrellas
+												%span Desarrollador, maker, atraído por la ciencia y la tecnología. ¿Su más grande sueño?, viajar por el cosmos
 										%a.mc-btn-action.blue.lighten-2.z-depth-3.hoverable
 											%i.material-icons menu
 										.mc-footer.blue.lighten-3
@@ -241,7 +256,7 @@
 												%span.trun  BackEnd
 										.mc-content.blue.lighten-1
 											.img-container
-												%img.responsive-img.white{src:"images/login/teacher01.jpg"}
+												%img.responsive-img.white{src:"images/login/willie.jpg"}
 											.mc-description.white-text
 												%span Joven estudiante desarrollador de código, con habilidades en físico-matemáticas
 										%a.mc-btn-action.blue.lighten-2.z-depth-3.hoverable
@@ -260,7 +275,7 @@
 											.img-container
 												%img.responsive-img.white{src:"images/login/ana.jpg"}
 											.mc-description.white-text
-												%span Esto es una breve descripción sobre mí
+												%span Sin rumbo definido, pero lista para enfrentar lo que sea a mi manera
 										%a.mc-btn-action.blue.lighten-2.z-depth-3.hoverable
 											%i.material-icons menu
 										.mc-footer.blue.lighten-3
@@ -293,7 +308,7 @@
 												%span.trun Documentación
 										.mc-content.blue.lighten-1
 											.img-container
-												%img.responsive-img.white{src:"images/login/teacher01.jpg"}
+												%img.responsive-img.white{src:"images/login/mariana.jpg"}
 											.mc-description.white-text
 												%span Análisis. Aspirante a ingeniera aeronauta
 										%a.mc-btn-action.blue.lighten-2.z-depth-3.hoverable
@@ -301,7 +316,7 @@
 										.mc-footer.blue.lighten-3
 											%a.center-align.blue.lighten-1{href:"https://www.instagram.com/marianazq13/", target:"_blank"}
 												%img{src:"images/login/instagram.png"}
-		%footer.page-footer.blue
+		%footer.page-footer
 			.container
 				.row
 					.col.s12.m6
