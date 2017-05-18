@@ -1,0 +1,59 @@
+
+// Mixin animation - varios navegadores
+
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+    // Chrome, Firefox, Safari, otros - versiones antiguas
+    -webkit-animation: $animations;
+    // All - todos los navegadores, incluso IE v10+ y Edge 15
+    animation: $animations;
+}
+
+// Mixin keyframes - varios navegadores
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+// Mixin transform - varios navegadores
+
+@mixin transform($str) {
+    // Chrome, Firefox, Safari, otros - versiones antiguas
+    -webkit-transform: #{$str};
+    // IE version 9
+    -ms-transform: #{$str};
+    // All - todos los navegadores, incluso IE v10+ y Edge 15
+    transform: #{$str};
+}
+
+// Mixin transition - varios navegadores
+
+@mixin transition($str) {
+    // Chrome, Firefox, Safari, otros - versiones antiguas
+    -webkit-transition: #{$str};
+    // All - todos los navegadores, incluso IE v10+ y Edge 15
+    transition: #{$str};
+}
+
+// Mixin Place para hacer un shortcut de Top,  Right, Bottom y Left
+
+@mixin place ($top, $right,$bottom, $left) {
+    top: #{$top};
+    right: #{$right};
+    bottom: #{$bottom};
+    left: #{$left};
+}

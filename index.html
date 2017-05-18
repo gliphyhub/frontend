@@ -8,7 +8,7 @@
     <meta content="TeamDevs" name="author">
     <meta content="TeamDevs" name="owner">
     <meta content="index/follow" name="robots">
-    <meta content="#1e88e5" name="theme-color">
+    <meta content="#2E5EC6" name="theme-color">
     <link href="images/favicon.ico" rel="shortcut icon" type="image/x-icon">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="css/materialize.css" media="screen,projection" rel="stylesheet">
@@ -17,170 +17,274 @@
     <title>GliphyHub</title>
   </head>
   <body>
-    <main class="main-login">
-      <div class="modal" id="dirigido">
-        <div class="modal-content center">
-          <img src="images/login/message.png">
-          <h5>Te enviaremos un correo muy pronto</h5>
-          <p>Revisa tu correo en unos minutos, así podrás recuperar tu cuenta</p>
-          <p class="right">
-            <a class="modal-action modal-close waves-effect btn-flat" href="#!">Volver</a>
-          </p>
-        </div>
+    <ul class="dropdown-content flechita" id="dropdown1">
+      <li>
+        <a class="grey-text text-darken-4" href="#about">Acerca de</a>
+      </li>
+      <li>
+        <a class="grey-text text-darken-4" href="#design">Design</a>
+      </li>
+      <li>
+        <a class="grey-text text-darken-4" href="#tec">Tecnología</a>
+      </li>
+      <li>
+        <a class="grey-text text-darken-4" href="#team">Team</a>
+      </li>
+    </ul>
+    <div class="modal" id="mensaje-01">
+      <div class="modal-content center">
+        <img src="images/login/message.png">
+        <h5>Te enviaremos un correo muy pronto</h5>
+        <p>Revisa tu correo en unos minutos, así podrás recuperar su cuenta</p>
+        <p class="right">
+          <a class="modal-action modal-close waves-effect btn-flat" href="#!">Volver</a>
+        </p>
       </div>
-      <div class="contenedor-login">
-        <div class="login-before"></div>
-        <div class="login">
-          <div id="particles"></div>
-          <div class="profile-card profileAnimated">
-            <div class="logotipo-login animate">
-              <a>
-                <img class="z-depth-1" src="images/login/index-log.png">
-              </a>
-              <h1>
-                <span>GliphyHub</span>
-              </h1>
-              <h2>
-                <span>Uniendo a la comunidad</span>
-              </h2>
-            </div>
-            <form class="profile-bio animate" id="inicialForm">
-              <div class="input-field col s12">
+    </div>
+    <main class="main-login">
+      <div class="index-first z-depth-2">
+        <div class="back"></div>
+        <div class="fixed z-depth-2" id="particles"></div>
+        <nav class="nav-index">
+          <div class="nav-wrapper">
+            <ul class="right hide-on-med-and-down">
+              <li>
+                <a href="#about">
+                  <span>Acerca de</span>
+                </a>
+              </li>
+              <li>
+                <a href="#design">
+                  <span>Design</span>
+                </a>
+              </li>
+              <li>
+                <a href="#tec">
+                  <span>Tecnología</span>
+                </a>
+              </li>
+              <li>
+                <a href="#team">
+                  <span>Team</span>
+                </a>
+              </li>
+            </ul>
+            <ul class="right">
+              <li class="hide-on-large-only">
+                <a class="dropdown-button" data-activates="dropdown1" href="#!">
+                  <span style="margin-right: 60px">Menú</span>
+                  <i class="material-icons right">arrow_drop_down</i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+        <div class="row animated no-margin">
+          <div class="col s12 m6 center-align">
+            <img class="hide-on-small-only" src="images/login/logo-horizontal-w-s.png">
+            <img class="hide-on-med-and-up left" src="images/login/logo-s.png">
+          </div>
+          <div class="ingresar col s12 m5">
+            <form>
+              <div class="col s12 white-bonis">
+                <h4 class="hide-on-small-only">Bienvenido</h4>
+                <h4 class="hide-on-med-and-up">Bienvenido a GliphyHub</h4>
+                <h6>Ingrese su nombre de usuario y contraseña para acceder a la plataforma</h6>
+              </div>
+              <div class="input-field col s12 l6">
                 <i class="material-icons prefix medium">account_circle</i>
                 <input class="validate" id="user" type="email">
                 <label for="user">Correo</label>
               </div>
-              <div class="input-field col s12">
+              <div class="input-field col s12 l6">
                 <i class="material-icons prefix medium">lock_outline</i>
                 <input class="validate" id="pass" type="password">
                 <label for="pass">Contraseña</label>
               </div>
               <button class="col s12 btn waves-effect waves-light" type="submit">
-                <span class="upper">Iniciar sesión</span>
-                <i class="material-icons right">send</i>
+                <span class="upper">Ingresar</span>
               </button>
-              <div class="col s12 forget">
-                <a class="upper" href="#!" id="forget">olvidé mi contraseña</a>
+              <div class="col s12 forget center-align">
+                <a class="upper white-bonis" href="#!">¿olvidó su contraseña?</a>
               </div>
             </form>
-            <form class="profile-bio" id="forgotten">
-              <div class="left backLogin">
-                <a class="btn-flat btn-square" id="backLogin">
-                  <i class="material-icons prefix medium">arrow_back</i>
-                </a>
-              </div>
-              <div class="col s12">
-                <h5>¿Olvidaste tu contraseña?</h5>
-              </div>
-              <div class="col s12">
-                <p class="jus text-normal">
-                  <span>Si olvidaste tu contraseña, ingresa en el campo de abajo el</span>
-                  <strong>correo con el cual te registrate</strong>
-                  <span>en la plataforma, para que nosotros podamos ayudarte a recuperar tu cuenta</span>
-                </p>
-              </div>
+          </div>
+          <div class="olvide col s12 m5 white-text">
+            <div class="left">
+              <a class="btn-flat btn-square" id="back-to-ingresar">
+                <i class="material-icons prefix medium">arrow_back</i>
+              </a>
+            </div>
+            <div class="col s12">
+              <h5>¿Olvidó su contraseña?</h5>
+            </div>
+            <div class="col s12">
+              <p class="jus text-normal">
+                <span>Si olvidó su contraseña, ingrese en el campo de abajo el</span>
+                <strong>correo con el cual se registró</strong>
+                <span>en la plataforma, para que nosotros podamos ayudarle a recuperar tu cuenta</span>
+              </p>
+            </div>
+            <form id="recuperar01">
               <div class="input-field col s12">
                 <i class="material-icons prefix medium">email</i>
-                <input class="validate" id="user" type="email">
+                <input class="validate" id="rcorreo" type="email">
                 <label for="user">Correo</label>
               </div>
-              <button class="col s12 btn waves-effect waves-light" id="recuperar" type="submit">
+              <button class="col s12 btn waves-effect waves-light" id="rbutton" type="submit">
                 <span>Recuperar mi cuenta</span>
               </button>
             </form>
+            <form class="ocultado" id="recuperar02">
+              <button class="col s12 btn waves-effect waves-light" id="rbutton" type="submit">
+                <span>Reenviar correo de confirmación</span>
+              </button>
+            </form>
           </div>
         </div>
+        <div class="bolita"></div>
       </div>
-      <ul class="dropdown-content flechita" id="dropdown1">
-        <li>
-          <a class="grey-text text-darken-4" href="#about">Acerca de</a>
-        </li>
-        <li>
-          <a class="grey-text text-darken-4" href="#desc">Características</a>
-        </li>
-        <li>
-          <a class="grey-text text-darken-4" href="#team">Team</a>
-        </li>
-      </ul>
-      <nav style="z-index: 40">
-        <div class="nav-wrapper blue">
-          <span class="left" style="margin-left: 10px">Sobre nosotros</span>
-          <ul class="right">
-            <li>
-              <a class="dropdown-button" data-activates="dropdown1" href="#!">
-                <span style="margin-right: 60px">Menú</span>
-                <i class="material-icons right">arrow_drop_down</i>
-              </a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-      <div class="deslizable">
+      <div class="index-content">
         <div class="section scrollspy" id="about"></div>
-        <div class="article">
-          <div class="container">
-            <div class="row">
-              <div class="col s12">
-                <h2 class="blue-text text-darken-3">¿Quiénes somos?</h2>
-              </div>
-              <div class="col s12">
-                <p class="jus text-presentation">
-                  <span>Somos una plataforma enfocada en la interacción entre la comunidad escolar y el cuerpo administrativo del plantel, innovando así la</span>
-                  <strong>comunicación</strong>
-                  <span>. Nuestra</span>
-                  <strong>misión</strong>
-                  <span>fue crear una nueva plataforma, que mejorara la experiencia de usuario y enriqueciera el ambiente de la comunidad escolar.</span>
-                  <br>
-                  <span>Lo que logramos, fue</span>
-                  <strong>mejor.</strong>
-                </p>
-              </div>
+        <section class="center">
+          <div class="row">
+            <div class="col s12">
+              <h2>La mejor manera de comunicarse ha llegado</h2>
             </div>
-          </div>
-        </div>
-        <div class="section scrollspy" id="desc"></div>
-        <div class="container">
-          <div class="row title-gif">
-            <div class="col s12 m6 center">
-              <h2 class="blue-text text-darken-3">Características</h2>
+            <div class="col s12">
+              <p class="text-presentation">
+                <span>Somos una plataforma enfocada en la interacción entre la comunidad escolar y el cuerpo administrativo del plantel, innovando así la</span>
+                <strong>comunicación</strong>
+                <span>. Nuestra</span>
+                <strong>misión</strong>
+                <span>fue crear una nueva plataforma, que mejorara la experiencia de usuario y enriqueciera el ambiente de la comunidad escolar.</span>
+                <br>
+                <span>Lo que logramos, fue</span>
+                <strong>mejor.</strong>
+              </p>
             </div>
-            <div class="col s12 m6 center">
-              <img class="responsive-img" src="images/inicio.gif">
-            </div>
-          </div>
-        </div>
-        <div class="article blue lighten-1 white-text">
-          <div class="container">
-            <div class="row">
-              <div class="col s12 m6 l4">
-                <div class="center space-login">
-                  <i class="grande material-icons white-text">flash_on</i>
+            <div class="col s12 m6 l4">
+              <div class="space-login left-align">
+                <div class="col s12">
+                  <i class="material-icons left">flash_on</i>
                   <h5>Acelera la comunicación</h5>
-                  <p class="center">Esta plataforma está diseñada para hacer que la comunicación entre los alumnos, tutores y autoridades del <b>plantel</b> sea más efectiva y rápida.</p>
+                </div>
+                <div class="col s12">
+                  <p>Esta plataforma está diseñada para hacer que la comunicación entre los alumnos, tutores y autoridades del <b>plantel</b> sea más efectiva y rápida.</p>
                 </div>
               </div>
-              <div class="col s12 m6 l4">
-                <div class="center space-login">
-                  <i class="grande material-icons white-text">group</i>
+            </div>
+            <div class="col s12 m6 l4">
+              <div class="space-login left-align">
+                <div class="col s12">
+                  <i class="material-icons left">group</i>
                   <h5>Enfocado al plantel</h5>
-                  <p class="center">Se ha desarrollado un diseño intuitivo, fácil de leer y amigable, que permite que todos los usuarios se sientan bien con GliphyHub, el lugar <b>ideal</b> para la comunicación escolar.</p>
+                </div>
+                <div class="col s12">
+                  <p>Se ha desarrollado un diseño intuitivo, fácil de leer y amigable, que permite que todos los usuarios se sientan bien con GliphyHub, el lugar <b>ideal</b> para la comunicación escolar.</p>
                 </div>
               </div>
-              <div class="col s12 m12 l4">
-                <div class="center space-login">
-                  <i class="grande material-icons white-text">important_devices</i>
-                  <h5>Totalmente Responsivo</h5>
-                  <p class="center">El diseño fue una de nuestras prioridades al diseñar este sitio. Se adapta, <b>evoluciona</b>, para que accedas cómodamente desde el dispositivo que quieras.</p>
+            </div>
+            <div class="col s12 m12 l4">
+              <div class="space-login left-align">
+                <div class="col s12">
+                  <i class="material-icons left">important_devices</i>
+                  <h5>Totalmente responsivo</h5>
+                </div>
+                <div class="col s12">
+                  <p>El diseño fue una de nuestras prioridades al diseñar este sitio. Se adapta, <b>evoluciona</b>, para que accedas cómodamente desde el dispositivo que quieras.</p>
                 </div>
               </div>
             </div>
           </div>
+        </section>
+        <div class="sec scrollspy grey lighten-2" id="design">
+          <section>
+            <div class="row">
+              <div class="col s12 l6">
+                <div class="material-example">
+                  <div class="material-cube one">
+                    <div class="shape z-depth-5"></div>
+                  </div>
+                  <div class="material-cube two">
+                    <div class="shape z-depth-5"></div>
+                  </div>
+                  <div class="material-cube three">
+                    <div class="shape z-depth-5"></div>
+                  </div>
+                  <div class="material-cube base">
+                    <div class="shape z-depth-5">
+                      <img src="images/login/seaside.jpg">
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col s12 l6">
+                <h2>Material Design, el corazón del sitio</h2>
+                <p>Creado y diseñado por Google, Material Design es un lenguaje de diseño que combina los principios clásicos del diseño exitoso junto con la innovación y la tecnología. El objetivo de Google consiste en desarrollar un sistema de diseño que permite una experiencia de usuario unificada a través de todos sus productos en cualquier plataforma.</p>
+                <a class="btn waves-effect" href="https://material.io/guidelines/material-design/introduction.html" target="_blank">Leer más</a>
+              </div>
+            </div>
+          </section>
         </div>
-        <div class="section scrollspy" id="team"></div>
-        <div class="article">
-          <div class="col s12 center section-Title">
-            <h2 class="blue-text text-darken-3">El equipo</h2>
+        <div class="scrollspy" id="tec"></div>
+        <div class="sec build">
+          <section class="center white-text">
+            <div class="row">
+              <div class="col s12">
+                <h2 class="white-text">Construido con tecnología de última generación</h2>
+              </div>
+              <div class="col s12">
+                <h6>Hemos utilizado tecnologías sólidas, libres y confiables, siempre pensando en el rendimiento y la confiabilidad que ofrecen estas herramientas, y el poder de creación y desarrollo de cada una.</h6>
+              </div>
+              <div class="col s12 m6 l4">
+                <img src="images/login/ruby.png">
+                <h5>Ruby On Rails</h5>
+                <p>
+                  <span>Ruby On Rails es un poderosísimo framework BackEnd escrito en Ruby y de código libre. Siguiendo el paradigma del patrón</span>
+                  <strong>Modelo Vista Controlador</strong>
+                  <span>combina la simplicidad y la potencia</span>
+                </p>
+                <a class="btn waves-effect" href="http://rubyonrails.org/" target="_blank">Saber más</a>
+              </div>
+              <div class="col s12 m6 l4">
+                <img src="images/login/material.png">
+                <h5>Materialize</h5>
+                <p>
+                  <span>Un framework web FrontEnd moderno y responsivo basado en</span>
+                  <strong>Material Design.</strong>
+                  <span>Materialize simplifica la vida de los desarrolladores y los usuarios que atienden</span>
+                </p>
+                <a class="btn waves-effect" href="http://materializecss.com/" target="_blank">Saber más</a>
+              </div>
+              <div class="col s12 l4">
+                <img src="images/login/github.png">
+                <h5>GitHub</h5>
+                <p>
+                  <span>Es una plataforma que, utilizando el sistema de</span>
+                  <strong>control de versiones Git,</strong>
+                  <span>permite la colaboración entre cientos de miles de desarrolladores</span>
+                </p>
+                <a class="btn waves-effect" href="https://github.com/" target="_blank">Saber más</a>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="scrollspy parallax-container valign-wrapper" id="team">
+          <div class="section">
+            <div class="container">
+              <div class="row center no-margin">
+                <div class="col s12">
+                  <h2 class="white-text">Conozca al equipo</h2>
+                </div>
+              </div>
+            </div>
           </div>
+          <div class="parallax">
+            <img src="images/login/team.jpg">
+          </div>
+        </div>
+        <div class="section">
           <div class="container">
             <div class="row">
               <div class="col s12 m6 l4">
@@ -197,7 +301,7 @@
                         <img class="responsive-img white" src="images/login/joel.jpg">
                       </div>
                       <div class="mc-description white-text">
-                        <span>Desarrollador, maker, atraído por la ciencia y la tecnología. ¿Su más grande sueño?, viajar por las estrellas</span>
+                        <span>Desarrollador, maker, atraído por la ciencia y la tecnología. ¿Su más grande sueño?, viajar por el cosmos</span>
                       </div>
                     </div>
                     <a class="mc-btn-action blue lighten-2 z-depth-3 hoverable">
@@ -250,7 +354,7 @@
                     </h2>
                     <div class="mc-content blue lighten-1">
                       <div class="img-container">
-                        <img class="responsive-img white" src="images/login/teacher01.jpg">
+                        <img class="responsive-img white" src="images/login/willie.jpg">
                       </div>
                       <div class="mc-description white-text">
                         <span>Joven estudiante desarrollador de código, con habilidades en físico-matemáticas</span>
@@ -281,7 +385,7 @@
                         <img class="responsive-img white" src="images/login/ana.jpg">
                       </div>
                       <div class="mc-description white-text">
-                        <span>Esto es una breve descripción sobre mí</span>
+                        <span>Sin rumbo definido, pero lista para enfrentar lo que sea a mi manera</span>
                       </div>
                     </div>
                     <a class="mc-btn-action blue lighten-2 z-depth-3 hoverable">
@@ -290,6 +394,34 @@
                     <div class="mc-footer blue lighten-3">
                       <a class="center-align blue lighten-1" href="https://www.facebook.com/AnSethLedger" target="_blank">
                         <img src="images/login/facebook.png">
+                      </a>
+                    </div>
+                  </article>
+                </div>
+              </div>
+              <div class="col s12 m6 l4">
+                <div class="team">
+                  <article class="material-card">
+                    <h2 class="blue">
+                      <span class="truncate">Mariana Alonzo</span>
+                      <strong class="truncate mc-title">
+                        <span class="trun">Documentación</span>
+                      </strong>
+                    </h2>
+                    <div class="mc-content blue lighten-1">
+                      <div class="img-container">
+                        <img class="responsive-img white" src="images/login/mariana.jpg">
+                      </div>
+                      <div class="mc-description white-text">
+                        <span>Análisis. Aspirante a ingeniera aeronauta</span>
+                      </div>
+                    </div>
+                    <a class="mc-btn-action blue lighten-2 z-depth-3 hoverable">
+                      <i class="material-icons">menu</i>
+                    </a>
+                    <div class="mc-footer blue lighten-3">
+                      <a class="center-align blue lighten-1" href="https://www.instagram.com/marianazq13/" target="_blank">
+                        <img src="images/login/instagram.png">
                       </a>
                     </div>
                   </article>
@@ -323,40 +455,12 @@
                   </article>
                 </div>
               </div>
-              <div class="col s12 m6 l4">
-                <div class="team">
-                  <article class="material-card">
-                    <h2 class="blue">
-                      <span class="truncate">Mariana Alonzo</span>
-                      <strong class="truncate mc-title">
-                        <span class="trun">Documentación</span>
-                      </strong>
-                    </h2>
-                    <div class="mc-content blue lighten-1">
-                      <div class="img-container">
-                        <img class="responsive-img white" src="images/login/teacher01.jpg">
-                      </div>
-                      <div class="mc-description white-text">
-                        <span>Análisis. Aspirante a ingeniera aeronauta</span>
-                      </div>
-                    </div>
-                    <a class="mc-btn-action blue lighten-2 z-depth-3 hoverable">
-                      <i class="material-icons">menu</i>
-                    </a>
-                    <div class="mc-footer blue lighten-3">
-                      <a class="center-align blue lighten-1" href="https://www.instagram.com/marianazq13/" target="_blank">
-                        <img src="images/login/instagram.png">
-                      </a>
-                    </div>
-                  </article>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </div>
     </main>
-    <footer class="page-footer blue">
+    <footer class="page-footer">
       <div class="container">
         <div class="row">
           <div class="col s12 m6">

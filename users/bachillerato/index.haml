@@ -1,6 +1,8 @@
 -#=================================================================================
 -#===================================== DISEÑO ======================================
 -#=================================================================================
+
+-seccion ="Inicio"
 -nombresTabla = "Willie"
 -apellidosTabla = "Almaráz García"
 -divName = nombresTabla.split(/ /)
@@ -10,9 +12,7 @@
 -tipoUser = "Estudiante"
 -imgPerfil = "../../images/users/user01.jpg"
 -imgCover = "../../images/covers/student-cover.jpg"
-
--notificationes=[{title:"Comunicado 1", icon:"sms", publicador: "David", desc: "Destacado el 00/00/00"}, {title:"Tarea 1", icon:"description", publicador: "Villena",  desc: "Fecha de entrega el 25/05/17"}, {title:"Comunicado 2", icon:"sms", publicador: "Clemente Cartujano", desc: "Alguna especie de preview o mensaje bastante largo que sí cabe"},]
--seccion ="Inicio"
+-notificationes=[{title:"Comunicado 1", icon:"sms", publicador: "David", desc: "Destacado el 00/00/00"}, {title:"Tarea 1", icon:"description", publicador: "Villena",  desc: "Fecha de entrega el 25/05/17"}, {title:"Comunicado 2", icon:"sms", publicador: "Clemente Cartujano", desc: "Alguna especie de preview o mensaje bastante largo que sí cabe"},{title:"Comunicado 1", icon:"sms", publicador: "David", desc: "Destacado el 00/00/00"}, {title:"Tarea 1", icon:"description", publicador: "Villena",  desc: "Fecha de entrega el 25/05/17"}, {title:"Comunicado 2", icon:"sms", publicador: "Clemente Cartujano", desc: "Alguna especie de preview o mensaje bastante largo que sí cabe"},]
 !!!5
 %html{lang:"es"}
 	%header.navegacion-espacio
@@ -22,50 +22,44 @@
 		%meta{name:"viewport", content:"width=device-width, initial-scale=1"}
 		%meta{charset: "UTF-8"}
 		%link{rel:"shortcut icon", href: "../../images/favicon.ico"}/
-		%meta{name: "theme-color", content: "#004d40 "}
+		%meta{name: "theme-color", content: "#303030"}
 		%link{rel:"stylesheet", href:"http://fonts.googleapis.com/icon?family=Material+Icons"}/
 		%link{rel:"stylesheet", href:"../../css/materialize.css", media: "screen,projection"}/		
 		%link{rel: "stylesheet", href:"../../css/gliphy.css"}/
-		%title Gliphy
+		%title Gliphy Admin
 	%body
 		-#=========================================
 		-#=========== Barra de navegación ================
 		-#=========================================
 		#nav-user.navbar-fixed
-			%nav.teal.darken-3
+			%nav.teal.darken-2
 				.nav-wrapper
 					-#=========================================
-					-#============= Botón Menú === ================
+					-#============= Botón Notificaciones === ================
 					-#=========================================
 					.left
-						%a#menu.hide-on-large-only.btn-flat.white-bonis{href:"#", data:{activates:"navegacion-movil"}}
+						%a#notificaciones-activator.btn-flat.white-bonis{href:"#", data:{activates:"notificaciones-menu"}}
 							%i.material-icons notifications
 					-#=========================================
 					-#====== Botón Menú - Opciones usuario ==============
 					-#=========================================
 					.right
-						%a#user-label.options-user.btn-flat.white-bonis.hide-on-small-only{href:"#!", data:{activates:"slide-out"}}
+						%a.user-activator.btn-flat.white-bonis.hide-on-small-only.no-upper{href:"#!", data:{activates:"user-menu"}}
 							%img.admin-img.left{src:"#{imgPerfil}"}
 							%span #{nombreCorto}
-						%a.options-user.btn-flat.white-bonis.hide-on-med-and-up{href:"#!",data:{activates:"slide-out"}}
+						%a.user-activator.btn-flat.white-bonis.hide-on-med-and-up{href:"#!",data:{activates:"user-menu"}}
 							%i.material-icons.left apps
 							%span OPCIONES
-					-#=========================================
-					-#============== Toggle Menú =================
-					-#=========================================
-					.right
-						%a#toggleMenu.btn-flat.white-bonis.hide-on-med-and-down.tooltipped.hoverable{href:"#!", data:{position:"bottom", delay:"50", tooltip:"Cambiar vista"}}
-							%i.material-icons.center view_stream
 					-#=========================================
 					-#========== Navegación - menú =================
 					-#=========================================
 					.col.s8.margincito-left.hide-on-small-only.truncate
-						%a.breadcrumb{href:"index.html"} Gliphy
+						%a.breadcrumb{href:"index.html"} Gliphy Admin
 						%a.breadcrumb #{seccion}
 		-#=========================================
 		-#=========== Opciones de usuario ================
 		-#=========================================
-		%ul#slide-out.side-nav.blue-grey.darken-4
+		%ul#user-menu.side-nav.blue-grey.darken-4
 			%li.userView
 				.background
 					%img{src:"#{imgCover}"}
@@ -82,56 +76,33 @@
 					%i.material-icons.left.white-bonis power_settings_new
 					%span Salir
 		-#=========================================
-		-#========== Menú navegación - Large ==============
-		-#=========================================http://localhost:7880/users/secundaria/#!
-		%ul#navegacion-no-oculto.side-nav.fixed.blue-grey.darken-4
-			%br/
-			%li.white-text
-				%h6.center-align.upper Notificaciones
-			%ul.notificaciones
-				-notificationes.each do |item|
-					%li 
-						%ul.collapsible.collapsible-accordion
-							%li
-								%a.waves-effect.white-bonis.collapsible-header
-									%i.material-icons.left.white-bonis=item[:icon]
-									%span.trun=item[:title]
-									%label=item[:publicador]
-								.collapsible-body.blue-grey.darken-3
-									%ul.blue-grey.darken-3
-										.row.no-margin
-											.col.s12.no-padding
-												.noti.white-text.jus=item[:desc]
-											.col.s12.no-padding
-												%a.btn-flat.waves-effect.no-margin.orange-text.right Ver más
+		-#======== Menú Notificaciones - Responsive ============
 		-#=========================================
-		-#======== Menú navegación - Responsive ============
-		-#=========================================
-		%ul#navegacion-movil.side-nav.blue-grey.darken-4
-			%br/
-			%li.white-text
-				%h6.center-align.upper Notificaciones
-			%ul.notificaciones
-				-notificationes.each do |item|
-					%li 
-						%ul.collapsible.collapsible-accordion
-							%li
-								%a.waves-effect.white-bonis.collapsible-header
-									%i.material-icons.left.white-bonis=item[:icon]
-									%span.trun=item[:title]
-									%label=item[:publicador]
-								.collapsible-body.blue-grey.darken-3
-									%ul.blue-grey.darken-3
-										.row.no-margin
-											.col.s12.no-padding
-												.noti.white-text.jus=item[:desc]
-											.col.s12.no-padding
-												%a.btn-flat.waves-effect.no-margin.orange-text.right Ver más
-			
+		%ul#notificaciones-menu.side-nav.blue-grey.darken-3
+			.side-contenedor
+				%br/
+				%li.white-text
+					%h6.center-align.upper Notificaciones
+				%ul.notificaciones
+					-notificationes.each do |item|
+						%li 
+							%ul.collapsible.collapsible-accordion
+								%li
+									%a.waves-effect.white-bonis.collapsible-header
+										%i.material-icons.left.white-bonis=item[:icon]
+										%span.trun=item[:title]
+										%label=item[:publicador]
+									.collapsible-body
+										%ul.blue-grey.darken-1
+											.row.no-margin
+												.col.s12.no-padding
+													.noti.white-text.jus=item[:desc]
+												.col.s12.no-padding
+													%a.btn-flat.waves-effect.no-margin.orange-text.right Ver más
 		-#=================================================================
 		-#========================= Contenido - Layout ===========================
 		-#=================================================================
-		%main.navegacion-espacio
+		%main
 			-#===============Boton buscar================
 			.fixed-action-btn
 				%a.btn-floating.btn-large.waves-effect.waves-light.red.tooltipped.hoverable{href:"#buscar", data:{position:"left", delay:"50", tooltip:"Buscar"}}

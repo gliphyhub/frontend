@@ -1,17 +1,23 @@
-// variables de color
+// Mixins para reducir código
+@import "components/mixins";
+
+// Variables
 @import "components/variables";
 
-// componentes generales
+// Componentes generales
 @import "components/general";
 @import "components/helpers";
+
+// Componentes del layout de usuarios
 @import "components/layout";
 @import "components/calendar";
 @import "components/cards";
 @import "components/carousel";
 @import "components/profile";
-@import "components/error404";
-@import "components/new-login";
 
-// componentes login
+// Página de error
+@import "components/error404";
+
+// Componentes del login
 @import "components/login";
 @import "components/card-login";

@@ -4,32 +4,32 @@
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta charset="UTF-8">
     <link href="../../images/favicon.ico" rel="shortcut icon">
-    <meta content="#bf360c   " name="theme-color">
+    <meta content="#303030" name="theme-color">
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="../../css/materialize.css" media="screen,projection" rel="stylesheet">
     <link href="../../css/gliphy.css" rel="stylesheet">
-    <title>Gliphy Teachers</title>
+    <title>Gliphy Admin</title>
   </header>
   <body>
     <div class="navbar-fixed" id="nav-user">
       <nav class="deep-purple darken-2">
         <div class="nav-wrapper">
           <div class="left">
-            <a class="hide-on-large-only btn-flat white-bonis" data-activates="navegacion-movil" href="#" id="menu">
+            <a class="hide-on-large-only btn-flat white-bonis" data-activates="menu-movil" href="#" id="menu-activator">
               <i class="material-icons">menu</i>
             </a>
           </div>
           <div class="left">
-            <a class="btn-flat white-bonis" data-activates="notificaciones" href="#" id="nTeacher">
+            <a class="btn-flat white-bonis" data-activates="notificaciones-menu" href="#" id="notificaciones-activator">
               <i class="material-icons">notifications</i>
             </a>
           </div>
           <div class="right">
-            <a class="no-upper options-user btn-flat white-bonis hide-on-small-only" data-activates="slide-out" href="#!">
+            <a class="user-activator btn-flat white-bonis hide-on-small-only no-upper" data-activates="user-menu" href="#!">
               <img class="admin-img left" src="../../images/users/user01.jpg">
               <span>Roberto Gervacio</span>
             </a>
-            <a class="options-user btn-flat white-bonis hide-on-med-and-up" data-activates="slide-out" href="#!">
+            <a class="user-activator btn-flat white-bonis hide-on-med-and-up" data-activates="user-menu" href="#!">
               <i class="material-icons left">apps</i>
               <span>OPCIONES</span>
             </a>
@@ -40,13 +40,13 @@
             </a>
           </div>
           <div class="col s8 margincito-left hide-on-small-only truncate">
-            <a class="breadcrumb" href="index.html">Gliphy Teachers</a>
-            <a class="breadcrumb">Inicio</a>
+            <a class="breadcrumb" href="index.html">Gliphy Admin</a>
+            <a class="breadcrumb">Publicaciones</a>
           </div>
         </div>
       </nav>
     </div>
-    <ul class="side-nav blue-grey darken-4" id="slide-out">
+    <ul class="side-nav blue-grey darken-4" id="user-menu">
       <li class="userView">
         <div class="background">
           <img src="../../images/covers/teacher-cover.jpg">
@@ -70,199 +70,223 @@
         </a>
       </li>
     </ul>
-    <ul class="side-nav fixed blue-grey darken-4" id="navegacion-no-oculto">
-      <br>
-      <li>
-        <a class="waves-effect white-bonis" href="index.html">
-          <i class="material-icons left white-bonis">account_circle</i>
-          <span>Publicaciones</span>
-        </a>
-      </li>
-      <br>
-      <li>
-        <a class="waves-effect white-bonis" href="new.html">
-          <i class="material-icons left white-bonis">add</i>
-          <span>Agregar</span>
-        </a>
-      </li>
-      <br>
-      <li>
-        <a class="waves-effect white-bonis" href="help.html">
-          <i class="material-icons left white-bonis">error</i>
-          <span>Ayuda</span>
-        </a>
-      </li>
-      <br>
+    <ul class="side-nav fixed blue-grey darken-4" id="menu-normal">
+      <div class="side-contenedor">
+        <div class="side-lista">
+          <br>
+          <li>
+            <a class="waves-effect white-bonis" href="index.html">
+              <i class="material-icons left white-bonis">account_circle</i>
+              <span>Publicaciones</span>
+            </a>
+          </li>
+          <br>
+          <li>
+            <a class="waves-effect white-bonis" href="new.html">
+              <i class="material-icons left white-bonis">add</i>
+              <span>Agregar</span>
+            </a>
+          </li>
+          <br>
+          <li>
+            <a class="waves-effect white-bonis" href="help.html">
+              <i class="material-icons left white-bonis">error</i>
+              <span>Ayuda</span>
+            </a>
+          </li>
+          <br>
+        </div>
+        <div class="line-divider"></div>
+        <li class="ayuda-btn">
+          <a class="waves-effect white-bonis" href="help.html">
+            <i class="material-icons left white-bonis">error</i>
+            <span>Ayuda</span>
+          </a>
+        </li>
+      </div>
     </ul>
-    <ul class="side-nav blue-grey darken-4" id="navegacion-movil">
-      <br>
-      <li>
-        <a class="waves-effect white-bonis" href="index.html">
-          <i class="material-icons left white-bonis">account_circle</i>
-          <span>Publicaciones</span>
-        </a>
-      </li>
-      <br>
-      <li>
-        <a class="waves-effect white-bonis" href="new.html">
-          <i class="material-icons left white-bonis">add</i>
-          <span>Agregar</span>
-        </a>
-      </li>
-      <br>
-      <li>
-        <a class="waves-effect white-bonis" href="help.html">
-          <i class="material-icons left white-bonis">error</i>
-          <span>Ayuda</span>
-        </a>
-      </li>
-      <br>
+    <ul class="side-nav blue-grey darken-4" id="menu-movil">
+      <div class="side-contenedor">
+        <div class="side-lista">
+          <br>
+          <li>
+            <a class="waves-effect white-bonis" href="index.html">
+              <i class="material-icons left white-bonis">account_circle</i>
+              <span>Publicaciones</span>
+            </a>
+          </li>
+          <br>
+          <li>
+            <a class="waves-effect white-bonis" href="new.html">
+              <i class="material-icons left white-bonis">add</i>
+              <span>Agregar</span>
+            </a>
+          </li>
+          <br>
+          <li>
+            <a class="waves-effect white-bonis" href="help.html">
+              <i class="material-icons left white-bonis">error</i>
+              <span>Ayuda</span>
+            </a>
+          </li>
+          <br>
+        </div>
+        <div class="line-divider"></div>
+        <li class="ayuda-btn">
+          <a class="waves-effect white-bonis" href="help.html">
+            <i class="material-icons left white-bonis">error</i>
+            <span>Ayuda</span>
+          </a>
+        </li>
+      </div>
     </ul>
-    <ul class="side-nav blue-grey darken-4" id="notificaciones">
-      <br>
-      <li class="white-text">
-        <h6 class="center-align upper">Notificaciones</h6>
-      </li>
-      <ul class="notificaciones">
-        <li>
-          <ul class="collapsible collapsible-accordion">
-            <li>
-              <a class="waves-effect white-bonis collapsible-header">
-                <i class="material-icons left white-bonis">sms</i>
-                <span class="trun">Comunicado 1</span>
-                <label>David</label>
-              </a>
-              <div class="collapsible-body blue-grey darken-3">
-                <ul class="blue-grey darken-3">
-                  <div class="row no-margin">
-                    <div class="col s12 no-padding">
-                      <div class="noti white-text jus">Destacado el 00/00/00</div>
-                    </div>
-                    <div class="col s12 no-padding">
-                      <a class="btn-flat waves-effect no-margin orange-text right">Ver más</a>
-                    </div>
-                  </div>
-                </ul>
-              </div>
-            </li>
-          </ul>
+    <ul class="side-nav blue-grey darken-3" id="notificaciones-menu">
+      <div class="side-contenedor">
+        <br>
+        <li class="white-text">
+          <h6 class="center-align upper">Notificaciones</h6>
         </li>
-        <li>
-          <ul class="collapsible collapsible-accordion">
-            <li>
-              <a class="waves-effect white-bonis collapsible-header">
-                <i class="material-icons left white-bonis">description</i>
-                <span class="trun">Tarea 1</span>
-                <label>Villena</label>
-              </a>
-              <div class="collapsible-body blue-grey darken-3">
-                <ul class="blue-grey darken-3">
-                  <div class="row no-margin">
-                    <div class="col s12 no-padding">
-                      <div class="noti white-text jus">Fecha de entrega el 25/05/17</div>
+        <ul class="notificaciones">
+          <li>
+            <ul class="collapsible collapsible-accordion">
+              <li>
+                <a class="waves-effect white-bonis collapsible-header">
+                  <i class="material-icons left white-bonis">sms</i>
+                  <span class="trun">Comunicado 1</span>
+                  <label>David</label>
+                </a>
+                <div class="collapsible-body">
+                  <ul class="blue-grey darken-1">
+                    <div class="row no-margin">
+                      <div class="col s12 no-padding">
+                        <div class="noti white-text jus">Destacado el 00/00/00</div>
+                      </div>
+                      <div class="col s12 no-padding">
+                        <a class="btn-flat waves-effect no-margin orange-text right">Ver más</a>
+                      </div>
                     </div>
-                    <div class="col s12 no-padding">
-                      <a class="btn-flat waves-effect no-margin orange-text right">Ver más</a>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul class="collapsible collapsible-accordion">
+              <li>
+                <a class="waves-effect white-bonis collapsible-header">
+                  <i class="material-icons left white-bonis">description</i>
+                  <span class="trun">Tarea 1</span>
+                  <label>Villena</label>
+                </a>
+                <div class="collapsible-body">
+                  <ul class="blue-grey darken-1">
+                    <div class="row no-margin">
+                      <div class="col s12 no-padding">
+                        <div class="noti white-text jus">Fecha de entrega el 25/05/17</div>
+                      </div>
+                      <div class="col s12 no-padding">
+                        <a class="btn-flat waves-effect no-margin orange-text right">Ver más</a>
+                      </div>
                     </div>
-                  </div>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <ul class="collapsible collapsible-accordion">
-            <li>
-              <a class="waves-effect white-bonis collapsible-header">
-                <i class="material-icons left white-bonis">sms</i>
-                <span class="trun">Comunicado 2</span>
-                <label>Clemente Cartujano</label>
-              </a>
-              <div class="collapsible-body blue-grey darken-3">
-                <ul class="blue-grey darken-3">
-                  <div class="row no-margin">
-                    <div class="col s12 no-padding">
-                      <div class="noti white-text jus">Alguna especie de preview o mensaje bastante largo que sí cabe</div>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul class="collapsible collapsible-accordion">
+              <li>
+                <a class="waves-effect white-bonis collapsible-header">
+                  <i class="material-icons left white-bonis">sms</i>
+                  <span class="trun">Comunicado 2</span>
+                  <label>Clemente Cartujano</label>
+                </a>
+                <div class="collapsible-body">
+                  <ul class="blue-grey darken-1">
+                    <div class="row no-margin">
+                      <div class="col s12 no-padding">
+                        <div class="noti white-text jus">Alguna especie de preview o mensaje bastante largo que sí cabe</div>
+                      </div>
+                      <div class="col s12 no-padding">
+                        <a class="btn-flat waves-effect no-margin orange-text right">Ver más</a>
+                      </div>
                     </div>
-                    <div class="col s12 no-padding">
-                      <a class="btn-flat waves-effect no-margin orange-text right">Ver más</a>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul class="collapsible collapsible-accordion">
+              <li>
+                <a class="waves-effect white-bonis collapsible-header">
+                  <i class="material-icons left white-bonis">sms</i>
+                  <span class="trun">Comunicado 1</span>
+                  <label>David</label>
+                </a>
+                <div class="collapsible-body">
+                  <ul class="blue-grey darken-1">
+                    <div class="row no-margin">
+                      <div class="col s12 no-padding">
+                        <div class="noti white-text jus">Destacado el 00/00/00</div>
+                      </div>
+                      <div class="col s12 no-padding">
+                        <a class="btn-flat waves-effect no-margin orange-text right">Ver más</a>
+                      </div>
                     </div>
-                  </div>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <ul class="collapsible collapsible-accordion">
-            <li>
-              <a class="waves-effect white-bonis collapsible-header">
-                <i class="material-icons left white-bonis">sms</i>
-                <span class="trun">Comunicado 1</span>
-                <label>David</label>
-              </a>
-              <div class="collapsible-body blue-grey darken-3">
-                <ul class="blue-grey darken-3">
-                  <div class="row no-margin">
-                    <div class="col s12 no-padding">
-                      <div class="noti white-text jus">Destacado el 00/00/00</div>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul class="collapsible collapsible-accordion">
+              <li>
+                <a class="waves-effect white-bonis collapsible-header">
+                  <i class="material-icons left white-bonis">description</i>
+                  <span class="trun">Tarea 1</span>
+                  <label>Villena</label>
+                </a>
+                <div class="collapsible-body">
+                  <ul class="blue-grey darken-1">
+                    <div class="row no-margin">
+                      <div class="col s12 no-padding">
+                        <div class="noti white-text jus">Fecha de entrega el 25/05/17</div>
+                      </div>
+                      <div class="col s12 no-padding">
+                        <a class="btn-flat waves-effect no-margin orange-text right">Ver más</a>
+                      </div>
                     </div>
-                    <div class="col s12 no-padding">
-                      <a class="btn-flat waves-effect no-margin orange-text right">Ver más</a>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <ul class="collapsible collapsible-accordion">
+              <li>
+                <a class="waves-effect white-bonis collapsible-header">
+                  <i class="material-icons left white-bonis">sms</i>
+                  <span class="trun">Comunicado 2</span>
+                  <label>Clemente Cartujano</label>
+                </a>
+                <div class="collapsible-body">
+                  <ul class="blue-grey darken-1">
+                    <div class="row no-margin">
+                      <div class="col s12 no-padding">
+                        <div class="noti white-text jus">Alguna especie de preview o mensaje bastante largo que sí cabe</div>
+                      </div>
+                      <div class="col s12 no-padding">
+                        <a class="btn-flat waves-effect no-margin orange-text right">Ver más</a>
+                      </div>
                     </div>
-                  </div>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <ul class="collapsible collapsible-accordion">
-            <li>
-              <a class="waves-effect white-bonis collapsible-header">
-                <i class="material-icons left white-bonis">description</i>
-                <span class="trun">Tarea 1</span>
-                <label>Villena</label>
-              </a>
-              <div class="collapsible-body blue-grey darken-3">
-                <ul class="blue-grey darken-3">
-                  <div class="row no-margin">
-                    <div class="col s12 no-padding">
-                      <div class="noti white-text jus">Fecha de entrega el 25/05/17</div>
-                    </div>
-                    <div class="col s12 no-padding">
-                      <a class="btn-flat waves-effect no-margin orange-text right">Ver más</a>
-                    </div>
-                  </div>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <ul class="collapsible collapsible-accordion">
-            <li>
-              <a class="waves-effect white-bonis collapsible-header">
-                <i class="material-icons left white-bonis">sms</i>
-                <span class="trun">Comunicado 2</span>
-                <label>Clemente Cartujano</label>
-              </a>
-              <div class="collapsible-body blue-grey darken-3">
-                <ul class="blue-grey darken-3">
-                  <div class="row no-margin">
-                    <div class="col s12 no-padding">
-                      <div class="noti white-text jus">Alguna especie de preview o mensaje bastante largo que sí cabe</div>
-                    </div>
-                    <div class="col s12 no-padding">
-                      <a class="btn-flat waves-effect no-margin orange-text right">Ver más</a>
-                    </div>
-                  </div>
-                </ul>
-              </div>
-            </li>
-          </ul>
-        </li>
-      </ul>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </ul>
     <main class="navegacion-espacio">
       <div class="fixed-action-btn">

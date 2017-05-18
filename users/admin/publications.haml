@@ -11,7 +11,8 @@
 -imgPerfil = "../../images/users/user01.jpg"
 -imgCover = "../../images/covers/admin-cover.jpg"
 
--menuLateral=[{title:"Inicio", link:"index.html", icon:"home"}, {title:"Base de Datos", link:"base.html", icon:"storage"},{title:"Publicaciones",link:"publications.html", icon:"account_circle"},{title:"Agregar",link:"new.html", icon:"add"},{title:"Ayuda", link:"help.html",icon:"error"}]
+-menuLateral=[{title:"Inicio", link:"index.html", icon:"home"}, {title:"Base de Datos", link:"base.html", icon:"storage"},{title:"Publicaciones",link:"publications.html", icon:"account_circle"},{title:"Agregar",link:"new.html", icon:"add"},]
+-notificationes=[{title:"Comunicado 1", icon:"sms", publicador: "David", desc: "Destacado el 00/00/00"}, {title:"Tarea 1", icon:"description", publicador: "Villena",  desc: "Fecha de entrega el 25/05/17"}, {title:"Comunicado 2", icon:"sms", publicador: "Clemente Cartujano", desc: "Alguna especie de preview o mensaje bastante largo que sí cabe"},{title:"Comunicado 1", icon:"sms", publicador: "David", desc: "Destacado el 00/00/00"}, {title:"Tarea 1", icon:"description", publicador: "Villena",  desc: "Fecha de entrega el 25/05/17"}, {title:"Comunicado 2", icon:"sms", publicador: "Clemente Cartujano", desc: "Alguna especie de preview o mensaje bastante largo que sí cabe"},]
 -seccion ="Publicaciones"
 -tablas=["Alumnos", "Profesores", "Administrativos", "Grupos"]
 !!!5
@@ -39,16 +40,22 @@
 					-#============= Botón Menú === ================
 					-#=========================================
 					.left
-						%a#menu.hide-on-large-only.btn-flat.white-bonis{href:"#", data:{activates:"navegacion-movil"}}
+						%a#menu-activator.hide-on-large-only.btn-flat.white-bonis{href:"#", data:{activates:"menu-movil"}}
 							%i.material-icons menu
+					-#=========================================
+					-#============= Botón Notificaciones === ================
+					-#=========================================
+					.left
+						%a#notificaciones-activator.btn-flat.white-bonis{href:"#", data:{activates:"notificaciones-menu"}}
+							%i.material-icons notifications
 					-#=========================================
 					-#====== Botón Menú - Opciones usuario ==============
 					-#=========================================
 					.right
-						%a#user-label.options-user.btn-flat.white-bonis.hide-on-small-only{href:"#!", data:{activates:"slide-out"}}
+						%a.user-activator.btn-flat.white-bonis.hide-on-small-only.no-upper{href:"#!", data:{activates:"user-menu"}}
 							%img.admin-img.left{src:"#{imgPerfil}"}
 							%span #{nombreCorto}
-						%a.options-user.btn-flat.white-bonis.hide-on-med-and-up{href:"#!",data:{activates:"slide-out"}}
+						%a.user-activator.btn-flat.white-bonis.hide-on-med-and-up{href:"#!",data:{activates:"user-menu"}}
 							%i.material-icons.left apps
 							%span OPCIONES
 					-#=========================================
@@ -66,7 +73,7 @@
 		-#=========================================
 		-#=========== Opciones de usuario ================
 		-#=========================================
-		%ul#slide-out.side-nav.blue-grey.darken-4
+		%ul#user-menu.side-nav.blue-grey.darken-4
 			%li.userView
 				.background
 					%img{src:"#{imgCover}"}
@@ -85,57 +92,96 @@
 		-#=========================================
 		-#========== Menú navegación - Large ==============
 		-#=========================================
-		%ul#navegacion-no-oculto.side-nav.fixed.blue-grey.darken-4
-			%br/
-			-menuLateral.each do |item|		
-				-if item[:title] == "Base de Datos"
-					%li
-						%ul.collapsible.collapsible-accordion
+		%ul#menu-normal.side-nav.fixed.blue-grey.darken-4
+			.side-contenedor
+				.side-lista
+					%br/
+					-menuLateral.each do |item|		
+						-if item[:title] == "Base de Datos"
 							%li
-								%a#base-datos-list.waves-effect.white-bonis.collapsible-header
+								%ul.collapsible.collapsible-accordion
+									%li
+										%a#base-datos-list.waves-effect.white-bonis.collapsible-header
+											%i.material-icons.left.white-bonis=item[:icon]
+											%span=item[:title]
+											%i.arrow.material-icons.white-bonis arrow_drop_down
+										.collapsible-body
+											%ul.blue-grey.darken-3
+												-tablas.each do |nombreTabla|
+													%li
+														%a.waves-effect.white-bonis{href:"#!"}=nombreTabla
+						-else
+							%li
+								%a.waves-effect.white-bonis{href: item[:link]}
 									%i.material-icons.left.white-bonis=item[:icon]
 									%span=item[:title]
-									%i.arrow.material-icons.white-bonis arrow_drop_down
-								.collapsible-body
-									%ul.blue-grey.darken-3
-										-tablas.each do |nombreTabla|
-											%li
-												%a.waves-effect.white-bonis{href:"#!"}=nombreTabla
-				-else
-					%li
-						%a.waves-effect.white-bonis{href: item[:link]}
-							%i.material-icons.left.white-bonis=item[:icon]
-							%span=item[:title]
-				%br/
+						%br/
+				.line-divider
+				%li.ayuda-btn
+					%a.waves-effect.white-bonis{href:"help.html"}
+						%i.material-icons.left.white-bonis error
+						%span Ayuda
 		-#=========================================
 		-#======== Menú navegación - Responsive ============
 		-#=========================================
-		%ul#navegacion-movil.side-nav.blue-grey.darken-4
-			%br/
-			-menuLateral.each do |item|		
-				-if item[:title] == "Base de Datos"
-					%li
-						%ul.collapsible.collapsible-accordion
+		%ul#menu-movil.side-nav.blue-grey.darken-4
+			.side-contenedor
+				.side-lista
+					%br/
+					-menuLateral.each do |item|		
+						-if item[:title] == "Base de Datos"
 							%li
-								%a#base-datos-list.waves-effect.white-bonis.collapsible-header
+								%ul.collapsible.collapsible-accordion
+									%li
+										%a#base-datos-list.waves-effect.white-bonis.collapsible-header
+											%i.material-icons.left.white-bonis=item[:icon]
+											%span=item[:title]
+											%i.arrow.material-icons.white-bonis arrow_drop_down
+										.collapsible-body
+											%ul.blue-grey.darken-3
+												-tablas.each do |nombreTabla|
+													%li
+														%a.waves-effect.white-bonis{href:"#!"}=nombreTabla
+						-else
+							%li
+								%a.waves-effect.white-bonis{href: item[:link]}
 									%i.material-icons.left.white-bonis=item[:icon]
 									%span=item[:title]
-									%i.arrow.material-icons.white-bonis arrow_drop_down
-								.collapsible-body
-									%ul.blue-grey.darken-2
-										-tablas.each do |nombreTabla|
-											%li
-												%a.waves-effect.white-bonis{href:"#!"}=nombreTabla
-				-else
-					%li
-						%a.waves-effect.white-bonis{href: item[:link]}
-							%i.material-icons.left.white-bonis=item[:icon]
-							%span=item[:title]
+						%br/
+				.line-divider
+				%li.ayuda-btn
+					%a.waves-effect.white-bonis{href:"help.html"}
+						%i.material-icons.left.white-bonis error
+						%span Ayuda
+		-#=========================================
+		-#======== Menú Notificaciones - Responsive ============
+		-#=========================================
+		%ul#notificaciones-menu.side-nav.blue-grey.darken-3
+			.side-contenedor
 				%br/
+				%li.white-text
+					%h6.center-align.upper Notificaciones
+				%ul.notificaciones
+					-notificationes.each do |item|
+						%li 
+							%ul.collapsible.collapsible-accordion
+								%li
+									%a.waves-effect.white-bonis.collapsible-header
+										%i.material-icons.left.white-bonis=item[:icon]
+										%span.trun=item[:title]
+										%label=item[:publicador]
+									.collapsible-body
+										%ul.blue-grey.darken-1
+											.row.no-margin
+												.col.s12.no-padding
+													.noti.white-text.jus=item[:desc]
+												.col.s12.no-padding
+													%a.btn-flat.waves-effect.no-margin.orange-text.right Ver más
 		-#=================================================================
 		-#========================= Contenido - Layout ===========================
 		-#=================================================================
 		%main.navegacion-espacio
+
 			-#===============Boton buscar================
 			.fixed-action-btn
 				%a.btn-floating.btn-large.waves-effect.waves-light.red.tooltipped.hoverable{href:"#buscar", data:{position:"left", delay:"50", tooltip:"Buscar"}}
